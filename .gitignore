@@ -44,3 +44,5 @@ themes/linc-edge/node_modules/*
 # ================== #
 themes/linc-edge/gulpfile.js
 themes/linc-edge/build/*
+
+package-lock.json
