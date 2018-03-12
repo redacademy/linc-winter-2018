@@ -18,6 +18,7 @@
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
+		<h1>Testing</h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
