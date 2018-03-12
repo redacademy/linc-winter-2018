@@ -2,7 +2,7 @@
  /**
  *
  * @package   LincEdge Functionality
- * @author    Calvin Ting calvinting@protonmail.com, David, Ryan
+ * @author    Calvin Ting calvinting@protonmail.com, David Yin davidyin92@hotmail.com, Ryan Ku ryancsku@gmail.com
  * @license   GPL-2.0+
  * @copyright 2018 RDC inc. 
  *
@@ -10,7 +10,7 @@
  * Plugin Name: LincEdge Functionality
  * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
  * Version:     1.0.0
- * Author:      Calvin
+ * Author:      Calvin, David, Ryan
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
