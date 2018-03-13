@@ -12,16 +12,7 @@
 }
 
 @mixin desktop {
-<<<<<<< HEAD
 	@media (min-width: $desktop__width) {
 		@content;
 	}
 }
-=======
-	@media (min-width: $desktop-width) {
-	  @content;
-	}
-  }
-
-
->>>>>>> 468a1f215c93669ecfc43841721a503f8f585fdd

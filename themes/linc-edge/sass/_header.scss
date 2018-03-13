@@ -1,6 +1,5 @@
 .site-header {
     background-color: #012f46;
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     width: 100%;
@@ -52,31 +51,3 @@
  .site-title {
     display: none;
  }
-=======
-    @include desktop{
-    background-color:red;
-    }
-
-}
-.masthead-flex {
-    display: flex;
-    margin-left: 3%;
-    margin-right: 3%;
-    justify-content: space-between;
-    align-items: flex-end;
-
-}
-
-// .site-logo {
-//     background: url(../../images/LincEdge-Logo.svg) no-repeat;
-//     background-size: contain;
-// 	width: 148px;
-// 	height: 75px;
-// }
-
-.site-title {
-    display: none;
-}
-
-
->>>>>>> 468a1f215c93669ecfc43841721a503f8f585fdd
