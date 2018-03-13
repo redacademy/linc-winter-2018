@@ -12,9 +12,7 @@
 }
 
 @mixin desktop {
-	@media (min-width: $desktop-width) {
-	  @content;
+	@media (min-width: $desktop__width) {
+		@content;
 	}
-  }
-
-
+}

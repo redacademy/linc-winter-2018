@@ -1,28 +1,53 @@
-#masthead {
+.site-header {
     background-color: #012f46;
-    @include desktop{
-    background-color:red;
-    }
-
-}
-.masthead-flex {
     display: flex;
-    margin-left: 3%;
-    margin-right: 3%;
-    justify-content: space-between;
-    align-items: flex-end;
-
-}
-
-// .site-logo {
-//     background: url(../../images/LincEdge-Logo.svg) no-repeat;
-//     background-size: contain;
-// 	width: 148px;
-// 	height: 75px;
-// }
-
-.site-title {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .site-logo {
+  display: flex;
+  width: $desktop__width;
+  justify-content: center;
+  position: relative;
+  img.hamburger-menu {
+    align-self: center;
+    position: absolute;
+    left: 0;
+    @include desktop {
+        display: none;
+    }
+  }
+  img.mobile-logo {
+    @include desktop {
+      display: none;
+    }
+  }
+  img.desktop-logo {
     display: none;
-}
-
-
+    @include desktop {
+        display: inline;
+    }
+  }
+ }
+ 
+ // .masthead-flex {
+ //     display: flex;
+ //     margin-left: 3%;
+ //     margin-right: 3%;
+ //     justify-content: space-between;
+ //     align-items: flex-end;
+ 
+ // }
+ 
+ nav.main-navigation {
+  display: none;
+  @include desktop {
+      display: block;
+  }
+ }
+ 
+ .site-title {
+    display: none;
+ }
