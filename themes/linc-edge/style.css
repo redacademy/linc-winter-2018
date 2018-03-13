@@ -666,6 +666,13 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.site-footer {
+  background-color: #012f46;
+  height: 150px; }
+  .site-footer .site-info a {
+    text-decoration: none;
+    color: white; }
+
 #masthead {
   background-color: #012f46; }
   @media (min-width: 650px) {
