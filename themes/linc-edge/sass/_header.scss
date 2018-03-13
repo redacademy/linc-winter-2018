@@ -11,6 +11,8 @@
   width: $desktop__width;
   justify-content: center;
   position: relative;
+  @include desktop {
+  }
   img.hamburger-menu {
     align-self: center;
     position: absolute;

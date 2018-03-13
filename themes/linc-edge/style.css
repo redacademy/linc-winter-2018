@@ -666,7 +666,6 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-<<<<<<< HEAD
 .site-footer {
   background-color: #012f46;
   height: 150px; }
@@ -674,12 +673,6 @@ object {
     text-decoration: none;
     color: white; }
 
-#masthead {
-  background-color: #012f46; }
-  @media (min-width: 650px) {
-    #masthead {
-      background-color: red; } }
-=======
 .site-header {
   background-color: #012f46;
   display: -webkit-box;
@@ -690,7 +683,6 @@ object {
           justify-content: center;
   width: 100%;
   height: 100%; }
->>>>>>> b5f95b3958d595c0d1a10a7882a5f887cb4c16db
 
 .site-logo {
   display: -webkit-box;
