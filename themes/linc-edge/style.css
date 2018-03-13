@@ -668,6 +668,9 @@ object {
 /* Front page */
 #masthead {
   background-color: #012f46; }
+  @media (min-width: 650px) {
+    #masthead {
+      background-color: red; } }
 
 .masthead-flex {
   display: -webkit-box;
@@ -681,12 +684,6 @@ object {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
-
-.site-logo {
-  background: url(../../images/LincEdge-Logo.svg) no-repeat;
-  background-size: contain;
-  width: 148px;
-  height: 75px; }
 
 .site-title {
   display: none; }
