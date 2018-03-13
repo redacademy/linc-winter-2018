@@ -21,7 +21,23 @@
 
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
+<<<<<<< HEAD
             <header id="masthead" class="site-header">
+=======
+			<header id="masthead" class="site-header">
+				<div class="masthead-flex">
+					<div class="site-logo">
+						<img class="hamburger-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/images/BurgerMenu-mobile.png">
+
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
+						</a>
+	
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo.svg">
+						</a>
+					</div>
+>>>>>>> 468a1f215c93669ecfc43841721a503f8f585fdd
 
                     <div class="site-logo">
 
