@@ -1,6 +1,6 @@
-# RED Starter
+# Linc Edge
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
+WordPress theme for lincedge.com
 
 ## Installation
 
