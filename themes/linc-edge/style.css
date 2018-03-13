@@ -1,9 +1,9 @@
 /*!
-Theme Name: Linc Edge
-Theme URI: http://underscores.me/
-Author: Calvin Ting, David Yin, Ryan Ku
-Author URI: http://www.redacademy.com
-Description: A WordPress theme for lincedge.com
+Theme Name: Linc-Edge
+Theme URI: http://lincedge.com
+Author: David, Ryan, Calvin
+Author URI: http://lincedge.com
+Description: A WordPress starter theme for Linc-Edge
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -666,3 +666,27 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+#masthead {
+  background-color: #012f46; }
+
+.masthead-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 3%;
+  margin-right: 3%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.site-logo {
+  background: url(../../images/LincEdge-Logo.svg) no-repeat;
+  background-size: contain;
+  width: 148px;
+  height: 75px; }
+
+.site-title {
+  display: none; }

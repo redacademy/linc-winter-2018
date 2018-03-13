@@ -1,0 +1,22 @@
+#masthead {
+    background-color: #012f46;
+
+}
+.masthead-flex {
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.site-logo {
+    background: url(../../images/LincEdge-Logo.svg) no-repeat;
+    background-size: contain;
+	width: 148px;
+	height: 75px;
+}
+
+.site-title {
+    display: none;
+}
