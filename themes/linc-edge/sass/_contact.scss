@@ -1,9 +1,50 @@
 .page-id-9 {
+h2,h3{
+    color:$color__title;
+}
 
 .entry-title{
+    
     display:none;
     @include desktop{
         display:block;
     }
 }
+.entry-content{
+    h2{
+        text-align:center;
+        text-transform:uppercase;
+        font-size:30px;
+        
+        
+    }
+}
+.contact-info-container{
+    hr{
+        margin-left:0px;
+        background-color:$color__lincedgegreen;
+        height:3px;
+    }
+    .info-title{
+        margin-bottom: 0;
+        width:300px;
+    }
+    h3{
+        font-size:25px;
+    }
+    p{
+        font-size:21px;
+    }
+    margin-left:7%;
+    width:200px;
+    .appointment{
+        width:500px;
+        font-size:1rem;
+    }
+    
+}
+
+
+
+
 }
