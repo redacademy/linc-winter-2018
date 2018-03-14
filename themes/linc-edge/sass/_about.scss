@@ -50,12 +50,14 @@
       line-height: 30px;
       text-align: center;
       @include desktop {
-        background-color: grey; 
+        background-color: #ffffff; 
         border: 1px solid #ffffff;
         border-radius: 5px;
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         font-size: 36px;
         line-height: 45px;
+        padding: 2.5%;
       }
       img {
         height: 280px;
@@ -63,6 +65,7 @@
         padding-top: 7.5%; /* Temporary, will need to be reversed due to repositioning of images */
         @include desktop {
           height: 410px; /* 386px initial + 7.5% (padding-top) */
+          padding-top: 0;
           width: 590px;
         }
       }
