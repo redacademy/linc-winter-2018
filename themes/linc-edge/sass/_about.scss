@@ -1,20 +1,27 @@
 .page-template-about {
+
   article {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10%;
     color: $color__title;
     .entry-title {
       font-weight: bold;
       text-align: center;
-      font-size: 70px;
       text-transform: uppercase;
+      font-size: 32px;
+      @include desktop {
+        font-size: 70px;
+      }
     }
     .entry-content {
-      font-size: 36px;
-      line-height: 44px;
-      font-style: italic;
+      font-size: 25px;
+      line-height: 30px;
+      font-style: normal;
+      @include desktop {
+        font-size: 36px;
+      }
     }
   }
+
   .about-content-container {
     margin-left: 10%;
     margin-right: 10%;
