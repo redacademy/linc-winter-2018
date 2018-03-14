@@ -2,42 +2,57 @@
 
   article {
     margin: 10%;
-    color: $color__title;
+
     .entry-title {
+      color: $color__title;
+      font-size: 32px;
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      font-size: 32px;
       @include desktop {
         font-size: 70px;
       }
     }
     .entry-content {
+      color: $color__text-main;
       font-size: 25px;
+      font-weight: normal;
       line-height: 30px;
-      font-style: normal;
+      text-align: center;
       @include desktop {
         font-size: 36px;
+        font-style: italic;
+        line-height: 45px;
       }
     }
   }
 
   .about-content-container {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
+    margin: 10%;
     .about-title {
-      font-size: 48px;
-      font-weight: bold;
       color: $color__title;
+      font-size: 32px;
+      font-weight: bold;
+      padding-bottom: 7.5%;
+      text-align: center;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 70px;
+      }
     }
     .about-description {
-      font-size: 20px;
-      line-height: 36px;
-      display: flex;
+      color: $color__text-main;
+      font-size: 25px;
+      font-weight: normal;
+      line-height: 30px;
+      padding-bottom: 5%;
+      text-align: center;
+      @include desktop {
+        font-size: 36px;
+      }
       img {
-        height: 385px;
-        width: 575px;
+        height: 250px;
+        width: 520px;
       }
     }
   }

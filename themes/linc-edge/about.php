@@ -16,12 +16,14 @@ get_header(); ?>
 
       <?php $fields = CFS()->get( 'action_description' );
       
-        foreach ( $fields as $field ) {?> 
+        foreach ( $fields as $field ) { ?> 
         
 				</div></div><div class="about-content-container">
-				<div class="about-title"><?php echo $field['title'];?></div>
-    		<div class="about-description"><?php echo $field['description'];?>
-    		<?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
+				<div class="about-title">
+          <?php echo $field['title'];?></div>
+    		<div class="about-description">
+          <?php echo $field['description']; ?>
+          <?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
 			
     </main><!-- #main -->
 	</div><!-- #primary -->
