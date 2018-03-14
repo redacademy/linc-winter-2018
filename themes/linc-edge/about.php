@@ -24,7 +24,7 @@ get_header(); ?>
     		<div class="about-description">
           <?php echo $field['description']; ?>
           <?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
-			
+
     </main><!-- #main -->
 	</div><!-- #primary -->
 

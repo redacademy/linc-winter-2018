@@ -13,6 +13,7 @@
         font-size: 70px;
       }
     }
+
     .entry-content {
       color: $color__text-main;
       font-size: 25px;
@@ -29,6 +30,7 @@
 
   .about-content-container {
     margin: 10%;
+
     .about-title {
       color: $color__title;
       font-size: 32px;
@@ -40,20 +42,30 @@
         font-size: 70px;
       }
     }
+
     .about-description {
       color: $color__text-main;
       font-size: 25px;
       font-weight: normal;
       line-height: 30px;
-      padding-bottom: 5%;
       text-align: center;
       @include desktop {
         font-size: 36px;
+        line-height: 45px;
+        border: 1px solid #ffffff;
+        background-color: grey; 
+        border-radius: 5px;
       }
       img {
-        height: 250px;
+        height: 280px;
         width: 520px;
+        padding-top: 7.5%; /* Temporary, will need to be reversed due to repositioning of images */
+        @include desktop {
+          height: 410px; /* 386px initial + 7.5% (padding-top) */
+          width: 590px;
+        }
       }
     }
   }
+
 }
