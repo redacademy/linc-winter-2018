@@ -12,8 +12,16 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
+				
 			<?php endwhile; // End of the loop. ?>
 
+		
+			<?php $fields = CFS()->get( 'action_description' );
+				foreach ( $fields as $field ) {?><p>
+				<?php echo $field['title'];?><p>
+    			<?php echo $field['description'];?><p>
+    			<?php echo '<img src="' . $field['picture'] .'"/>'; } ?> <p>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
