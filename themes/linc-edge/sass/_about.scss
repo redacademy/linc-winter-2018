@@ -1,38 +1,59 @@
-.page-template-about{
-    article{
-        margin-left:10%;
-        margin-right:10%;
-        color:$color__title;
-    .entry-title{
-        font-weight:bold;
-        text-align:center;
-        font-size:70px;
-        text-transform:uppercase;
+.page-template-about {
+
+  article {
+    margin: 10%;
+
+    .entry-title {
+      color: $color__title;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 70px;
+      }
     }
-    .entry-content{
-        font-size:36px;
-        line-height:44px;
-        font-style:italic;
+    .entry-content {
+      color: $color__text-main;
+      font-size: 25px;
+      font-weight: normal;
+      line-height: 30px;
+      text-align: center;
+      @include desktop {
+        font-size: 36px;
+        font-style: italic;
+        line-height: 45px;
+      }
     }
+  }
+
+  .about-content-container {
+    margin: 10%;
+    .about-title {
+      color: $color__title;
+      font-size: 32px;
+      font-weight: bold;
+      padding-bottom: 7.5%;
+      text-align: center;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 70px;
+      }
     }
-    .about-content-container{
-        margin-left:10%;
-        margin-right:10%;
-        margin-bottom:10%;
-    .about-title{
-        font-size:48px;
-        font-weight:bold;
-        color:$color__title;
+    .about-description {
+      color: $color__text-main;
+      font-size: 25px;
+      font-weight: normal;
+      line-height: 30px;
+      padding-bottom: 5%;
+      text-align: center;
+      @include desktop {
+        font-size: 36px;
+      }
+      img {
+        height: 250px;
+        width: 520px;
+      }
     }
-    .about-description{
-        font-size:20px;
-        line-height:36px;
-        display:flex;
-        img{
-            height:385px;
-            width:575px;
-     
-        }
-    }
-}
+  }
 }

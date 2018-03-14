@@ -27,7 +27,7 @@
 
                 <nav class="main-navigation">
                     
-                    <button class="hamburger hamburger--squeeze" type="button">
+                    <button class="hamburger hamburger--squeeze is-active" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
