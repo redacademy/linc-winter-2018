@@ -1,0 +1,38 @@
+.page-template-about{
+    article{
+        margin-left:10%;
+        margin-right:10%;
+        color:$color__title;
+    .entry-title{
+        font-weight:bold;
+        text-align:center;
+        font-size:70px;
+        text-transform:uppercase;
+    }
+    .entry-content{
+        font-size:36px;
+        line-height:44px;
+        font-style:italic;
+    }
+    }
+    .about-content-container{
+        margin-left:10%;
+        margin-right:10%;
+        margin-bottom:10%;
+    .about-title{
+        font-size:48px;
+        font-weight:bold;
+        color:$color__title;
+    }
+    .about-description{
+        font-size:20px;
+        line-height:36px;
+        display:flex;
+        img{
+            height:385px;
+            width:575px;
+     
+        }
+    }
+}
+}
