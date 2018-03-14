@@ -1,18 +1,47 @@
 .site-footer{
     background-color:#012f46;
-    height:270px;
+    
     justify-content:center;
     align-items:center;
     display:flex;
+    margin-top:50px;
+    height:200px;
+    
+    @include desktop{
+        height:275px;
+    }
+
+    .widget-area{
+
+
+        @include desktop{
+            margin-top:50px;
+        }
+    }
+
 
 
     .site-info{
-        margin-top:50px;
+        line-height:0;
+        margin-top: 55px;
+     
+       
+
+        
         
         span,p{
         color:white;
 
         }
+        span{
+         font-size:2rem;
+        }
+        p{
+            font-size:1rem;
+        }
+        @include desktop{
+            margin-top:0;
+        line-height:1.5;
         span{
             font-size:3rem;
             
@@ -21,23 +50,37 @@
             font-size:1.3rem;
             
         }
+        }
     }
     .icon-container{
         display:flex;
         margin:0 auto;
         justify-content:space-between;
+        width:200px;
+
+
+        @include desktop{
         width:250px;
+        }
     }
     .footer-text-container{
+        margin-top: 50px;
         display:flex;
         justify-content: space-between;
+    
+        @include desktop{
         width: 750px;
         margin-left: 400px;
+        }
        
 
     }
     .footer-policy{
+        display:none;
+        @include desktop{
         text-decoration: underline;
+        display:block;
+        }
 
     }
 

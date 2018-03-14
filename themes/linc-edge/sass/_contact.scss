@@ -1,0 +1,6 @@
+.entry-title{
+    display:none;
+    @include desktop{
+        display:block;
+    }
+}
