@@ -10,9 +10,20 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
+
+
+
+
+
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'LincEdge© 2018. %s' ), 'All Rights Reserved.' ); ?></a>
+
+					<?php get_sidebar(); ?>
+
 				</div><!-- .site-info -->
+
+
+
+
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

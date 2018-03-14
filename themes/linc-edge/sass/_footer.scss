@@ -1,12 +1,44 @@
 .site-footer{
     background-color:#012f46;
-    height:150px;
-    .site-info{
+    height:270px;
+    justify-content:center;
+    align-items:center;
+    display:flex;
 
-        a{
-        text-decoration: none;
+
+    .site-info{
+        margin-top:50px;
+        
+        span,p{
         color:white;
+
         }
+        span{
+            font-size:3rem;
+            
+        }
+        p{
+            font-size:1.3rem;
+            
+        }
+    }
+    .icon-container{
+        display:flex;
+        margin:0 auto;
+        justify-content:space-between;
+        width:250px;
+    }
+    .footer-text-container{
+        display:flex;
+        justify-content: space-between;
+        width: 750px;
+        margin-left: 400px;
+       
+
+    }
+    .footer-policy{
+        text-decoration: underline;
+
     }
 
 
