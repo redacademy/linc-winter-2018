@@ -25,29 +25,18 @@
 
             <header id="masthead" class="site-header">
 
-                <nav class="main-navigation">
+                <nav class="menu-navigation">
                     
-                    <button class="hamburger hamburger--squeeze is-active" type="button">
+                    <button class="hamburger hamburger--squeeze" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                    <!-- <img class="hamburger-menu" src="<?php echo get_stylesheet_directory_uri(); ?>/images/BurgerMenu-mobile.png"> -->
-
-                    <div class="site-logo">
-                        <a href="<?php echo esc_url( home_url( ‘/’ ) ); ?>" rel="home">
-                            <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
-                        </a><!-- .mobile-logo -->
-
-                        <a href="<?php echo esc_url( home_url( ‘/’ ) ); ?>" rel="home">
-                            <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo.svg">
-                        </a><!-- .desktop-logo -->
-
-                    </div><!-- .site-logo -->
 
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-                
-                </nav><!-- .main-navigation -->
+
+
+                </nav><!-- .menu-navigation -->
 
                     
 

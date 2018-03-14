@@ -28,6 +28,10 @@
     }
     box-shadow: none;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .hamburger-box {
