@@ -8,7 +8,7 @@
     height:200px;
     
     @include desktop{
-        height:275px;
+        height:200px;
     }
 
     .widget-area{
@@ -23,12 +23,8 @@
 
     .site-info{
         line-height:0;
-        margin-top: 55px;
-     
-       
-
-        
-        
+        margin-top: 53px;
+    
         span,p{
         color:white;
 
@@ -40,7 +36,7 @@
             font-size:1rem;
         }
         @include desktop{
-            margin-top:0;
+        margin-top:0;
         line-height:1.5;
         span{
             font-size:3rem;
