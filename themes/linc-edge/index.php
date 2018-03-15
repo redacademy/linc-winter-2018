@@ -1,6 +1,7 @@
 <?php
 /**
  * The main template file.
+ * Template Name: Products
  *
  * @package linc_edge_Theme
  */
