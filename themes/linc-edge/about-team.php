@@ -15,10 +15,75 @@ get_header(); ?>
 			<?php endwhile; // End of the loop. ?>
 
     <!-- Get 'team' posts -->
+    <!-- <ul class="product-types-list">
+			<?php
+			$terms = get_terms ( array(
+				'taxonomy' => 'department',
+				'hide_empty' => 0,
+			));
+			if ( ! empty ($terms) ):
+			?>
+				<?php foreach ( $terms as $term ):?>
+				<li class="product-type">
+					<p>
+						<a href="<?php echo get_term_link( $term ); ?>"
+						class="btn"><?php echo $term->name; ?></a>
+					</p>
+				</li>
+			<?php endforeach; ?>
+			<?php endif; ?>
+	</ul> -->
+
     <?php
-    $team_posts = get_posts( array(
+    $args = array(
         'post_type' => 'team',
+        'department' => 'general',
         'posts_per_page' => -1, // Unlimited posts
         'orderby' => 'title', // Order alphabetically by name
-    ) );
+                );
+    $team_posts = get_posts( $args );
+
+    if ( $team_posts ):
+    ?>
+        <?php 
+        foreach ( $team_posts as $post ): 
+        setup_postdata($post);
+        ?>
+
+            <div class="member-profile">
+                <h3><?php the_title(); ?></h3>
+                <?php echo CFS() -> get ('position'); ?>
+                <?php echo CFS() -> get ('biography'); ?>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+
+    <?php
+    $args2 = array(
+        'post_type' => 'team',
+        'department' => 'co-op',
+        'posts_per_page' => -1, // Unlimited posts
+        'orderby' => 'title', // Order alphabetically by name
+                );
+    $team_posts = get_posts( $args2 );
+
+    if ( $team_posts ):
+    ?>
+    <h1>Co-op</h1>
+        <?php 
+        foreach ( $team_posts as $post ): 
+        setup_postdata($post);
+        ?>
+
+            <div class="member-profile">
+                <h3><?php the_title(); ?></h3>
+                <?php echo CFS() -> get ('position'); ?>
+                <?php echo CFS() -> get ('biography'); ?>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+
+
+<?php get_footer(); ?>
+
 
