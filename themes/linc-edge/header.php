@@ -14,7 +14,6 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-
     <?php wp_head(); ?>
     </head>
 
@@ -33,7 +32,16 @@
                         </span>
                     </button>
 
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-Copyright.png">
+                    </a>
+
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
 
 
                 </nav><!-- .menu-navigation -->

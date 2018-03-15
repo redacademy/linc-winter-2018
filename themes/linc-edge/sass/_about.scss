@@ -12,10 +12,10 @@
       @include desktop {
         font-size: 70px;
       }
-    }
+    } /* .entry-title */
 
     .entry-content {
-      color: $color__text-main;
+      color: $color__title;
       font-size: 25px;
       font-weight: normal;
       line-height: 30px;
@@ -24,54 +24,99 @@
         font-size: 36px;
         font-style: italic;
         line-height: 45px;
-      }
-    }
-  }
+      } 
+    } /* .entry-content */
+  } /* article */
 
   .about-content-container {
+
     margin: 10%;
 
     .about-title {
       color: $color__title;
       font-size: 32px;
       font-weight: bold;
-      padding-bottom: 7.5%;
+      // padding-bottom: 7.5%;
       text-align: center;
       text-transform: uppercase;
       @include desktop {
         font-size: 70px;
       }
-    }
+    } /* .about-title */
+
+    hr {
+      background-color: $color__lincedgegreen;
+      display: block;
+      height: 3px;
+      visibility: hidden;
+      width: 20%;
+      @include desktop {
+        visibility: visible;
+      }
+    } /* hr */
 
     .about-description {
       color: $color__text-main;
       font-size: 25px;
       font-weight: normal;
       line-height: 30px;
+<<<<<<< HEAD
       text-align: center;
       
       
+=======
+      text-align: center; // CONSULT ON USAGE //
+>>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf
       @include desktop {
         background-color: #ffffff; 
         border: 1px solid #ffffff;
         border-radius: 5px;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         font-size: 36px;
         line-height: 45px;
         padding: 2.5%;
+        width: 1080px; /* TEMPORARY SOLUTION */
       }
       img {
+<<<<<<< HEAD
     
         height: 280px;
+=======
+        order: 2;
+        height: 230px;
+>>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf
         width: 520px;
-        padding-top: 7.5%; /* Temporary, will need to be reversed due to repositioning of images */
         @include desktop {
           height: 410px; /* 386px initial + 7.5% (padding-top) */
-          padding-top: 0;
           width: 590px;
+<<<<<<< HEAD
         }
       }
     }
   }
 }
+=======
+        } 
+      } /* img */
+      .about-text {
+        order: 1;
+        padding: 0 20px;
+      } /* .about-text */
+    } /* .about-description */
+
+    &:nth-of-type(odd) {
+      .about-description {
+        img {
+          order: 1;
+        } /* img */
+        .about-text {
+          order: 2;
+        } /* .about-text */
+      } /* .about-description */
+    } /* nth-of-type */
+
+  } /* .about-content-container */
+
+} /* .page-template-about */
+>>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf

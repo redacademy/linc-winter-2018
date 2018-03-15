@@ -29,6 +29,8 @@
     box-shadow: none;
   }
 
+  // additional
+  height: 100%;
   @include desktop {
     display: none;
   }
