@@ -79,9 +79,54 @@ function linc_edge_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'linc_edge_minified_css', 10, 2 );
 
+
+
+
+// Hook up the AJAX ajctions
+add_action( 'wp_ajax_nopriv_gf_button_get_form', 'gf_button_ajax_get_form' );
+add_action( 'wp_ajax_gf_button_get_form', 'gf_button_ajax_get_form' );
+// Add the "button" action to the gravityforms shortcode
+// e.g. [gravityforms action="button" id=1 text="button text"]
+add_filter( 'gform_shortcode_button', 'gf_button_shortcode', 10, 3 );
+function gf_button_shortcode( $shortcode_string, $attributes, $content ){
+	$a = shortcode_atts( array(
+		'id' => 0,
+		'text' => 'Show me the form!',
+		'button_class' => ''
+	), $attributes );
+	$form_id = absint( $a['id'] );
+	if ( $form_id < 1 ) {
+		return 'Missing the ID attribute.';
+	}
+	// Enqueue the scripts and styles
+	gravity_form_enqueue_scripts( $form_id, true );
+	$ajax_url = admin_url( 'admin-ajax.php' );
+	$html = sprintf( '<button id="gf_button_get_form_%d" class="%s">%s</button>', $form_id, $a['button_class'], $a['text'] );
+	$html .= sprintf( '<div id="gf_button_form_container_%d" style="display:none;"></div>', $form_id );
+	$html .= "<script>
+				(function (SHFormLoader, $) {
+				$('#gf_button_get_form_{$form_id}').click(function(){
+					var button = $(this);
+					$.get('{$ajax_url}?action=gf_button_get_form&form_id={$form_id}',function(response){
+						$('#gf_button_form_container_{$form_id}').html(response).fadeIn();
+						button.remove();
+						if(window['gformInitDatepicker']) {gformInitDatepicker();}
+					});
+				});
+			}(window.SHFormLoader = window.SHFormLoader || {}, jQuery));
+			</script>";
+	return $html;
+}
+function gf_button_ajax_get_form(){
+	$form_id = isset( $_GET['form_id'] ) ? absint( $_GET['form_id'] ) : 0;
+	gravity_form( $form_id,true, false, false, false, true );
+	die();
+}
+
 /**
  * Enqueue scripts and styles.
  */
+
 function linc_edge_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
@@ -91,48 +136,13 @@ function linc_edge_scripts() {
 
 	wp_enqueue_script( 'header-js', get_template_directory_uri() . '/js/header.js', array('jquery-cdn'), true );
 
+	wp_enqueue_script( 'contact-js', get_template_directory_uri() . '/js/contact.js', array('jquery-cdn'), true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
-
-
-add_filter( 'gform_shortcode_button', 'leaven_gravity_button_shortcode', 40, 3 );
-
-function leaven_gravity_button_shortcode( $shortcode_string, $attributes, $content ) {
-	if ( 'button' !== $attributes['action'] ) {
-		return $shortcode_string;
-	}
-	$defaults = array(
-		'title'        => true,
-		'description'  => false,
-		'id'           => 0,
-		'name'         => '',
-		'field_values' => '',
-		'tabindex'     => 1,
-		'text'         => __( 'Click to open form', 'leaven' ),
-	);
-	$attributes = wp_parse_args( $attributes, $defaults );
-	if ( $attributes['id'] < 1 ) {
-		return __( 'Missing the ID attribute.', 'leaven' );
-	}
-	return leaven_build_gravity_button( $attributes );
-}
-
-function leaven_build_gravity_button( $attributes ) {
-	$form_id = absint( $attributes['id'] );
-	$text    = esc_attr( $attributes['text'] );
-	$onclick = "jQuery('#gravityform_button_{$form_id}, #gravityform_container_{$form_id}').slideToggle();";
-	$html  = sprintf( '<button id="gravityform_button_%1$d" class="gravity_button" onclick="%2$s">%3$s</button>', esc_attr( $form_id ), $onclick, esc_attr( $text ) );
-	$html .= sprintf( '<div id="gravityform_container_%1$d" class="gravity_container" style="display:none;">', esc_attr( $form_id ) );
-	$html .= gravity_form( $form_id, $attributes['title'], $attributes['description'], false, $attributes['field_values'], true, $attributes['tabindex'], false );
-	$html .= '</div>';
-	return $html;
-}
-
-
-
 
 /**
  * Custom template tags for this theme.
@@ -143,3 +153,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+
