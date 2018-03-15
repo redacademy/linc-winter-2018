@@ -47,7 +47,7 @@
         font-size: 36px;
         line-height: 45px;
         padding: 2.5%;
-        width: 1080px; /* TEMPORARY SOLUTION */
+        width: 100%;
       }
 
       .about-title {
@@ -78,15 +78,16 @@
         height: 230px;
         width: 520px;
         @include desktop {
-          height: 410px; /* 386px initial + 7.5% (padding-top) */
-          width: 590px;
+          height: 25vw; /* 386px initial + 7.5% (padding-top) */
+          width: 50%;
         } 
       } /* img */
-      
+
       .about-text {
         order: 1;
         padding: 0 20px;
       }
+
     } /* .about-description */
 
     &:nth-of-type(odd) {
