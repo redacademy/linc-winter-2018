@@ -47,7 +47,7 @@ h2,h3{
  
 iframe{
     margin-left:7%;
-    max-width:700%;
+    max-width:90%;
     height:300px;
 }
 }
@@ -66,18 +66,34 @@ iframe{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
     }
-    .comments-questions{
+    .comments-questions,.contact-form-title{
     color:$color__title;
     font-size:20px;
     font-weight:bold;
+    text-align:center;
     
+    }
+    input[type="text"]{
+       max-width:90%;
+       margin-left:7%;
+       border-radius:10px; 
+       
     }
 }
 .gform_title {
     display: none 
 }
+.gfield_label{
+margin-left:7%;
+
+}
 
 
 
 
+}
+.gform_next_button{
+    width:30%;
+    margin-left: 65%;
+   
 }
