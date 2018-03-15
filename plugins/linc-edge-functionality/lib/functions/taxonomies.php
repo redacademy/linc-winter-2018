@@ -39,7 +39,7 @@ function team_member_type_taxonomy() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
     );
-    register_taxonomy( 'team-member-type', array( 'team-member' ), $args );
+    register_taxonomy( 'team_member_type', array( 'team-member' ), $args );
 
 }
 add_action( 'init', 'team_member_type_taxonomy', 0 );
@@ -74,7 +74,9 @@ function team_taxonomy() {
 		'hierarchical' => true,
 		'query_var' => true,
 		'rewrite' => false,
-		'labels' => $labels
+        'labels' => $labels,
+        
+		'show_admin_column' => true,
 	) );
 }
 add_action( 'init', 'team_taxonomy', 0 );

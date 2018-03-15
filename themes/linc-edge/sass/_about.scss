@@ -32,29 +32,6 @@
 
     margin: 10%;
 
-    .about-title {
-      color: $color__title;
-      font-size: 32px;
-      font-weight: bold;
-      // padding-bottom: 7.5%;
-      text-align: center;
-      text-transform: uppercase;
-      @include desktop {
-        font-size: 70px;
-      }
-    } /* .about-title */
-
-    hr {
-      background-color: $color__lincedgegreen;
-      display: block;
-      height: 3px;
-      visibility: hidden;
-      width: 20%;
-      @include desktop {
-        visibility: visible;
-      }
-    } /* hr */
-
     .about-description {
       color: $color__text-main;
       font-size: 25px;
@@ -70,21 +47,47 @@
         font-size: 36px;
         line-height: 45px;
         padding: 2.5%;
-        width: 1080px; /* TEMPORARY SOLUTION */
+        width: 100%;
       }
+
+      .about-title {
+        color: $color__title;
+        font-size: 32px;
+        font-weight: bold;
+        // padding-bottom: 7.5%;
+        text-align: center;
+        text-transform: uppercase;
+        @include desktop {
+          font-size: 70px;
+        }
+      } /* .about-title */
+  
+      hr {
+        background-color: $color__lincedgegreen;
+        display: block;
+        height: 3px;
+        visibility: hidden;
+        width: 20%;
+        @include desktop {
+          visibility: visible;
+        }
+      } /* hr */
+
       img {
         order: 2;
         height: 230px;
         width: 520px;
         @include desktop {
-          height: 410px; /* 386px initial + 7.5% (padding-top) */
-          width: 590px;
+          height: 25vw; /* 386px initial + 7.5% (padding-top) */
+          width: 50%;
         } 
       } /* img */
+
       .about-text {
         order: 1;
         padding: 0 20px;
       }
+
     } /* .about-description */
 
     &:nth-of-type(odd) {

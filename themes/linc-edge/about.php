@@ -19,12 +19,12 @@ get_header(); ?>
         foreach ( $fields as $field ) { ?> 
         
 				</div></div><div class="about-content-container">
-        <div class="about-title"><?php echo $field['title'];?></div> 
-          <hr />
 
-    		<div class="about-description">
-          <?php echo '<img src="' . $field['picture'] .'"/>'; ?>
-          <p class="about-text"><?php echo $field['description']; } ?></p>
+          <div class="about-description">
+            <div class="about-title"><?php echo $field['title'];?></div> 
+            <hr />
+            <?php echo '<img src="' . $field['picture'] .'"/>'; ?>
+            <p class="about-text"><?php echo $field['description']; } ?></p>
 
     </main><!-- #main -->
 	</div><!-- #primary -->
