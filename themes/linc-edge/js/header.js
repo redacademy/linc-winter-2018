@@ -2,11 +2,11 @@
 
     $(document).ready(function () {
         console.log('jsss file linked');
-        var $hamburger = $(".hamburger");
-        $hamburger.on("click", function(event) {
-            $hamburger.toggleClass("is-active");
+        var $hamburger = $('.hamburger');
+        $hamburger.on('click', function(event) {
+            $hamburger.toggleClass('is-active');
             event.preventDefault();
-            $('.menu-navigation .menu').toggleClass("is-active");
+            $('.menu-navigation .menu').toggleClass('is-active');
             // $('.menu-navigation #primary-menu').focus();
         });
       
