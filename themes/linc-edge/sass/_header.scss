@@ -37,8 +37,7 @@
       border-bottom: 1px solid #fff;
       padding-left: 1rem;
       &:hover {
-        color: #ffffff;
-        background: $color__lincedgegreen;
+        color: $color__lincedgegreen;
       }
       @include desktop {
         display: inline;
@@ -88,7 +87,16 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   color: #ffffff;
   font-size: 16px;
-  padding: 0.6rem 1rem 0.4rem 1rem;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  display: inline-block;
   // text-transform: uppercase; /* Consult */
+  }
+}
+
+#primary-menu { 
+  @include desktop {
+  margin: 10px;
+  padding: 1.5rem;
+  display: block;
   }
 }
