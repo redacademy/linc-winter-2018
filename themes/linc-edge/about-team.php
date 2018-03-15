@@ -13,27 +13,8 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
-
+   
     <!-- Get 'team' posts -->
-    <!-- <ul class="product-types-list">
-			<?php
-			$terms = get_terms ( array(
-				'taxonomy' => 'department',
-				'hide_empty' => 0,
-			));
-			if ( ! empty ($terms) ):
-			?>
-				<?php foreach ( $terms as $term ):?>
-				<li class="product-type">
-					<p>
-						<a href="<?php echo get_term_link( $term ); ?>"
-						class="btn"><?php echo $term->name; ?></a>
-					</p>
-				</li>
-			<?php endforeach; ?>
-			<?php endif; ?>
-	</ul> -->
-
     <?php
     $args = array(
         'post_type' => 'team',
@@ -93,7 +74,26 @@ get_header(); ?>
         <?php endforeach; ?>
     <?php endif; ?>
 
-
+<!-- This part is just to show taxonomy links, which we have to redirect/remove -->
+    <!-- <ul class="product-types-list">
+    <?php
+			$terms = get_terms ( array(
+				'taxonomy' => 'department',
+				'hide_empty' => 0,
+			));
+			if ( ! empty ($terms) ):
+			?>
+				<?php foreach ( $terms as $term ):?>
+				<li class="product-type">
+					<p>
+						<a href="<?php echo get_term_link( $term ); ?>"
+						class="btn"><?php echo $term->name; ?></a>
+					</p>
+				</li>
+			<?php endforeach; ?>
+			<?php endif; ?>
+    </ul> -->
+    
 <?php get_footer(); ?>
 
 
