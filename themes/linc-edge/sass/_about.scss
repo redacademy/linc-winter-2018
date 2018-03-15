@@ -49,6 +49,8 @@
       font-weight: normal;
       line-height: 30px;
       text-align: center;
+      
+      
       @include desktop {
         background-color: #ffffff; 
         border: 1px solid #ffffff;
@@ -60,6 +62,7 @@
         padding: 2.5%;
       }
       img {
+    
         height: 280px;
         width: 520px;
         padding-top: 7.5%; /* Temporary, will need to be reversed due to repositioning of images */
@@ -71,5 +74,4 @@
       }
     }
   }
-
 }

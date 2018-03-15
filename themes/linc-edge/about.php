@@ -23,9 +23,8 @@ get_header(); ?>
           <?php echo $field['title'];?></div>
           <hr width 30%  height 3px />
     		<div class="about-description">
-          <?php echo $field['description']; ?>
-          <?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
-
+          <?php echo '<img src="' . $field['picture'] .'"/>'; ?>
+		  <?php echo $field['description']; }?>
     </main><!-- #main -->
 	</div><!-- #primary -->
 
