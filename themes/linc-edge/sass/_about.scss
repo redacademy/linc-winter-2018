@@ -84,19 +84,19 @@
       .about-text {
         order: 1;
         padding: 0 20px;
-      } /* .about-text */
+      }
     } /* .about-description */
 
     &:nth-of-type(odd) {
       .about-description {
         img {
           order: 1;
-        } /* img */
+        }
         .about-text {
           order: 2;
-        } /* .about-text */
-      } /* .about-description */
-    } /* nth-of-type */
+        }
+      }
+    }
 
   } /* .about-content-container */
 
