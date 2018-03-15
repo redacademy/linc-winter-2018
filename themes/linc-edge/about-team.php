@@ -38,8 +38,10 @@ get_header(); ?>
     $args = array(
         'post_type' => 'team',
         'department' => 'general',
-        'posts_per_page' => -1, // Unlimited posts
-        'orderby' => 'title', // Order alphabetically by name
+        'posts_per_page' => -1,
+        'meta_key' => 'order_placement',
+        'orderby' => 'meta_value',
+        'order' => 'ASC'
                 );
     $team_posts = get_posts( $args );
 
@@ -49,8 +51,10 @@ get_header(); ?>
         foreach ( $team_posts as $post ): 
         setup_postdata($post);
         ?>
-
             <div class="member-profile">
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( 'medium' ); ?>
+                <?php endif; ?>
                 <h3><?php the_title(); ?></h3>
                 <?php echo CFS() -> get ('position'); ?>
                 <?php echo CFS() -> get ('biography'); ?>
@@ -62,20 +66,26 @@ get_header(); ?>
     $args2 = array(
         'post_type' => 'team',
         'department' => 'co-op',
-        'posts_per_page' => -1, // Unlimited posts
-        'orderby' => 'title', // Order alphabetically by name
+        'posts_per_page' => -1,
+        'meta_key' => 'order_placement',
+        'orderby' => 'meta_value',
+        'order' => 'ASC'
                 );
     $team_posts = get_posts( $args2 );
 
     if ( $team_posts ):
     ?>
     <h1>Co-op</h1>
+    <?php echo $term->name; ?>
         <?php 
         foreach ( $team_posts as $post ): 
         setup_postdata($post);
         ?>
 
             <div class="member-profile">
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( 'medium' ); ?>
+                <?php endif; ?>
                 <h3><?php the_title(); ?></h3>
                 <?php echo CFS() -> get ('position'); ?>
                 <?php echo CFS() -> get ('biography'); ?>
