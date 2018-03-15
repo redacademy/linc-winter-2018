@@ -80,16 +80,21 @@
   }
 }
 
+/* currently working below - Ryan */
+
 #menu-item-25 {
   @include desktop {
-  background-color: $color__lincedgegreen;
-  border-radius: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #ffffff;
-  font-size: 16px;
-  padding: 0.1rem 1rem 0.1rem 1rem;
-  display: inline-block;
-  // text-transform: uppercase; /* Consult */
+    background-color: $color__lincedgegreen;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    display: inline-block;
+    // text-transform: uppercase; /* Consult */
+    a:hover {
+      color: #ffffff;
+    }
   }
 }
 
@@ -97,6 +102,33 @@
   @include desktop {
   margin: 10px;
   padding: 1.5rem;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   }
+}
+
+#menu-item-109,
+#menu-item-110,
+#menu-item-113,
+#menu-item-114 {
+  @include desktop {
+  display: none;
+    a {
+      text-decoration: none;
+      display: block;
+      color: #ffffff;
+      background: $color__title;
+      border-bottom: 1px solid #fff;
+      padding-left: 1rem;
+      &:hover {
+        color: $color__lincedgegreen;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+ul.sub-menu {
+  background: $color__title;
+  margin: 0;  
 }
