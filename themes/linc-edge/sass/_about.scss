@@ -60,13 +60,7 @@
       font-size: 25px;
       font-weight: normal;
       line-height: 30px;
-<<<<<<< HEAD
-      text-align: center;
-      
-      
-=======
       text-align: center; // CONSULT ON USAGE //
->>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf
       @include desktop {
         background-color: #ffffff; 
         border: 1px solid #ffffff;
@@ -79,24 +73,12 @@
         width: 1080px; /* TEMPORARY SOLUTION */
       }
       img {
-<<<<<<< HEAD
-    
-        height: 280px;
-=======
         order: 2;
         height: 230px;
->>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf
         width: 520px;
         @include desktop {
           height: 410px; /* 386px initial + 7.5% (padding-top) */
           width: 590px;
-<<<<<<< HEAD
-        }
-      }
-    }
-  }
-}
-=======
         } 
       } /* img */
       .about-text {
@@ -119,4 +101,3 @@
   } /* .about-content-container */
 
 } /* .page-template-about */
->>>>>>> f1971052f4ef70d3294660ca45d50fa90d97ebcf
