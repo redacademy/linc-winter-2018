@@ -31,11 +31,22 @@
   .about-content-container {
     margin: 10%;
 
+      hr {
+        visibility: hidden;
+        @include desktop {
+          background-color: $color__lincedgegreen;
+          display: block;
+          height: 3px;
+          visibility: visible;
+          width: 20%;
+        }
+      }
+
     .about-title {
       color: $color__title;
       font-size: 32px;
       font-weight: bold;
-      padding-bottom: 7.5%;
+      // padding-bottom: 7.5%;
       text-align: center;
       text-transform: uppercase;
       @include desktop {
@@ -62,12 +73,15 @@
       img {
         height: 280px;
         width: 520px;
-        padding-top: 7.5%; /* Temporary, will need to be reversed due to repositioning of images */
         @include desktop {
           height: 410px; /* 386px initial + 7.5% (padding-top) */
-          padding-top: 0;
           width: 590px;
         }
+      }
+      .about-text {
+        padding: 0 20px;
+       
+        
       }
     }
   }
