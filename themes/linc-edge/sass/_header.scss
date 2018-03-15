@@ -1,5 +1,5 @@
 #masthead {
-  background-color: #012f46;
+  background-color: $color__title;
   height: 48px;
   @include desktop {
     height: 144px;
@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     line-height: 40px;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #ffffff;
     display: none;
     &.is-active {
       display: block;
@@ -32,13 +32,13 @@
     a {
       text-decoration: none;
       display: block;
-      color: #fff;
-      background: #012F46;
+      color: #ffffff;
+      background: $color__title;
       border-bottom: 1px solid #fff;
       padding-left: 1rem;
       &:hover {
-        color: white;
-        background: #97C13B;
+        color: #ffffff;
+        background: $color__lincedgegreen;
       }
       @include desktop {
         display: inline;
