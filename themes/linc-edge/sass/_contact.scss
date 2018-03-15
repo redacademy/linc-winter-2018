@@ -2,12 +2,29 @@
 h2,h3{
     color:$color__title;
 }
+.title-line{
+    display:none;
+    @include desktop{
+        display:block;
+        background-color: $color__lincedgegreen;
+        height:3px;
+        position: absolute;
+         top: 52%;
+         left: 36.5%;
+    
+    }
+}
 
 .entry-title{
     
     display:none;
     @include desktop{
+        font-size: 70px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
         display:block;
+        color: $color__title;
     }
 }
 .entry-content{
@@ -56,7 +73,7 @@ iframe{
     button{
     margin-top:14px;
     border-radius: 30px;
-    height:43px;
+    height:52px;
     width:240px;
     text-transform:uppercase;
     font-size:18px;
@@ -65,15 +82,18 @@ iframe{
     font-weight:bold;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
+    &:focus{
+        outline:0;
+    }
     }
     .comments-questions,.contact-form-title{
     color:$color__title;
-    font-size:20px;
+    font-size:25px;
     font-weight:bold;
     text-align:center;
     
     }
-    input[type="text"]{
+    input[type="text"],textarea{
        max-width:90%;
        margin-left:7%;
        border-radius:10px; 
@@ -85,6 +105,8 @@ iframe{
 }
 .gfield_label{
 margin-left:7%;
+font-size:17px;
+color:$color__title;
 
 }
 
@@ -92,8 +114,48 @@ margin-left:7%;
 
 
 }
-.gform_next_button{
-    width:30%;
-    margin-left: 65%;
+.gform_page_footer{
+    display:flex;
+    justify-content: space-around;
+
    
+img.gform_ajax_spinner {
+        display: none;
+    }
+#gform_next_button_1_14{
+    width:30%;
+    margin-left:60%;
+    &:focus{
+        outline:0;
+    }
+   
+}
+.gform_next_button,.gform_button{
+    width:38%;
+    height:50px;
+    border-radius: 30px;
+    text-transform:uppercase;
+    font-size:18px;
+    background-color:$color__lincedgegreen;
+    color:white;
+    font-weight:bold;
+    &:focus{
+        outline:0;
+    }
+
+}
+.gform_previous_button{
+    width:38%;
+    height:50px;
+    border-radius: 30px;
+    text-transform:uppercase;
+    font-size:18px;
+    background-color:$color__lincedgegreen;
+    color:white;
+    font-weight:bold;
+    &:focus{
+        outline:0;
+    }
+
+}
 }
