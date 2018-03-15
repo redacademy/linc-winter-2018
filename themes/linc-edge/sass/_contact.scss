@@ -8,9 +8,7 @@ h2,h3{
         display:block;
         background-color: $color__lincedgegreen;
         height:3px;
-        position: fixed;
-         top: 52%;
-         left: 36.5%;
+        
     
     }
 }
@@ -19,6 +17,7 @@ h2,h3{
     
     display:none;
     @include desktop{
+        margin-bottom:0;
         font-size: 70px;
         font-weight: bold;
         text-align: center;
@@ -28,12 +27,60 @@ h2,h3{
     }
 }
 .entry-content{
+    margin:0;
     h2{
-        text-align:center;
+        text-align:left;
         text-transform:uppercase;
         font-size:30px;
+        width:300px;
+    
+      
+        @include desktop{
+       
+            font-size:2.5rem;
+            width: 200%;
+            text-align:left;
+            margin-left:0;
+        }
         
         
+    }
+}
+.main-contact-container{
+    display:flex;
+    width:100%;
+    @include desktop{
+        margin-left: 8%;
+        margin-right: 5%;
+    }
+.message-container{
+    display:none;
+    @include desktop{
+        
+        width:43%;
+        display:block;
+        margin-left:230px;
+        // margin-top: 10px;
+        background-color:$color__title;
+        padding:15px;
+        border-radius:10px;
+        input[type="text"],textarea{
+            width:100%;
+        }
+        .gform_button{
+            width:38%;
+            height:50px;
+            border-radius: 30px;
+            text-transform:uppercase;
+            font-size:18px;
+            background-color:$color__lincedgegreen;
+            color:white;
+            font-weight:bold;
+            margin-left:60%;
+            &:focus{
+                outline:0;
+            }
+        }
     }
 }
 .contact-info-container{
@@ -54,11 +101,22 @@ h2,h3{
     }
     margin-left:7%;
     width:200px;
+    @include desktop{
+        width: 15%;
+
+    }
     .appointment{
         width:500px;
         font-size:1rem;
     }
     
+}
+.message-container{
+    .contact-desktop-title{
+        font-size:40px;
+        color:white;
+    }
+}
 }
 .map-container{
  
@@ -66,9 +124,18 @@ iframe{
     margin-left:7%;
     max-width:90%;
     height:300px;
+    @include desktop{
+        width:78%;
+        margin-left:14%;
+        margin-top:4%;
+        height:500px;
+        border-radius:10px;
+        margin-right: 5%;
+    }
 }
 }
 .question-container{
+    display:block;
     text-align:center;
     button{
     margin-top:14px;
@@ -99,6 +166,9 @@ iframe{
        border-radius:10px; 
        
     }
+    @include desktop{
+        display:none;
+    }
 }
 .gform_title {
     display: none 
@@ -107,6 +177,10 @@ iframe{
 margin-left:7%;
 font-size:17px;
 color:$color__title;
+@include desktop{
+    color:white;
+    margin-left:0;
+}
 
 }
 
