@@ -38,7 +38,7 @@
                     </a>
 
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo.svg">
+                        <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-Copyright.png">
                     </a>
 
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
