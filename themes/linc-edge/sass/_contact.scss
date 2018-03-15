@@ -1,6 +1,6 @@
 .page-id-9 {
 h2,h3{
-    color:$color__title;
+    color:$color__lincedgeblue;
 }
 .title-line{
     display:none;
@@ -23,7 +23,7 @@ h2,h3{
         text-align: center;
         text-transform: uppercase;
         display:block;
-        color: $color__title;
+        color: $color__lincedgeblue;
     }
 }
 .entry-content{
@@ -61,7 +61,7 @@ h2,h3{
         display:block;
         margin-left:230px;
         // margin-top: 10px;
-        background-color:$color__title;
+        background-color:$color__lincedgeblue;
         padding:15px;
         border-radius:10px;
         input[type="text"],textarea{
@@ -154,7 +154,7 @@ iframe{
     }
     }
     .comments-questions,.contact-form-title{
-    color:$color__title;
+    color:$color__lincedgeblue;
     font-size:25px;
     font-weight:bold;
     text-align:center;
@@ -176,7 +176,7 @@ iframe{
 .gfield_label{
 margin-left:7%;
 font-size:17px;
-color:$color__title;
+color:$color__lincedgeblue;
 @include desktop{
     color:white;
     margin-left:0;

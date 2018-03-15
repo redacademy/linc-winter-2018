@@ -1,5 +1,5 @@
 #masthead {
-  background-color: $color__title;
+  background-color: $color__lincedgeblue;
   height: 48px;
   @include desktop {
     height: 144px;
@@ -33,11 +33,11 @@
       text-decoration: none;
       display: block;
       color: #ffffff;
-      background: $color__title;
+      background: $color__lincedgeblue;
       border-bottom: 1px solid #fff;
       padding-left: 1rem;
       &:hover {
-        color: $color__lincedgegreen;
+        background: $color__lincedgegreen;
       }
       @include desktop {
         display: inline;
@@ -46,7 +46,10 @@
         border-bottom: none;
         padding-left: 0;
         margin: 0 1rem;
-        // color: skyblue;
+        &:hover {
+          background: none;
+          color: $color__lincedgegreen;
+        }
       }
     }
   }
@@ -107,6 +110,7 @@
   }
 }
 
+// Changing sub-menus on desktop view
 #menu-item-109,
 #menu-item-110,
 #menu-item-113,
@@ -117,7 +121,7 @@
       text-decoration: none;
       display: block;
       color: #ffffff;
-      background: $color__title;
+      background: $color__lincedgeblue;
       border-bottom: 1px solid #fff;
       padding-left: 1rem;
       &:hover {
@@ -129,6 +133,6 @@
 }
 
 ul.sub-menu {
-  background: $color__title;
+  background: $color__lincedgeblue;
   margin: 0;  
 }
