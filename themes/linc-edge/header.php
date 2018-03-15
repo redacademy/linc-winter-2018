@@ -33,7 +33,16 @@
                         </span>
                     </button>
 
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
+                    </a>
+
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo.svg">
+                    </a>
+
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
 
 
                 </nav><!-- .menu-navigation -->
