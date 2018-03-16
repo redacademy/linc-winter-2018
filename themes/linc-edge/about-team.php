@@ -9,9 +9,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
+                <header class="entry-header">
+                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                </header>
 			<?php endwhile; // End of the loop. ?>
    
     <!-- Get 'team' posts -->
@@ -57,7 +57,6 @@ get_header(); ?>
     if ( $team_posts ):
     ?>
     <h1>Co-op</h1>
-    <?php echo $term->name; ?>
         <?php 
         foreach ( $team_posts as $post ): 
         setup_postdata($post);

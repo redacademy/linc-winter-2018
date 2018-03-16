@@ -16,3 +16,15 @@
 		@content;
 	}
 }
+
+@mixin page-title-style {
+	@media (min-width: $desktop__width) {
+		margin-bottom: 0;
+		font-size: 70px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+		color: #012f46;
+	}
+}
