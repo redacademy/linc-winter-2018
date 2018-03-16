@@ -38,7 +38,7 @@ h2,h3{
         @include desktop{
        
             font-size:2.5rem;
-            width: 200%;
+            width: 250%;
             text-align:left;
             margin-left:0;
         }
@@ -48,7 +48,7 @@ h2,h3{
 }
 .main-contact-container{
     display:flex;
-    width:100%;
+
     @include desktop{
         margin-left: 8%;
         margin-right: 5%;
