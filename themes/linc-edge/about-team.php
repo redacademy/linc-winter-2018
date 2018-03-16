@@ -57,7 +57,6 @@ get_header(); ?>
     if ( $team_posts ):
     ?>
     <h1>Co-op</h1>
-    <?php echo $term->name; ?>
         <?php 
         foreach ( $team_posts as $post ): 
         setup_postdata($post);

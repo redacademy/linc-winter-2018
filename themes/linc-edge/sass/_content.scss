@@ -47,3 +47,9 @@
 .bypostauthor {
 	display: block;
 }
+
+
+// GLOBAL title style
+.entry-title {
+	@include page-title-style;
+}
