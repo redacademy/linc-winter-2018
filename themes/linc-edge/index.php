@@ -26,7 +26,29 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+      <?php the_posts_navigation(); ?>
+      
+        <?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
+
+          foreach ( $fields as $field ) { ?>
+          
+            <div class="features-content-container">
+              <div class="features-title"><?php echo $field['title']; ?></div>
+              <?php echo '<img src="' . $field['image'] . '"/>'; ?>
+              <p class="features-text"><?php echo $field['description']; } ?></p>
+
+        <!-- Ending "features" forEach-loop -->
+
+        <?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
+
+          foreach ( $fields as $field ) { ?>
+
+            <div class="benefits-content-container">
+              <div class="benefits-title"><?php echo $field['title']; ?></div>
+              <?php echo '<img src="' . $field['image'] . '"/>'; ?>
+              <p class="benefits-text"><?php echo $field['description']; } ?></p>
+          
+        <!-- Ending "benefits" forEach-loop -->
 
 		<?php else : ?>
 
