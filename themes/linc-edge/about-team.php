@@ -5,93 +5,108 @@ Template Name: Our Team
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-                <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                </header>
-			<?php endwhile; // End of the loop. ?>
-   
-    <!-- Get 'team' posts -->
-    <?php
-    $args = array(
-        'post_type' => 'team',
-        'department' => 'general',
-        'posts_per_page' => -1,
-        'meta_key' => 'order_placement',
-        'orderby' => 'meta_value',
-        'order' => 'ASC'
-                );
-    $team_posts = get_posts( $args );
+        <?php while ( have_posts() ) : the_post(); ?>
+            <header class="entry-header">
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            </header>
+        <?php endwhile; // End of the loop. Remaining content are custom fields ?>
+        
+<!-- Get 'team' posts -->
+<?php
+$args = array(
+    'post_type' => 'team',
+    'department' => 'general',
+    'posts_per_page' => -1,
+    'meta_key' => 'order_placement',
+    'orderby' => 'meta_value',
+    'order' => 'ASC'
+            );
+$team_posts = get_posts( $args );
 
-    if ( $team_posts ):
-    ?>
+if ( $team_posts ):
+?>
+    <div class="team-general-container">
         <?php 
         foreach ( $team_posts as $post ): 
         setup_postdata($post);
         ?>
             <div class="member-profile">
                 <?php if ( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail( 'medium' ); ?>
+                    <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h3><?php the_title(); ?></h3>
-                <?php echo CFS() -> get ('position'); ?>
-                <?php echo CFS() -> get ('biography'); ?>
-            </div>
+                <h2><?php the_title(); ?></h2>
+                <h3><?php echo CFS() -> get ('position'); ?></h3>
+                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
+                <div class="bio">
+                    <?php echo CFS() -> get ('biography'); ?>
+                </div>
+            </div><!-- .member-profile -->
         <?php endforeach; ?>
-    <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
+    </div>
+<?php endif; ?>
 
-    <?php
-    $args2 = array(
-        'post_type' => 'team',
-        'department' => 'co-op',
-        'posts_per_page' => -1,
-        'meta_key' => 'order_placement',
-        'orderby' => 'meta_value',
-        'order' => 'ASC'
-                );
-    $team_posts = get_posts( $args2 );
 
-    if ( $team_posts ):
-    ?>
-    <h1>Co-op</h1>
+<?php
+$args2 = array(
+    'post_type' => 'team',
+    'department' => 'co-op',
+    'posts_per_page' => -1,
+    'meta_key' => 'order_placement',
+    'orderby' => 'meta_value',
+    'order' => 'ASC'
+            );
+$team_posts2 = get_posts( $args2 );
+
+if ( $team_posts2 ):
+?>
+<h1 class="entry-title"><?php echo CFS()->get('additional_department'); ?></h1>
+<h2 class="team-comment"><?php echo CFS()->get('department_comment'); ?></h2>
+
+    <div class="team-co-op-container">
         <?php 
-        foreach ( $team_posts as $post ): 
+        foreach ( $team_posts2 as $post ): 
         setup_postdata($post);
-        ?>
-
+        ?>      
             <div class="member-profile">
                 <?php if ( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail( 'medium' ); ?>
+                    <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h3><?php the_title(); ?></h3>
-                <?php echo CFS() -> get ('position'); ?>
-                <?php echo CFS() -> get ('biography'); ?>
-            </div>
+                <h2><?php the_title(); ?></h2>
+                <h3><?php echo CFS() -> get ('position'); ?></h3>
+                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
+                <div class="bio">
+                    <?php echo CFS() -> get ('biography'); ?>
+                </div>
+            </div><!-- .member-profile -->
         <?php endforeach; ?>
-    <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
+    </div>
+<?php endif; ?>
+
 
 <!-- This part is just to show taxonomy links, which we have to redirect/remove -->
-    <!-- <ul class="product-types-list">
-    <?php
-			$terms = get_terms ( array(
-				'taxonomy' => 'department',
-				'hide_empty' => 0,
-			));
-			if ( ! empty ($terms) ):
-			?>
-				<?php foreach ( $terms as $term ):?>
-				<li class="product-type">
-					<p>
-						<a href="<?php echo get_term_link( $term ); ?>"
-						class="btn"><?php echo $term->name; ?></a>
-					</p>
-				</li>
-			<?php endforeach; ?>
-			<?php endif; ?>
-    </ul> -->
+<!-- <ul class="product-types-list">
+<?php
+        $terms = get_terms ( array(
+            'taxonomy' => 'department',
+            'hide_empty' => 0,
+        ));
+        if ( ! empty ($terms) ):
+        ?>
+            <?php foreach ( $terms as $term ):?>
+            <li class="product-type">
+                <p>
+                    <a href="<?php echo get_term_link( $term ); ?>"
+                    class="btn"><?php echo $term->name; ?></a>
+                </p>
+            </li>
+        <?php endforeach; ?>
+        <?php endif; ?>
+</ul> -->
     
 <?php get_footer(); ?>
 

@@ -1,3 +1,62 @@
 .page-template-about-team {
+    // 1rem = 16px | 1.25rem = 20px | 1.5rem = 24px | 2rem = 32px
+    .entry-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        // color: red;
+    }
+    h2.team-comment {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: normal;
+    }
+    .team-general-container,
+    .team-co-op-container {
+        // width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .member-profile {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        // width: 73vw;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+        img.headshot {
+            width: 185px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin: 0;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: normal;
+            margin: 0;
+            text-align: center;
+        }
+        img.arrow-show-more{
+            cursor:pointer;
+            width: 35px;
+            height: 15px;
+        }
+        p {
+            
+        }
+    }
 }
+
+
+
+// .arrow-show-more:hover {
+//     // background: red;
+// }
