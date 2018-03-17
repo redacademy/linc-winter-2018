@@ -14,23 +14,24 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 40px;
+    line-height: 50px;
     border-top: 1px solid #ffffff;
     display: none;
+    // JS on click, add class .is-active
     &.is-active {
       display: block;
     }
     @include desktop {
       display: block;
       border-top: none;
-      margin-top: 2rem;
+      margin-top: 3.5rem;
     }
 		li {
       display: inline;
-      text-align: left;
     }
     a {
       text-decoration: none;
+      font-size: 1.25rem;
       display: block;
       color: #ffffff;
       background: $color__lincedgeblue;
@@ -41,13 +42,11 @@
       }
       @include desktop {
         display: inline;
-        font-size: 20px;
         background: none;
         border-bottom: none;
         padding-left: 0;
-        margin: 0 1rem;
+        margin: 0 2rem;
         &:hover {
-            
           background: none;
           color: $color__lincedgegreen;
         }
@@ -70,67 +69,63 @@
     }
     position: absolute;
     top: 18%;
-    left: 3%;
+    left: 6.5%;
     width: 148px;
   }
 }
 
-.menu-menu-container {
-  @include desktop {
-    height: 143px;
+
+@include desktop {
+  .menu-menu-container {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    max-width: 1440px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-/* currently working below - Ryan */
-
-#menu-item-25 {
-  @include desktop {
+  li {
+    padding: 15px 0px;
+  }
+  .sub-menu {
+    position: absolute;
+    padding-left: 0;
+    z-index: 2;
+    display: none;
+    li {
+      padding-top: 15px;
+    }
+  }
+  // Home link
+  ul.menu .menu-item-156 a {
+    display: none;
+  }
+  // Sign Up link
+  ul.menu .menu-item-25 {
     background-color: $color__lincedgegreen;
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: #ffffff;
-    font-size: 16px;
-    padding: 0.1rem 1rem 0.1rem 1rem;
-    display: inline-block;
     // text-transform: uppercase; /* Consult */
+    padding: 0.5rem 0;
+    margin-right: 2rem;
     a:hover {
       color: #ffffff;
     }
   }
-}
-
-#primary-menu { 
-  @include desktop {
-  margin: 10px;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-
- 
+  .menu-item-21 {
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        right: 275px;
+      }
+    }
   }
-}
-
-
-// Changing sub-menus on desktop view
-#menu-item-109,
-#menu-item-110,
-#menu-item-113,
-#menu-item-114 {
-  @include desktop {
-  display: none;
-    a {
-      text-decoration: none;
-      display: block;
-      color: #ffffff;
-      background: $color__lincedgeblue;
-      border-bottom: 1px solid #fff;
-      padding-left: 1rem;
-      &:hover {
-        color: $color__lincedgegreen;
-        visibility: visible;
+  .menu-item-24 {
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -138,6 +133,6 @@
 
 ul.sub-menu {
   background: $color__lincedgeblue;
-  margin: 0;  
+  margin: 0;
 }
 
