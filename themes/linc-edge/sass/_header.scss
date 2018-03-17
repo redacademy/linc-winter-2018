@@ -24,6 +24,7 @@
     @include desktop {
       display: block;
       border-top: none;
+      margin-top: 3.5rem;
     }
 		li {
       display: inline;
@@ -91,7 +92,7 @@
     display: none;
   }
   // Sign Up link
-  #menu-item-25 {
+  ul#primary-menu #menu-item-25 {
     background-color: $color__lincedgegreen;
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -103,27 +104,6 @@
     }
   }
 }
-
-
-
-// Changing sub-menus on desktop view
-// #menu-item-109 {
-//   @include desktop {
-//   display: none;
-//     a {
-//       text-decoration: none;
-//       display: block;
-//       color: #ffffff;
-//       background: $color__lincedgeblue;
-//       border-bottom: 1px solid #fff;
-//       padding-left: 1rem;
-//       &:hover {
-//         color: $color__lincedgegreen;
-//         visibility: visible;
-//       }
-//     }
-//   }
-// }
 
 ul.sub-menu {
   background: $color__lincedgeblue;
