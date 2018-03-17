@@ -84,15 +84,24 @@
     margin-left: auto;
     margin-right: auto;
   }
+  li {
+    padding: 15px 0px;
+  }
   .sub-menu {
+    position: absolute;
+    padding-left: 0;
+    z-index: 2;
     display: none;
+    li {
+      padding-top: 15px;
+    }
   }
   // Home link
-  ul#primary-menu #menu-item-156 a {
+  ul.menu .menu-item-156 a {
     display: none;
   }
   // Sign Up link
-  ul#primary-menu #menu-item-25 {
+  ul.menu .menu-item-25 {
     background-color: $color__lincedgegreen;
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -101,6 +110,23 @@
     margin-right: 2rem;
     a:hover {
       color: #ffffff;
+    }
+  }
+  .menu-item-21 {
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        right: 275px;
+      }
+    }
+  }
+  .menu-item-24 {
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
