@@ -20,11 +20,11 @@ get_header(); ?>
         
 				</div></div><div class="about-content-container">
 
-          <div class="about-description">
-            <div class="about-title"><?php echo $field['title'];?></div> 
+          <div class="about-container">
+            <div class="about-text-group"><p class="about-title"><?php echo $field['title'];?></p></div>
             <hr />
-            <?php echo '<img src="' . $field['picture'] .'"/>'; ?>
-            <p class="about-text"><?php echo $field['description']; } ?></p>
+            <div class="about-text-group"><p class="about-description"><?php echo $field['description']; ?></p></div>
+            <?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
 
     </main><!-- #main -->
 	</div><!-- #primary -->

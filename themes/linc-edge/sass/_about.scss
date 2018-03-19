@@ -32,7 +32,7 @@
 
     margin: 10%;
 
-    .about-description {
+    .about-container {
       color: $color__text-main;
       font-size: 25px;
       font-weight: normal;
@@ -62,6 +62,7 @@
         }
       } /* .about-title */
   
+    
       hr {
         background-color: $color__lincedgegreen;
         display: block;
@@ -83,19 +84,19 @@
         }
       } /* img */
 
-      .about-text {
+      .about-description {
         order: 1;
         padding: 0 20px;
       }
 
-    } /* .about-description */
+    } /* .about-container */
 
     &:nth-of-type(odd) {
-      .about-description {
+      .about-container {
         img {
           order: 1;
         }
-        .about-text {
+        .about-description {
           order: 2;
         }
       }
