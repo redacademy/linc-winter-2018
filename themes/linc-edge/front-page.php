@@ -20,9 +20,10 @@ get_header(); ?>
 				 <div class="banner-text"> <?php echo $bannercontainer['banner_text'];?></div>
 				 <div class="download-container">
 				 <div class="download-pics"><?php echo '<img src="' . $bannercontainer['googleimage'] . '"/>';?></div>
-				 <div class="download-pics"><?php echo '<img src="' . $bannercontainer['appleimage']. '"/>'; }?></div>
+				 <div class="download-pics2"><?php echo '<img src="' . $bannercontainer['appleimage']. '"/>'; }?></div>
 				 </div>
 		</div>
+	<div class="signup-front"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
 		  <div class="theproblem-heading"><?php echo CFS()->get( 'heading' ); ?> </div>
 		  <div class="theproblem-description"><?php echo CFS()->get ('heading1_description'); ?></div>
 		</main><!-- #main -->
