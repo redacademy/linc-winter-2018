@@ -11,6 +11,19 @@ margin-top:-24px;
     justify-content: center;
     height:60%;
     align-items:center;
+    font-size:1.25rem;
+}
+.download-container{
+    display:flex;
+    justify-content:space-around;
+    margin-left:10%;
+    margin-right:10%;
+
+    .download-pics{
+    width:100px;
+    height:32px;
+
+    }
 }
 
 @include desktop{
