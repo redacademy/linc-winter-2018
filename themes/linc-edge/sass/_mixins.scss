@@ -18,6 +18,7 @@
 }
 
 @mixin page-title-style {
+
 	@media (min-width: $desktop__width) {
 		margin-bottom: 0;
 		font-size: 70px;

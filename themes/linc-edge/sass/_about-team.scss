@@ -1,18 +1,12 @@
 .page-template-about-team {
     // 1rem = 16px | 1.25rem = 20px | 1.5rem = 24px | 2rem = 32px
-    .entry-title {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        // color: red;
-    }
     h2.team-comment {
         width: 75%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 1rem auto 3.5rem auto;
         text-align: center;
         font-size: 1.25rem;
         font-weight: normal;
+        line-height: 1.25;
     }
     .team-general-container,
     .team-co-op-container {
@@ -28,29 +22,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        margin-bottom: 2.5rem;
         img.headshot {
             width: 185px;
+            margin-bottom: 0.75rem;
         }
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
             margin: 0;
             text-align: center;
+            color: $color__lincedgeblue; 
         }
         h3 {
             font-size: 1.15rem;
             font-weight: normal;
             margin: 0;
             text-align: center;
-        }
-        img.arrow-show-more{
-            cursor:pointer;
-            width: 35px;
-            height: 15px;
-        }
-        p {
-            
+            margin-bottom: 0.75rem;
         }
     }
     .collapseomatic {
@@ -62,10 +51,40 @@
     }
     .collapseomatic_content {
         margin-left: 0;
+        p {
+            margin-top: 0;
+        }
+    }
+    .additional-title {
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: $color__lincedgeblue; 
     }
 }
 
-
+.page-template-about-team {
+    //make these globals eventually
+    .entry-title {
+        padding: 1.5rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: $color__lincedgeblue; 
+    }
+    #masthead {
+        position: fixed;
+        top: 0;
+        // left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    .site-content {
+        margin-top: 48px;
+        background: #fff;
+    }
+}
 
 // .arrow-show-more:hover {
 //     // background: red;

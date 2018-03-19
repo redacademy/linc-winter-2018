@@ -44,7 +44,7 @@ if ( $team_posts ):
                 $content = CFS() -> get ('biography');
                 $content = str_replace( ']]>', ']]>', $content );
                 echo do_shortcode('[expand title="" 
-                notitle="true" 
+                alt="Show biography" 
                 trigpos="below" 
                 trigclass="expand-bio"
                 targclass="bio"]'
@@ -70,7 +70,7 @@ $team_posts2 = get_posts( $args2 );
 
 if ( $team_posts2 ):
 ?>
-<h1 class="entry-title"><?php echo CFS()->get('additional_department'); ?></h1>
+<h1 class="additional-title"><?php echo CFS()->get('additional_department'); ?></h1>
 <h2 class="team-comment"><?php echo CFS()->get('department_comment'); ?></h2>
 
     <div class="team-co-op-container">
@@ -89,7 +89,7 @@ if ( $team_posts2 ):
                 $content = CFS() -> get ('biography');
                 $content = str_replace( ']]>', ']]>', $content );
                 echo do_shortcode('[expand title="" 
-                notitle="true" 
+                alt="Show biography" 
                 trigpos="below" 
                 trigclass="expand-bio"
                 targclass="bio"]'

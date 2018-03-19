@@ -50,6 +50,9 @@
 
 
 // GLOBAL title style
+h1 {
+	margin: 0;
+}
 .entry-title {
 	@include page-title-style;
 }
