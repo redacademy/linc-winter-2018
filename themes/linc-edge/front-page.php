@@ -13,13 +13,16 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
-		  <div class="banner-container">
-		 	 <div class="banner-text"> <?php echo CFS()->get( 'banner_text' );?> </div>
-			 	<div class="download-container">  
-				 <div class="download-pics"><?php echo '<img src="' . CFS()->get( 'googleimage' ) . '"/>'; ?></div>  
-				 <div class="download-pics"><?php echo '<img src="' . CFS()->get( 'appleimage' ) .'"/>'; ?></div>
-				</div>
-		  </div>
+
+		<div class="banner-container">
+		  <?php $bannercontainers = CFS()->get( 'banners' );
+			foreach ( $bannercontainers as $bannercontainer ) { ?>
+				 <div class="banner-text"> <?php echo $bannercontainer['banner_text'];?></div>
+				 <div class="download-container">
+				 <div class="download-pics"><?php echo '<img src="' . $bannercontainer['googleimage'] . '"/>';?></div>
+				 <div class="download-pics"><?php echo '<img src="' . $bannercontainer['appleimage']. '"/>'; }?></div>
+				 </div>
+		</div>
 		  <div class="theproblem-heading"><?php echo CFS()->get( 'heading' ); ?> </div>
 		  <div class="theproblem-description"><?php echo CFS()->get ('heading1_description'); ?></div>
 		</main><!-- #main -->

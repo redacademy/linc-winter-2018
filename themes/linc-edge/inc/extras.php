@@ -25,7 +25,7 @@ function lincedge_hero_image(){
 	if ( !is_page_template( 'front-page.php' ) ) {
 		return;
 	}else{
-		$CFS_url = CFS()->get( 'banner' );
+		$CFS_url = CFS()->get( 'bannerimage' );
 		if (!$CFS_url){
 			return;
 		}
