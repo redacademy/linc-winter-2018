@@ -23,9 +23,14 @@ get_header(); ?>
 				 <div class="download-pics2"><?php echo '<img src="' . $bannercontainer['appleimage']. '"/>'; }?></div>
 				 </div>
 		</div>
-	<div class="signup-front"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
-		  <div class="theproblem-heading"><?php echo CFS()->get( 'heading' ); ?> </div>
-		  <div class="theproblem-description"><?php echo CFS()->get ('heading1_description'); ?></div>
+					<div class="signup-front"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
+
+	<div class="afterbanner-container">
+			<?php $afterbannertexts = CFS()->get( 'after_banner_text' );
+			foreach ($afterbannertexts as $afterbannertext ) {?>
+		  <div class="theproblem-heading"> <?php echo $afterbannertext['heading']; ?> </div>
+		  <div class="theproblem-description"> <?php echo $afterbannertext['heading1_description']; }?> </div>
+	</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
