@@ -12,30 +12,30 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-			<?php endwhile; // End of the loop. ?>
+			<?php endwhile; ?>
 
-      <?php $fields = CFS()->get( 'action_description' );
+      <div class="about-container">
+
+        <?php $fields = CFS()->get( 'action_description' );
       
-        foreach ( $fields as $field ) { ?> 
-        
-        </div></div>
-        
-        <div class="about-container">
+        foreach ( $fields as $field ): ?> 
 
-          <div class="about-content-container">
+            <div class="about-content-container">
 
-            <div class="about-text-group">
-              <p class="about-title"><?php echo $field['title'];?></p>
-              <p class="about-description"><?php echo $field['description']; ?></p>
-            </div><!-- .about-text-group -->
+              <div class="about-text-group">
+                <p class="about-title"><?php echo $field['title'];?></p>
+                <p class="about-description"><?php echo $field['description']; ?></p>
+              </div><!-- .about-text-group -->
 
-            <div class="about-image-group">
-              <?php echo '<img src="' . $field['picture'] .'"/>'; } ?>
-            </div><!-- .about-image-group -->
+              <div class="about-image-group">
+                <?php echo '<img src="' . $field['picture'] .'"/>';  ?>
+              </div><!-- .about-image-group -->
+                
+            </div><!-- .about-content-container -->
+          
+        <?php endforeach; ?>
 
-          </div><!-- .about-content-container -->
-        
-        </div><!-- .about-container -->
+      </div><!-- .about-container -->
 
     </main><!-- #main -->
 	</div><!-- #primary -->
