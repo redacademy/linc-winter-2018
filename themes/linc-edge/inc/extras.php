@@ -20,3 +20,24 @@ function linc_edge_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'linc_edge_body_classes' );
+
+function lincedge_hero_image(){
+	if ( !is_page_template( 'front-page.php' ) ) {
+		return;
+	}else{
+		$CFS_url = CFS()->get( 'banner' );
+		if (!$CFS_url){
+			return;
+		}
+		$CSS =".page-template-front-page .banner-container{
+		background: 
+		url({$CFS_url}) no-repeat center top;
+		background-size:cover;
+		height:250px;
+
+		}";
+		wp_add_inline_style ('red-starter-style',$CSS);
+	} 
+}
+ 
+add_action("wp_enqueue_scripts" , 'lincedge_hero_image');
