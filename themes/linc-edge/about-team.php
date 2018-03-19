@@ -10,7 +10,7 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
             <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
             </header>
         <?php endwhile; // End of the loop. Remaining content are custom fields ?>
         
