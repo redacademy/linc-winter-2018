@@ -43,6 +43,12 @@ if ( $team_posts ):
                 <div class="bio">
                     <?php echo CFS() -> get ('biography'); ?>
                 </div>
+                <?php echo do_shortcode("[expand title='testing simple']description[/expand]"); ?>
+                <?php
+                $content = CFS() -> get ('biography');
+                $content = str_replace( ']]>', ']]>', $content );
+                echo do_shortcode('[expand title="Replace with Green Arrow"]'.$content.'[/expand]');
+                ?>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
@@ -81,6 +87,7 @@ if ( $team_posts2 ):
                 <div class="bio">
                     <?php echo CFS() -> get ('biography'); ?>
                 </div>
+                <?php echo do_shortcode("[expand title='DESCRIPTION']description[/expand]"); ?>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>

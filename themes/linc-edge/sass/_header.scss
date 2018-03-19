@@ -2,9 +2,13 @@
   background-color: $color__lincedgeblue;
   height: 48px;
   @include desktop {
-    height: 144px;
+    height: 143px;
   }
-  // position: fixed
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 9999;
 }
 
 .menu-navigation {
