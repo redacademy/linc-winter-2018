@@ -39,15 +39,16 @@ if ( $team_posts ):
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <h3><?php echo CFS() -> get ('position'); ?></h3>
-                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
-                <div class="bio">
-                    <?php echo CFS() -> get ('biography'); ?>
-                </div>
-                <?php echo do_shortcode("[expand title='testing simple']description[/expand]"); ?>
+
                 <?php
                 $content = CFS() -> get ('biography');
                 $content = str_replace( ']]>', ']]>', $content );
-                echo do_shortcode('[expand title="Replace with Green Arrow"]'.$content.'[/expand]');
+                echo do_shortcode('[expand title="" 
+                notitle="true" 
+                trigpos="below" 
+                trigclass="expand-bio"
+                targclass="bio"]'
+                .$content.'[/expand]');
                 ?>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
@@ -83,11 +84,17 @@ if ( $team_posts2 ):
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <h3><?php echo CFS() -> get ('position'); ?></h3>
-                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
-                <div class="bio">
-                    <?php echo CFS() -> get ('biography'); ?>
-                </div>
-                <?php echo do_shortcode("[expand title='DESCRIPTION']description[/expand]"); ?>
+                
+                <?php
+                $content = CFS() -> get ('biography');
+                $content = str_replace( ']]>', ']]>', $content );
+                echo do_shortcode('[expand title="" 
+                notitle="true" 
+                trigpos="below" 
+                trigclass="expand-bio"
+                targclass="bio"]'
+                .$content.'[/expand]');
+                ?>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
