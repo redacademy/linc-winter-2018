@@ -68,6 +68,7 @@
             width: auto;
             @include desktop {
                 margin-left: 2rem;
+                width: 100%;
             }
         }
     }
@@ -89,7 +90,7 @@
         display: block;
         margin: 0 auto;
         @include desktop {
-            // margin-left: 10vw;
+            margin: 0 60% 0 40%;
         }
     }
     .additional-title {
@@ -98,6 +99,11 @@
         text-transform: uppercase;
         font-size: 1.5rem;
         color: $color__lincedgeblue; 
+        @include desktop {
+            font-size: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 }
 

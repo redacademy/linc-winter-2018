@@ -40,6 +40,9 @@ if ( $team_posts ):
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
                     <h3><?php echo CFS() -> get ('position'); ?></h3>
+                    <!-- <div class="testing-excerpt"> -->
+                        <!-- <?php echo CFS() -> get ('biography'); ?> -->
+                    <!-- </div> -->
 
                     <?php
                     $content = CFS() -> get ('biography');
@@ -72,7 +75,7 @@ $team_posts2 = get_posts( $args2 );
 
 if ( $team_posts2 ):
 ?>
-<h1 class="additional-title"><?php echo CFS()->get('additional_department'); ?></h1>
+<h1 class="additional-title"><span class="title-underline"><?php echo CFS()->get('additional_department'); ?></span></h1>
 <h2 class="team-comment"><?php echo CFS()->get('department_comment'); ?></h2>
 
     <div class="team-co-op-container">
@@ -84,19 +87,22 @@ if ( $team_posts2 ):
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h2><?php the_title(); ?></h2>
-                <h3><?php echo CFS() -> get ('position'); ?></h3>
-                
-                <?php
-                $content = CFS() -> get ('biography');
-                $content = str_replace( ']]>', ']]>', $content );
-                echo do_shortcode('[expand title="" 
-                alt="Show biography" 
-                trigpos="below" 
-                trigclass="expand-bio"
-                targclass="bio"]'
-                .$content.'[/expand]');
-                ?>
+
+                <div class="member-profile-inner">
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo CFS() -> get ('position'); ?></h3>
+
+                    <?php
+                    $content = CFS() -> get ('biography');
+                    $content = str_replace( ']]>', ']]>', $content );
+                    echo do_shortcode('[expand title="" 
+                    alt="Show biography" 
+                    trigpos="below" 
+                    trigclass="expand-bio"
+                    targclass="bio"]'
+                    .$content.'[/expand]');
+                    ?>
+                </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
