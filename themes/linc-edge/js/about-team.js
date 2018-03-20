@@ -33,9 +33,23 @@
 
             // Hide excerpt on collapse-o-matic click
             var $toggle_bio = $('.expand-bio');
-            $toggle_bio.on('click', function(event) {
-                console.log('hide excerpt')
+            $('.expand-bio').on('click', function(event) {
+                console.log('hide excerpt');
+                $(this).siblings('.bio-excerpt').hide();
+                // $(this).addClass('colomat-expand-only');
+                $(this).hide();
+                // console.log($(this).siblings('.bio-excerpt'));
+
+                // setTimeout(function(){
+                //     $('.colomat-close').on('click', function(event) {
+                //         console.log('click');
+                //         $(this).siblings('.bio-excerpt').show();
+                //     });
+                // }, 100);
+                
             });
+
+
         }
     });
     
