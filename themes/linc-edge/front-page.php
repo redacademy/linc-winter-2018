@@ -64,6 +64,8 @@ get_header(); ?>
 			<p class="features-title"><?php echo $featurecontainer['features_text']; }?>
 	</div>
 
+	<div class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> learn more </a></div>
+
 
 
 
