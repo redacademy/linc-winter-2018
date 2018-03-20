@@ -40,9 +40,9 @@ if ( $team_posts ):
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
                     <h3><?php echo CFS() -> get ('position'); ?></h3>
-                    <!-- <div class="testing-excerpt"> -->
-                        <!-- <?php echo CFS() -> get ('biography'); ?> -->
-                    <!-- </div> -->
+                    <div class="bio-excerpt">
+                        <?php echo CFS() -> get ('biography'); ?>
+                    </div>
 
                     <?php
                     $content = CFS() -> get ('biography');
@@ -91,7 +91,10 @@ if ( $team_posts2 ):
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
                     <h3><?php echo CFS() -> get ('position'); ?></h3>
-
+                    <div class="bio-excerpt">
+                        <?php echo CFS() -> get ('biography'); ?>
+                    </div>
+                    
                     <?php
                     $content = CFS() -> get ('biography');
                     $content = str_replace( ']]>', ']]>', $content );
