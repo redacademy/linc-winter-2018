@@ -1,9 +1,15 @@
 .page-template-front-page{
 
 
-    //ASK JIM ABOUT THIS, NEGATIVE MARGIN
+
 .banner-container{
 margin-top:-24px;
+@include desktop{
+    //ASK JIM ABOUT THIS
+    height:690px !important;
+
+    
+}
 .banner-text{
     color:white;
     font-weight:bold;
@@ -12,30 +18,44 @@ margin-top:-24px;
     height:60%;
     align-items:center;
     font-size:1.25rem;
+    @include desktop{
+    font-size:2.5rem;
+    height:50%;
+    }
 }
 .download-container{
     display:flex;
     justify-content:space-around;
     margin-left:10%;
     margin-right:10%;
+    @include desktop{
+      margin-left:30%;
+      margin-right:30%;
+    }
 
     .download-pics{
     width:100px;
     height:32px;
+    @include desktop{
+        height:50px;
+        width:170px;
+    }
     }
     .download-pics2{
         width:88px;
         height:32px;
+        @include desktop{
+            height:50px;
+            width:170px;
+        }
     }
 }
 
-@include desktop{
-    
-}
+
 
 
 }
-.signup-front{
+.signup-front,.learnmore-front,.signup-front2{
 
     border-radius: 30px;
     height: 52px;
@@ -48,15 +68,23 @@ margin-top:-24px;
     display:flex;
     justify-content: center;
     align-items:center;
+    margin:8% auto;
 
-    margin:0 auto;
-    margin-top:5%;
     a{
         text-decoration: none;
         color:white;
 
      
     }
+
+}
+.signup-front{
+    @include desktop{
+        display:none;
+    }
+}
+.signup-front2{
+    display:none;
 }
 .theproblem-heading{
     text-align:center;
@@ -66,12 +94,126 @@ margin-top:-24px;
     text-transform: uppercase;
     margin-top:5%;
     margin-bottom:4%;
+    @include desktop{
+
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        color: #012f46;
+    }
 }
 .theproblem-description{
-
     font-size:20px;
     width:85%;
     margin:0 auto;
+    @include desktop{
+        line-height:36px;
+        width:1000px;
+    }
+}
+.benefits-header,.features-header{
+    font-size:24px;
+    text-transform:uppercase;
+    color:$color__lincedgeblue;
+    font-weight:bold;
+    margin-top:7%;
+    text-align: center;
+    @include desktop{
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        color: #012f46;
+
+    }
+
+}
+.benefits-container,.features-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top:5%;
+    @include desktop{
+        flex-direction:row;
+        justify-content:space-between;
+        width:80%;
+        margin:0 auto;
+        margin-top:5%;
+    }
+   
+  
+    .benefits-image,.features-image{
+
+        width:180px;
+        height:180px;
+        @include desktop{
+            width:285px;
+            height:285px;
+        }
+
+    }
+    .benefits-title,.features-title{
+        text-align:center;
+
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        font-size:18px;
+        margin-top:10%;
+    }
+    p{
+        margin-bottom:0;
+    }
+   
+.howworks-container{
+    width: 100%;
+
+   
+}
+
+}
+
+.howworks-header{
+    font-size:24px;
+    text-transform:uppercase;
+    color:$color__lincedgeblue;
+    font-weight:bold;
+    margin-top:7%;
+    text-align:center;
+}
+.carousel{
+
+    height: 250px;
+    width:100%;
+    margin-top:10%;
+    img{
+        width:30%;
+        height:30%;
+    }
+    .carousel-cell{
+        width: 100%;
+        height: 200px;
+        text-align:center;
+
+      
+    }
+    .flickity-page-dots{
+        bottom: 5%;
+    }
+    .flickity-button{
+        display:none;
+    }
+    .howworks-title{
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        width:50%;
+        margin:0 auto;
+        margin-top:8%;
+    }
+
 }
 
 

@@ -20,22 +20,45 @@ get_header(); ?>
       
         foreach ( $fields as $field ): ?> 
 
-            <div class="about-content-container">
+          <div class="about-content-container">
 
-              <div class="about-text-group">
-                <p class="about-title"><?php echo $field['title'];?></p>
-                <p class="about-description"><?php echo $field['description']; ?></p>
-              </div><!-- .about-text-group -->
+            <div class="about-text-group">
+              <p class="about-title"><?php echo $field['title'];?></p>
+              <p class="about-description"><?php echo $field['description']; ?></p>
+            </div><!-- .about-text-group -->
 
-              <div class="about-image-group">
-                <?php echo '<img src="' . $field['picture'] .'"/>';  ?>
-              </div><!-- .about-image-group -->
-                
-            </div><!-- .about-content-container -->
+            <div class="about-image-group">
+              <?php echo '<img src="' . $field['picture'] .'"/>';  ?>
+            </div><!-- .about-image-group -->
+              
+          </div><!-- .about-content-container -->
           
         <?php endforeach; ?>
 
       </div><!-- .about-container -->
+
+
+
+	
+	<div class="customer-container">
+			<div class="customer-header">	<?php echo CFS()->get( 'customer_header' ); ?></div>
+				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+			<?php $customers = CFS()->get('customer_logo');
+			foreach ($customers as $customer ): ?>
+				<div class="customer-content-container">
+					<div class="customer-image-group">
+						<?php echo '<img src="' . $customer['image'] . '"/>';?>
+					</div>
+				</div>
+		<?php endforeach; ?>
+      </div><!-- / carousel -->
+    </div>
+
+
+
+
+      
+
 
     </main><!-- #main -->
 	</div><!-- #primary -->

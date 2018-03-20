@@ -31,9 +31,10 @@
   .about-container {
 
     .about-content-container {
+      background-color: #ffffff; 
       display: flex;
       flex-direction: column;
-      margin: 10%;
+      padding: 10%;
       justify-content: center;
       @include desktop {
         align-items: center;
@@ -43,6 +44,8 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        margin: 10%;
+        padding: 0;
       }
     } /* .about-content-container */ 
 
@@ -91,18 +94,71 @@
       } /* img */
     } /* .about-image-group */
 
-   
-      .about-content-container {
-        &:nth-of-type(odd) {
-          .about-image-group {
-            order: 2;
-          }
-          .about-text-group {
-            order: 1;
-          }
+    .about-content-container {
+      &:nth-of-type(odd) {
+        .about-image-group {
+          order: 2;
         }
-      } /* .about-content-container */
+        .about-text-group {
+          order: 1;
+        }
+      }
+    } /* .about-content-container (nth-of-type) */
 
   } /* .about-container */
 
+  // .customer-content-container {
+  //   background-color: $color__background-body;
+  //   @include desktop {
+  //     background-color: #ffffff;
+  //   }
+  // } /* customer-container */
+
+  // .customer-image-group {
+  //   display: flex; 
+  //   justify-content: space-between;
+  //   img {
+  //     height: 25%;
+  //     width: 25%;
+  //   } /* img */
+  // } /* .about-image-group */
+
+  .customer-content-container{
+    width:100%;
+    text-align:center;
+  }
+  .flickity-viewport{
+    height:200px !important;
+  }
+  .carousel{
+    height:300px;
+    width:100%;
+    margin-top:10%;
+    img{
+      margin-top: 25%;
+        width:250px;
+        height:100px;
+    }
+    .carousel-cell{
+        width: 100%;
+        height: 200px;
+        
+
+      
+    }
+    .flickity-page-dots{
+        bottom: 10%;
+    }
+    .flickity-button{
+        display:none;
+    }
+  }
+  .customer-header{
+    font-size:24px;
+    text-transform:uppercase;
+    color:$color__lincedgeblue;
+    font-weight:bold;
+    margin-top:7%;
+    text-align:center;
+  }
 } /* .page-template-about */
