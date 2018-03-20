@@ -37,23 +37,28 @@ get_header(); ?>
 
       </div><!-- .about-container -->
 
-      <div class="customer-container">
 
-        <?php $fields = CFS()->get( 'customer_logo' );
 
-        foreach ( $fields as $field ): ?>
+	
+	<div class="customer-container">
+			<div class="customer-header">	<?php echo CFS()->get( 'customer-header' ); ?></div>
+				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+			<?php $customers = CFS()->get('customer_logo');
+			foreach ($customers as $customer ): ?>
+				<div class="customer-content-container">
+					<div class="customer-image-group">
+						<?php echo '<img src="' . $customer['image'] . '"/>';?>
+					</div>
+				</div>
+		<?php endforeach; ?>
+      </div><!-- / carousel -->
+    </div>
 
-          <div class="customer-content-container">
 
-            <div class="customer-image-group">
-              <?php echo '<img src="' . $field['image'] . '"/>'; ?>
-            </div><!-- .customer-image-group -->
 
-          </div><!-- .customer-content-container -->
 
-        <?php endforeach; ?>
+      
 
-      </div><!-- .customer-container -->
 
     </main><!-- #main -->
 	</div><!-- #primary -->
