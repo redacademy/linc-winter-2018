@@ -31,6 +31,40 @@ get_header(); ?>
 		  <div class="theproblem-heading"> <?php echo $afterbannertext['heading']; ?> </div>
 		  <div class="theproblem-description"> <?php echo $afterbannertext['heading1_description']; }?> </div>
 	</div>
+
+	<div class="benefits-container">
+			<div class="benefits-header">	<?php echo CFS()->get( 'benefits_header' ); ?></div>
+			<?php $benefitscontainers = CFS()->get('benefits_container');
+			foreach ($benefitscontainers as $benefitcontainer ) {?>
+			<div class="benefits-image"><?php echo '<img src="' . $benefitcontainer['benefits_image'] . '"/>';?></div>
+			<p class="benefits-title"><?php echo $benefitcontainer['benefits_text']; }?>
+
+	
+	<div class="howworks-container">
+			<div class="howworks-header">	<?php echo CFS()->get( 'howworks_header' ); ?></div>
+	
+
+				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+			<?php $howworkscontainers = CFS()->get('howworks_container');
+			foreach ($howworkscontainers as $howworkcontainer ): ?>
+				<div class="carousel-cell">
+					<div class="howworks-image">
+						<?php echo '<img src="' . $howworkcontainer['howworks_image'] . '"/>';?>
+					</div>
+					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
+				</div>
+		<?php endforeach; ?>
+		</div><!-- / carousel -->
+
+
+
+
+
+
+
+
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

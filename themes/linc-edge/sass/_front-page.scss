@@ -68,10 +68,87 @@ margin-top:-24px;
     margin-bottom:4%;
 }
 .theproblem-description{
-
     font-size:20px;
     width:85%;
     margin:0 auto;
+}
+.benefits-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top:5%;
+   
+    .benefits-header{
+        font-size:24px;
+        text-transform:uppercase;
+        color:$color__lincedgeblue;
+        font-weight:bold;
+        margin-top:7%;
+
+    }
+    .benefits-image{
+
+        width:180px;
+        height:180px;
+
+
+    }
+    .benefits-title{
+        text-align:center;
+
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        font-size:18px;
+        margin-top:10%;
+    }
+    p{
+        margin-bottom:0;
+    }
+.howworks-container{
+    width: 100%;
+
+    .howworks-header{
+        font-size:24px;
+        text-transform:uppercase;
+        color:$color__lincedgeblue;
+        font-weight:bold;
+        margin-top:7%;
+        text-align:center;
+    }
+}
+
+}
+.carousel{
+
+    height:300px;
+    width:100%;
+    margin-top:10%;
+    img{
+        width:30%;
+        height:30%;
+    }
+    .carousel-cell{
+        width: 100%;
+        height: 200px;
+        text-align:center;
+
+      
+    }
+    .flickity-page-dots{
+        bottom: 30%;
+    }
+    .flickity-button{
+        display:none;
+    }
+    .howworks-title{
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        width:50%;
+        margin:0 auto;
+        margin-top:8%;
+    }
+
 }
 
 
