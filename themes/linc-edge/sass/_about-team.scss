@@ -27,16 +27,19 @@
             position: relative;
             background: #fff;
             min-height: 200px;
-            height: auto;
+
+            flex-direction: row;
+            // align-items: flex-start;
+            // margin-right: 10px;
         }
         img.headshot {
             width: 185px;
             margin-bottom: 0.75rem;
             @include desktop {
                 margin: 0;
-                position: absolute;
-                left: 0;
-                top: 11px;
+                // position: absolute;
+                // left: 0;
+                // top: 11px;
             }
         }
         h2 {
@@ -47,6 +50,7 @@
             color: $color__lincedgeblue;
             @include desktop {
                 font-size: 2rem;
+                text-align: left;
             }
         }
         h3 {
@@ -55,6 +59,16 @@
             margin: 0;
             text-align: center;
             margin-bottom: 0.75rem;
+            @include desktop {
+                text-align: left;
+            }
+        }
+        .member-profile-inner {
+            height: auto;
+            width: auto;
+            @include desktop {
+                margin-left: 2rem;
+            }
         }
     }
     .collapseomatic {
@@ -69,6 +83,13 @@
         p {
             margin-top: 0;
             margin-bottom: 1rem;
+        }
+    }
+    .expand-bio {
+        display: block;
+        margin: 0 auto;
+        @include desktop {
+            // margin-left: 10vw;
         }
     }
     .additional-title {

@@ -37,19 +37,21 @@ if ( $team_posts ):
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h2><?php the_title(); ?></h2>
-                <h3><?php echo CFS() -> get ('position'); ?></h3>
+                <div class="member-profile-inner">
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo CFS() -> get ('position'); ?></h3>
 
-                <?php
-                $content = CFS() -> get ('biography');
-                $content = str_replace( ']]>', ']]>', $content );
-                echo do_shortcode('[expand title="" 
-                alt="Show biography" 
-                trigpos="below" 
-                trigclass="expand-bio"
-                targclass="bio"]'
-                .$content.'[/expand]');
-                ?>
+                    <?php
+                    $content = CFS() -> get ('biography');
+                    $content = str_replace( ']]>', ']]>', $content );
+                    echo do_shortcode('[expand title="" 
+                    alt="Show biography" 
+                    trigpos="below" 
+                    trigclass="expand-bio"
+                    targclass="bio"]'
+                    .$content.'[/expand]');
+                    ?>
+                </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
