@@ -36,13 +36,18 @@ get_header(); ?>
 		  <div class="theproblem-description"> <?php echo $afterbannertext['heading1_description']; }?> </div>
 	</div>
 
+
+
+	<div class="benefits-header">	<?php echo CFS()->get( 'benefits_header' ); ?></div>
 	<div class="benefits-container">
-			<div class="benefits-header">	<?php echo CFS()->get( 'benefits_header' ); ?></div>
 			<?php $benefitscontainers = CFS()->get('benefits_container');
-			foreach ($benefitscontainers as $benefitcontainer ) {?>
+			foreach ($benefitscontainers as $benefitcontainer ): ?>
+			<div>
 			<div class="benefits-image"><?php echo '<img src="' . $benefitcontainer['benefits_image'] . '"/>';?></div>
-			<p class="benefits-title"><?php echo $benefitcontainer['benefits_text']; }?>
-	</div>
+			<p class="benefits-title"><?php echo $benefitcontainer['benefits_text'];?>
+			</div>
+				<?php endforeach; ?>
+			</div>
 
 	
 	<div class="howworks-container">
@@ -57,17 +62,20 @@ get_header(); ?>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
 				</div>
 		<?php endforeach; ?>
+			</div>
 		</div><!-- / carousel -->
 
 
+	<div class="features-header">	<?php echo CFS()->get( 'features_header' ); ?></div>
 	<div class="features-container">
-			<div class="features-header">	<?php echo CFS()->get( 'features_header' ); ?></div>
 			<?php $featurescontainers = CFS()->get('features_container');
-			foreach ($featurescontainers as $featurecontainer ) {?>
+			foreach ($featurescontainers as $featurecontainer ):?>
+			<div>
 			<div class="features-image"><?php echo '<img src="' . $featurecontainer['features_image'] . '"/>';?></div>
-			<p class="features-title"><?php echo $featurecontainer['features_text']; }?>
+			<p class="features-title"><?php echo $featurecontainer['features_text']; ?>
 	</div>
-
+	<?php endforeach; ?>
+		</div>
 	<div class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> learn more </a></div>
 
 <!-- testimonials -->
