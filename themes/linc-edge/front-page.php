@@ -62,8 +62,21 @@ get_header(); ?>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
 				</div>
 		<?php endforeach; ?>
-			</div>
-		</div><!-- / carousel -->
+			</div><!-- / carousel -->
+			
+			<div class="non-carousel">
+			<?php $howworkscontainers = CFS()->get('howworks_container');
+			foreach ($howworkscontainers as $howworkcontainer ): ?>
+				<div class="hw-inner-container">
+					<div class="howworks-image">
+						<?php echo '<img src="' . $howworkcontainer['howworks_image'] . '"/>';?>
+					</div>
+					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
+				</div>
+		<?php endforeach; ?>
+			</div><!-- / carousel -->
+		</div>
+		
 
 
 	<div class="features-header">	<?php echo CFS()->get( 'features_header' ); ?></div>

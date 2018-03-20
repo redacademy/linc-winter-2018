@@ -113,7 +113,7 @@ margin-top:-24px;
         width:1000px;
     }
 }
-.benefits-header,.features-header{
+.benefits-header,.features-header,.howworks-header{
     font-size:24px;
     text-transform:uppercase;
     color:$color__lincedgeblue;
@@ -139,7 +139,7 @@ margin-top:-24px;
     margin-top:5%;
     @include desktop{
         flex-direction:row;
-        justify-content:space-between;
+        justify-content:space-around;
         width:80%;
         margin:0 auto;
         margin-top:5%;
@@ -168,23 +168,22 @@ margin-top:-24px;
         margin-bottom:0;
     }
    
+
+
+}
+
 .howworks-container{
     width: 100%;
+    .non-carousel{
+        display:none;
+    }
 
    
-}
 
-}
-
-.howworks-header{
-    font-size:24px;
-    text-transform:uppercase;
-    color:$color__lincedgeblue;
-    font-weight:bold;
-    margin-top:7%;
-    text-align:center;
-}
 .carousel{
+    @include desktop{
+        display:none;
+    }
 
     height: 250px;
     width:100%;
@@ -217,5 +216,5 @@ margin-top:-24px;
 }
 
 
-
+}
 }
