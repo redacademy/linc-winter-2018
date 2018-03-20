@@ -110,7 +110,7 @@ margin-top:-24px;
     margin:0 auto;
     @include desktop{
         line-height:36px;
-        width:1000px;
+
     }
 }
 .benefits-header,.features-header,.howworks-header{
@@ -176,7 +176,45 @@ margin-top:-24px;
     width: 100%;
     .non-carousel{
         display:none;
+        @include desktop{
+            
+            text-align:center;
+            display:flex;
+            justify-content:center;
+            width:100%;
+            margin-top:5%;
+            
+        }
+    .hw-inner-container{
+        @include desktop{
+            background-color:$color__lincedgeblue;
+            height:500px;
+            width:370px;
+            border: 2px solid white;
+ 
+
+        }
     }
+    .howworks-title{
+        @include desktop{
+            color:white;
+            font-size:30px;
+            margin-left:18%;
+            margin-right:18%;
+            text-align:center;
+            margin-top:20%;
+
+        }
+    }
+    img{
+        @include desktop{
+            margin-top:40%;
+        width:97px;
+        height:97px;
+    }
+    }
+    }
+    
 
    
 
