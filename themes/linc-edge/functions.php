@@ -138,6 +138,8 @@ function linc_edge_scripts() {
 
 	wp_enqueue_script( 'contact-js', get_template_directory_uri() . '/build/js/contact.min.js', array('jquery-cdn'), true );
 
+	wp_enqueue_script( 'about-team-js', get_template_directory_uri() . '/build/js/about-team.min.js', array('jquery-cdn'), true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
