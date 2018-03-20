@@ -144,23 +144,34 @@
             }
         }    
     }
+    .title-underline-short {
+        @include desktop {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 3px;
+                bottom: -10px; 
+                margin: 0 auto;
+                left: 0;
+                width: 60px;
+                background: $color__lincedgegreen;
+            }
+        }    
+    }
     #masthead {
-        // position: fixed;
+        position: fixed;
         top: 0;
-        // left: 0;
+        left: 0;
         width: 100%;
         z-index: 9999;
     }
     .site-content {
-        // margin-top: 48px;
+        margin-top: 48px;
         background: #fff;
         @include desktop {
-            // margin-top: 143px;
+            margin-top: 143px;
             background: $color__background-body;
         }
     }
 }
-
-// .arrow-show-more:hover {
-//     // background: red;
-// }

@@ -39,7 +39,7 @@ if ( $team_posts ):
                 <?php endif; ?>
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
-                    <h3><?php echo CFS() -> get ('position'); ?></h3>
+                    <h3 class="title-underline-short"><?php echo CFS() -> get ('position'); ?></h3>
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
@@ -90,7 +90,7 @@ if ( $team_posts2 ):
 
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
-                    <h3><?php echo CFS() -> get ('position'); ?></h3>
+                    <h3 class="title-underline-short"><?php echo CFS() -> get ('position'); ?></h3>
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>

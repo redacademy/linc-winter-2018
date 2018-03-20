@@ -20,7 +20,7 @@
                 if(text.length > minimize_char_count ) {
                     text = text.slice(0,minimize_char_count )+ '... ';
                     $(this).text(text);
-                    $(this).css("color", "red");
+                    // $(this).css("color", "red");
                 }
             });
             
@@ -28,7 +28,7 @@
             if (CEO_text.length > minimize_char_count_CEO ) {
                 CEO_text = CEO_text.slice(0,minimize_char_count_CEO )+ '... ';
                 $(CEO_bio_excerpt).text(CEO_text);
-                $(CEO_bio_excerpt).css("color", "skyblue");
+                // $(CEO_bio_excerpt).css("color", "skyblue");
             }
 
             // Hide excerpt on collapse-o-matic click
