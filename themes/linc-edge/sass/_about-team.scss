@@ -1,18 +1,12 @@
 .page-template-about-team {
     // 1rem = 16px | 1.25rem = 20px | 1.5rem = 24px | 2rem = 32px
-    .entry-title {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        // color: red;
-    }
     h2.team-comment {
         width: 75%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 1rem auto 3.5rem auto;
         text-align: center;
         font-size: 1.25rem;
         font-weight: normal;
+        line-height: 1.25;
     }
     .team-general-container,
     .team-co-op-container {
@@ -20,6 +14,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+  
     .member-profile {
         margin-left: auto;
         margin-right: auto;
@@ -28,34 +23,137 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2.5rem;
+        @include desktop {
+            position: relative;
+            background: #fff;
+            min-height: 200px;
 
+            flex-direction: row;
+            // align-items: flex-start;
+            // margin-right: 10px;
+        }
         img.headshot {
             width: 185px;
+            margin-bottom: 0.75rem;
+            @include desktop {
+                margin: 0;
+                // position: absolute;
+                // left: 0;
+                // top: 11px;
+            }
         }
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
             margin: 0;
             text-align: center;
+            color: $color__lincedgeblue;
+            @include desktop {
+                font-size: 2rem;
+                text-align: left;
+            }
         }
         h3 {
             font-size: 1.15rem;
             font-weight: normal;
             margin: 0;
             text-align: center;
+            margin-bottom: 0.75rem;
+            @include desktop {
+                text-align: left;
+            }
         }
-        img.arrow-show-more{
-            cursor:pointer;
-            width: 35px;
-            height: 15px;
+        .member-profile-inner {
+            height: auto;
+            width: auto;
+            @include desktop {
+                margin-left: 2rem;
+                width: 100%;
+            }
         }
+    }
+    .collapseomatic {
+        background-size: contain;
+        padding: 0;
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+    }
+    .collapseomatic_content {
+        margin-left: 0;
         p {
-            
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+    .expand-bio {
+        display: block;
+        margin: 0 auto;
+        @include desktop {
+            margin: 0 60% 0 40%;
+        }
+    }
+    .additional-title {
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: $color__lincedgeblue; 
+        @include desktop {
+            font-size: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
     }
 }
 
-
+.page-template-about-team {
+    //make these globals eventually
+    .entry-title {
+        padding: 1.5rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: $color__lincedgeblue; 
+        @include desktop {
+            font-size: 3rem;
+            padding-top: 3rem;
+            padding-bottom:3rem;
+            }
+        }
+    .title-underline {
+        @include desktop {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 3px;
+                bottom: -10px; 
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: $color__lincedgegreen;
+            }
+        }    
+    }
+    #masthead {
+        // position: fixed;
+        top: 0;
+        // left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    .site-content {
+        // margin-top: 48px;
+        background: #fff;
+        @include desktop {
+            // margin-top: 143px;
+            background: $color__background-body;
+        }
+    }
+}
 
 // .arrow-show-more:hover {
 //     // background: red;

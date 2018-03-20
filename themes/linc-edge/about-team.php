@@ -10,7 +10,7 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
             <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
             </header>
         <?php endwhile; // End of the loop. Remaining content are custom fields ?>
         
@@ -37,11 +37,23 @@ if ( $team_posts ):
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h2><?php the_title(); ?></h2>
-                <h3><?php echo CFS() -> get ('position'); ?></h3>
-                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
-                <div class="bio">
-                    <?php echo CFS() -> get ('biography'); ?>
+                <div class="member-profile-inner">
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo CFS() -> get ('position'); ?></h3>
+                    <!-- <div class="testing-excerpt"> -->
+                        <!-- <?php echo CFS() -> get ('biography'); ?> -->
+                    <!-- </div> -->
+
+                    <?php
+                    $content = CFS() -> get ('biography');
+                    $content = str_replace( ']]>', ']]>', $content );
+                    echo do_shortcode('[expand title="" 
+                    alt="Show biography" 
+                    trigpos="below" 
+                    trigclass="expand-bio"
+                    targclass="bio"]'
+                    .$content.'[/expand]');
+                    ?>
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
@@ -63,7 +75,7 @@ $team_posts2 = get_posts( $args2 );
 
 if ( $team_posts2 ):
 ?>
-<h1 class="entry-title"><?php echo CFS()->get('additional_department'); ?></h1>
+<h1 class="additional-title"><span class="title-underline"><?php echo CFS()->get('additional_department'); ?></span></h1>
 <h2 class="team-comment"><?php echo CFS()->get('department_comment'); ?></h2>
 
     <div class="team-co-op-container">
@@ -75,11 +87,21 @@ if ( $team_posts2 ):
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
                 <?php endif; ?>
-                <h2><?php the_title(); ?></h2>
-                <h3><?php echo CFS() -> get ('position'); ?></h3>
-                <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more.png">    
-                <div class="bio">
-                    <?php echo CFS() -> get ('biography'); ?>
+
+                <div class="member-profile-inner">
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo CFS() -> get ('position'); ?></h3>
+
+                    <?php
+                    $content = CFS() -> get ('biography');
+                    $content = str_replace( ']]>', ']]>', $content );
+                    echo do_shortcode('[expand title="" 
+                    alt="Show biography" 
+                    trigpos="below" 
+                    trigclass="expand-bio"
+                    targclass="bio"]'
+                    .$content.'[/expand]');
+                    ?>
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>

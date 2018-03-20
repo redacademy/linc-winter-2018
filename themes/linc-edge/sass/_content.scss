@@ -50,6 +50,17 @@
 
 
 // GLOBAL title style
+h1 {
+	margin: 0;
+}
 .entry-title {
 	@include page-title-style;
+}
+
+// GLOBAL margin beneath fixed header
+.site-content {
+	// margin-top: 48px;
+	// @include desktop {
+	// 	margin-top: 143px;
+	// }
 }
