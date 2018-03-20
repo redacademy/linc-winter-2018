@@ -38,12 +38,11 @@ get_header(); ?>
 			foreach ($benefitscontainers as $benefitcontainer ) {?>
 			<div class="benefits-image"><?php echo '<img src="' . $benefitcontainer['benefits_image'] . '"/>';?></div>
 			<p class="benefits-title"><?php echo $benefitcontainer['benefits_text']; }?>
+	</div>
 
 	
 	<div class="howworks-container">
 			<div class="howworks-header">	<?php echo CFS()->get( 'howworks_header' ); ?></div>
-	
-
 				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
 			<?php $howworkscontainers = CFS()->get('howworks_container');
 			foreach ($howworkscontainers as $howworkcontainer ): ?>
@@ -57,6 +56,13 @@ get_header(); ?>
 		</div><!-- / carousel -->
 
 
+	<div class="features-container">
+			<div class="features-header">	<?php echo CFS()->get( 'features_header' ); ?></div>
+			<?php $featurescontainers = CFS()->get('features_container');
+			foreach ($featurescontainers as $featurecontainer ) {?>
+			<div class="features-image"><?php echo '<img src="' . $featurecontainer['features_image'] . '"/>';?></div>
+			<p class="features-title"><?php echo $featurecontainer['features_text']; }?>
+	</div>
 
 
 
