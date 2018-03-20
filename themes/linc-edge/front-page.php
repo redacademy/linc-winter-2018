@@ -21,8 +21,12 @@ get_header(); ?>
 				 <div class="download-container">
 				 <div class="download-pics"><?php echo '<img src="' . $bannercontainer['googleimage'] . '"/>';?></div>
 				 <div class="download-pics2"><?php echo '<img src="' . $bannercontainer['appleimage']. '"/>'; }?></div>
-				 </div>
+				</div>
+				 <div class="signup-front2"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
+				</div>
 		</div>
+		
+		
 					<div class="signup-front"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
 
 	<div class="afterbanner-container">
