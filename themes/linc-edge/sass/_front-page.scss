@@ -1,9 +1,14 @@
 .page-template-front-page{
 
 
-    //ASK JIM ABOUT THIS, NEGATIVE MARGIN
+
 .banner-container{
 margin-top:-24px;
+@include desktop{
+    //ASK JIM ABOUT THIS
+    height:690px !important;
+    
+}
 .banner-text{
     color:white;
     font-weight:bold;
@@ -12,26 +17,40 @@ margin-top:-24px;
     height:60%;
     align-items:center;
     font-size:1.25rem;
+    @include desktop{
+    font-size:2.5rem;
+    height:50%;
+    }
 }
 .download-container{
     display:flex;
     justify-content:space-around;
     margin-left:10%;
     margin-right:10%;
+    @include desktop{
+      margin-left:30%;
+      margin-right:30%;
+    }
 
     .download-pics{
     width:100px;
     height:32px;
+    @include desktop{
+        height:50px;
+        width:170px;
+    }
     }
     .download-pics2{
         width:88px;
         height:32px;
+        @include desktop{
+            height:50px;
+            width:170px;
+        }
     }
 }
 
-@include desktop{
-    
-}
+
 
 
 }

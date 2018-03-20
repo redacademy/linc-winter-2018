@@ -66,8 +66,7 @@ get_header(); ?>
 
 	<div class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> learn more </a></div>
 
-
-
+<!-- testimonials -->
 
 
 
