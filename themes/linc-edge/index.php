@@ -42,13 +42,14 @@ get_header(); ?>
 					foreach ( $fields as $field ):  ?>
 									<div class="carousel-cell">
 							<div class="features-inner-container">
+							<?php echo '<img src="' . $field['image'] . '"/>'; ?>
               <div class="features-title"><?php echo $field['title']; ?></div>
-              <?php echo '<img src="' . $field['image'] . '"/>'; ?>
 							<p class="features-text"><?php echo $field['description'];  ?>
 							</div>	
 							</div>
 							<?php endforeach; ?>
 							</div>	
+							</div>
 							</div>
 							</p>
 
@@ -65,8 +66,6 @@ get_header(); ?>
 							<p class="benefits-text"><?php echo $field['description'];?></p>
 							<?php endforeach; ?>
 							</div>
-				
-
 					<div class="benefit-carousel">
 					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
 				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>

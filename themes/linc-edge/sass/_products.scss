@@ -65,4 +65,42 @@
 
         }
     }
+
+    .features-content-container{
+
+        .features-title{
+            margin-top:20%;
+        }
+        .carousel{
+            height:500px;
+            width:100%;
+            margin-bottom:60%;
+            .benefits-title{
+            margin-top:12%;
+            font-weight:bold;
+            color:$color__lincedgeblue;
+            font-size:18px;
+            
+            }
+            .features-text{
+               width:90%;
+               font-size:18px;
+               line-height:30px;
+    
+            }
+            .carousel-cell{
+                width:100%;
+           .title-text-con{
+               margin-left:7%;
+           }
+            }
+            .flickity-page-dots{
+                bottom: 8%;
+            }
+            .flickity-button{
+                display:none;
+            }
+        }
+
+    }
 }
