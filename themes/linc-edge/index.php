@@ -26,27 +26,41 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-      <?php the_posts_navigation(); ?>
-      
+			<?php the_posts_navigation(); ?>
+			<div class="button-container">
+			<button id="button-feature">Features</button>
+			<button id="button-benefit">Benefits</button>
+			</div>
+
+
+
+       <div class="features-content-container">
+			 <div class="feature-title"><?php echo CFS()->get( 'features_title' ); ?> </div>
         <?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
 
-          foreach ( $fields as $field ) { ?>
+          foreach ( $fields as $field ):  ?>
           
-            <div class="features-content-container">
+
               <div class="features-title"><?php echo $field['title']; ?></div>
               <?php echo '<img src="' . $field['image'] . '"/>'; ?>
-              <p class="features-text"><?php echo $field['description']; } ?></p>
+							<p class="features-text"><?php echo $field['description'];  ?>
+							
+							<?php endforeach; ?>
+</div>
+							</p>
+
 
         <!-- Ending "features" forEach-loop -->
 
+				<div class="benefits-content-container">
+				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
         <?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
-
-          foreach ( $fields as $field ) { ?>
-
-            <div class="benefits-content-container">
+          foreach ( $fields as $field ) : ?>
               <div class="benefits-title"><?php echo $field['title']; ?></div>
               <?php echo '<img src="' . $field['image'] . '"/>'; ?>
-              <p class="benefits-text"><?php echo $field['description']; } ?></p>
+							<p class="benefits-text"><?php echo $field['description'];?></p>
+							<?php endforeach; ?>
+							</div>
           
         <!-- Ending "benefits" forEach-loop -->
 

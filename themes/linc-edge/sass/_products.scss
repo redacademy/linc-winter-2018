@@ -1,0 +1,15 @@
+.page-template-index{
+    .entry-title{
+        display:none;
+    }
+    .benefit-title,.feature-title{
+        text-align:center;
+
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        font-size:18px;
+    }
+    .benefits-content-container{
+        display:none;
+    }
+}
