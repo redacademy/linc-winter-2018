@@ -45,6 +45,8 @@
                 // Show full bio
                 $(this).siblings('.bio-excerpt').children().siblings().show();
                 $(this).siblings('.bio-excerpt').children().children().next().show();
+                // Keep headshot from moving (too much)
+                $(this).parent().siblings('.headshot').css({"align-self":"flex-start", "margin-top":"0.65rem"});
 
                 $(this).hide();
                 $(this).siblings('.arrow-show-less').show();
@@ -55,7 +57,9 @@
                 // Hide full bio
                 $(this).siblings('.bio-excerpt').children().children().next().hide();
                 $('.member-profile-inner .bio-excerpt p:not(:first-child)').hide();
-
+                // Place headshot back
+                $(this).parent().siblings('.headshot').css({"align-self":"center", "margin-top":"0"});
+                
                 $(this).hide();
                 $(this).siblings('.arrow-show-more').show();
             })
