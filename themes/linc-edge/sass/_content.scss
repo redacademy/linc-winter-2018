@@ -48,7 +48,63 @@
 	display: block;
 }
 
-
+// Testimonials 
+.testimonial {
+	color: #fff;
+	background-color: $color__lincedgeblue;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 350px;
+	margin-top: 6rem;
+	@include desktop {
+		height: 250px;
+		margin-top: 0;
+	}
+	.testimonial-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 75%;
+		margin: 0 auto;
+		position: relative;
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+	img {
+		width: 175px;
+		position: absolute;
+		top: -45%;
+		@include desktop {
+			position: relative;
+			width: 20vw;
+			height: 20vw;
+		}
+		display: block;
+	}
+	.endorsement {
+		@include desktop {
+			margin-left: 2rem;
+		}
+	}
+	p {
+		font-style: italic;
+		font-size: 1.1rem;
+		margin-top: 5rem;
+		@include desktop {
+			margin-top: 0;
+			font-size: 1.25rem;
+		}
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1.1rem;
+		@include desktop {
+			font-size: 1.25rem;
+		}
+	}
+}
 // GLOBAL title style
 h1 {
 	margin: 0;

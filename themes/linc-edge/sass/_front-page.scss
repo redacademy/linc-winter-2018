@@ -150,8 +150,8 @@ margin-top:-24px;
         width:180px;
         height:180px;
         @include desktop{
-            width:285px;
-            height:285px;
+            width:20vw;
+            height:20vw;
         }
 
     }
@@ -186,10 +186,25 @@ margin-top:-24px;
         }
     .hw-inner-container{
         @include desktop{
+            
             background-color:$color__lincedgeblue;
             height:500px;
             width:370px;
             border: 2px solid white;
+            &:nth-child(2) {
+                .howworks-title{
+                    margin-left:25%;
+                    margin-right:25%;
+                }
+            }
+            &:nth-child(3) {
+                .howworks-title{
+                    margin-left:27%;
+                    margin-right:27%;
+                }
+            }
+      
+            
  
 
         }
@@ -197,22 +212,27 @@ margin-top:-24px;
     .howworks-title{
         @include desktop{
             color:white;
-            font-size:30px;
-            margin-left:18%;
-            margin-right:18%;
+            font-size:24px;
+            margin-left:24.5%;
+            margin-right:24.5%;
             text-align:center;
             margin-top:20%;
+         
+         
 
         }
+      
     }
+  
     img{
         @include desktop{
             margin-top:40%;
         width:97px;
-        height:97px;
+        height:80px;
     }
     }
     }
+
     
 
    
@@ -253,5 +273,22 @@ margin-top:-24px;
 }
 
 
+}
+
+
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.site-content {
+    margin-top: 48px;
+    background: #fff;
+    @include desktop {
+        margin-top: 143px;
+        background: $color__background-body;
+    }
 }
 }

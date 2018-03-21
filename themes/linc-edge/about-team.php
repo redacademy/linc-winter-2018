@@ -43,6 +43,8 @@ if ( $team_posts ):
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
+                    <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                    <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
 
                     <?php
                     $content = CFS() -> get ('biography');
@@ -94,7 +96,9 @@ if ( $team_posts2 ):
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    
+                    <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                    <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+
                     <?php
                     $content = CFS() -> get ('biography');
                     $content = str_replace( ']]>', ']]>', $content );
