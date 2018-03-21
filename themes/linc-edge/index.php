@@ -28,8 +28,8 @@ get_header(); ?>
 
 			<?php the_posts_navigation(); ?>
 			<div class="button-container">
-			<button id="button-feature">Features</button>
-			<button id="button-benefit">Benefits</button>
+			<button class="button-feature" id="button-feature">Features</button>
+			<button class="button-benefit" id="button-benefit">Benefits</button>
 			</div>
 
 
@@ -57,7 +57,7 @@ get_header(); ?>
         <!-- Ending "features" forEach-loop -->
 
 			
-				<div class="benefits-content-container" id="benefit-page">
+				<div class="benefits-content-container" id="benefit-desktop">
 				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
         <?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
           foreach ( $fields as $field ) : ?>
@@ -66,6 +66,8 @@ get_header(); ?>
 							<p class="benefits-text"><?php echo $field['description'];?></p>
 							<?php endforeach; ?>
 							</div>
+
+				<div class="benefits-content-container" id="benefit-mobile">
 					<div class="benefit-carousel">
 					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
 				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
@@ -82,6 +84,7 @@ get_header(); ?>
 				</div>
 		<?php endforeach; ?>
 			</div><!-- / carousel -->
+</div>
 
 
 				
