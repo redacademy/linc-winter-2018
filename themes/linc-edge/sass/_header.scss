@@ -30,7 +30,7 @@
       width: 75%;
       justify-content: space-between;
       border-top: none;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
     }
 		li {
       display: inline;
@@ -94,10 +94,10 @@
     margin-right: auto;
   }
   li {
-    padding: 15px 0px;
+    text-align: center;
   }
   .sub-menu {
-    position: absolute;
+    // position: absolute;
     padding-left: 0;
     z-index: 2;
     display: none;
@@ -126,11 +126,11 @@
     }
   }
   .menu-item-21 {
+    // width: 85px;
     &:hover {
       .sub-menu {
         display: flex;
         flex-direction: column;
-        right: 275px;
       }
     }
   }
