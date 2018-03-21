@@ -10,32 +10,55 @@
             // Trim first paragraph
             var CEO_bio_excerpt = $('.member-profile-inner .bio-excerpt:first p');
             var bio_excerpt = $('.member-profile-inner .bio-excerpt:not(:first) p');
-            // CEO excerpt char count
+
             var minimize_char_count_CEO = 80;   
             var minimize_char_count = 45;
-   
 
             bio_excerpt.each(function(){    
                 var text = $(this).text();        
                 if(text.length > minimize_char_count ) {
-                    text = text.slice(0,minimize_char_count )+ '... ';
-                    $(this).text(text);
-                    $(this).css("color", "red");
+                    $(this).html(text.slice(0,minimize_char_count )+ '<span>... </span>'
+                    + '<span style="display:none;">'
+                    + text.slice(minimize_char_count , text.length)
+                    + '</span>'
+                    );
                 }
             });
             
-            var CEO_text = CEO_bio_excerpt.text();
-            if (CEO_text.length > minimize_char_count_CEO ) {
-                CEO_text = CEO_text.slice(0,minimize_char_count_CEO )+ '... ';
-                $(CEO_bio_excerpt).text(CEO_text);
-                $(CEO_bio_excerpt).css("color", "skyblue");
-            }
-
-            // Hide excerpt on collapse-o-matic click
-            var $toggle_bio = $('.expand-bio');
-            $toggle_bio.on('click', function(event) {
-                console.log('hide excerpt')
+            CEO_bio_excerpt.each(function(){    
+                var CEO_text = $(this).text();        
+                if(CEO_text.length > minimize_char_count ) {
+                    $(this).html(CEO_text.slice(0,minimize_char_count_CEO )+ '<span>... </span>'
+                    + '<span style="display:none;">'
+                    + CEO_text.slice(minimize_char_count_CEO , CEO_text.length)
+                    + '</span>'
+                    );
+                }
             });
+
+            // Show/hide full bio
+            $('.arrow-show-less').hide();
+            $('.arrow-show-more').on('click', function(event) {
+                console.log('show bio');
+                // Hide ellipses
+                $(this).siblings('.bio-excerpt').children().children().hide();
+                // Show full bio
+                $(this).siblings('.bio-excerpt').children().siblings().show();
+                $(this).siblings('.bio-excerpt').children().children().next().show();
+
+                $(this).hide();
+                $(this).siblings('.arrow-show-less').show();
+            })
+            $('.arrow-show-less').on('click', function(event) {
+                // Show ellipses
+                $(this).siblings('.bio-excerpt').children().children().show();
+                // Hide full bio
+                $(this).siblings('.bio-excerpt').children().children().next().hide();
+                $('.member-profile-inner .bio-excerpt p:not(:first-child)').hide();
+
+                $(this).hide();
+                $(this).siblings('.arrow-show-more').show();
+            })
         }
     });
     

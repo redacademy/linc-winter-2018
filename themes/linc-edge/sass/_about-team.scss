@@ -79,6 +79,9 @@
         cursor: pointer;
         width: 40px;
         height: 20px;
+        @include desktop {
+            display: none;
+        }
     }
     .collapseomatic_content {
         margin-left: 0;
@@ -86,11 +89,32 @@
             margin-top: 0;
             margin-bottom: 1rem;
         }
+        @include desktop {
+            display: none;
+        }
     }
     .expand-bio {
         display: block;
         margin: 0 auto;
         @include desktop {
+            margin: 0 60% 0 40%;
+            display: none;
+        }
+    }
+    .bio-excerpt {
+        display: none;
+        @include desktop {
+            display: block;
+        }
+    }
+    .arrow-show-more,
+    .arrow-show-less {
+        display: none;
+        @include desktop {
+            cursor: pointer;
+            display: inline-block;
+            width: 35px;
+            height: 15px;
             margin: 0 60% 0 40%;
         }
     }
@@ -138,23 +162,34 @@
             }
         }    
     }
+    .title-underline-short {
+        @include desktop {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                height: 3px;
+                bottom: -10px; 
+                margin: 0 auto;
+                left: 0;
+                width: 60px;
+                background: $color__lincedgegreen;
+            }
+        }    
+    }
     #masthead {
-        // position: fixed;
+        position: fixed;
         top: 0;
-        // left: 0;
+        left: 0;
         width: 100%;
         z-index: 9999;
     }
     .site-content {
-        // margin-top: 48px;
+        margin-top: 48px;
         background: #fff;
         @include desktop {
-            // margin-top: 143px;
+            margin-top: 143px;
             background: $color__background-body;
         }
     }
 }
-
-// .arrow-show-more:hover {
-//     // background: red;
-// }

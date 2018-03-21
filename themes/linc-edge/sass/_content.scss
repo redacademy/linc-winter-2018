@@ -48,7 +48,37 @@
 	display: block;
 }
 
-
+// Testimonials 
+.testimonial {
+	color: #fff;
+	background-color: $color__lincedgeblue;
+	width: 100%;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	.testimonial-inner {
+		display: flex;
+		align-items: center;
+		width: 75%;
+		margin: 0 auto;
+	}
+	img {
+		width: 20vw;
+		height: 20vw;
+		display: block;
+	}
+	.endorsement {
+		margin-left: 2rem;
+	}
+	p {
+		font-style: italic;
+		font-size: 1.25rem;
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1.25rem;
+	}
+}
 // GLOBAL title style
 h1 {
 	margin: 0;

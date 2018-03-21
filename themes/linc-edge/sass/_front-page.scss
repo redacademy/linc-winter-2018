@@ -275,4 +275,21 @@ margin-top:-24px;
 
 
 }
+
+
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.site-content {
+    margin-top: 48px;
+    background: #fff;
+    @include desktop {
+        margin-top: 143px;
+        background: $color__background-body;
+    }
+}
 }
