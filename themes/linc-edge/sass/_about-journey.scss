@@ -12,7 +12,6 @@
         background: #fff;
         @include desktop {
             margin-top: 143px;
-            background: $color__background-body;
         }
     }
     .entry-title {
@@ -59,7 +58,7 @@ ul.timeline-list {
         @include desktop {
             margin: 0 auto;
         }
-        // bullet point
+        // bullet points
         &:before{
             content: '';
             position: absolute;
@@ -71,6 +70,10 @@ ul.timeline-list {
             height: 20px;
             border: 1px solid $color__lincedgegreen;
             border-radius: 50%;
+            @include desktop {
+                width: 40px;
+                height: 40px;
+            }
         }
         // bullet point at the end
         &:last-child:after {
@@ -84,32 +87,62 @@ ul.timeline-list {
             height: 20px;
             border: 1px solid $color__lincedgegreen;
             border-radius: 50%;
-        }
-        // timeline item
-        .timeline-item{
-            background: #fff; 
-            position: relative;
-            // top: 0;
-            left: 2rem;
-            width: 75vw;
-            // padding: 20px;
+            @include desktop {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }
 
-
-.timeline-item {
-    color: $color__lincedgeblue;
-    h2 {
-        margin: 0;
-    }
-    img {
-        display: none;
+ul.timeline-list li {
+    .timeline-item {
+        color: $color__lincedgeblue;
+        position: relative;
+        left: 2rem;
+        width: 75vw;
         @include desktop {
-            display: inline;
+            width: 25vw;
+            min-height: 250px;
+        }
+        h2 {
+            margin: 0;
+            @include desktop {
+                font-size: 2.5rem;
+            }
+        }
+        img {
+            display: none;
+            @include desktop {
+                display: inline;
+                position: absolute;
+                bottom: 110%;
+            }
+        }
+        p {
+            margin: 0;
+            padding-top: 0.75rem;
+            font-size: 1.1rem;
         }
     }
-    p {
-        margin: 0;
+    @include desktop {
+        &:nth-child(odd) .timeline-item {
+            left: 3.5rem;
+            .timeline-content {
+                text-align: left;
+            }
+            img {
+                left: 0;
+            }
+        }
+        &:nth-child(even) .timeline-item {
+            left: calc(-25vw - 3rem);
+            .timeline-content {
+                text-align: right;
+            }
+            img {
+                right: 0;
+            }
+        }
     }
 }
