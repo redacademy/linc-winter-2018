@@ -46,6 +46,14 @@
         justify-content: flex-start;
         margin: 10%;
         padding: 0;
+        &:nth-of-type(odd) {
+          .about-image-group {
+            order: 2;
+          }
+          .about-text-group {
+            order: 1;
+          }
+        }
       }
     } /* .about-content-container */ 
 
@@ -93,20 +101,6 @@
         width: 100%;
       } /* img */
     } /* .about-image-group */
-
-    .about-content-container {
-
-      @include desktop {
-        &:nth-of-type(odd) {
-          .about-image-group {
-            order: 2;
-          }
-          .about-text-group {
-            order: 1;
-          }
-        }
-      }
-    } /* .about-content-container (nth-of-type) */
 
   } /* .about-container */
 
