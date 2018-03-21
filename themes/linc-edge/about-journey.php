@@ -10,16 +10,18 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
                 <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
                 </header>
             <?php endwhile; // End of the loop. ?>
             
         <?php $timeline_entry_container = CFS()->get('timeline_entry'); ?>
-        <ul>
+        <ul class="timeline-list">
                 <?php foreach ($timeline_entry_container as $post ): ?>
                 <li>
                     <div class="timeline-item">
-                        <?php echo '<img class="timeline-image" src="' . $post['timeline_image'] . '"/>';?>
+                        <?php if ( $post['timeline_image'] ) : ?>
+                            <?php echo '<img class="timeline-image" src="' . $post['timeline_image'] . '"/>';?>
+                        <?php endif ?>
                         <div class="timeline-content">
                             <h2 class="timeline-date"><?php echo $post['timeline_date'];?></h2>
                             <p class="timeline-event"><?php echo $post['timeline_event'];?></p>
