@@ -34,33 +34,58 @@ get_header(); ?>
 
 
 
-       <div class="features-content-container">
+       <div class="features-content-container" id="feature-page">
+			 <div class="benefit-carousel">
 			 <div class="feature-title"><?php echo CFS()->get( 'features_title' ); ?> </div>
+			 <div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
         <?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
-
-          foreach ( $fields as $field ):  ?>
-          
-
+					foreach ( $fields as $field ):  ?>
+									<div class="carousel-cell">
+							<div class="features-inner-container">
               <div class="features-title"><?php echo $field['title']; ?></div>
               <?php echo '<img src="' . $field['image'] . '"/>'; ?>
 							<p class="features-text"><?php echo $field['description'];  ?>
-							
+							</div>	
+							</div>
 							<?php endforeach; ?>
-</div>
+							</div>	
+							</div>
 							</p>
 
 
         <!-- Ending "features" forEach-loop -->
 
-				<div class="benefits-content-container">
+			
+				<div class="benefits-content-container" id="benefit-page">
 				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
         <?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
           foreach ( $fields as $field ) : ?>
-              <div class="benefits-title"><?php echo $field['title']; ?></div>
+           
               <?php echo '<img src="' . $field['image'] . '"/>'; ?>
 							<p class="benefits-text"><?php echo $field['description'];?></p>
 							<?php endforeach; ?>
 							</div>
+				
+
+					<div class="benefit-carousel">
+					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
+				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+			<?php $fields = CFS()->get('benefits');
+			foreach ($fields as $field ): ?>
+				<div class="carousel-cell">
+					<div class="benefit-image">
+						<?php echo '<img src="' . $field['image'] . '"/>';?>
+					</div>
+					<div class="title-text-con">
+					<div class="benefits-title"><?php echo $field['title']; ?></div>
+					<p class="benefits-text"><?php echo $field['description'];?></p>
+					</div>
+				</div>
+		<?php endforeach; ?>
+			</div><!-- / carousel -->
+
+
+				
           
         <!-- Ending "benefits" forEach-loop -->
 

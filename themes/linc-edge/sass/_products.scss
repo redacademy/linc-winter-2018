@@ -1,15 +1,68 @@
 .page-template-index{
+    .button-container{
+        text-align:center;
+        @include desktop{
+            display:none;
+        }
+    }
     .entry-title{
         display:none;
     }
     .benefit-title,.feature-title{
+        text-transform:uppercase;
+        margin-top:5%;
         text-align:center;
-
         font-weight:bold;
         color:$color__lincedgeblue;
-        font-size:18px;
+        font-size:24px;
     }
     .benefits-content-container{
         display:none;
+    }
+    .carousel{
+        height:500px;
+        width:100%;
+        margin-bottom:60%;
+        .benefits-title{
+        margin-top:12%;
+        font-weight:bold;
+        color:$color__lincedgeblue;
+        font-size:18px;
+        
+        }
+        .benefits-text{
+           width:90%;
+           font-size:18px;
+           line-height:30px;
+
+        }
+        .carousel-cell{
+            width:100%;
+       .title-text-con{
+           margin-left:7%;
+       }
+        }
+        .flickity-page-dots{
+            bottom: 45%;
+        }
+        .flickity-button{
+            display:none;
+        }
+    }
+
+    .features-inner-container{
+        margin-left:8%;
+        margin-right:13%;
+        .features-title,.benefits-title{
+            font-weight:bold;
+            color:$color__lincedgeblue;
+            font-size:18px;
+    
+    
+        }
+        .features-text,.benefits-text{
+            line-height:25px;
+
+        }
     }
 }
