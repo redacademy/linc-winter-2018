@@ -1,6 +1,37 @@
 .page-template-index{
+    #benefit-desktop{
+        display:none;
+    }
     .button-container{
-        text-align:center;
+        display: flex;
+        justify-content: center;
+
+        button{
+            width:40%;
+            height:40px;
+
+        }
+        
+        .button-feature{
+
+            background-color:white;
+                color:$color__lincedgeblue;
+           
+        }
+        
+        .button-benefit{
+            background-color:white;
+            color:$color__lincedgeblue;
+         
+        }
+        .button-active{
+            background-color:$color__lincedgeblue;
+            color:white;
+
+        
+        }
+    
+        
         @include desktop{
             display:none;
         }
