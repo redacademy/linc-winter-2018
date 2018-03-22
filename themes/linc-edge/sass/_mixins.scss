@@ -17,6 +17,12 @@
 	}
 }
 
+@mixin product {
+	@media (max-width: $product__width) {
+		@content;
+	}
+}
+
 @mixin page-title-style {
 
 }

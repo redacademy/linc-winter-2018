@@ -92,15 +92,14 @@ get_header(); ?>
 
         <!-- Ending "features" forEach-loop -->
 
-			
+				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
 				<div class="benefits-content-container" id="benefit-desktop">
-					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
 					<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
-					var_dump($fields);
 						foreach ( $fields as $field ) : ?>
-						
+						<div class="benefit-text-container">
 								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
 								<p class="benefits-text"><?php echo $field['description'];?></p>
+						</div>
 						<?php endforeach; ?>
 				</div>
 

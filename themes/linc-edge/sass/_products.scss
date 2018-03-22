@@ -1,6 +1,21 @@
 .page-template-index{
     #benefit-desktop{
         display:none;
+        @include desktop{
+            display:block;
+            display:flex;
+            flex-wrap:wrap;
+            img{
+                width:65%;
+            }
+            .benefit-text-container{
+                width:50%;
+            }
+            .benefits-text{
+                width:50%;
+                margin-left:10%;
+            }
+        }
     }
     .button-container{
         display: flex;
@@ -99,8 +114,8 @@
             position:absolute;
             margin-top:7%;
             margin-left:2%;
-            width:920px;
-            height:420px;
+            width:75%;
+            height:65%;
             z-index:-1;
 
         }
@@ -110,14 +125,18 @@
 
             margin-left:15%;
             margin-right:13%;
+
+
+           
             @include desktop{
                 display:flex;
             flex-direction:row;
             .feature-text-container{
                 display:flex;
+                max-height:700px;
                 flex-direction:column;
                 justify-content:flex-start;
-                margin-left:12%;
+                margin-left:5%;
                 margin-top:13%;
            
 
@@ -184,6 +203,13 @@
             }
             .flickity-button{
                 display:none;
+                @include desktop{
+                    display:block;
+                    background-color:$color__lincedgeblue;
+                    .flickity-button-icon{
+                        fill:white;
+                    }
+                }
             }
         }
 
