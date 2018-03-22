@@ -1,0 +1,85 @@
+.page-template-price {
+  margin: 7.5%;
+  .pricing-plan-container {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // width: 25rem;
+    }
+  } /* .pricing-plan-container */
+
+  .pricing-plan-content-container {
+    visibility: hidden;
+    @include desktop {
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffffff; 
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      width: 27.5rem;
+      min-width: 23.5rem;
+    }
+  } /* .pricing-plan-content-container */
+
+  .pricing-plan-image-group {
+    @include desktop {
+      align-self: center;
+    }
+  } /* .pricing-plan-image-group */
+
+  .pricing-plan-text-group {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      p {
+        align-self: center;
+      }
+    }
+  } /* .pricing-plan-text-group */
+  
+  .pricing-plan-title {
+    @include desktop {
+      color: $color__lincedgeblue;
+      font-size: 48px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  } /* .pricing-plan-title */
+
+  .pricing-plan-description {
+    @include desktop {
+      color: $color__text-main;
+      font-size: 20px;
+      line-height: 36px;
+      margin: 0 15%;
+    }
+  } /* .pricing-plan-description */
+
+  .pricing-plan-rate {
+    @include desktop {
+      color: $color__text-main;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  } /* .pricing-plan-rate */
+
+  .pricing-plan-button-group {
+    @include desktop {
+      align-self: center;
+      margin-bottom: 15%;
+      .pricing-plan-button {
+        background-color: $color__lincedgegreen;
+        border-radius: 30px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        color: #ffffff;
+        font-size: 1.25rem;
+        padding: 0.75rem 2.75rem;
+        text-transform: uppercase;
+      } /* .pricing-plan-button */
+    }
+  } /* .pricing-plan-button-group */
+
+} /* .page-template-price */
