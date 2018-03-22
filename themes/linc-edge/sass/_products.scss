@@ -2,18 +2,35 @@
     #benefit-desktop{
         display:none;
         @include desktop{
+            .benefit-back{
+                width:34%;
+                background-color:white;
+                z-index:-1;
+                height:500px;
+                margin-left:-1.5%;
+                margin-top:13%;
+                position:absolute;
+                border-radius:10px;
+
+            }
+            margin-left:11%;
+    
             display:block;
             display:flex;
             flex-wrap:wrap;
             img{
-                width:65%;
+                width:70%;
             }
             .benefit-text-container{
+                z-index:3;
                 width:50%;
             }
             .benefits-text{
-                width:50%;
-                margin-left:10%;
+                width:60%;
+                font-size:20px;
+                line-height:36px;
+                margin-left:5%;
+                margin-bottom:25%;
             }
         }
     }

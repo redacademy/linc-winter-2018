@@ -96,7 +96,10 @@ get_header(); ?>
 				<div class="benefits-content-container" id="benefit-desktop">
 					<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
 						foreach ( $fields as $field ) : ?>
+
 						<div class="benefit-text-container">
+						<span class="benefit-back"></span>
+
 								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
 								<p class="benefits-text"><?php echo $field['description'];?></p>
 						</div>
