@@ -24,7 +24,7 @@
          $(window).scroll(function(){
             var currentScreenPosition  = $(document).scrollTop();
             if (currentScreenPosition < $('#masthead').height()) {
-                console.log('testin');
+                // console.log('testin');
             $('#masthead').addClass( 'header-transparent' );
             } else {
             $( '#masthead' ).removeClass( 'header-transparent' );

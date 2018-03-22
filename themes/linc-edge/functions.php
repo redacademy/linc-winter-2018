@@ -144,6 +144,8 @@ function linc_edge_scripts() {
 	wp_enqueue_script( 'contact-js', get_template_directory_uri() . '/build/js/contact.min.js', array('jquery'), true );
 
 	wp_enqueue_script( 'about-team-js', get_template_directory_uri() . '/build/js/about-team.min.js', array('jquery'), true );
+
+	wp_enqueue_script( 'about-journey-js', get_template_directory_uri() . '/build/js/about-journey.min.js', array('jquery'), true );
 	
 	wp_enqueue_script( 'product-js', get_template_directory_uri() . '/build/js/product.min.js', array('jquery'), true );
 

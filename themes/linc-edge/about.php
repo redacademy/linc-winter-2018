@@ -10,15 +10,25 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <header class="entry-header">
+          <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+        </header><!-- .entry-header -->
+
+        <div class="entry-content">
+          <?php the_content(); ?>
+          <?php
+            wp_link_pages( array(
+              'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+              'after'  => '</div>',
+            ) );
+          ?>
+        </div><!-- .entry-content -->
 
 			<?php endwhile; ?>
 
       <div class="about-container">
 
-        <?php $fields = CFS()->get( 'action_description' );
-      
-        foreach ( $fields as $field ): ?> 
+        <?php $fields = CFS()->get( 'action_description' ); foreach ( $fields as $field ): ?> 
 
           <div class="about-content-container">
 
@@ -42,8 +52,7 @@ get_header(); ?>
 			  <div class="customer-header"><?php echo CFS()->get( 'customer_header' ); ?></div>
         
         <div class="carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
-			    <?php $customers = CFS()->get('customer_logo');
-          foreach ($customers as $customer ): ?>
+			    <?php $customers = CFS()->get('customer_logo'); foreach ($customers as $customer ): ?>
           
 				    <div class="customer-content-container">
 					    <div class="customer-image-group"> 
