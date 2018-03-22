@@ -46,20 +46,27 @@
         font-weight:bold;
         color:$color__lincedgeblue;
         font-size:24px;
+        margin-bottom:5%;
     }
     .benefits-content-container{
         display:none;
     }
-    .carousel{
-        height:500px;
+    .carousel-2{
+        
+        min-height:500px;
         width:100%;
         margin-bottom:60%;
         .benefits-title{
-        margin-top:12%;
+        margin-top:20px;
         font-weight:bold;
         color:$color__lincedgeblue;
         font-size:18px;
         
+        }
+        .benefit-image{
+            text-align: center;
+            margin-left:5%;
+            margin-right:5%;
         }
         .benefits-text{
            width:90%;
@@ -74,7 +81,7 @@
        }
         }
         .flickity-page-dots{
-            bottom: 45%;
+            bottom: -20px;
         }
         .flickity-button{
             display:none;
@@ -98,14 +105,18 @@
     }
 
     .features-content-container{
+        .testimonial{
+           margin-top:10rem;
+        }
 
         .features-title{
-            margin-top:20%;
+            margin-top:20px;
         }
         .carousel{
-            height:500px;
+            min-height:500px;
             width:100%;
-            margin-bottom:60%;
+
+            margin-bottom: 50px;
             .benefits-title{
             margin-top:12%;
             font-weight:bold;
@@ -126,7 +137,7 @@
            }
             }
             .flickity-page-dots{
-                bottom: 8%;
+                bottom: -20px;
             }
             .flickity-button{
                 display:none;

@@ -1,14 +1,26 @@
 (function($) {
 
     $(document).ready(function(){
-        $("#button-feature").click(function(){
-            $(".features-content-container").css("display", "block");
-            $(".benefits-content-container").css("display", "none");
+
+
+        if($('.carousel').length){
             $('.carousel').flickity({
                 // options
                 cellAlign: 'left',
                 contain: true
               });
+        }
+        
+
+
+        $("#button-feature").click(function(){
+            $(".features-content-container").css("display", "block");
+            $(".benefits-content-container").css("display", "none");
+            // $('.carousel').flickity({
+            //     // options
+            //     cellAlign: 'left',
+            //     contain: true
+            //   });
         });
     });
     $(document).ready(function(){
@@ -17,8 +29,7 @@
             $("#benefit-mobile").css("display","block");
             $("#benefit-desktop").css("display", "none");
             $(".features-content-container").css("display", "none");
-            $('.carousel').flickity({
-                // options
+            $('.carousel-2').flickity({
                 cellAlign: 'left',
                 contain: true
               });
@@ -26,11 +37,7 @@
             $("#benefit-mobile").css("display","none");
             $("#benefit-desktop").css("display", "block");
             $(".features-content-container").css("display", "none");
-            $('.carousel').flickity({
-                // options
-                cellAlign: 'left',
-                contain: true
-              });
+         
                 
             }
         });
@@ -40,9 +47,6 @@
         $(".button-feature").addClass("button-active");
       });
 
-
-
-
       $(document).ready(function(){
         $("#button-benefit").click(function(){
         $(".button-benefit").addClass("button-active");
@@ -51,8 +55,6 @@
 
       });
     });
-
-
 
     $(document).ready(function(){
         $("#button-feature").click(function(){

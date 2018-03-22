@@ -19,7 +19,7 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
+			<!-- Start the Loop -->
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
@@ -28,63 +28,122 @@ get_header(); ?>
 
 			<?php the_posts_navigation(); ?>
 			<div class="button-container">
-			<button class="button-feature" id="button-feature">Features</button>
-			<button class="button-benefit" id="button-benefit">Benefits</button>
+				<button class="button-feature" id="button-feature">Features</button>
+				<button class="button-benefit" id="button-benefit">Benefits</button>
 			</div>
 
-
-
-       <div class="features-content-container" id="feature-page">
+			<div class="features-content-container" id="feature-page">
 			 <div class="benefit-carousel">
-			 <div class="feature-title"><?php echo CFS()->get( 'features_title' ); ?> </div>
-			 <div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
-        <?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
-					foreach ( $fields as $field ):  ?>
-									<div class="carousel-cell">
+					<div class="feature-title">
+						<?php echo CFS()->get( 'features_title' ); ?>
+					</div>
+			 		<div class="carousel">
+        		<?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
+						foreach ( $fields as $field ):  ?>
+						<div class="carousel-cell">
 							<div class="features-inner-container">
-							<?php echo '<img src="' . $field['image'] . '"/>'; ?>
-              <div class="features-title"><?php echo $field['title']; ?></div>
-							<p class="features-text"><?php echo $field['description'];  ?>
-							</div>	
+								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
+								<div class="features-title">
+									<?php echo $field['title']; ?>
+								</div>
+								<p class="features-text">
+									<?php echo $field['description'];  ?>
+								</p>
+							</div><!-- .features-inner-container -->	
+						</div><!-- .carousel-cell -->
+						<?php endforeach; ?>					
+					</div><!-- .carousel -->
+			</div><!-- .benefit-carousel -->
+
+
+		<?php
+		$args = array(
+			'post_type' => 'testimonial',
+			'title' => 'Chad Myers'
+						);
+    $get_testimonial = get_posts( $args );
+    ?>
+    <?php 
+        foreach ( $get_testimonial as $post ): 
+        setup_postdata($post);
+    ?>
+			<div class="testimonial">
+					<div class="testimonial-inner">
+							<img src="<?php echo CFS() -> get ('image'); ?>">
+							<div class="endorsement">
+									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
+									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
 							</div>
-							<?php endforeach; ?>
-							</div>	
-							</div>
-							</div>
-							</p>
+					</div>
+			</div><!-- .testimonial -->
+			<?php endforeach; wp_reset_postdata(); ?>
+				</div> <!--features container closing -->
+						
+
+	
+
+							
 
 
         <!-- Ending "features" forEach-loop -->
 
 			
 				<div class="benefits-content-container" id="benefit-desktop">
-				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
-        <?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
-          foreach ( $fields as $field ) : ?>
-           
-              <?php echo '<img src="' . $field['image'] . '"/>'; ?>
-							<p class="benefits-text"><?php echo $field['description'];?></p>
-							<?php endforeach; ?>
-							</div>
+					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
+					<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
+					var_dump($fields);
+						foreach ( $fields as $field ) : ?>
+						
+								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
+								<p class="benefits-text"><?php echo $field['description'];?></p>
+						<?php endforeach; ?>
+				</div>
 
 				<div class="benefits-content-container" id="benefit-mobile">
 					<div class="benefit-carousel">
-					<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
-				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
-			<?php $fields = CFS()->get('benefits');
-			foreach ($fields as $field ): ?>
-				<div class="carousel-cell">
-					<div class="benefit-image">
-						<?php echo '<img src="' . $field['image'] . '"/>';?>
+						<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
+				<div class="carousel-2">
+					<?php 
+					
+					foreach($fields as $field ): ?>
+					<div class="carousel-cell">
+						<div class="benefit-image">
+							<?php echo '<img src="' . $field['image'] . '"/>';?>
+						</div>
+						<div class="title-text-con">
+							<div class="benefits-title"><?php echo $field['title']; ?></div>
+							<p class="benefits-text"><?php echo $field['description'];?></p>
+						</div>
 					</div>
-					<div class="title-text-con">
-					<div class="benefits-title"><?php echo $field['title']; ?></div>
-					<p class="benefits-text"><?php echo $field['description'];?></p>
-					</div>
+					<?php endforeach; ?>
+				</div><!-- / carousel2 -->
+			<?php
+    $args = array(
+        'post_type' => 'testimonial',
+        'title' => 'Daniel Mendes'
+                );
+    $get_testimonial = get_posts( $args );
+    ?>
+    <?php 
+        foreach ( $get_testimonial as $post ): 
+        setup_postdata($post);
+    ?>
+        <div class="testimonial">
+            <div class="testimonial-inner">
+                <img src="<?php echo CFS() -> get ('image'); ?>">
+                <div class="endorsement">
+                    <p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
+                    <h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+			</div>
 				</div>
-		<?php endforeach; ?>
-			</div><!-- / carousel -->
-</div>
+
+
+				
+
 
 
 				
@@ -102,3 +161,5 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+
+
