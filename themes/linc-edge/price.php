@@ -50,7 +50,7 @@ get_header(); ?>
     </div><!-- .pricing-plan-container -->
 
     <div class="subscription-description-container">
-      <?php $subscribe = CFS()->get( 'subscribe_description_content' ); foreach ( $subscribes as $subscribe ): ?>
+      <?php $subscribes = CFS()->get( 'subscribe_description_content' ); foreach ( $subscribes as $subscribe ): ?>
 
         <div class="subscription-description-content-container">
           
@@ -63,10 +63,15 @@ get_header(); ?>
       <?php endforeach; ?><!-- ending foreach loop -->
     </div><!-- .subscription-description-container -->
 
+    <div class="subscribe-container">
+      <input type="email" name="EMAIL" placeholder="Email address" required />
+      <input type="submit" value="Subscribe" />
+    </div><!-- .subscribe-container -->
+
     <div class="subscription-condition-container">
 
       <div class="subscription-condition-content-container">
-        <?php $condition = CFS()->get( 'subscribe_condition_content' ); foreach ( $conditions as $condition ): ?>
+        <?php $conditions = CFS()->get( 'subscribe_condition_content' ); foreach ( $conditions as $condition ): ?>
 
           <div class="subscription-condition-group">
             <p class="subscription-condition"><?php echo $condition['subscribe_condition']; ?></p><!-- .subscription-condition -->

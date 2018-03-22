@@ -20,8 +20,6 @@
       border: 1px solid #ffffff;
       border-radius: 10px;
       width: 32%;
-      // width: 23.5rem;
-      // min-width: 23.5rem;
     }
   } /* .pricing-plan-content-container */
 
@@ -85,5 +83,41 @@
       } /* .pricing-plan-button */
     }
   } /* .pricing-plan-button-group */
+
+  .subscription-description-group {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscription-description {
+    align-self: center;
+    color: $color__lincedgeblue;
+    @include desktop {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .subscribe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .subscription-condition-group {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscription-condition {
+    color: $color__lincedgeblue;
+    @include desktop {
+      font-size: 1.15rem;
+    }
+  }
 
 } /* .page-template-price */
