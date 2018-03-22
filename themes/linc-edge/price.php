@@ -35,7 +35,7 @@ get_header(); ?>
           </div><!-- .pricing-plan-image-group -->
 
           <div class="pricing-plan-text-group">
-            <p class="pricing-plan-title"><?php echo $field['pricing_title'];?></p><!-- .pricing-plan-title -->
+            <p class="pricing-plan-title"><?php echo $field['pricing_title']; ?></p><!-- .pricing-plan-title -->
             <p class="pricing-plan-description"><?php echo $field['pricing_description']; ?></p><!-- .pricing-plan-description -->
             <p class="pricing-plan-rate"><?php echo $field['pricing_rate']; ?></p><!-- .pricing-plan-rate -->
           </div><!-- .pricing-plan-text-group -->
@@ -47,8 +47,25 @@ get_header(); ?>
         </div><!-- .pricing-plan-content-container -->
         
       <?php endforeach; ?><!-- ending foreach loop -->
-
     </div><!-- .pricing-plan-container -->
+
+    <div class="notification-subscription-container">
+      <?php $updates = CFS()->get( 'content_subsciption' ); foreach ( $updates as $update ): ?>
+
+        <div class="notification-subscription-content-container">
+          
+          <div class="notification-subscription-description-group">
+            <p class="notification-subscription-description"><?php echo $field['subscribe_description']; ?></p><!-- .notification-subscription-description -->
+          </div><!-- .notification-subscription-description-group -->
+
+          <div class="notification-subscription-condition-group">
+            <p class="notification-subscription-condition"><?php echo $field['subscribe_condition']; ?></p><!-- .notification-subscription-condition -->
+          </div><!-- .notification-subscription-condition-group -->
+
+        </div><!-- .notification-subscription-content-container -->
+
+      <?php endforeach; ?><!-- ending foreach loop -->
+    </div><!-- .notification-subscription-container -->
 
   </main><!-- .site-main -->
 </div><!-- .content-area -->
