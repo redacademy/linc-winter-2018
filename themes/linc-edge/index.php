@@ -13,18 +13,18 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
+			<!-- <?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-			<?php endif; ?>
+			<?php endif; ?> -->
 
 			<!-- Start the Loop -->
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
+			<!-- <?php while ( have_posts() ) : the_post(); ?>
+					<header class="entry-header">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</header>
+			<?php endwhile; ?> -->
 
 			<?php the_posts_navigation(); ?>
 			<div class="button-container">
@@ -34,9 +34,9 @@ get_header(); ?>
 
 			<div class="features-content-container" id="feature-page">
 			 <div class="benefit-carousel">
-					<div class="feature-title">
+					<div class="feature-title"><span class="title-underline">
 						<?php echo CFS()->get( 'features_title' ); ?>
-					</div>
+					</span></div>
 			 		<div class="carousel">
         		<?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
 						foreach ( $fields as $field ):  ?>
@@ -48,7 +48,9 @@ get_header(); ?>
 								<div class="feature-text-container">
 							
 										<div class="features-title">
+											<span class="title-underline-short">
 											<?php echo $field['title']; ?>
+											</span>
 										</div>
 										<p class="features-text">
 											<?php echo $field['description'];  ?>
@@ -92,7 +94,7 @@ get_header(); ?>
 
         <!-- Ending "features" forEach-loop -->
 
-				<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
+				<div class="benefit-title"><span class="title-underline"><?php echo CFS()->get( 'benefits_title' ); ?></span></div>
 				<div class="benefits-content-container" id="benefit-desktop">
 					<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
 						foreach ( $fields as $field ) : ?>
@@ -102,7 +104,7 @@ get_header(); ?>
 
 						
 								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
-								<p class="benefit-title-desktop"><?php echo $field['title'];?></p>
+								<p class="benefit-title-desktop"><span class="title-underline-short"><?php echo $field['title'];?></span></p>
 								<p class="benefits-text"><?php echo $field['description'];?></p>
 						</div>
 						<?php endforeach; ?>
