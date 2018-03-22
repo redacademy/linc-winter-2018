@@ -67,26 +67,32 @@
       color: $color__lincedgeblue;
       display: flex;
       justify-content: center;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 0;
       @include desktop {
         // border-bottom: 5px solid $color__lincedgegreen;
-        font-size: 2.5rem;
+        font-size: 2rem;
         justify-content: flex-start;
         margin-bottom: 1.5rem; 
       }
+      @media screen and (min-width: 850px) {
+        font-size: 2.5rem;
+      } 
     } /* .about-title */
 
     .about-description {
       color: $color__text-main;
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.75;
       @include desktop {
-        font-size: 1.25rem;
-        // line-height: 36px;
+        font-size: 1.15rem;
+        line-height: 1.5;
       }
+      @media screen and (min-width: 850px) {
+        font-size: 1.25rem;
+      } 
     }
 
     .about-image-group {
