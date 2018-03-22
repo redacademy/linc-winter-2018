@@ -8,11 +8,16 @@
                 font-size:20px;
             }
             .gform_wrapper{
+                form{
+                    margin:0;
+                }
+
                 .gfield_label{
                     font-weight:normal;
+      
                     display:flex;
-                    justify-content:flex-start;
-                    margin-left:12.5%;
+                    justify-content:center;
+                    
                 }
                 width:100%;
                 margin-top:3%;
@@ -55,7 +60,16 @@
             display:none;
         }
     }
+    .entry-title{
+        font-size:1.5rem;
+        color:$color__lincedgeblue;
+        text-align:center;
+        @include desktop{
+           @include page-title-style;
 
+        }
+        
+    }
     .signup-text{
         width:70%;
         text-align:center;
@@ -89,6 +103,11 @@
     .name-signup{
         text-align: center;
     }
+.gform_footer{
+    @include desktop{
+        text-align: center;
+    }
+}
 
 
     
