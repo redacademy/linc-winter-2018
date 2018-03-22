@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="about-content-container">
 
             <div class="about-text-group">
-              <p class="about-title"><?php echo $field['title'];?></p>
+              <p class="about-title"><span class="title-underline-short"><?php echo $field['title'];?></span></p>
               <p class="about-description"><?php echo $field['description']; ?></p>
             </div><!-- .about-text-group -->
 
