@@ -42,13 +42,18 @@ get_header(); ?>
 						foreach ( $fields as $field ):  ?>
 						<div class="carousel-cell">
 							<div class="features-inner-container">
+							<span class="white-back"></span>
 								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
-								<div class="features-title">
-									<?php echo $field['title']; ?>
+	
+								<div class="feature-text-container">
+							
+										<div class="features-title">
+											<?php echo $field['title']; ?>
+										</div>
+										<p class="features-text">
+											<?php echo $field['description'];  ?>
+										</p>
 								</div>
-								<p class="features-text">
-									<?php echo $field['description'];  ?>
-								</p>
 							</div><!-- .features-inner-container -->	
 						</div><!-- .carousel-cell -->
 						<?php endforeach; ?>					

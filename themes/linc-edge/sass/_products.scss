@@ -40,6 +40,7 @@
         display:none;
     }
     .benefit-title,.feature-title{
+        
         text-transform:uppercase;
         margin-top:5%;
         text-align:center;
@@ -47,6 +48,9 @@
         color:$color__lincedgeblue;
         font-size:24px;
         margin-bottom:5%;
+        @include desktop{
+            font-size: 48px;
+        }
     }
     .benefits-content-container{
         display:none;
@@ -88,23 +92,58 @@
         }
     }
 
-    .features-inner-container{
-        margin-left:8%;
-        margin-right:13%;
-        .features-title,.benefits-title{
-            font-weight:bold;
-            color:$color__lincedgeblue;
-            font-size:18px;
-    
-    
-        }
-        .features-text,.benefits-text{
-            line-height:25px;
+  
+    .white-back{
+        @include desktop{
+            background-color:white;
+            position:absolute;
+            margin-top:7%;
+            margin-left:2%;
+            width:920px;
+            height:420px;
+            z-index:-1;
 
         }
     }
-
     .features-content-container{
+        .features-inner-container{
+
+            margin-left:15%;
+            margin-right:13%;
+            @include desktop{
+                display:flex;
+            flex-direction:row;
+            .feature-text-container{
+                display:flex;
+                flex-direction:column;
+                justify-content:flex-start;
+                margin-left:12%;
+                margin-top:13%;
+           
+
+                
+     
+            }
+            }
+           
+            .features-title,.benefits-title{
+                font-weight:bold;
+                color:$color__lincedgeblue;
+                font-size:18px;
+                @include desktop{
+                    letter-spacing: 1px;
+                    font-size:40px;
+                    font-weight:normal;
+                }
+        
+        
+            }
+            .features-text,.benefits-text{
+
+               
+    
+            }
+        }
         .testimonial{
            margin-top:10rem;
         }
@@ -128,6 +167,10 @@
                width:90%;
                font-size:18px;
                line-height:30px;
+               @include desktop{
+                line-height:40px;
+        
+                }
     
             }
             .carousel-cell{
