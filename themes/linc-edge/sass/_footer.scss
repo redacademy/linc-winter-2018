@@ -73,6 +73,7 @@
     .footer-policy{
         display:none;
         @include desktop{
+            
         text-decoration: underline;
         display:block;
         }

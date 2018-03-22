@@ -100,11 +100,38 @@ get_header(); ?>
 						<div class="benefit-text-container">
 						<span class="benefit-back"></span>
 
+						
 								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
+								<p class="benefit-title-desktop"><?php echo $field['title'];?></p>
 								<p class="benefits-text"><?php echo $field['description'];?></p>
 						</div>
 						<?php endforeach; ?>
 				</div>
+				<div class="testi2-desktop">
+				<?php
+		$args = array(
+			'post_type' => 'testimonial',
+			'title' => 'Daniel Mendes'
+						);
+    $get_testimonial = get_posts( $args );
+    ?>
+    <?php 
+        foreach ( $get_testimonial as $post ): 
+        setup_postdata($post);
+    ?>
+			<div class="testimonial">
+					<div class="testimonial-inner">
+							<img src="<?php echo CFS() -> get ('image'); ?>">
+							<div class="endorsement">
+									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
+									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+							</div>
+					</div>
+			</div><!-- .testimonial -->
+			<?php endforeach; wp_reset_postdata(); ?>	
+			</div>	
+
+
 
 				<div class="benefits-content-container" id="benefit-mobile">
 					<div class="benefit-carousel">
@@ -154,6 +181,7 @@ get_header(); ?>
 
 			
 		<div class="signup-product"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
+		<div class="signup-product-desktop"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> sign up for beta</a></div>
 
 
 				

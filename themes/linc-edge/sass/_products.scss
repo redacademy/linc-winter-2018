@@ -1,12 +1,19 @@
 .page-template-index{
+    
     #benefit-desktop{
         display:none;
         @include desktop{
+            .benefit-title-desktop{
+                font-size:40px;
+                color:$color__lincedgeblue;
+                margin-left:4%;
+                
+            }
             .benefit-back{
                 width:34%;
                 background-color:white;
                 z-index:-1;
-                height:500px;
+                height:80%;
                 margin-left:-1.5%;
                 margin-top:13%;
                 position:absolute;
@@ -27,7 +34,7 @@
             }
             .benefits-text{
                 width:60%;
-                font-size:20px;
+                font-size:15px;
                 line-height:36px;
                 margin-left:5%;
                 margin-bottom:25%;
@@ -236,16 +243,20 @@
         text-align:center;
         margin-top:12%;
         color:$color__lincedgeblue;
+        @include desktop{
+            font-size:40px;
+            font-weight:bold;
+            margin-top:7%;
+        }
   
     }
-    .signup-product{
+    .signup-product,.signup-product-desktop{
         border-radius: 30px;
         height: 52px;
         width: 240px;
         text-transform: uppercase;
         font-size: 18px;
         background-color: #97c13b;
-
         font-weight: 700;
         display:flex;
         justify-content: center;
@@ -255,5 +266,30 @@
                 text-decoration: none;
                 color: #fff;
             }
+            
+    }
+    .signup-product{
+
+        @include desktop{
+            display:none;
+        }
+        
+    }
+    .signup-product-desktop{
+        display:none;
+        @include desktop{
+            display:block;
+            a{
+                display: flex;
+                justify-content: center;
+                padding:12px;
+            }
+        }
+    }
+    .testi2-desktop{
+        display:none;
+        @include desktop{
+            display:block
+        }
     }
 }
