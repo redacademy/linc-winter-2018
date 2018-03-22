@@ -56,7 +56,7 @@
         width: 240px;
         text-transform: uppercase;
         font-size: 1.15rem;
-        background-color: #97c13b;
+        background-color: $color__lincedgegreen;
         font-weight: 700;
         display:flex;
         justify-content: center;
@@ -85,7 +85,7 @@
         text-transform: uppercase;
         font-weight:bold;
         color:$color__lincedgeblue;
-        margin: 5% 0;
+        margin: 3% 0;
         @include desktop {
             font-size: 3rem;
             font-weight: 700;
@@ -115,6 +115,7 @@
         }
         .indiv-benefit, .indiv-feature {
             text-align: center;
+            margin-bottom: 1rem;
         }
         .benefits-image,.features-image {
             width:180px;
@@ -129,7 +130,7 @@
             font-weight:bold;
             color:$color__lincedgeblue;
             font-size:18px;
-            margin-top:10%;
+            margin: 0;
         }
         p {
             margin-bottom:0;
@@ -140,29 +141,47 @@
         width: 100%;
         .non-carousel{
             display:none;
+            position: relative;
             @include desktop {
-                text-align:center;
                 display:flex;
-                justify-content:center;
-                width:100%;
-                margin-top:5%;
+                justify-content: space-between;
+                text-align: center;
+                &:after {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5%;
+                    transform: translateX(-50%);
+                    background: url(../../images/green-arrow-down.png);
+                    background-size: contain;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
             }
             .hw-inner-container {
                 @include desktop {
                     background-color:$color__lincedgeblue;
                     height:500px;
-                    width:370px;
-                    border: 2px solid white;
-                    &:nth-child(2) {
-                        .howworks-title{
-                            // margin-left:25%;
-                            // margin-right:25%;
-                        }
+                    width:24vw;
+                    position: relative;
+                    &:not(:first-child) {
+                        border-left: 1px solid #fff;
                     }
-                    &:nth-child(3) {
-                        .howworks-title{
-                            // margin-left:27%;
-                            // margin-right:27%;
+                    &:not(:last-child) {
+                        &:after {
+                            content: '';
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            left: 101%;
+                            bottom: 50%;
+                            transform: translateX(-50%);
+                            background: url(../../images/green-arrow-right.png);
+                            background-size: contain;
+                            border-radius: 50%;
+                            z-index: 1;
                         }
                     }
                 }
@@ -175,11 +194,7 @@
                     margin-right:24.5%;
                     text-align:center;
                     margin-top:20%;
-                
-                
-
                 }
-            
             }
             img{
                 @include desktop{
@@ -194,17 +209,16 @@
             @include desktop {
                 display:none;
             }
-            height: 250px;
+            height: 225px;
             width:100%;
-            margin-top:10%;
-            img {
-                width:30%;
-                height:30%;
-            }
+            // margin-top:10%;
             .carousel-cell {
                 width: 100%;
-                height: 200px;
+                // min-height: 350px;   
                 text-align:center;          
+            }
+            img {
+                height: 100px;
             }
             .flickity-page-dots {
                 bottom: 5%;
@@ -217,7 +231,7 @@
                 color:$color__lincedgeblue;
                 width:50%;
                 margin:0 auto;
-                margin-top:8%;
+                margin-top:5%;
             }
         } // end carousel
     } // end how-works container

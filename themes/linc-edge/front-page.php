@@ -55,16 +55,16 @@ get_header(); ?>
 
 	
 
+		<div class="howworks-header"><span class="title-underline">
+			<?php echo CFS()->get( 'howworks_header' ); ?>
+		</span></div>
 		<div class="howworks-container">
-			<div class="howworks-header"><span class="title-underline">
-				<?php echo CFS()->get( 'howworks_header' ); ?>
-			</span></div>
-			<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+			<div class="carousel"  data-flickity='{ "wrapAround": true }'>
 			<?php $howworkscontainers = CFS()->get('howworks_container');
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="carousel-cell">
 					<div class="howworks-image">
-						<?php echo '<img src="' . $howworkcontainer['howworks_image'] . '"/>';?>
+						<?php echo '<img class="howworks-image" src="' . $howworkcontainer['howworks_image'] . '"/>';?>
 					</div>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
 				</div>
@@ -75,16 +75,13 @@ get_header(); ?>
 			<?php $howworkscontainers = CFS()->get('howworks_container_desktop');
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="hw-inner-container">
-					<div class="howworks-image">
-						<?php echo '<img src="' . $howworkcontainer['howworks_image_desktop'] . '"/>';?>
-					</div>
+					<?php echo '<img class="howworks-image" src="' . $howworkcontainer['howworks_image_desktop'] . '"/>';?>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text_desktop'];?></p>
 				</div>
 				<?php endforeach; ?>
 			</div><!-- .non-carousel -->
 		</div><!-- .howworks-container -->
 	
-
 
 		<div class="features-header"><span class="title-underline">
 			<?php echo CFS()->get( 'features_header' ); ?>
