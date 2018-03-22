@@ -1,20 +1,8 @@
 .page-template-about {
 
-  article {
-    margin: 10%;
-
-    .entry-title {
-      color: $color__lincedgeblue;
-      font-size: 32px;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-      @include desktop {
-        font-size: 70px;
-      }
-    } /* .entry-title */
-
     .entry-content {
+      width: 75%;
+      margin: 0 auto;
       color: $color__lincedgeblue;
       font-size: 25px;
       font-weight: normal;
@@ -26,7 +14,6 @@
         line-height: 45px;
       } 
     } /* .entry-content */
-  } /* article */
 
   .about-container {
 

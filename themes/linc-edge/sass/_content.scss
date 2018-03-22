@@ -105,18 +105,68 @@
 		}
 	}
 }
+
+// GLOBAL fixed header
+#masthead {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+// GLOBAL margin beneath fixed header
+.site-content {
+	margin-top: 48px;
+	background: #fff;
+	@include desktop {
+		margin-top: 143px;
+		background: $color__background-body;
+	}
+}
 // GLOBAL title style
 h1 {
 	margin: 0;
 }
 .entry-title {
-	@include page-title-style;
+	padding: 1.5rem 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: $color__lincedgeblue; 
+	@include desktop {
+		font-size: 3.5rem;
+		padding-top: 3rem;
+		padding-bottom:3rem;
+		}
 }
-
-// GLOBAL margin beneath fixed header
-.site-content {
-	// margin-top: 48px;
-	// @include desktop {
-	// 	margin-top: 143px;
-	// }
+.title-underline {
+	@include desktop {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			height: 4px;
+			bottom: -10px; 
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			width: 100%;
+			background: $color__lincedgegreen;
+		}
+	}    
+}
+.title-underline-short {
+	@include desktop {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			height: 3px;
+			bottom: -10px; 
+			margin: 0 auto;
+			left: 0;
+			width: 60px;
+			background: $color__lincedgegreen;
+		}
+	}    
 }
