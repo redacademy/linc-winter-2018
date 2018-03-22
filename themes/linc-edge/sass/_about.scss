@@ -103,11 +103,17 @@
 
   } /* .about-container */
 
+  .customer-container {
+    background: $color__background-body;
+    @include desktop {
+      background: #fff;
+    }
+  }
   .customer-header {
     color: $color__lincedgeblue;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 5% auto;
+    padding: 2rem 0;
     text-align: center;
     text-transform: uppercase;
   } /* .customer-header */
@@ -155,6 +161,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    // background: #fff;
   } /* .customer-content-container */
 
 } /* .page-template-about */
