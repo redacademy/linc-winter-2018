@@ -1,11 +1,11 @@
 .page-template-price {
-  margin: 7.5%;
   .pricing-plan-container {
     @include desktop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      // width: 25rem;
+      width: 80%;
+      margin: 0 auto;
     }
   } /* .pricing-plan-container */
 
@@ -19,8 +19,9 @@
       background-color: #ffffff; 
       border: 1px solid #ffffff;
       border-radius: 10px;
-      width: 23.5rem;
-      min-width: 23.5rem;
+      width: 32%;
+      // width: 23.5rem;
+      // min-width: 23.5rem;
     }
   } /* .pricing-plan-content-container */
 
@@ -43,17 +44,20 @@
   .pricing-plan-title {
     @include desktop {
       color: $color__lincedgeblue;
-      font-size: 48px;
       font-weight: bold;
+      font-size: 1.5rem;
       text-transform: uppercase;
+    }
+    @media screen and (min-width: 950px) {
+      font-size: 2rem;
     }
   } /* .pricing-plan-title */
 
   .pricing-plan-description {
     @include desktop {
       color: $color__text-main;
-      font-size: 20px;
-      line-height: 36px;
+      font-size: 1.15rem;
+      line-height: 1.5;
       margin: 0 15%;
     }
   } /* .pricing-plan-description */
@@ -61,8 +65,8 @@
   .pricing-plan-rate {
     @include desktop {
       color: $color__text-main;
-      font-size: 20px;
-      line-height: 36px;
+      font-size: 1.25rem;
+      line-height: 1;
     }
   } /* .pricing-plan-rate */
 
@@ -76,7 +80,7 @@
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         color: #ffffff;
         font-size: 1.25rem;
-        padding: 0.75rem 2.75rem;
+        padding: 0.75rem 2rem;
         text-transform: uppercase;
       } /* .pricing-plan-button */
     }

@@ -1,4 +1,11 @@
 .page-template-signup{
+    .entry-content {
+        @include desktop {
+        margin: 1.5rem auto 0 auto;
+        width: 75%;
+        }
+    }
+
     .signup-desktop{
         display:none;
         @include desktop{
@@ -60,18 +67,9 @@
             display:none;
         }
     }
-    .entry-title{
-        font-size:1.5rem;
-        color:$color__lincedgeblue;
-        text-align:center;
-        @include desktop{
-           @include page-title-style;
 
-        }
-        
-    }
     .signup-text{
-        width:70%;
+        width:75%;
         text-align:center;
         margin:0 auto;
         font-size:1rem;
