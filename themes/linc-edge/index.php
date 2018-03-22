@@ -124,7 +124,7 @@ get_header(); ?>
 
 				<div class="benefits-content-container" id="benefit-mobile">
 					<div class="benefit-carousel">
-						<div class="benefit-title"><?php echo CFS()->get( 'benefits_title' ); ?></div>
+
 				<div class="carousel-2">
 					<?php 
 					

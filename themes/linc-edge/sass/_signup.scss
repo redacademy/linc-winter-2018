@@ -1,3 +1,33 @@
+.page-id-229{
+.thankyou-text{
+    text-align:center;
+    font-size:30px;
+}
+.back-home-button{
+    margin:0 auto;
+    margin-top:8%;
+    margin-bottom:20%;
+    border-radius: 30px;
+    height:52px;
+    width:240px;
+    text-transform:uppercase;
+    font-size:18px;
+     background-color:$color__lincedgegreen;
+     color:white;
+     font-weight:bold;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     a{
+         text-decoration:none;
+         color:white;
+         display:flex;
+         justify-content: center;
+         padding:12px;
+     }
+}
+ 
+
+}
+
 .page-template-signup{
     .entry-content {
         @include desktop {
@@ -9,6 +39,7 @@
     .signup-desktop{
         display:none;
         @include desktop{
+            margin-bottom:20%;
             display:block;
             .signup-desktop-text{
                 text-align:center;
@@ -21,16 +52,16 @@
 
                 .gfield_label{
                     font-weight:normal;
-      
+                    margin-left: 13%;
                     display:flex;
-                    justify-content:center;
+                    justify-content:flex-start;
                     
                 }
                 width:100%;
                 margin-top:3%;
                 display:flex;
                 flex-direction:column;
-                input{
+                input.medium{
                     width:75%;
                     box-shadow: 0 0 3px #ddd;
         
@@ -60,6 +91,8 @@
             font-size:0.85rem;
             text-align:center;
             margin-top:10%;
+            margin-bottom:10%;
+     
     
         }
 
@@ -106,7 +139,12 @@
         text-align: center;
     }
 }
+.site-footer{
+    margin-top:0;
+}
 
-
+.site-content {
+height:100%;
+}
     
 }

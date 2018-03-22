@@ -16,11 +16,7 @@
         $("#button-feature").click(function(){
             $(".features-content-container").css("display", "block");
             $(".benefits-content-container").css("display", "none");
-            // $('.carousel').flickity({
-            //     // options
-            //     cellAlign: 'left',
-            //     contain: true
-            //   });
+
         });
     });
     $(document).ready(function(){
@@ -64,7 +60,22 @@
 
       });
 
-     
+    $(window).on('resize', function () {
+        if (document.body.clientWidth > 650) {
+            $('.features-content-container').css('display','block');
+            $('#benefit-desktop').css('display','flex');
+            $('#benefit-mobile').css('display','none');
+        }
+    });
+
+    $(window).on('resize', function () {
+        if (document.body.clientWidth < 650) {
+            $('.features-content-container').css('display','block');
+            $('#benefit-desktop').css('display','none');
+
+        }
+    });
+    
     });
     
 
