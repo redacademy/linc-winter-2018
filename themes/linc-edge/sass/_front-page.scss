@@ -50,7 +50,7 @@
     } // end banner container
 
     // call-to-action buttons
-    .signup-front,.learnmore-front,.signup-front-desktop {
+    .signup-front-mobile,.learnmore-front,.signup-front-desktop {
         border-radius: 30px;
         height: 52px;
         width: 240px;
@@ -67,7 +67,7 @@
             color:#fff;      
         }
     }
-    .signup-front {
+    .signup-front-mobile {
         @include desktop {
             display:none;
         }
@@ -78,47 +78,28 @@
             display:flex;
         }
     }
-    .theproblem-heading {
+    .theproblem-heading,
+    .benefits-header,.features-header,.howworks-header {
+        font-size: 1.5rem;
         text-align:center;
-        font-size:24px;
+        text-transform: uppercase;
         font-weight:bold;
         color:$color__lincedgeblue;
-        text-transform: uppercase;
-        margin-top:5%;
-        margin-bottom:4%;
+        margin: 5% 0;
         @include desktop {
-
             font-size: 3rem;
             font-weight: 700;
-            text-align: center;
-            text-transform: uppercase;
             display: block;
             color: #012f46;
         }
     }
     .theproblem-description {
-        font-size:20px;
-        width:85%;
+        font-size: 1.25rem;
+        width: 85%;
         margin:0 auto;
+        text-align: justify;
         @include desktop {
-            line-height:36px;
-
-        }
-    }
-    .benefits-header,.features-header,.howworks-header {
-        font-size:24px;
-        text-transform:uppercase;
-        color:$color__lincedgeblue;
-        font-weight:bold;
-        margin-top:7%;
-        text-align: center;
-        @include desktop {
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            text-transform: uppercase;
-            display: block;
-            color: #012f46;
+            width: 75%;
         }
     }
     .benefits-container,.features-container {
@@ -126,13 +107,14 @@
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        margin-top:5%;
         @include desktop{
             flex-direction:row;
             justify-content:space-around;
-            width:80%;
+            width: 80%;
             margin:0 auto;
-            margin-top:5%;
+        }
+        .indiv-benefit, .indiv-feature {
+            text-align: center;
         }
         .benefits-image,.features-image {
             width:180px;
