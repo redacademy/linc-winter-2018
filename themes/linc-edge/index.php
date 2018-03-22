@@ -137,9 +137,16 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    <?php endforeach; ?>
+    <?php endforeach; wp_reset_postdata();?>
 			</div>
 				</div>
+
+		
+
+		<div class="experience-title"><?php echo CFS()->get('experience_title');?></div>
+
+			
+		<div class="signup-product"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
 
 
 				
