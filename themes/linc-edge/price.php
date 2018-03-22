@@ -63,10 +63,14 @@ get_header(); ?>
       <?php endforeach; ?><!-- ending foreach loop -->
     </div><!-- .subscription-description-container -->
 
-    <div class="subscribe-container">
-      <input type="email" name="EMAIL" placeholder="Email address" required />
-      <input type="submit" value="Subscribe" />
-    </div><!-- .subscribe-container -->
+    <div class="subscription-form-container">
+      <div class="subscription-form-content-container">
+        <div class="subscription-form-group">
+          <input class="email-field" type="email" name="EMAIL" placeholder="Email address" required />
+          <input class="submit-button" type="submit" value="Subscribe" />
+        </div><!-- .subscription-form-group -->
+      </div><!-- .subscription-form-content-container -->
+    </div><!-- .subscription-form-container -->
 
     <div class="subscription-condition-container">
 
