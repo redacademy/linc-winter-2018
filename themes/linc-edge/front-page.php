@@ -32,13 +32,13 @@ get_header(); ?>
 	<div class="afterbanner-container">
 			<?php $afterbannertexts = CFS()->get( 'after_banner_text' );
 			foreach ($afterbannertexts as $afterbannertext ) {?>
-		  <div class="theproblem-heading"> <?php echo $afterbannertext['heading']; ?> </div>
+		  <div class="theproblem-heading"><span class="title-underline"> <?php echo $afterbannertext['heading']; ?> </span></div>
 		  <div class="theproblem-description"> <?php echo $afterbannertext['heading1_description']; }?> </div>
 	</div>
 
 
 
-	<div class="benefits-header">	<?php echo CFS()->get( 'benefits_header' ); ?></div>
+	<div class="benefits-header"><span class="title-underline"><?php echo CFS()->get( 'benefits_header' ); ?></span></div>
 	<div class="benefits-container">
 			<?php $benefitscontainers = CFS()->get('benefits_container');
 			foreach ($benefitscontainers as $benefitcontainer ): ?>
@@ -52,7 +52,7 @@ get_header(); ?>
 	
 
 	<div class="howworks-container">
-			<div class="howworks-header">	<?php echo CFS()->get( 'howworks_header' ); ?></div>
+			<div class="howworks-header"><span class="title-underline"><?php echo CFS()->get( 'howworks_header' ); ?></span></div>
 				<div class="carousel"  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
 			<?php $howworkscontainers = CFS()->get('howworks_container');
 			foreach ($howworkscontainers as $howworkcontainer ): ?>
@@ -90,7 +90,7 @@ get_header(); ?>
 		
 
 
-	<div class="features-header">	<?php echo CFS()->get( 'features_header' ); ?></div>
+	<div class="features-header"><span class="title-underline"><?php echo CFS()->get( 'features_header' ); ?></span></div>
 	<div class="features-container">
 			<?php $featurescontainers = CFS()->get('features_container');
 			foreach ($featurescontainers as $featurecontainer ):?>
@@ -124,7 +124,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    <?php endforeach; ?>
+    <?php endforeach; wp_reset_postdata(); ?>
 
 
 
