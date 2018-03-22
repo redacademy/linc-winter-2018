@@ -12,7 +12,6 @@
 
   .pricing-plan-content-container {
     @include desktop {
-      visibility: visible;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -110,18 +109,22 @@
   }
 
   .subscription-form-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
     @include desktop {
-      display: flex;
-      justify-content: space-evenly;
       margin: 1rem;
       width: 40%;
     }
   } /* .subscribe-container */
 
   input.email-field {
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 10rem;
     @include desktop {
       width: auto;
+      padding-left: 1rem;
       padding-right: 10rem;
     }
   } /* input.email-field */
