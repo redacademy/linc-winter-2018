@@ -50,7 +50,7 @@ get_header(); ?>
     </div><!-- .pricing-plan-container -->
 
     <div class="notification-subscription-container">
-      <?php $fields = CFS()->get( 'content_subsciption' ); foreach ( $fields as $field ): ?>
+      <?php $updates = CFS()->get( 'content_subsciption' ); foreach ( $updates as $update ): ?>
 
         <div class="notification-subscription-content-container">
           
