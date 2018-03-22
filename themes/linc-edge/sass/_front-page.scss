@@ -83,7 +83,16 @@ margin-top:-32px;
     }
 }
 .signup-front2{
+
     display:none;
+    @include desktop{
+        display:block;
+        a{
+            display: flex;
+            justify-content: center;
+            padding:12px;
+        }
+    }
 }
 .theproblem-heading{
     text-align:center;
