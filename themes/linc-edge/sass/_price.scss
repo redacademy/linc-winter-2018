@@ -1,5 +1,6 @@
 .page-template-price {
   .pricing-plan-container {
+    display: none;
     @include desktop {
       display: flex;
       flex-direction: row;
@@ -10,9 +11,7 @@
   } /* .pricing-plan-container */
 
   .pricing-plan-content-container {
-    visibility: hidden;
     @include desktop {
-      visibility: visible;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -20,8 +19,6 @@
       border: 1px solid #ffffff;
       border-radius: 10px;
       width: 32%;
-      // width: 23.5rem;
-      // min-width: 23.5rem;
     }
   } /* .pricing-plan-content-container */
 
@@ -85,5 +82,83 @@
       } /* .pricing-plan-button */
     }
   } /* .pricing-plan-button-group */
+
+  .subscription-description-group {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  } /* .subscription-description-group */
+
+  .subscription-description {
+    align-self: center;
+    color: $color__lincedgeblue;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1.5rem;
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  } /* .subscription-description */
+
+  .subscription-form-content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .subscription-form-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    @include desktop {
+      margin: 1rem;
+      width: 40%;
+    }
+  } /* .subscribe-container */
+
+  input.email-field {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 10rem;
+    @include desktop {
+      width: auto;
+      padding-left: 1rem;
+      padding-right: 10rem;
+    }
+  } /* input.email-field */
+
+  input.submit-button {
+    background-color: $color__lincedgegreen;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    @include desktop {
+      font-size: 1.25rem;
+      width: auto;
+    }
+  } /* input.submit-button */
+
+  .subscription-condition-group {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  } /* .subscription-condition-group */
+
+  .subscription-condition {
+    align-self: center;
+    color: $color__lincedgeblue;
+    font-size: 1rem;
+    margin: 1.5rem;
+    @include desktop {
+      font-size: 1.15rem;
+    }
+  } /* subscription-condition */
 
 } /* .page-template-price */

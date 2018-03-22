@@ -1,304 +1,238 @@
-.page-template-front-page{
+.page-template-front-page {
 
-
-
-.banner-container{
-margin-top:-32px;
-@include desktop{
-    //ASK JIM ABOUT THIS
-    height:690px !important;
-
-}
-.banner-text{
-    color:white;
-    font-weight:bold;
-    display:flex;
-    justify-content: center;
-    height:60%;
-    align-items:center;
-    font-size:1.25rem;
-    text-shadow: 2px 2px 2px rgba(56, 56, 56, 0.5);
-    @include desktop{
-    font-size:2.5rem;
-    height:50%;
-    }
-}
-.download-container{
-    display:flex;
-    justify-content:space-around;
-    margin-left:10%;
-    margin-right:10%;
-    @include desktop{
-      margin-left:30%;
-      margin-right:30%;
-    }
-
-    .download-pics{
-    width:100px;
-    height:32px;
-    @include desktop{
-        height:50px;
-        width:170px;
-    }
-    }
-    .download-pics2{
-        width:88px;
-        height:32px;
-        @include desktop{
-            height:50px;
-            width:170px;
+    .banner-container {
+        margin-top: -24px;
+        @include desktop {
+            //ASK JIM ABOUT THIS
+            height:690px !important;
         }
-    }
-}
-
-
-
-
-}
-.signup-front,.learnmore-front,.signup-front2{
-
-    border-radius: 30px;
-    height: 52px;
-    width: 240px;
-    text-transform: uppercase;
-    font-size: 18px;
-    background-color: #97c13b;
-    color: #fff;
-    font-weight: 700;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    margin:8% auto;
-
-    a{
-        text-decoration: none;
-        color:white;
-
-     
-    }
-
-}
-.signup-front{
-    @include desktop{
-        display:none;
-    }
-}
-.signup-front2{
-
-    display:none;
-    @include desktop{
-        display:block;
-        a{
-            display: flex;
-            justify-content: center;
-            padding:12px;
-        }
-    }
-}
-.theproblem-heading{
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    color:$color__lincedgeblue;
-    text-transform: uppercase;
-    margin-top:5%;
-    margin-bottom:4%;
-    @include desktop{
-
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        display: block;
-        color: #012f46;
-    }
-}
-.theproblem-description{
-    font-size:20px;
-    width:85%;
-    margin:0 auto;
-    @include desktop{
-        line-height:36px;
-
-    }
-}
-.benefits-header,.features-header,.howworks-header{
-    font-size:24px;
-    text-transform:uppercase;
-    color:$color__lincedgeblue;
-    font-weight:bold;
-    margin-top:7%;
-    text-align: center;
-    @include desktop{
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        display: block;
-        color: #012f46;
-
-    }
-
-}
-.benefits-container,.features-container{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    margin-top:5%;
-    @include desktop{
-        flex-direction:row;
-        justify-content:space-around;
-        width:80%;
-        margin:0 auto;
-        margin-top:5%;
-    }
-   
-  
-    .benefits-image,.features-image{
-
-        width:180px;
-        height:180px;
-        @include desktop{
-            width:20vw;
-            height:20vw;
-        }
-
-    }
-    .benefits-title,.features-title{
-        text-align:center;
-
-        font-weight:bold;
-        color:$color__lincedgeblue;
-        font-size:18px;
-        margin-top:10%;
-    }
-    p{
-        margin-bottom:0;
-    }
-   
-
-
-}
-
-.howworks-container{
-    width: 100%;
-    .non-carousel{
-        display:none;
-        @include desktop{
-            
-            text-align:center;
-            display:flex;
-            justify-content:center;
-            width:100%;
-            margin-top:5%;
-            
-        }
-    .hw-inner-container{
-        @include desktop{
-            
-            background-color:$color__lincedgeblue;
-            height:500px;
-            width:370px;
-            border: 2px solid white;
-            &:nth-child(2) {
-                .howworks-title{
-                    margin-left:25%;
-                    margin-right:25%;
-                }
-            }
-            &:nth-child(3) {
-                .howworks-title{
-                    margin-left:27%;
-                    margin-right:27%;
-                }
-            }
-      
-            
- 
-
-        }
-    }
-    .howworks-title{
-        @include desktop{
+        .banner-text {
             color:white;
-            font-size:24px;
-            margin-left:24.5%;
-            margin-right:24.5%;
-            text-align:center;
-            margin-top:20%;
-         
-         
-
+            font-weight:bold;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            text-align: center;
+            height:60%;
+            font-size:1.25rem;
+            text-shadow: 2px 2px 2px rgba(56, 56, 56, 0.5);
+            @include desktop {
+                font-size:2.5rem;
+                height:50%;
+            }
         }
-      
-    }
-  
-    img{
-        @include desktop{
-            margin-top:40%;
-        width:97px;
-        height:80px;
-    }
-    }
-    }
+        .download-container {
+            display:flex;
+            justify-content:space-around;
+            margin-left:10%;
+            margin-right:10%;
+            @include desktop {
+                margin-left:30%;
+                margin-right:30%;
+            }
+            .google-play-link {
+                width:100px;
+                height:32px;
+                @include desktop {
+                    height:50px;
+                    width:170px;
+                }
+            }
+            .app-store-link {
+                width:88px;
+                height:32px;
+                @include desktop {
+                    height:50px;
+                    width:170px;
+                }
+            }
+        } // end download container
+    } // end banner container
 
-    
-
-   
-
-.carousel{
-    @include desktop{
+    // call-to-action buttons
+    .signup-front-mobile,.learnmore-front,.signup-front-desktop {
+        border-radius: 30px;
+        height: 52px;
+        width: 240px;
+        text-transform: uppercase;
+        font-size: 1.15rem;
+        background-color: $color__lincedgegreen;
+        font-weight: 700;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        margin: 2rem auto;
+        a {
+            text-decoration: none;
+            color:#fff;      
+        }
+    }
+    .signup-front-mobile {
+        @include desktop {
+            display:none;
+        }
+    }
+    .signup-front-desktop {
         display:none;
+        @include desktop {
+            display:flex;
+        }
     }
-
-    height: 250px;
-    width:100%;
-    margin-top:10%;
-    img{
-        width:30%;
-        height:30%;
-    }
-    .carousel-cell{
-        width: 100%;
-        height: 200px;
+    .theproblem-heading,
+    .benefits-header,.features-header,.howworks-header {
+        font-size: 1.5rem;
         text-align:center;
-
-      
-    }
-    .flickity-page-dots{
-        bottom: 5%;
-    }
-    .flickity-button{
-        display:none;
-    }
-    .howworks-title{
+        text-transform: uppercase;
         font-weight:bold;
         color:$color__lincedgeblue;
-        width:50%;
+        margin: 3% 0;
+        @include desktop {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            color: #012f46;
+        }
+    }
+    .theproblem-description {
+        font-size: 1.25rem;
+        width: 85%;
         margin:0 auto;
-        margin-top:8%;
+        text-align: justify;
+        @include desktop {
+            width: 75%;
+        }
     }
+    .benefits-container,.features-container {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        @include desktop{
+            flex-direction:row;
+            justify-content:space-around;
+            width: 80%;
+            margin:0 auto;
+        }
+        .indiv-benefit, .indiv-feature {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .benefits-image,.features-image {
+            width:180px;
+            height:180px;
+            @include desktop{
+                width:20vw;
+                height:20vw;
+            }
+        }
+        .benefits-title,.features-title {
+            text-align:center;
+            font-weight:bold;
+            color:$color__lincedgeblue;
+            font-size:18px;
+            margin: 0;
+        }
+        p {
+            margin-bottom:0;
+        }
+    } // end benefites/features-container
 
-}
+    .howworks-container {
+        width: 100%;
+        .non-carousel{
+            display:none;
+            position: relative;
+            @include desktop {
+                display:flex;
+                justify-content: space-between;
+                text-align: center;
+                &:after {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5%;
+                    transform: translateX(-50%);
+                    background: url(../../images/green-arrow-down.png);
+                    background-size: contain;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+            .hw-inner-container {
+                @include desktop {
+                    background-color:$color__lincedgeblue;
+                    height:500px;
+                    width:24vw;
+                    position: relative;
+                    &:not(:first-child) {
+                        border-left: 1px solid #fff;
+                    }
+                    &:not(:last-child) {
+                        &:after {
+                            content: '';
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            left: 101%;
+                            bottom: 50%;
+                            transform: translateX(-50%);
+                            background: url(../../images/green-arrow-right.png);
+                            background-size: contain;
+                            border-radius: 50%;
+                            z-index: 1;
+                        }
+                    }
+                }
+            } // end hw-inner-container
+            .howworks-title{
+                @include desktop{
+                    color:white;
+                    font-size:24px;
+                    margin-left:24.5%;
+                    margin-right:24.5%;
+                    text-align:center;
+                    margin-top:20%;
+                }
+            }
+            img{
+                @include desktop{
+                    margin-top:40%;
+                    width:97px;
+                    height:80px;
+                }
+            }
+        } // end non-carousel
 
-
-}
-
-
-#masthead {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-}
-.site-content {
-    margin-top: 48px;
-    background: #fff;
-    @include desktop {
-        margin-top: 143px;
-        background: $color__background-body;
-    }
-}
+        .carousel{
+            @include desktop {
+                display:none;
+            }
+            height: 225px;
+            width:100%;
+            // margin-top:10%;
+            .carousel-cell {
+                width: 100%;
+                // min-height: 350px;   
+                text-align:center;          
+            }
+            img {
+                height: 100px;
+            }
+            .flickity-page-dots {
+                bottom: 5%;
+            }
+            .flickity-button {
+                display:none;
+            }
+            .howworks-title {
+                font-weight:bold;
+                color:$color__lincedgeblue;
+                width:50%;
+                margin:0 auto;
+                margin-top:5%;
+            }
+        } // end carousel
+    } // end how-works container
 }

@@ -35,7 +35,7 @@ get_header(); ?>
           </div><!-- .pricing-plan-image-group -->
 
           <div class="pricing-plan-text-group">
-            <p class="pricing-plan-title"><?php echo $field['pricing_title'];?></p><!-- .pricing-plan-title -->
+            <p class="pricing-plan-title"><?php echo $field['pricing_title']; ?></p><!-- .pricing-plan-title -->
             <p class="pricing-plan-description"><?php echo $field['pricing_description']; ?></p><!-- .pricing-plan-description -->
             <p class="pricing-plan-rate"><?php echo $field['pricing_rate']; ?></p><!-- .pricing-plan-rate -->
           </div><!-- .pricing-plan-text-group -->
@@ -47,9 +47,45 @@ get_header(); ?>
         </div><!-- .pricing-plan-content-container -->
         
       <?php endforeach; ?><!-- ending foreach loop -->
-
     </div><!-- .pricing-plan-container -->
 
+    <div class="subscription-description-container">
+      <?php $subscribes = CFS()->get( 'subscribe_description_content' ); foreach ( $subscribes as $subscribe ): ?>
+
+        <div class="subscription-description-content-container">
+          
+          <div class="subscription-description-group">
+            <p class="subscription-description"><?php echo $subscribe['subscribe_description']; ?></p><!-- .subscription-description -->
+          </div><!-- .subscription-description-group -->
+
+        </div><!-- .subscription-description-content-container -->
+
+      <?php endforeach; ?><!-- ending foreach loop -->
+    </div><!-- .subscription-description-container -->
+
+    <div class="subscription-form-container">
+      <div class="subscription-form-content-container">
+        <div class="subscription-form-group">
+          <input class="email-field" type="email" name="EMAIL" placeholder="Email address" required />
+          <input class="submit-button" type="submit" value="Subscribe" />
+        </div><!-- .subscription-form-group -->
+      </div><!-- .subscription-form-content-container -->
+    </div><!-- .subscription-form-container -->
+
+    <div class="subscription-condition-container">
+
+      <div class="subscription-condition-content-container">
+        <?php $conditions = CFS()->get( 'subscribe_condition_content' ); foreach ( $conditions as $condition ): ?>
+
+          <div class="subscription-condition-group">
+            <p class="subscription-condition"><?php echo $condition['subscribe_condition']; ?></p><!-- .subscription-condition -->
+          </div><!-- .subscription-condition-group -->
+
+        </div><!-- subscription-condition-content-container -->
+    
+      <?php endforeach; ?><!-- ending foreach loop -->
+    </div><!-- .subscription-condition-container -->
+          
   </main><!-- .site-main -->
 </div><!-- .content-area -->
 
