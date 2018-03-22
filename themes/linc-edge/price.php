@@ -49,24 +49,34 @@ get_header(); ?>
       <?php endforeach; ?><!-- ending foreach loop -->
     </div><!-- .pricing-plan-container -->
 
-    <div class="notification-subscription-container">
-      <?php $updates = CFS()->get( 'content_subsciption' ); foreach ( $updates as $update ): ?>
+    <div class="subscription-description-container">
+      <?php $subscribe = CFS()->get( 'subscribe_description_content' ); foreach ( $subscribes as $subscribe ): ?>
 
-        <div class="notification-subscription-content-container">
+        <div class="subscription-description-content-container">
           
-          <div class="notification-subscription-description-group">
-            <p class="notification-subscription-description"><?php echo $field['subscribe_description']; ?></p><!-- .notification-subscription-description -->
-          </div><!-- .notification-subscription-description-group -->
+          <div class="subscription-description-group">
+            <p class="subscription-description"><?php echo $subscribe['subscribe_description']; ?></p><!-- .subscription-description -->
+          </div><!-- .subscription-description-group -->
 
-          <div class="notification-subscription-condition-group">
-            <p class="notification-subscription-condition"><?php echo $field['subscribe_condition']; ?></p><!-- .notification-subscription-condition -->
-          </div><!-- .notification-subscription-condition-group -->
-
-        </div><!-- .notification-subscription-content-container -->
+        </div><!-- .subscription-description-content-container -->
 
       <?php endforeach; ?><!-- ending foreach loop -->
-    </div><!-- .notification-subscription-container -->
+    </div><!-- .subscription-description-container -->
 
+    <div class="subscription-condition-container">
+
+      <div class="subscription-condition-content-container">
+        <?php $condition = CFS()->get( 'subscribe_condition_content' ); foreach ( $conditions as $condition ): ?>
+
+          <div class="subscription-condition-group">
+            <p class="subscription-condition"><?php echo $condition['subscribe_condition']; ?></p><!-- .subscription-condition -->
+          </div><!-- .subscription-condition-group -->
+
+        </div><!-- subscription-condition-content-container -->
+    
+      <?php endforeach; ?><!-- ending foreach loop -->
+    </div><!-- .subscription-condition-container -->
+          
   </main><!-- .site-main -->
 </div><!-- .content-area -->
 
