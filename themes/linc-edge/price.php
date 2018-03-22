@@ -13,6 +13,16 @@ get_header(); ?>
       <header class="entry-header">
         <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
       </header><!-- .entry-header -->
+
+      <div class="entry-content">
+        <?php the_content(); ?>
+        <?php wp_link_pages( array(
+          'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+          'after'  => '</div>',
+          ) );
+        ?>
+      </div><!-- .entry-content -->
+
     <?php endwhile; ?><!-- ending while loop -->
 
     <div class="pricing-plan-container">
