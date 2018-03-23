@@ -20,18 +20,15 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 	
-
+		
 		<div class="banner-container">
-		  <?php $bannercontainers = CFS()->get( 'banners' );
-			foreach ( $bannercontainers as $bannercontainer ) : ?>
 				 <div class="banner-text">
-			
-					 <?php echo $bannercontainer['banner_text'];?>
+					 <?php echo CFS()->get( 'banner_text' ); ?>
 				</div>
 				 <div class="download-container">
-					<a href="<?php echo $bannercontainer['google_store_link']?>"> <?php echo '<img class="google-play-link" src="' . $bannercontainer['googleimage'] . '"/>'?> </a> 
-					<a href="<?php echo $bannercontainer['apple_store_link']?>"><?php echo '<img class="app-store-link" src="' . $bannercontainer['appleimage']. '"/>' ?></a>
-					<?php endforeach; ?>
+					<a href="<?php echo CFS()->get( 'google_store_link' );?>"> <?php echo '<img class="google-play-link" src="' . CFS()->get( 'googleimage' ) . '"/>'?></a> 
+					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
+	
 				</div>
 				 <div class="signup-front-desktop">
 					 <?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
@@ -134,7 +131,18 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
                 </div>
             </div>
         </div>
-    <?php endforeach; wp_reset_postdata(); ?>
+	<?php endforeach; wp_reset_postdata(); ?>
+	
+
+ 	<div class="join-beta-container">
+		<div class="join-beta-title">
+			<?php echo CFS()->get( 'join_beta_title' ); ?>
+		</div>
+		<div class="join-beta-button">
+		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
+		</div>
+	</div>
+
 
 
 
