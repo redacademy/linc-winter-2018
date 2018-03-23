@@ -36,8 +36,9 @@ function lincedge_hero_image(){
 		height:250px;
 
 		}";
-		wp_add_inline_style ('red-starter-style',$CSS);
+		wp_add_inline_style ('lincedge-starter-style',$CSS);
 	} 
 }
  
-add_action("wp_enqueue_scripts" , 'lincedge_hero_image');
+add_action('wp_enqueue_scripts' , 'lincedge_hero_image');
+

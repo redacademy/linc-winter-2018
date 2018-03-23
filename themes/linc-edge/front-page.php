@@ -2,20 +2,34 @@
 /**
  * Template Name: Front Page
  */
+?>
 
-get_header(); ?>
+
+
+
+	<?php
+
+
+if ( 'posts' == get_option( 'show_on_front' ) ) {
+    include( get_home_template() );
+} else {
+    get_header();?>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+	
 
 		<div class="banner-container">
 		  <?php $bannercontainers = CFS()->get( 'banners' );
 			foreach ( $bannercontainers as $bannercontainer ) { ?>
 				 <div class="banner-text">
+			
 					 <?php echo $bannercontainer['banner_text'];?>
 				</div>
 				 <div class="download-container">
-				 	<?php echo '<img class="google-play-link" src="' . $bannercontainer['googleimage'] . '"/>';?>
+	
+					<?php echo '<img class="google-play-link" src="' . $bannercontainer['googleimage'] . '"/>';?>
 				 	<?php echo '<img class="app-store-link" src="' . $bannercontainer['appleimage']. '"/>'; }?>
 				</div>
 				 <div class="signup-front-desktop">
@@ -59,7 +73,7 @@ get_header(); ?>
 			<?php echo CFS()->get( 'howworks_header' ); ?>
 		</span></div>
 		<div class="howworks-container">
-			<div class="carousel"  data-flickity='{ "wrapAround": true }'>
+			<div class="carousel" >
 			<?php $howworkscontainers = CFS()->get('howworks_container');
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="carousel-cell">
@@ -129,3 +143,5 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+
+	<?php }?>

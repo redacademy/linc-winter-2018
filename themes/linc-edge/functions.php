@@ -1,6 +1,6 @@
 <?php
 /**
- * RED Starter Theme functions and definitions.
+ * Linc Edge Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -56,7 +56,7 @@ add_action( 'after_setup_theme', 'linc_edge_content_width', 0 );
  */
 function linc_edge_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
+		'name'          => esc_html( 'Footer' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -82,46 +82,7 @@ add_filter( 'stylesheet_uri', 'linc_edge_minified_css', 10, 2 );
 
 
 
-// Hook up the AJAX ajctions
-add_action( 'wp_ajax_nopriv_gf_button_get_form', 'gf_button_ajax_get_form' );
-add_action( 'wp_ajax_gf_button_get_form', 'gf_button_ajax_get_form' );
-// Add the "button" action to the gravityforms shortcode
-// e.g. [gravityforms action="button" id=1 text="button text"]
-add_filter( 'gform_shortcode_button', 'gf_button_shortcode', 10, 3 );
-function gf_button_shortcode( $shortcode_string, $attributes, $content ){
-	$a = shortcode_atts( array(
-		'id' => 0,
-		'text' => 'Show me the form!',
-		'button_class' => ''
-	), $attributes );
-	$form_id = absint( $a['id'] );
-	if ( $form_id < 1 ) {
-		return 'Missing the ID attribute.';
-	}
-	// Enqueue the scripts and styles
-	gravity_form_enqueue_scripts( $form_id, true );
-	$ajax_url = admin_url( 'admin-ajax.php' );
-	$html = sprintf( '<button id="gf_button_get_form_%d" class="%s">%s</button>', $form_id, $a['button_class'], $a['text'] );
-	$html .= sprintf( '<div id="gf_button_form_container_%d" style="display:none;"></div>', $form_id );
-	$html .= "<script>
-				(function (SHFormLoader, $) {
-				$('#gf_button_get_form_{$form_id}').click(function(){
-					var button = $(this);
-					$.get('{$ajax_url}?action=gf_button_get_form&form_id={$form_id}',function(response){
-						$('#gf_button_form_container_{$form_id}').html(response).fadeIn();
-						button.remove();
-						if(window['gformInitDatepicker']) {gformInitDatepicker();}
-					});
-				});
-			}(window.SHFormLoader = window.SHFormLoader || {}, jQuery));
-			</script>";
-	return $html;
-}
-function gf_button_ajax_get_form(){
-	$form_id = isset( $_GET['form_id'] ) ? absint( $_GET['form_id'] ) : 0;
-	gravity_form( $form_id,true, false, false, false, true );
-	die();
-}
+
 
 /**
  * Enqueue scripts and styles.
@@ -131,9 +92,9 @@ function linc_edge_scripts() {
 
 	wp_enqueue_script('jquery');
 
-	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'lincedge-starter-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '3.3.1', true);
 
@@ -149,11 +110,16 @@ function linc_edge_scripts() {
 	
 	wp_enqueue_script( 'product-js', get_template_directory_uri() . '/build/js/product.min.js', array('jquery'), true );
 
+	wp_enqueue_style( 'style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
+
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lato', false ); 
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
+
 
 
 
