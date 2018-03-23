@@ -129,7 +129,6 @@ add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
 
 
 
-
 /**
  * Custom template tags for this theme.
  */
