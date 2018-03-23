@@ -156,6 +156,14 @@ function linc_edge_scripts() {
 add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
 
 
+function wpb_add_google_fonts() {
+ 
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lato', false ); 
+	}
+	 
+	add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+	
+
 
 
 
