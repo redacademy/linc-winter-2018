@@ -10,6 +10,7 @@
 	<?php
 
 
+
 if ( 'posts' == get_option( 'show_on_front' ) ) {
     include( get_home_template() );
 } else {
@@ -22,15 +23,15 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 
 		<div class="banner-container">
 		  <?php $bannercontainers = CFS()->get( 'banners' );
-			foreach ( $bannercontainers as $bannercontainer ) { ?>
+			foreach ( $bannercontainers as $bannercontainer ) : ?>
 				 <div class="banner-text">
 			
 					 <?php echo $bannercontainer['banner_text'];?>
 				</div>
 				 <div class="download-container">
-	
-					<?php echo '<img class="google-play-link" src="' . $bannercontainer['googleimage'] . '"/>';?>
-				 	<?php echo '<img class="app-store-link" src="' . $bannercontainer['appleimage']. '"/>'; }?>
+					<a href="<?php echo $bannercontainer['google_store_link']?>"> <?php echo '<img class="google-play-link" src="' . $bannercontainer['googleimage'] . '"/>'?> </a> 
+					<a href="<?php echo $bannercontainer['apple_store_link']?>"><?php echo '<img class="app-store-link" src="' . $bannercontainer['appleimage']. '"/>' ?></a>
+					<?php endforeach; ?>
 				</div>
 				 <div class="signup-front-desktop">
 					 <?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>

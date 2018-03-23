@@ -1,4 +1,10 @@
 .page-template-front-page {
+    .testimonial{
+        margin-top:9rem;
+        @include desktop{
+            margin-top:3rem;
+        }
+    }
 
     .banner-container {
         margin-top: -32px;
@@ -25,26 +31,28 @@
         .download-container {
             display:flex;
             justify-content:space-around;
-            margin-left:10%;
-            margin-right:10%;
+            text-align:center;
+            margin-left:15%;
+            margin-right:15%;
             @include desktop {
-                margin-left:30%;
-                margin-right:30%;
+            margin-left:25%;
+            margin-right:25%;
+
             }
             .google-play-link {
                 width:100px;
-                height:32px;
+                height:100%;
                 @include desktop {
-                    height:50px;
-                    width:170px;
+                    height:100%;
+                    width:180px;
                 }
             }
             .app-store-link {
-                width:88px;
-                height:32px;
+                width:100px;
+                height:100%;
                 @include desktop {
-                    height:50px;
-                    width:170px;
+                    height:100%;
+                    width:180px;
                 }
             }
         } // end download container
@@ -76,6 +84,7 @@
     .signup-front-desktop {
         display:none;
         @include desktop {
+            margin-top:8%;
             display:flex;
         }
     }
