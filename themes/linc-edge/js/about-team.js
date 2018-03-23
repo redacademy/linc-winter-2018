@@ -6,14 +6,14 @@
         $('.member-profile-inner .bio-excerpt-mobile p').hide();
         // Show/hide full bio mobile
         $('.arrow-show-less-mobile').hide();
-        $('.arrow-show-more-mobile').on('click', function(event) {
+        $('.arrow-show-more-mobile').on('click', function() {
             // Show full bio
             $(this).parent().siblings('.bio-excerpt-mobile').children("p").show({duration:300});
 
             $(this).hide();
             $(this).siblings('.arrow-show-less-mobile').show();
         })
-        $('.arrow-show-less-mobile').on('click', function(event) {
+        $('.arrow-show-less-mobile').on('click', function() {
             // Hide full bio
             $(this).parent().siblings('.bio-excerpt-mobile').children("p").hide({duration:300});
             
@@ -55,7 +55,7 @@
 
         // Show/hide full bio desktop
         $('.arrow-show-less-desktop').hide();
-        $('.arrow-show-more-desktop').on('click', function(event) {
+        $('.arrow-show-more-desktop').on('click', function() {
             // Hide ellipses
             $(this).parent().siblings('.bio-excerpt-desktop').children("p").children(".elip").hide();
             // Show full bio
@@ -67,7 +67,7 @@
             $(this).hide();
             $(this).siblings('.arrow-show-less-desktop').show();
         })
-        $('.arrow-show-less-desktop').on('click', function(event) {
+        $('.arrow-show-less-desktop').on('click', function() {
             // Show ellipses
             $(this).parent().siblings('.bio-excerpt-desktop').children("p").children(".elip").show();
             // Hide full bio

@@ -108,11 +108,11 @@
 
 // GLOBAL margin beneath fixed header
 .site-content {
-
 	margin-top: 48px;
 	background: #fff;
+	border: 2px solid gold;
 	@include desktop {
-		margin-top: 108px;
+		margin-top: 143px;
 		background: $color__background-body;
 	}
 }

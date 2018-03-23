@@ -3,20 +3,20 @@
   background-color: $color__lincedgeblue;
   height: 48px;
   @include desktop {
-    height: 108px;
+    height: 143px;
   }
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 10;
-	border-bottom: 1px solid #d7d7d7;
+	border: 2px solid red;
 	box-shadow: 5px 5px 6px 0px hsla(0, 0%, 39%, .25);
 }
-.logged-in #masthead {
-  margin-top: 46px;
-  @include desktop {
-    margin-top: 32px;
+.admin-bar #masthead {
+  top: 46px;
+  @media screen and (min-width: 782px) {
+    top: 32px;
   }
 }
 
