@@ -1,21 +1,23 @@
+// Fixed header
+#masthead {
+  background-color: $color__lincedgeblue;
+  height: 48px;
+  @include desktop {
+    height: 108px;
+  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	border-bottom: 1px solid #d7d7d7;
+	box-shadow: 5px 5px 6px 0px hsla(0, 0%, 39%, .25);
+}
 .logged-in #masthead {
   margin-top: 46px;
   @include desktop {
     margin-top: 32px;
   }
-}
-
-#masthead {
-  background-color: $color__lincedgeblue;
-  height: 48px;
-  @include desktop {
-    height: 143px;
-  }
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // z-index: 9999;
 }
 
 .menu-navigation {
