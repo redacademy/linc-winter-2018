@@ -102,14 +102,14 @@
             display: none;
         }
     }
-    .bio-excerpt {
+    .bio-excerpt-desktop {
         display: none;
         @include desktop {
             display: block;
         }
     }
-    .arrow-show-more,
-    .arrow-show-less {
+    .arrow-show-more-desktop,
+    .arrow-show-less-desktop {
         display: none;
         @include desktop {
             cursor: pointer;
@@ -135,6 +135,18 @@
         display: block;
         @include desktop {
             display: none;
+        }
+    }
+    .arrow-container-mobile {
+        display: block;
+        @include desktop {
+            display: none;
+        }
+    }
+    .arrow-container-desktop {
+        display: none;
+        @include desktop {
+            display: block;
         }
     }
     .arrow-show-more-mobile,
