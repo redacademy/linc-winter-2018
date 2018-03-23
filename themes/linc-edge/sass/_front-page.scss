@@ -156,19 +156,7 @@
                 display:flex;
                 justify-content: space-between;
                 text-align: center;
-                &:after {
-                    content: '';
-                    width: 50px;
-                    height: 50px;
-                    position: absolute;
-                    left: 50%;
-                    bottom: -5%;
-                    transform: translateX(-50%);
-                    background: url(../../images/green-arrow-down.png);
-                    background-size: contain;
-                    border-radius: 50%;
-                    z-index: 1;
-                }
+               
             }
             .hw-inner-container {
                 @include desktop {
