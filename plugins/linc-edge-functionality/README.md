@@ -1,3 +1,3 @@
-# Linc Edge Functionality Plugin
+# LincEdge Functionality Plugin
 
-A template for a WordPress functionality plugin for RED Academy students.
+The "LincEdge Functionality" plugin contains all of the core functionality for this website so that it remains theme-independent.
