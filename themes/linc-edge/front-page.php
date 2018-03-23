@@ -2,8 +2,16 @@
 /**
  * Template Name: Front Page
  */
+?>
 
-get_header(); ?>
+	<?php
+
+
+if ( 'posts' == get_option( 'show_on_front' ) ) {
+    include( get_home_template() );
+} else {
+    get_header();?>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -129,3 +137,5 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+
+	<?php }?>

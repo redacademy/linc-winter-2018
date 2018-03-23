@@ -81,7 +81,6 @@ get_header(); ?>
 
         <!-- Ending "features" forEach-loop -->
 
-				<div class="benefit-title"><span class="title-underline"><?php echo CFS()->get( 'benefits_title' ); ?></span></div>
 				<div class="benefits-content-container" id="benefit-desktop">
 					<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
 						foreach ( $fields as $field ) : ?>
@@ -124,6 +123,8 @@ get_header(); ?>
 
 				<div class="benefits-content-container" id="benefit-mobile">
 					<div class="benefit-carousel">
+
+				<div class="benefit-title"><span class="title-underline"><?php echo CFS()->get( 'benefits_title' ); ?></span></div>
 
 				<div class="carousel-2">
 					<?php 

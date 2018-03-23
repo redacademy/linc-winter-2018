@@ -1,4 +1,10 @@
 .page-id-9 {
+    .site-content{
+        height:100%;
+    }
+    .site-footer{
+        margin-top:0;
+    }
 h2,h3{
     color:$color__lincedgeblue;
 }
@@ -123,6 +129,7 @@ iframe{
 .question-container{
     display:block;
     text-align:center;
+    margin-bottom: 15%;
     button{
     margin-top:14px;
     border-radius: 30px;
