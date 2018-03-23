@@ -51,7 +51,7 @@ get_header(); ?>
 
 			  <div class="customer-header"><span class="title-underline"><?php echo CFS()->get( 'customer_header' ); ?></span></div>
         
-        <div class="carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+        <div class="carousel">
 			    <?php $customers = CFS()->get('customer_logo'); foreach ($customers as $customer ): ?>
           
 				    <div class="customer-content-container">

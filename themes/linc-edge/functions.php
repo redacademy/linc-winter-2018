@@ -56,7 +56,7 @@ add_action( 'after_setup_theme', 'linc_edge_content_width', 0 );
  */
 function linc_edge_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
+		'name'          => esc_html( 'Footer' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

@@ -2,7 +2,7 @@
 
     $(document).ready(function(){
 
-
+        // ASK JIM
         if($('.carousel').length){
             $('.carousel').flickity({
                 // options
