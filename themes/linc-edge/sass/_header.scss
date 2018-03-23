@@ -27,7 +27,7 @@
 }
 
 .menu-navigation {
-  z-index:999;
+  z-index:10;
   height: 100%;
   position: relative;
   ul.menu {
@@ -46,10 +46,11 @@
       width: 75%;
       justify-content: space-between;
       border-top: none;
-      margin-top: 3.5rem;
+      margin-top: 2.5rem;
     }
 		li {
       display: inline;
+      position: relative;
     }
     a {
       text-decoration: none;
@@ -66,8 +67,9 @@
         display: inline;
         background: none;
         border-bottom: none;
-        padding-left: 0;
         font-size: 1.25rem;
+        text-align: center;
+        padding: 0;
         &:hover {
           background: none;
           color: $color__lincedgegreen;
@@ -90,10 +92,12 @@
       display: inline;
     }
     position: absolute;
-    top: 18%;
+    top: 15%;
     left: 0;
-    width: 148px;
+    width: 128px;
     @media screen and (min-width: 750px ) {
+      top: 10%;
+      width: 148px;
       left: 6.5%;
     }
   }
@@ -109,16 +113,16 @@
     margin-left: auto;
     margin-right: auto;
   }
-  li {
-    text-align: center;
-  }
   .sub-menu {
-    // position: absolute;
+    position: absolute;
     padding-left: 0;
-    z-index: 2;
+    z-index: 1;
     display: none;
     li {
-      padding-top: 15px;
+      padding: 15px 10px 0;
+      // background: red;
+      text-align: center;
+      border-top: 1px solid $color__border-abbr;
     }
   }
   // Home link
@@ -140,31 +144,31 @@
       color: #ffffff;
     }
   }
-    // Products link
-    .menu-item-24 {
-      &:hover {
-        .sub-menu {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    }
-  // About link
-  .menu-item-21 {
-    // width: 85px;
+  // Products link
+  .menu-item-24 {
     &:hover {
       .sub-menu {
         display: flex;
         flex-direction: column;
       }
-      .menu-item-159 {
-        @include desktop {
-          display: none;
-        }
+    }
+  }
+  // About link
+  .menu-item-21 {
+    &:hover {
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        // Company
+        // .menu-item-159 {
+        //   @include desktop {
+        //     display: none;
+        //   }
+        // }
       }
     }
   }
-}
+} // end @include desktop
 
 ul.sub-menu {
   background: $color__lincedgeblue;

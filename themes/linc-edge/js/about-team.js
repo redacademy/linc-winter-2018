@@ -62,7 +62,7 @@
             $(this).parent().siblings('.bio-excerpt-desktop').children("p").show();
             $(this).parent().siblings('.bio-excerpt-desktop').children("p").children(".trimmed-text").show();
             // Keep headshot from moving (too much)
-            // $(this).parent().parent().siblings('.headshot').css({"align-self":"flex-start", "margin-top":"0.6rem"});
+            // $(this).parent().parent().siblings('.headshot').css({"align-self":"flex-start", "margin-top":"0.65rem"});
 
             $(this).hide();
             $(this).siblings('.arrow-show-less-desktop').show();
@@ -74,7 +74,7 @@
             $(this).parent().siblings('.bio-excerpt-desktop').children("p").children(".trimmed-text").hide();
             $(this).parent().siblings('.bio-excerpt-desktop').children("p:not(:first-child)").hide();
             // Place headshot back
-            $(this).parent().parent().siblings('.headshot').css({"align-self":"center", "margin-top":"0"});
+            // $(this).parent().parent().siblings('.headshot').css({"align-self":"center", "margin-top":"0"});
             
             $(this).hide();
             $(this).siblings('.arrow-show-more-desktop').show();
