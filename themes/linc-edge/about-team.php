@@ -54,17 +54,6 @@ if ( $team_posts ):
                         <img class="arrow-show-more-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
                         <img class="arrow-show-less-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
                     </div>
-
-                    <?php
-                    // $content = CFS() -> get ('biography');
-                    // $content = str_replace( ']]>', ']]>', $content );
-                    // echo do_shortcode('[expand title="" 
-                    // alt="Show biography" 
-                    // trigpos="below" 
-                    // trigclass="expand-bio"
-                    // targclass="bio"]'
-                    // .$content.'[/expand]');
-                    ?>
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
@@ -116,17 +105,6 @@ if ( $team_posts2 ):
                         <img class="arrow-show-more-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
                         <img class="arrow-show-less-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
                     </div>
-                    
-                    <!-- <?php
-                    // $content = CFS() -> get ('biography');
-                    // $content = str_replace( ']]>', ']]>', $content );
-                    // echo do_shortcode('[expand title="" 
-                    // alt="Show biography" 
-                    // trigpos="below" 
-                    // trigclass="expand-bio"
-                    // targclass="bio"]'
-                    // .$content.'[/expand]');
-                    ?> -->
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
