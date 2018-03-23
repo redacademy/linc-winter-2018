@@ -40,5 +40,5 @@ function lincedge_hero_image(){
 	} 
 }
  
-add_action("wp_enqueue_scripts" , 'lincedge_hero_image');
+add_action('wp_enqueue_scripts' , 'lincedge_hero_image');
 
