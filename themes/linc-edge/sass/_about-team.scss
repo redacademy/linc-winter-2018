@@ -131,4 +131,21 @@
             padding-bottom: 1rem;
         }
     }
+    .bio-excerpt-mobile {
+        display: block;
+        @include desktop {
+            display: none;
+        }
+    }
+    .arrow-show-more-mobile,
+    .arrow-show-less-mobile {
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        width: 40px;
+        height: 20px;
+        @include desktop {
+            display: none;
+        }
+    }
 }

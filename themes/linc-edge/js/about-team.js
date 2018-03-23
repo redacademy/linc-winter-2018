@@ -41,29 +41,35 @@
             $('.arrow-show-more').on('click', function(event) {
                 console.log('show bio');
                 // Hide ellipses
-                $(this).siblings('.bio-excerpt').children().children().hide();
+                $(this).parent().siblings('.bio-excerpt').children().children().hide();
                 // Show full bio
-                $(this).siblings('.bio-excerpt').children().siblings().show();
-                $(this).siblings('.bio-excerpt').children().children().next().show();
+                $(this).parent().siblings('.bio-excerpt').children().siblings().show();
+                $(this).parent().siblings('.bio-excerpt').children().children().next().show();
                 // Keep headshot from moving (too much)
-                $(this).parent().siblings('.headshot').css({"align-self":"flex-start", "margin-top":"0.65rem"});
+                $(this).parent().parent().siblings('.headshot').css({"align-self":"flex-start", "margin-top":"0.65rem"});
 
                 $(this).hide();
                 $(this).siblings('.arrow-show-less').show();
             })
             $('.arrow-show-less').on('click', function(event) {
                 // Show ellipses
-                $(this).siblings('.bio-excerpt').children().children().show();
+                $(this).parent().siblings('.bio-excerpt').children().children().show();
                 // Hide full bio
-                $(this).siblings('.bio-excerpt').children().children().next().hide();
+                $(this).parent().siblings('.bio-excerpt').children().children().next().hide();
                 $('.member-profile-inner .bio-excerpt p:not(:first-child)').hide();
                 // Place headshot back
-                $(this).parent().siblings('.headshot').css({"align-self":"center", "margin-top":"0"});
+                $(this).parent().parent().siblings('.headshot').css({"align-self":"center", "margin-top":"0"});
                 
                 $(this).hide();
                 $(this).siblings('.arrow-show-more').show();
             })
-        }
+
+            // $(window).on('resize', function () { 
+            //     if (document.body.clientWidth < 650) {
+
+            //     }
+            //  });
+        } // end window on load
     });
     
 })( jQuery );

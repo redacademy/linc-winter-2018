@@ -43,18 +43,27 @@ if ( $team_posts ):
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                    <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    <div class="bio-excerpt-mobile">
+                        <?php echo CFS() -> get ('biography'); ?>
+                    </div>
+                    <div class="desktop-arrow-container">
+                        <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
+                    <div class="mobile-arrow-container">
+                        <img class="arrow-show-more-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
 
                     <?php
-                    $content = CFS() -> get ('biography');
-                    $content = str_replace( ']]>', ']]>', $content );
-                    echo do_shortcode('[expand title="" 
-                    alt="Show biography" 
-                    trigpos="below" 
-                    trigclass="expand-bio"
-                    targclass="bio"]'
-                    .$content.'[/expand]');
+                    // $content = CFS() -> get ('biography');
+                    // $content = str_replace( ']]>', ']]>', $content );
+                    // echo do_shortcode('[expand title="" 
+                    // alt="Show biography" 
+                    // trigpos="below" 
+                    // trigclass="expand-bio"
+                    // targclass="bio"]'
+                    // .$content.'[/expand]');
                     ?>
                 </div>
             </div><!-- .member-profile -->
@@ -96,9 +105,15 @@ if ( $team_posts2 ):
                     <div class="bio-excerpt">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                    <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
-
+                    <div class="desktop-arrow-container">
+                        <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
+                    <div class="mobile-arrow-container">
+                        <img class="arrow-show-more-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
+                    
                     <?php
                     $content = CFS() -> get ('biography');
                     $content = str_replace( ']]>', ']]>', $content );
