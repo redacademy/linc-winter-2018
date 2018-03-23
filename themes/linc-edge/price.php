@@ -42,12 +42,7 @@ get_header(); ?>
     </div><!-- .subscription-description-container -->
 
     <div class="subscription-form-container">
-
-      <div class="subscription-form-content-container">
-        <input class="email-field" type="email" name="EMAIL" placeholder="Email address" required />
-        <input class="submit-button" type="submit" value="Subscribe" />
-      </div><!-- .subscription-form-content-container -->
-      
+      <?php echo CFS()->get( 'subscribe_form' ); ?>
     </div><!-- .subscription-form-container -->
 
     <div class="subscription-condition-container">

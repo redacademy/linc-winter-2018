@@ -97,18 +97,18 @@
   } /* .subscription-description */
 
   .subscription-form-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .subscription-form-content-container {
     display: flex;
     justify-content: space-evenly;
-    width: 90%;
+    width: 100%;
     @include desktop {
       margin: 1rem;
-      width: 40%;
     }
   } /* .subscribe-container */
 
