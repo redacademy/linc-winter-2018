@@ -1,3 +1,10 @@
+.logged-in #masthead {
+  margin-top: 46px;
+  @include desktop {
+    margin-top: 32px;
+  }
+}
+
 #masthead {
   background-color: $color__lincedgeblue;
   height: 48px;
