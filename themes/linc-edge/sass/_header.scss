@@ -1,14 +1,29 @@
+// Fixed header
 #masthead {
   background-color: $color__lincedgeblue;
   height: 48px;
   @include desktop {
-    height: 143px;
+    height: 108px;
   }
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	border: 2px solid red;
+	box-shadow: 5px 5px 6px 0px hsla(0, 0%, 39%, .25);
+}
+.admin-bar #masthead {
+  top: 46px;
+  @media screen and (min-width: 782px) {
+    top: 32px;
+  }
+}
+// WP menu default <600px is not position: fixed, leaving a gap above our menu
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+      position: fixed !important;
+  }
 }
 
 .menu-navigation {
@@ -112,7 +127,6 @@
   }
   // Sign Up link
   ul.menu .menu-item-25 {
-    // text-transform: uppercase; /* Consult */
     @media screen and (min-width: 750px ) {
       margin-right: 2rem;
     }
@@ -126,6 +140,16 @@
       color: #ffffff;
     }
   }
+    // Products link
+    .menu-item-24 {
+      &:hover {
+        .sub-menu {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  // About link
   .menu-item-21 {
     // width: 85px;
     &:hover {
@@ -133,13 +157,10 @@
         display: flex;
         flex-direction: column;
       }
-    }
-  }
-  .menu-item-24 {
-    &:hover {
-      .sub-menu {
-        display: flex;
-        flex-direction: column;
+      .menu-item-159 {
+        @include desktop {
+          display: none;
+        }
       }
     }
   }

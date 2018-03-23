@@ -41,6 +41,11 @@ h2,h3{
         
     }
 }
+
+.gform_page {
+  text-align: center;
+}
+
 .main-contact-container{
     display:flex;
 
@@ -48,6 +53,7 @@ h2,h3{
         margin-left: 8%;
         margin-right: 5%;
     }
+
 .message-container{
     display:none;
     @include desktop{

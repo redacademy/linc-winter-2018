@@ -40,31 +40,20 @@ if ( $team_posts ):
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
                     <h3 class="title-underline-short"><?php echo CFS() -> get ('position'); ?></h3>
-                    <div class="bio-excerpt">
-                        <?php echo CFS() -> get ('biography'); ?>
-                    </div>
                     <div class="bio-excerpt-mobile">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <div class="desktop-arrow-container">
-                        <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                        <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    <div class="bio-excerpt-desktop">
+                        <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <div class="mobile-arrow-container">
+                    <div class="arrow-container-mobile">
                         <img class="arrow-show-more-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
                         <img class="arrow-show-less-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
                     </div>
-
-                    <?php
-                    // $content = CFS() -> get ('biography');
-                    // $content = str_replace( ']]>', ']]>', $content );
-                    // echo do_shortcode('[expand title="" 
-                    // alt="Show biography" 
-                    // trigpos="below" 
-                    // trigclass="expand-bio"
-                    // targclass="bio"]'
-                    // .$content.'[/expand]');
-                    ?>
+                    <div class="arrow-container-desktop">
+                        <img class="arrow-show-more-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
@@ -102,28 +91,20 @@ if ( $team_posts2 ):
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
                     <h3 class="title-underline-short"><?php echo CFS() -> get ('position'); ?></h3>
-                    <div class="bio-excerpt">
+                    <div class="bio-excerpt-mobile">
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <div class="desktop-arrow-container">
-                        <img class="arrow-show-more" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                        <img class="arrow-show-less" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    <div class="bio-excerpt-desktop">
+                        <?php echo CFS() -> get ('biography'); ?>
                     </div>
-                    <div class="mobile-arrow-container">
+                    <div class="arrow-container-mobile">
                         <img class="arrow-show-more-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
                         <img class="arrow-show-less-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
                     </div>
-                    
-                    <?php
-                    $content = CFS() -> get ('biography');
-                    $content = str_replace( ']]>', ']]>', $content );
-                    echo do_shortcode('[expand title="" 
-                    alt="Show biography" 
-                    trigpos="below" 
-                    trigclass="expand-bio"
-                    targclass="bio"]'
-                    .$content.'[/expand]');
-                    ?>
+                    <div class="arrow-container-desktop">
+                        <img class="arrow-show-more-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                    </div>
                 </div>
             </div><!-- .member-profile -->
         <?php endforeach; ?>
