@@ -2,8 +2,7 @@
 
     $(document).ready(function () {
 
-        console.log('about-team-js');
-        window.onload = function() {
+
 
             // Hide all bio paragraphs except first paragraph
             $('.member-profile-inner .bio-excerpt p:not(:first-child)').hide();
@@ -63,7 +62,7 @@
                 $(this).hide();
                 $(this).siblings('.arrow-show-more').show();
             })
-        }
+        
     });
     
 })( jQuery );
