@@ -63,7 +63,9 @@ get_header(); ?>
     ?>
 			<div class="testimonial">
 					<div class="testimonial-inner">
-							<img src="<?php echo CFS() -> get ('image'); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+							<?php endif; ?>
 							<div class="endorsement">
 									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
 									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
@@ -109,7 +111,9 @@ get_header(); ?>
     ?>
 			<div class="testimonial">
 					<div class="testimonial-inner">
-							<img src="<?php echo CFS() -> get ('image'); ?>">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+						<?php endif; ?>
 							<div class="endorsement">
 									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
 									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
@@ -154,7 +158,9 @@ get_header(); ?>
     ?>
         <div class="testimonial">
             <div class="testimonial-inner">
-                <img src="<?php echo CFS() -> get ('image'); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+							<?php endif; ?>
                 <div class="endorsement">
                     <p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
                     <h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>

@@ -26,8 +26,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					 <?php echo CFS()->get( 'banner_text' ); ?>
 				</div>
 				 <div class="download-container">
-					<a href="<?php echo CFS()->get( 'google_store_link' );?>"> <?php echo '<img class="google-play-link" src="' . CFS()->get( 'googleimage' ) . '"/>'?></a> 
-					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
+					<a href="<?php echo CFS()->get( 'google_store_link' );?>"> <?php echo '<img class="google-play-link" alt="Google Store "src="' . CFS()->get( 'googleimage' ) . '"/>'?></a> 
+					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
 	
 				</div>
 				 <div class="signup-front-desktop">
@@ -124,7 +124,9 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
     ?>
         <div class="testimonial">
             <div class="testimonial-inner">
-                <img src="<?php echo CFS() -> get ('image'); ?>">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+				<?php endif; ?>
                 <div class="endorsement">
                     <p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
                     <h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
