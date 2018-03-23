@@ -19,6 +19,12 @@
     top: 32px;
   }
 }
+// WP menu default <600px is not position: fixed, leaving a gap above our menu
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+      position: fixed !important;
+  }
+}
 
 .menu-navigation {
   z-index:999;
