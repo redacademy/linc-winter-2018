@@ -2,13 +2,13 @@
  /**
  *
  * @package   LincEdge Functionality
- * @author    Calvin Ting calvinting@protonmail.com, David Yin davidyin92@hotmail.com, Ryan Ku ryancsku@gmail.com
+ * @author    Calvin Ting calvinting@protonmail.com, David Yin davidyin92@hotmail.com, Ryan Cs. Ku ryancsku@gmail.com
  * @license   GPL-2.0+
  * @copyright 2018 RDC inc. 
  *
  * @wordpress-plugin
  * Plugin Name: LincEdge Functionality
- * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
+ * Description: The "LincEdge Functionality" plugin contains all of the core functionality for this website so that it remains theme-independent.
  * Version:     1.0.0
  * Author:      Calvin, David, Ryan
  * License:     GPL-2.0+
