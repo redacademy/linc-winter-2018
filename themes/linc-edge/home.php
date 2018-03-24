@@ -11,7 +11,7 @@ get_header(); ?>
 
                 <?php single_post_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
 
-		</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
 
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
