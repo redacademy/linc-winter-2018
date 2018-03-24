@@ -1,0 +1,43 @@
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.error-header {
+  align-self: center;
+  color: $color__lincedgeblue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.error-content {
+  align-self: center;
+  color: $color__text-main;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0 15%;
+  padding: 1.5rem auto;
+}
+
+.error-button {
+  align-self: center;
+  padding-top: 6rem;
+}
+
+button {
+  align-self: center;
+  margin-bottom: 15%;
+  background-color: $color__lincedgegreen;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #ffffff;
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  a {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+}
