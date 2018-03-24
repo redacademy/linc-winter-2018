@@ -1,42 +1,154 @@
 .blog {
+background-color:white;
+.site-content{
+    margin-bottom: 30%;
+}
+
+
 
 article{
-    display:flex;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    margin-bottom:8%;
+    
+   
+
+    
+
+    .article-container{
+        
+        display:flex;
+        margin-top:4%;
+        margin-left:3%;
+        margin-right:3%;
+    }
+    &:before{
+        content: ' ';
+        position: absolute;
+        height:2px;
+        width:93%;
+        left:10px;
+
+        margin-right:10%;
+        background-color:$color__background-hr;
+    }
+    &:nth-child(1){
+        img{
+            height:20rem;
+            border-radius:0px;
+          
+        }
+        .entry-content{
+            .content-container{
+                margin-left:5%;
+            }
+            
+            .category-title{
+                margin-top:10%;
+      
+            }
+            position:absolute;
+            background-color:black;
+            opacity: 0.9;
+            bottom:0px;
+            left:0px;
+            width:80%;
+            height:40%;
+           
+            color:white;
+            .author{
+                color:white;
+           
+                
+            
+            }
+            .entry-title{
+                a{
+                color:white;
+     
+                }
+            }
+        }
+        .image-container{
+            width:100%;
+        }
+    }
+    &:nth-last-child(1) {
+        
+        &:after{
+        content: ' ';
+        position: absolute;
+        height:2px;
+        width:93%;
+        margin-top:8%;
+        left:10px;
+        margin-right:10%;
+        background-color:$color__background-hr;
+        }
+       
+    }
+
     img{
         max-width:none;
         width:100%;
-        height:80%;
+        height:9rem;
+        border-radius:10px;
+
+        
     }
     .image-container{
-      width:45%;
-      height:9.5rem;
+        margin-top:11%;
+      width:60%;
+      height:100%;
+   
     }
     .entry-content{
+
+        margin-top:10%;
         width:100%;
-        margin:0;
         margin-left:3%;
+        .category-title{
+            a{
+                
+                text-decoration:none;
+                text-transform:uppercase;
+                color:$color__lincedgegreen;
+            }
+        }
         p{
             margin:0;
+            color:$color__lincedgeblue;
         }
         .entry-title{
             text-align:left;
             margin:0;
             padding:0;
+            margin-bottom:4%;
             a{
+                text-transform:none;
+                color:$color__text-main;
                 text-decoration:none;
             }
         }
         .entry-meta{
+            color:$color__lincedgeblue;
+            margin-top:4%;
             .posted-on{
                 display:none;
             }
             .comments{
                 display:none;
             }
+            .author{
+                text-transform:uppercase;
+                .author-color{
+                    color:$color__lincedgegreen;
+                }
+           
+            }
         }
     }
+}
+.site-footer{
+    margin-top:0;
 }
 
 

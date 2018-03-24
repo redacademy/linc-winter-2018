@@ -11,7 +11,9 @@ get_header(); ?>
 
                 <?php single_post_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
 
-    </header><!-- .entry-header -->
+        </header><!-- .entry-header -->
+        
+<div class="article-master-container">
 
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -29,6 +31,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content-blog', 'none' ); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- #primary -->
+    
+</div>
 
 <?php get_footer(); ?>
