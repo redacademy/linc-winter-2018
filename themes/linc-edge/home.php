@@ -13,10 +13,7 @@ get_header(); ?>
 
         </header><!-- .entry-header -->
         
-        <?php
-$content = get_the_content('Read more');
-print $content;
-?>
+
 
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
