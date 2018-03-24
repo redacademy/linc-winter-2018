@@ -1,6 +1,6 @@
 (function($) {
     $(document).ready(function () {
-        console.log('about-journey linked');
+
         /* Check the location of each element */
         $('.timeline-item').each( function(){
         
