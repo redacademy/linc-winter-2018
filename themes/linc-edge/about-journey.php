@@ -20,7 +20,7 @@ get_header(); ?>
                 <li>
                     <div class="timeline-item">
                         <?php if ( $post['timeline_image'] ) : ?>
-                            <?php echo '<img class="timeline-image" src="' . $post['timeline_image'] . '"/>';?>
+                            <?php echo '<img class="timeline-image" src="' . esc_html($post['timeline_image']) . '"/>';?>
                         <?php endif ?>
                         <div class="timeline-content">
                             <h2 class="timeline-date"><?php echo $post['timeline_date'];?></h2>

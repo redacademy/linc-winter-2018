@@ -10,7 +10,6 @@
 	left: 0;
 	width: 100%;
 	z-index: 10;
-	border: 2px solid red;
 	box-shadow: 5px 5px 6px 0px hsla(0, 0%, 39%, .25);
 }
 .admin-bar #masthead {
@@ -120,7 +119,6 @@
     display: none;
     li {
       padding: 15px 10px 0;
-      // background: red;
       text-align: center;
       border-top: 1px solid $color__border-abbr;
     }

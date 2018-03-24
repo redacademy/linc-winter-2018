@@ -11,7 +11,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
         <header class="entry-header">
-          <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+          <?php esc_html(the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' )); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">
@@ -33,8 +33,8 @@ get_header(); ?>
           <div class="about-content-container">
 
             <div class="about-text-group">
-              <p class="about-title"><span class="title-underline-short"><?php echo $field['title'];?></span></p>
-              <p class="about-description"><?php echo $field['description']; ?></p>
+              <p class="about-title"><span class="title-underline-short"><?php echo esc_html($field['title']);?></span></p>
+              <p class="about-description"><?php echo esc_html($field['description']); ?></p>
             </div><!-- .about-text-group -->
 
             <div class="about-image-group">

@@ -18,7 +18,7 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <div id="page" class="hfeed site">
+        <div id="page" class="hfeed site" title="LincEdge">
 
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
@@ -33,11 +33,11 @@
                     </button>
 
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
+                        <img class="mobile-logo" alt="LincEdge Mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-mobile.png">
                     </a>
 
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img class="desktop-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-Copyright.png">
+                        <img class="desktop-logo" alt="LincEdge Desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LincEdge-Logo-Copyright.png">
                     </a>
 
        
