@@ -11,9 +11,7 @@
 
 
 
-if ( 'posts' == get_option( 'show_on_front' ) ) {
-    include( get_home_template() );
-} else {
+
     get_header();?>
 
 
@@ -59,7 +57,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<?php $benefitscontainers = CFS()->get('benefits_container');
 			foreach ($benefitscontainers as $benefitcontainer ): ?>
 			<div class="indiv-benefit">
-				<?php echo '<img class="benefits-image" src="' . $benefitcontainer['benefits_image'] . '"/>';?>
+				<?php echo '<img class="benefits-image" alt="Benefits Image" src="' . $benefitcontainer['benefits_image'] . '"/>';?>
 				<p class="benefits-title"><?php echo $benefitcontainer['benefits_text'];?></p>
 			</div>
 			<?php endforeach; ?>
@@ -76,7 +74,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="carousel-cell">
 					<div class="howworks-image">
-						<?php echo '<img class="howworks-image" src="' . $howworkcontainer['howworks_image'] . '"/>';?>
+						<?php echo '<img class="howworks-image" alt="How Works Image" src="' . $howworkcontainer['howworks_image'] . '"/>';?>
 					</div>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text'];?></p>
 				</div>
@@ -87,7 +85,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<?php $howworkscontainers = CFS()->get('howworks_container_desktop');
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="hw-inner-container">
-					<?php echo '<img class="howworks-image" src="' . $howworkcontainer['howworks_image_desktop'] . '"/>';?>
+					<?php echo '<img class="howworks-image" alt="How Works Image" src="' . $howworkcontainer['howworks_image_desktop'] . '"/>';?>
 					<p class="howworks-title"><?php echo $howworkcontainer['howworks_text_desktop'];?></p>
 				</div>
 				<?php endforeach; ?>
@@ -102,7 +100,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<?php $featurescontainers = CFS()->get('features_container');
 			foreach ($featurescontainers as $featurecontainer ):?>
 			<div class="indiv-feature">
-				<?php echo '<img class="features-image" src="' . $featurecontainer['features_image'] . '"/>';?>
+				<?php echo '<img class="features-image" alt="Features Image" src="' . $featurecontainer['features_image'] . '"/>';?>
 				<p class="features-title"><?php echo $featurecontainer['features_text']; ?>
 			</div>
 			<?php endforeach; ?>
@@ -155,4 +153,3 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 
 <?php get_footer(); ?>
 
-	<?php }?>
