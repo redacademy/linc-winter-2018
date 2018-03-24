@@ -16,11 +16,11 @@
             }
         });
 
-        // Center sub-menus below parent
+        // Center sub-menus below parent on desktop
         $('.menu .sub-menu').each(function() {
             $(this).css({
-               'left' : '50%',
-               'margin-left' : $(this).width() / 2 * - 1 + 'px'
+                'left' : '50%',
+                'margin-left' : $(this).width() / 2 * - 1 + 'px'
             });
         });
 

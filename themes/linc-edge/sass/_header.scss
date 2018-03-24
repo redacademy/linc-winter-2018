@@ -118,7 +118,7 @@
     z-index: 1;
     display: none;
     li {
-      padding: 15px 10px 0;
+      padding: 5px 10px 0;
       text-align: center;
       border-top: 1px solid $color__border-abbr;
     }
@@ -171,5 +171,8 @@
 ul.sub-menu {
   background: $color__lincedgeblue;
   margin: 0;
+  @media screen and (max-width: 650px) {
+    margin-left: 0 !important;
+  }
 }
 
