@@ -138,9 +138,9 @@
 		<div class="join-beta-title">
 			<?php echo CFS()->get( 'join_beta_title' ); ?>
 		</div>
-		<div class="join-beta-button">
+		<button class="join-beta-button">
 		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-		</div>
+		</button>
 	</div>
 
 

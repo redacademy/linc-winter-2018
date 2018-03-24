@@ -60,21 +60,7 @@
 
     // call-to-action buttons
     .signup-front-mobile,.learnmore-front,.signup-front-desktop {
-        border-radius: 30px;
-        height: 52px;
-        width: 240px;
-        text-transform: uppercase;
-        font-size: 1.15rem;
-        background-color: $color__lincedgegreen;
-        font-weight: 700;
-        display:flex;
-        justify-content: center;
-        align-items:center;
-        margin: 2rem auto;
-        a {
-            text-decoration: none;
-            color:#fff;      
-        }
+        @include linc-button-style;
     }
     .signup-front-mobile {
         @include desktop {
@@ -246,29 +232,10 @@
             margin-top:5%;
             font-size: 40px;
             font-weight: 700;
-     
             }
         }
         .join-beta-button{
-            
-            border-radius: 30px;
-            height: 52px;
-            width:240px;
-            text-transform: uppercase;
-            font-size: 18px;
-            background-color: #97c13b;
-            font-weight: 700;
-            padding:10px;
-            margin:5% auto;
-            @include desktop{
-            width: 300px;
-            margin: 3% auto; 
-            }  
-            a{
-                text-decoration:none;
-                color:white;
-            }
- 
+            @include linc-button-style;
         }
     }
 }
