@@ -1,6 +1,8 @@
 (function($) {
 
     $(document).ready(function () {
+        if($('body').is('.page-template-about-team')){
+
         // ----------------------- MOBILE -----------------------
         // Hide all bio paragraphs
         $('.member-profile-inner .bio-excerpt-mobile p').hide();
@@ -80,6 +82,7 @@
             $(this).siblings('.arrow-show-more-desktop').show();
         })
 
+        } // end if
     });
     
 })( jQuery );
