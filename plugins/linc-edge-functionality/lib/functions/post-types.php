@@ -6,7 +6,7 @@
  */
 
 // Register Custom Post Type Testimonials
-function testimonial_post_type() {
+function register_testimonial_post_type() {
 
 	$labels = array(
 		'name'                  => 'Testimonials',
@@ -46,7 +46,7 @@ function testimonial_post_type() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 10,
+		'menu_position'         => 22,
 		'menu_icon'             => 'dashicons-thumbs-up',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -59,38 +59,38 @@ function testimonial_post_type() {
 	register_post_type( 'testimonial', $args );
 
 }
-add_action( 'init', 'testimonial_post_type', 0 );
+add_action( 'init', 'register_testimonial_post_type', 0 );
 
 
 // Register Custom Post Type 'team' - https://css-tricks.com/creating-meet-team-page-wordpress/
-function team_post_type() {
+function register_team_post_type() {
    
 	// Labels
 	 $labels = array(
-		 'name' => _x("Team", "post type general name"),
-		 'singular_name' => _x("Team", "post type singular name"),
+		 'name' => "Team",
+		 'singular_name' => "Team",
 		 'menu_name' => 'Team Profiles',
-		 'add_new' => _x("Add New", "team item"),
-		 'add_new_item' => __("Add New Profile"),
-		 'edit_item' => __("Edit Profile"),
-		 'new_item' => __("New Profile"),
-		 'view_item' => __("View Profile"),
-		 'search_items' => __("Search Profiles"),
-		 'not_found' =>  __("No Profiles Found"),
-		 'not_found_in_trash' => __("No Profiles Found in Trash"),
+		 'add_new' => "Add New",
+		 'add_new_item' => ("Add New Profile"),
+		 'all_items' => 'All Team Profiles',
+		 'edit_item' => ("Edit Profile"),
+		 'new_item' => ("New Profile"),
+		 'view_item' => ("View Profile"),
+		 'search_items' => ("Search Profiles"),
+		 'not_found' =>  ("No Profiles Found"),
+		 'not_found_in_trash' => ("No Profiles Found in Trash"),
 		 'parent_item_colon' => ''
 	 );
-	 
-	 // Register post type
-	 register_post_type('team', array(
-		 'labels' => $labels,
-		 'public' => true,
-		 'has_archive' => false,
-		 'menu_position' => 10,
-		 'menu_icon' => 'dashicons-businessman',
-		 'rewrite' => false,
-		 'publicly_queryable' => true,
-		 'supports' => array('title', 'editor', 'thumbnail')
-	 ) );
+	 $args2 = array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'menu_position' => 20,
+		'menu_icon' => 'dashicons-businessman',
+		'rewrite' => false,
+		'publicly_queryable' => true,
+		'supports' => array('title', 'editor', 'thumbnail', 'revisions')
+	 );
+	 register_post_type('team', $args2 );
  }
- add_action( 'init', 'team_post_type', 0 );
+ add_action( 'init', 'register_team_post_type', 0 );
