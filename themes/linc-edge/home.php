@@ -4,6 +4,18 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+       
+
+       <header class="entry-header">
+
+                <?php single_post_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+
+
+		</header><!-- .entry-header -->
+
+
+
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -21,5 +33,5 @@ get_header(); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
