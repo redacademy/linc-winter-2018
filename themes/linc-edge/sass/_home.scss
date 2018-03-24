@@ -3,14 +3,18 @@ background-color:white;
 .site-content{
     margin-bottom: 30%;
 }
+
+
+
 article{
     margin-bottom:8%;
+    
+   
 
-    &:first-child{
-        background-color: red;
-    }
+    
 
     .article-container{
+        
         display:flex;
         margin-top:4%;
         margin-left:3%;
@@ -26,7 +30,49 @@ article{
         margin-right:10%;
         background-color:$color__background-hr;
     }
+    &:nth-child(1){
+        img{
+            height:20rem;
+            border-radius:0px;
+          
+        }
+        .entry-content{
+            .content-container{
+                margin-left:5%;
+            }
+            
+            .category-title{
+                margin-top:10%;
+      
+            }
+            position:absolute;
+            background-color:black;
+            opacity: 0.9;
+            bottom:0px;
+            left:0px;
+            width:80%;
+            height:40%;
+           
+            color:white;
+            .author{
+                color:white;
+           
+                
+            
+            }
+            .entry-title{
+                a{
+                color:white;
+     
+                }
+            }
+        }
+        .image-container{
+            width:100%;
+        }
+    }
     &:nth-last-child(1) {
+        
         &:after{
         content: ' ';
         position: absolute;
@@ -49,7 +95,7 @@ article{
         
     }
     .image-container{
-        margin-top:12%;
+        margin-top:11%;
       width:60%;
       height:100%;
    

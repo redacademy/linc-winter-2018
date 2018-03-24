@@ -22,6 +22,7 @@
         
     
 	<div class="entry-content">
+        <div class="content-container">
     <div class="category-title">
     <?php
     foreach((get_the_category()) as $category) { 
@@ -43,4 +44,5 @@
 		<?php endif; ?>
     </div><!-- .entry-content -->
 </div>
+
 </article><!-- #post-## -->
