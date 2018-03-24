@@ -123,6 +123,11 @@ add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
 
 
 
+function et_excerpt_length($length) {
+	return 10;
+}
+add_filter('excerpt_length', 'et_excerpt_length');
+
 
 
 

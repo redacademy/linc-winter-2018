@@ -11,25 +11,22 @@ get_header(); ?>
 
                 <?php single_post_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
 
-
 		</header><!-- .entry-header -->
-
-
 
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+
 			<?php endif; ?>
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content' ); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+ 
+                <?php get_template_part( 'template-parts/content-blog' ); ?>
+ 
 		
 			<?php endwhile; ?>
 
 		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php get_template_part( 'template-parts/content-blog', 'none' ); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
