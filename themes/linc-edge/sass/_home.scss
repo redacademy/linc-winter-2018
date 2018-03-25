@@ -173,6 +173,9 @@ article{
       margin-top:11%;
       width:70%;
       height:100%;
+      @include desktop{
+        margin-top:5.5rem;
+      }
       
    
     }
@@ -182,7 +185,7 @@ article{
         width:100%;
         margin-left:3%;
         @include desktop{
-            margin-top:10%;
+            margin-top:5rem;
         }
         .category-title{
             a{

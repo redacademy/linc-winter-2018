@@ -32,7 +32,7 @@
     background-color:$color__lincedgeblue;
     opacity: 0.95;
     left:0px;
-    width:94%;
+    width:95%;
     height:35%;
     margin:0;
     bottom:130px;
@@ -42,8 +42,8 @@
     font-size:1rem;
     justify-content:center;
     @include desktop{
-        justify-content:flex-start;
-        width:30%;
+        justify-content:center;
+        width:55%;
         
     }
     
