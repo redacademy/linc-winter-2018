@@ -37,6 +37,7 @@ article{
         }
        
         img{
+            object-fit: cover;
             height:20rem;
             border-radius:0px;
             @include desktop{
@@ -128,6 +129,7 @@ article{
     }
 
     img{
+        object-fit:cover;
         max-width:none;
         width:100%;
         height:11rem;
