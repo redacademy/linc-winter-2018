@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<header class="entry-header">
 					<h1 class="error-title entry-title"><span class="title-underline"><?php echo esc_html( 'Error 404' ); ?></span></h1>
-				</header><!-- .error-header -->
+				</header><!-- .entry-header -->
 
 				<div class="error-content">
 					<p class="error-description"><?php echo esc_html( 'This page could not be found.' ); ?></p>
@@ -24,7 +24,7 @@ get_header(); ?>
 
         <div class="error-button">
           <button><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Back to Home</a></button>
-        <div class="error-button">
+        </div><!-- .error-button -->
 
 			</section><!-- .error-404 -->
 
