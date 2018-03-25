@@ -20,9 +20,9 @@ get_header(); ?>
 
 			<div class="features-content-container" id="feature-page">
 			 	<div class="benefit-carousel">
-					<div class="feature-title"><span class="title-underline">
+					<h1 class="entry-title"><span class="title-underline">
 						<?php echo CFS()->get( 'features_title' ); ?>
-					</span></div>
+					</span></h1>
 			 		<div class="carousel">
         			<?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
 						foreach ( $fields as $field ):  ?>
@@ -76,14 +76,16 @@ get_header(); ?>
 
 
 
+			<h1 class="entry-title entry-title-benefits"><span class="title-underline">
+				<?php echo CFS()->get( 'benefits_title' ); ?>
+			</span></h1>
+
 			<div class="benefits-content-container" id="benefit-desktop">
 				<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
 					foreach ( $fields as $field ) : ?>
 
 					<div class="benefit-text-container">
 					<span class="benefit-back"></span>
-
-					
 							<?php echo '<img src="' . $field['image'] . '"/>'; ?>
 							<p class="benefit-title-desktop"><span class="title-underline-short"><?php echo $field['title'];?></span></p>
 							<p class="benefits-text"><?php echo $field['description'];?></p>
@@ -117,11 +119,12 @@ get_header(); ?>
 				<?php endforeach; wp_reset_postdata(); ?>	
 			</div><!-- Testimonial Benefits, desktop -->
 
+			<!-- Benefits mobile carousel -->
 			<div class="benefits-content-container" id="benefit-mobile">
 				<div class="benefit-carousel">
-					<div class="benefit-title"><span class="title-underline">
+					<div class="benefit-title">
 						<?php echo CFS()->get( 'benefits_title' ); ?>
-					</span></div>
+					</div>
 					<div class="carousel-2">
 					<?php 
 					foreach($fields as $field ): ?>
@@ -165,11 +168,23 @@ get_header(); ?>
 			</div><!-- benefit content container -->
 
 
-		<div class="experience-title"><?php echo CFS()->get('experience_title');?></div>
-
-		<div class="signup-product"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
-		<div class="signup-product-desktop"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> sign up for beta</a></div>
-
+		<div class="experience-container">
+			<h2 class="experience-title">
+				<?php echo CFS()->get('experience_title');?>
+			</h2>
+			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+				<button class="sign-up-product">
+					<p>Sign Up</p>
+				</button>
+			</a>
+			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+				<button class="sign-up-product-desktop">
+					<p>Sign Up for Beta</p>
+				</button>
+			</a>
+			<!-- <div class="signup-product"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
+			<div class="signup-product-desktop"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> sign up for beta</a></div> -->
+		</div>
         <!-- Ending "benefits" forEach-loop -->
 
 		<?php else : ?>
