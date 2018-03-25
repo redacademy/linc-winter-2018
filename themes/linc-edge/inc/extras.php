@@ -29,7 +29,7 @@ function lincedge_hero_image(){
 		if (!$CFS_url){
 			return;
 		}
-		$CSS =".page-template-front-page .banner-container{
+		$CSS =".home .banner-container{
 		background: 
 		url({$CFS_url}) no-repeat center top;
 		background-size:cover;
