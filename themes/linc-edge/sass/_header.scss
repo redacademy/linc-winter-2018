@@ -10,7 +10,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 10;
-	box-shadow: 5px 5px 6px 0px hsla(0, 0%, 39%, .25);
+	box-shadow: 5px 5px 6px 0px rgba(99, 99, 99, 0.25);
 }
 .admin-bar #masthead {
   top: 46px;
@@ -137,10 +137,19 @@
       background-color: $color__lincedgegreen;
       padding: 0.5rem 1rem;
       border-radius: 30px;
+      border: 1px solid;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     a:hover {
       color: #ffffff;
+      background-color: $color__lincedgegreen;
+      border-color: $color__text-main;
+    }
+    a:focus {
+      color: #ffffff;
+      outline: none;
+      background-color: darken($color__lincedgegreen, 5%);
+
     }
   }
   // Products link
