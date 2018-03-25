@@ -37,9 +37,9 @@
         
         		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-            <span class="posted-on"><?php linc_edge_posted_on(); ?> /</span> 
-            <span class="comments"><?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / </span>
-            <span class="author"> <span><i class="far fa-clock"></i> </span>By <span class="author-color"><?php the_author(); ?></span></span>
+            <span class="posted-on"><span><i class="far fa-clock"></i> </span><?php linc_edge_posted_on(); ?> </span> 
+            <span class="comments"><?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> </span>
+            <span class="author"> By <span class="author-color"><?php the_author(); ?></span></span>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
     </div><!-- .entry-content -->
