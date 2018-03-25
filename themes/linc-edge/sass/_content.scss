@@ -51,7 +51,7 @@
 // Testimonials 
 .testimonial {
 	color: #fff;
-	background-color: $color__lincedgeblue;
+	background: linear-gradient(gold 10%, $color__lincedgeblue 10%, $color__lincedgeblue 90%, gold 90%,gold 100%);
 	width: 100%;
 	display: flex;
 	align-items: center;

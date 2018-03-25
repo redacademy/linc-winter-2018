@@ -162,7 +162,7 @@
             display:block
         }
     }
-    
+
     .benefits-content-container{
         display: none;
         // JS display on click
@@ -177,6 +177,9 @@
             min-height:500px;
             width:100%;
             margin-bottom:60%;
+            @media screen and (min-width: 550px) {
+                margin-bottom: 25%;
+            }
             .carousel-cell{
                 width:100%;
                 .benefits-image{
