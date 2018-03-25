@@ -33,8 +33,8 @@
     </div>
 
     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-      <?php echo esc_html(get_the_excerpt()); ?>
-        
+      <span class="excerpt-mobile"><?php echo esc_html(excerpt(11)); ?></span>
+      <span class="excerpt-desktop"><?php echo esc_html(excerpt(40)); ?></span>
         		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
             <span class="posted-on"><span><i class="far fa-clock"></i> </span><?php linc_edge_posted_on(); ?> </span> 
@@ -44,5 +44,7 @@
 		<?php endif; ?>
     </div><!-- .entry-content -->
 </div>
+
+
 
 </article><!-- #post-## -->
