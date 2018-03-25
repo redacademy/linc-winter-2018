@@ -35,4 +35,14 @@ get_header(); ?>
     
 </div>
 
+<div class="backhome-container">
+
+        <a href ="http://linc.van.cp.academy.red/">
+			<button class="backhome-button">
+				<p>go back home</p>
+            </button>
+        </a>
+
+	</div>
+
 <?php get_footer(); ?>
