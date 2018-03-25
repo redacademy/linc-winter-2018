@@ -28,7 +28,7 @@ get_header(); ?>
 
       <div class="about-container">
 
-        <?php $fields = CFS()->get( 'action_description' ); foreach ( $fields as $field ): ?> 
+        <?php $fields = CFS()->get( esc_html('action_description' )); foreach ( $fields as $field ): ?> 
 
           <div class="about-content-container">
 
@@ -49,10 +49,10 @@ get_header(); ?>
 
 	    <div class="customer-container">
 
-			  <div class="customer-header"><span class="title-underline"><?php echo CFS()->get( 'customer_header' ); ?></span></div>
+			  <div class="customer-header"><span class="title-underline"><?php echo CFS()->get( esc_html('customer_header') ); ?></span></div>
         
         <div class="carousel">
-			    <?php $customers = CFS()->get('customer_logo'); foreach ($customers as $customer ): ?>
+			    <?php $customers = CFS()->get(esc_html('customer_logo')); foreach ($customers as $customer ): ?>
           
 				    <div class="customer-content-container">
 					    <div class="customer-image-group"> 

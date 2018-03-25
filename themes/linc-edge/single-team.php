@@ -22,12 +22,12 @@ get_header(); ?>
                 <?php endif; ?>
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
-                    <h3 class="title-underline-short"><?php echo CFS() -> get ('position'); ?></h3>
+                    <h3 class="title-underline-short"><?php echo CFS() -> get (esc_html('position')); ?></h3>
                     <div class="bio-excerpt-mobile">
-                        <?php echo CFS() -> get ('biography'); ?>
+                        <?php echo CFS() -> get (esc_html('biography')); ?>
                     </div>
                     <div class="bio-excerpt-desktop">
-                        <?php echo CFS() -> get ('biography'); ?>
+                        <?php echo CFS() -> get (esc_html('biography')); ?>
                     </div>
                 </div>
             </div><!-- .member-profile -->
