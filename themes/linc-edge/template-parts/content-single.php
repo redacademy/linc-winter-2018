@@ -13,9 +13,9 @@
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
+		<div class="entry-meta">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<div class="entry-meta">
 			<?php linc_edge_posted_on(); ?> / <?php linc_edge_comment_count(); ?> / <?php linc_edge_posted_by(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
