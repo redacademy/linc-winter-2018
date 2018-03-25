@@ -1,5 +1,6 @@
 .page-template-price {
-  .pricing-plan-container {
+
+  .pricing-plans-container {
     display: none;
     @include desktop {
       display: flex;
@@ -76,27 +77,27 @@
       }
     } /* .pricing-plan-button */
 
-  .subscription-description-content-container {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
-    
-  } /* .subscription-description-content-container */
 
-  .subscription-description {
-    align-self: center;
-    color: $color__lincedgeblue;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 1.5rem;
+  .subscription-description-container {
     @include desktop {
-      font-size: 1.5rem;
+      margin-top: 3rem;
     }
-  } /* .subscription-description */
+    .subscription-description {
+      color: $color__lincedgeblue;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0 1.5rem;
+      text-align: center;
+      @include desktop {
+        font-size: 1.5rem;
+      }
+    } /* .subscription-description */
+  } /* .subscription-description-container */
+
+
 
   .subscription-form-container {
+    margin: 2rem auto;
     @include desktop {
       display: flex;
       justify-content: center;
@@ -137,26 +138,19 @@
     }
   } /* input.submit-button */
 
-  .subscription-condition-content-container {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4.5rem;
+  .subscription-condition-container {
+    .subscription-condition {
+      align-self: center;
+      color: $color__lincedgeblue;
+      font-size: 1rem;
+      margin: 0 1.5rem;
+      @include desktop {
+        font-size: 1.15rem;
+      }
+    } /* subscription-condition */
   } /* .subscription-condition-group */
 
-  .subscription-condition {
-    align-self: center;
-    color: $color__lincedgeblue;
-    font-size: 1rem;
-    margin: 1.5rem;
-    @include desktop {
-      font-size: 1.15rem;
-    }
-  } /* subscription-condition */
 
-  .site-content {
-    height: 100%;
-  }
+
 
 } /* .page-template-price */
