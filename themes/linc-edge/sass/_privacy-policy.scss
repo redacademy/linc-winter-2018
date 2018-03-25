@@ -1,0 +1,49 @@
+.privacy-policy {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+.section-1-title-1,
+.section-2-title-1,
+.section-3-title-1,
+.section-4-title-1,
+.section-5-title-1,
+.section-6-title-1,
+.section-7-title-1,
+.section-8-title-1,
+.section-9-title-1,
+.section-10-title-1,
+.section-11-title-1,
+.section-12-title-1,
+.section-13-title-1,
+.section-14-title-1,
+.section-15-title-1,
+.section-16-title-1,
+.section-17-title-1,
+.section-18-title-1,
+.section-19-title-1, {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.privacy-policy-button {
+  align-self: center;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  button {
+    align-self: center;
+    margin-bottom: 15%;
+    background-color: $color__lincedgegreen;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}

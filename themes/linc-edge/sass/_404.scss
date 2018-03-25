@@ -26,18 +26,20 @@
   padding-top: 6rem;
 }
 
-button {
-  align-self: center;
-  margin-bottom: 15%;
-  background-color: $color__lincedgegreen;
-  border-radius: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  color: #ffffff;
-  font-size: 1.25rem;
-  padding: 0.75rem 2rem;
-  text-transform: uppercase;
-  a {
-    color: #ffffff !important;
-    text-decoration: none;
+.error404 .error-404 {
+  button {
+    align-self: center;
+    margin-bottom: 15%;
+    background-color: $color__lincedgegreen;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
   }
 }

@@ -28,5 +28,30 @@
 }
 
 @mixin linc-button-style {
-	
+	height: 52px;
+	width: 240px;
+	border-radius: 30px;
+	font-size: 1.15rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: $color__lincedgegreen;
+	border: none;
+	box-shadow: 0px 1px 2px $color__text-main;
+
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	margin: 2rem auto;
+	&:hover {
+		background-color: darken($color__lincedgegreen, 5%)
+	}
+	&:focus {
+		box-shadow: inset 0px 1px 2px $color__text-main;
+		transform: translateY(1px);
+		outline: none;
+	}
+	a {
+		text-decoration: none;
+		color:#fff;      
+	}
 }
