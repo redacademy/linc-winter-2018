@@ -2,23 +2,12 @@
 /**
  * Template Name: Front Page
  */
-?>
 
-
-
-
-	<?php
-
-
-
-
-    get_header();?>
-
+get_header();?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-	
-		
+			
 		<div class="banner-container">
 				 <div class="banner-text">
 					 <?php echo CFS()->get( 'banner_text' ); ?>
@@ -35,6 +24,7 @@
 				</a>
 		</div>
 		
+		<!-- Mobile: Sign Up button below banner -->
 		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
 			<button class="signup-front-mobile">
 				<p>Sign Up</p>
@@ -52,8 +42,6 @@
 			</div>
 		</div>
 
-
-
 		<div class="benefits-header"><span class="title-underline">
 			<?php echo CFS()->get( 'benefits_header' ); ?>
 		</span></div>
@@ -66,8 +54,6 @@
 			</div>
 			<?php endforeach; ?>
 		</div>
-
-	
 
 		<div class="howworks-header"><span class="title-underline">
 			<?php echo CFS()->get( 'howworks_header' ); ?>
@@ -96,7 +82,6 @@
 			</div><!-- .non-carousel -->
 		</div><!-- .howworks-container -->
 	
-
 		<div class="features-header"><span class="title-underline">
 			<?php echo CFS()->get( 'features_header' ); ?>
 		</span></div>
@@ -109,56 +94,53 @@
 			</div>
 			<?php endforeach; ?>
 		</div>
+		
+		<!-- Learn More button -->
 		<?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?>
 			<button class="learnmore-front">
 				<p>Learn More</p>
 			</button>
 		</a>
-<!-- testimonials -->
-<?php
-    $args = array(
-        'post_type' => 'testimonial',
-        'posts_per_page' => 1,
-        'title' => 'Chad Myers'
-                );
-    $get_testimonial = get_posts( $args );
-    ?>
-    <?php 
-        foreach ( $get_testimonial as $post ): 
-        setup_postdata($post);
-    ?>
-        <div class="testimonial">
-            <div class="testimonial-inner">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
-				<?php endif; ?>
-                <div class="endorsement">
-                    <p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
-                    <h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
-                </div>
-            </div>
-        </div>
-	<?php endforeach; wp_reset_postdata(); ?>
+
+		<!-- testimonial -->
+		<?php
+			$args = array(
+				'post_type' => 'testimonial',
+				'posts_per_page' => 1,
+				'title' => 'Chad Myers'
+						);
+			$get_testimonial = get_posts( $args );
+			?>
+			<?php 
+				foreach ( $get_testimonial as $post ): 
+				setup_postdata($post);
+			?>
+				<div class="testimonial">
+					<div class="testimonial-inner">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+						<?php endif; ?>
+						<div class="endorsement">
+							<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
+							<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+						</div>
+					</div>
+				</div>
+			<?php endforeach; wp_reset_postdata(); ?>
 	
 
- 	<div class="join-beta-container">
-		<h2 class="join-beta-title">
-			<?php echo CFS()->get( 'join_beta_title' ); ?>
-		</h2>
-		<?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?>
-			<button class="join-beta-button">
-				<p>Sign Up</p>
-			</button>
-		</a>
-	</div>
-
-
-
-
+		<div class="join-beta-container">
+			<h2 class="join-beta-title">
+				<?php echo CFS()->get( 'join_beta_title' ); ?>
+			</h2>
+			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+				<button class="join-beta-button">
+					<p>Sign Up</p>
+				</button>
+			</a>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
 <?php get_footer(); ?>
-
