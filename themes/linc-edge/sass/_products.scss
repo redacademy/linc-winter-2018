@@ -1,11 +1,13 @@
 .page-template-index{
-    overscroll-behavior-y: contain;
+
+    
     .site-content{
         height:100%;
     }
 
     // mobile
     .button-container{
+        
         display: flex;
         justify-content: center;
         padding-top: 1rem;    
@@ -32,6 +34,8 @@
 
     // mobile and desktop
     .features-content-container{
+
+
         display:block;
         .features-inner-container{
             margin-left:15%;
