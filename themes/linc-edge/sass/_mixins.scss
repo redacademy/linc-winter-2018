@@ -41,7 +41,7 @@
 	display:flex;
 	justify-content: center;
 	align-items:center;
-	margin: 2rem auto;
+	margin: 0 auto;
 	&:hover {
 		background-color: darken($color__lincedgegreen, 5%)
 	}
@@ -49,13 +49,6 @@
 		box-shadow: inset 0px 1px 2px $color__text-main;
 		transform: translateY(1px);
 		outline: none;
-	}
-	a {
-		// text-decoration: none;
-		// color:#fff;
-		// margin: 0;
-		// width: 100%;
-		// line-height: 52px;
 	}
 	p {
 		margin: 0;
