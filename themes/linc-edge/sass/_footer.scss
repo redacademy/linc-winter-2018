@@ -1,11 +1,11 @@
 .site-footer{
     background-color:#012f46;
-    
+
     justify-content:center;
     align-items:center;
     display:flex;
     margin-top:50px;
-    height:200px;
+    height:240px;
     width:100%;
     
     @include desktop{
@@ -64,9 +64,14 @@
         }
     }
     .footer-text-container{
+        flex-wrap:wrap;
         margin-top: 50px;
         display:flex;
         justify-content: space-around;
+
+        @media screen and (max-width: 667px) {
+            margin-left:0 !important;
+        }
   
 
     
@@ -81,14 +86,14 @@
 
     }
     .footer-policy{
-        display:none;
-        @include desktop{
+    
+
         
         text-decoration: underline;
-        display:block;
+ 
         }
 
     }
 
 
-}
+
