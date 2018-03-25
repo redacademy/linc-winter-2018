@@ -14,16 +14,18 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title();
+					the_archive_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+
+			     
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( esc_html('template-parts/content' ));
+					get_template_part( 'template-parts/content-blog' );
 				?>
 
 			<?php endwhile; ?>
@@ -32,12 +34,20 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( esc_html('template-parts/content', 'none' )); ?>
+			<?php get_template_part( 'template-parts/content-blog', 'none' ); ?>
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<div class="backhome-container">
 
+<a href ="http://linc.van.cp.academy.red/">
+	<button class="backhome-button">
+		<p>go back home</p>
+	</button>
+</a>
+
+</div>
 
 <?php get_footer(); ?>
