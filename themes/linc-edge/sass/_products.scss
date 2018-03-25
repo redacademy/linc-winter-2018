@@ -3,6 +3,7 @@
         height:100%;
     }
 
+    // mobile
     .button-container{
         display: flex;
         justify-content: center;
@@ -28,6 +29,7 @@
         }
     } // end .button-container
 
+    // mobile and desktop
     .features-content-container{
         display:block;
         .features-inner-container{
@@ -111,7 +113,7 @@
         } // end .carousel
     } // end features-content-container
 
-
+    // desktop
     .entry-title-benefits {
         display: none;
         @include desktop {
@@ -163,6 +165,7 @@
         }
     }
 
+    // mobile
     .benefits-content-container{
         display: none;
         // JS display on click
@@ -176,10 +179,10 @@
         .carousel-2{
             min-height:500px;
             width:100%;
-            margin-bottom:60%;
-            @media screen and (min-width: 550px) {
-                margin-bottom: 25%;
-            }
+            margin-bottom: 50px;
+            // @media screen and (min-width: 550px) {
+            //     margin-bottom: 25%;
+            // }    
             .carousel-cell{
                 width:100%;
                 .benefits-image{
@@ -227,7 +230,7 @@
         text-align: center;
         .experience-title{
             color:$color__lincedgeblue;
-            margin-top:10%;
+            margin: 0;
             font-size: 1.5rem;
             @include desktop{
             margin-top:5%;
