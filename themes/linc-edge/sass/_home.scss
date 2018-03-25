@@ -40,6 +40,8 @@ article{
     }
 
     &:nth-child(1){
+        
+       
         &:before{
             display:none;
         }
@@ -48,12 +50,16 @@ article{
             object-fit: cover;
             height:20rem;
             border-radius:0px;
+
             @include desktop{
                 height:90vh;
+                margin-left:0% !important;
             }
           
         }
         .article-container{
+            background-color:$color__background-body;
+            border-radius:0px;
             
             position:relative;
             
@@ -68,12 +74,11 @@ article{
             position:absolute;
             background-color:$color__lincedgeblue;
             opacity: 0.95;
-            bottom:0px;
             left:0px;
             width:90%;
             height:70%;
             margin:0;
-            bottom:20px;
+            bottom:45px;
             color:white;
             .content-container{
                 margin-left:5%;
@@ -123,7 +128,7 @@ article{
     &:nth-of-type(odd){
         @include desktop{
             img{
-                margin-left:2%;
+                margin-left:3%;
             }
         }
 
