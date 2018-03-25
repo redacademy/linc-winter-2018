@@ -14,12 +14,12 @@ get_header(); ?>
                 </header>
             <?php endwhile; // End of the loop. ?>
             
-        <?php $timeline_entry_container = CFS()->get('timeline_entry'); ?>
+        <?php $timeline_entry_container = CFS()->get(esc_html('timeline_entry')); ?>
         <ul class="timeline-list">
                 <?php foreach ($timeline_entry_container as $post ): ?>
                 <li>
                     <div class="timeline-item">
-                        <?php if ( $post['timeline_image'] ) : ?>
+                        <?php if ( esc_html($post['timeline_image']) ) : ?>
                             <?php echo '<img class="timeline-image" src="' . esc_html($post['timeline_image']) . '"/>';?>
                         <?php endif ?>
                         <div class="timeline-content">

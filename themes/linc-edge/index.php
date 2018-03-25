@@ -22,24 +22,24 @@ get_header(); ?>
 				<!-- Features Carousel -->
 			 	<div class="features-carousel"> <!-- renamed from benefit-carousel, pretty sure unused -->
 					<h1 class="entry-title"><span class="title-underline">
-						<?php echo CFS()->get( 'features_title' ); ?>
+						<?php echo CFS()->get( esc_html('features_title') ); ?>
 					</span></h1>
 			 		<div class="carousel">
-        			<?php $fields = CFS()->get( 'features' ); /* Declaring "features" forEach-loop */
+        			<?php $fields = CFS()->get( esc_html('features') ); /* Declaring "features" forEach-loop */
 						foreach ( $fields as $field ):  ?>
 						<div class="carousel-cell">
 							<div class="features-inner-container">
 							<span class="white-back"></span>
-								<?php echo '<img src="' . $field['image'] . '"/>'; ?>
+								<?php echo '<img src="' . esc_url($field['image']) . '"/>'; ?>
 	
 								<div class="feature-text-container">
 									<div class="features-title">
 										<span class="title-underline-short">
-										<?php echo $field['title']; ?>
+										<?php echo esc_html($field['title']); ?>
 										</span>
 									</div>
 									<p class="features-text">
-										<?php echo $field['description'];  ?>
+										<?php echo esc_html($field['description']);  ?>
 									</p>
 								</div>
 							</div><!-- .features-inner-container -->	
@@ -63,11 +63,11 @@ get_header(); ?>
 				<div class="testimonial">
 					<div class="testimonial-inner">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+							<?php the_post_thumbnail(esc_html('large'), [esc_html('class') => esc_html('testimonial-headshot'), esc_html('alt') => esc_html('Testimonial Headshot')]); ?>
 						<?php endif; ?>
 						<div class="endorsement">
-								<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
-								<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+								<p><?php echo CFS() -> get (esc_html('endorsers_testimonial')); ?></p>
+								<h2><?php echo CFS() -> get (esc_html('endorsers_name')); ?></h2>
 						</div>
 					</div>
 				</div><!-- .testimonial -->
@@ -76,16 +76,16 @@ get_header(); ?>
 
 			<!-- Desktop only Benefits section -->
 			<h1 class="entry-title entry-title-benefits"><span class="title-underline">
-				<?php echo CFS()->get( 'benefits_title' ); ?>
+				<?php echo CFS()->get( esc_html('benefits_title') ); ?>
 			</span></h1>
 			<div class="benefits-content-container" id="benefit-desktop">
-				<?php $fields = CFS()->get( 'benefits' ); /* Declaring "benefits" forEach-loop */
+				<?php $fields = CFS()->get( esc_html('benefits') ); /* Declaring "benefits" forEach-loop */
 					foreach ( $fields as $field ) : ?>
 					<div class="benefit-text-container">
 					<span class="benefit-back"></span>
-							<?php echo '<img src="' . $field['image'] . '"/>'; ?>
-							<p class="benefit-title-desktop"><span class="title-underline-short"><?php echo $field['title'];?></span></p>
-							<p class="benefits-text"><?php echo $field['description'];?></p>
+							<?php echo '<img src="' . esc_url($field['image']) . '"/>'; ?>
+							<p class="benefit-title-desktop"><span class="title-underline-short"><?php echo esc_html($field['title']);?></span></p>
+							<p class="benefits-text"><?php echo esc_html($field['description']);?></p>
 					</div>
 					<?php endforeach; ?>
 			</div><!-- .benefits-content-container -->
@@ -105,11 +105,11 @@ get_header(); ?>
 				<div class="testimonial">
 					<div class="testimonial-inner">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+							<?php the_post_thumbnail(esc_html('large'), [esc_html('class') => esc_html('testimonial-headshot'), esc_html('alt') => esc_html('Testimonial Headshot')]); ?>
 						<?php endif; ?>
 							<div class="endorsement">
-									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
-									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+									<p><?php echo CFS() -> get (esc_html('endorsers_testimonial')); ?></p>
+									<h2><?php echo CFS() -> get (esc_html('endorsers_name')); ?></h2>
 							</div>
 					</div>
 				</div><!-- .testimonial -->
@@ -120,18 +120,18 @@ get_header(); ?>
 			<div class="benefits-content-container" id="benefit-mobile">
 				<div class="benefit-carousel"> <!-- pretty sure unused -->
 					<h1 class="benefit-title">
-						<?php echo CFS()->get( 'benefits_title' ); ?>
+						<?php echo CFS()->get( esc_html('benefits_title') ); ?>
 					</h1>
 					<div class="carousel-2">
 					<?php 
 					foreach($fields as $field ): ?>
 						<div class="carousel-cell">
 							<div class="benefits-image">
-								<?php echo '<img src="' . $field['image'] . '"/>';?>
+								<?php echo '<img src="' . esc_url($field['image']) . '"/>';?>
 							</div>
 							<div class="title-text-con">
-								<div class="benefits-title"><?php echo $field['title']; ?></div>
-								<p class="benefits-text"><?php echo $field['description'];?></p>
+								<div class="benefits-title"><?php echo esc_html($field['title']); ?></div>
+								<p class="benefits-text"><?php echo esc_html($field['description']);?></p>
 							</div>
 						</div><!-- .carousel cell -->
 					<?php endforeach; ?>
@@ -152,11 +152,11 @@ get_header(); ?>
 						<div class="testimonial">
 							<div class="testimonial-inner">
 								<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+									<?php the_post_thumbnail(esc_html('large'), [esc_html('class') => esc_html('testimonial-headshot'), esc_html('alt') => esc_html('Testimonial Headshot')]); ?>
 								<?php endif; ?>
 								<div class="endorsement">
-									<p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
-									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+									<p><?php echo CFS() -> get (esc_html('endorsers_testimonial')); ?></p>
+									<h2><?php echo CFS() -> get (esc_html('endorsers_name')); ?></h2>
 								</div>
 							</div>
 						</div><!-- .testimonial -->
@@ -167,10 +167,10 @@ get_header(); ?>
 
 		<div class="experience-container">
 			<h2 class="experience-title">
-				<?php echo CFS()->get('experience_title');?>
+				<?php echo CFS()->get(esc_html('experience_title'));?>
 			</h2>
 			<?php echo ' <a class="linc-edge-button"
-			href="' . get_site_url() . "/sign-up/" . '"> ';?>
+			href="' . esc_url(get_site_url()) . "/sign-up/" . '"> ';?>
 				<p class="mobile">Sign Up</p>
 				<p class="desktop">Sign Up for Beta</p>
 			</a>

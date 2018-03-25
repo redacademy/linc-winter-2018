@@ -9,7 +9,7 @@ get_header(); ?>
 
        <header class="entry-header">
 
-                <?php single_post_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+                <?php single_post_title( esc_html('<h1 class="entry-title"><span class="title-underline">', '</span></h1>') ); ?>
 
         </header><!-- .entry-header -->
         
@@ -22,13 +22,13 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
  
-                <?php get_template_part( 'template-parts/content-blog' ); ?>
+                <?php get_template_part( esc_html('template-parts/content-blog') ); ?>
  
 		
 			<?php endwhile; ?>
 
 		<?php else : ?>
-			<?php get_template_part( 'template-parts/content-blog', 'none' ); ?>
+			<?php get_template_part( esc_html('template-parts/content-blog'), esc_html('none') ); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
     </div><!-- #primary -->

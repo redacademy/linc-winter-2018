@@ -23,7 +23,7 @@ get_header(); ?>
 				</div><!-- .error-content -->
 
         <div class="error-button">
-          <button><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Back to Home</a></button>
+          <button><a href="<?php echo esc_url(home_url( '/' )); ?>" rel="home">Back to Home</a></button>
         </div><!-- .error-button -->
 
 			</section><!-- .error-404 -->

@@ -10,11 +10,11 @@ get_header();?>
 			
 		<div class="banner-container">
 				 <div class="banner-text">
-					 <?php echo CFS()->get( 'banner_text' ); ?>
+					 <?php echo CFS()->get( esc_html('banner_text') ); ?>
 				</div>
 				 <div class="download-container">
-					<a href="<?php echo CFS()->get( 'google_store_link' );?>"><?php echo '<img class="google-play-link" alt="Google Store "src="' . CFS()->get( 'googleimage' ) . '"/>'?></a> 
-					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
+					<a href="<?php echo CFS()->get( esc_html('google_store_link') );?>"><?php echo '<img class="google-play-link" alt="Google Store "src="' . CFS()->get( esc_html('googleimage') ) . '"/>'?></a> 
+					<a href="<?php echo CFS()->get( esc_html('apple_store_link') );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( esc_html('appleimage') ). '"/>' ?></a>
 	
 				</div>
 				<?php echo '<a class="linc-edge-button signup-front-desktop"
@@ -30,7 +30,7 @@ get_header();?>
 		</a>
 
 		<div class="afterbanner-container">
-				<?php $afterbannertexts = CFS()->get( 'after_banner_text' );
+				<?php $afterbannertexts = CFS()->get( esc_html('after_banner_text') );
 				foreach ($afterbannertexts as $afterbannertext ) {?>
 			<div class="theproblem-heading"><span class="title-underline">
 				<?php echo esc_html($afterbannertext['heading']); ?>
@@ -41,10 +41,10 @@ get_header();?>
 		</div>
 
 		<div class="benefits-header"><span class="title-underline">
-			<?php echo CFS()->get( 'benefits_header' ); ?>
+			<?php echo CFS()->get( esc_html('benefits_header') ); ?>
 		</span></div>
 		<div class="benefits-container">
-			<?php $benefitscontainers = CFS()->get('benefits_container');
+			<?php $benefitscontainers = CFS()->get(esc_html('benefits_container'));
 			foreach ($benefitscontainers as $benefitcontainer ): ?>
 			<div class="indiv-benefit">
 				<?php echo '<img class="benefits-image" alt="Benefits Image" src="' . esc_html($benefitcontainer['benefits_image']) . '"/>';?>
@@ -54,11 +54,11 @@ get_header();?>
 		</div>
 
 		<div class="howworks-header"><span class="title-underline">
-			<?php echo CFS()->get( 'howworks_header' ); ?>
+			<?php echo CFS()->get( esc_html('howworks_header') ); ?>
 		</span></div>
 		<div class="howworks-container">
 			<div class="carousel" >
-			<?php $howworkscontainers = CFS()->get('howworks_container');
+			<?php $howworkscontainers = CFS()->get(esc_html('howworks_container'));
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="carousel-cell">
 					<div class="howworks-image">
@@ -70,7 +70,7 @@ get_header();?>
 			</div><!-- .carousel -->
 			
 			<div class="non-carousel">
-			<?php $howworkscontainers = CFS()->get('howworks_container_desktop');
+			<?php $howworkscontainers = CFS()->get(esc_html('howworks_container_desktop'));
 				foreach ($howworkscontainers as $howworkcontainer ): ?>
 				<div class="hw-inner-container">
 					<?php echo '<img class="howworks-image" alt="How Works Image" src="' . esc_html($howworkcontainer['howworks_image_desktop']) . '"/>';?>
@@ -81,10 +81,10 @@ get_header();?>
 		</div><!-- .howworks-container -->
 	
 		<div class="features-header"><span class="title-underline">
-			<?php echo CFS()->get( 'features_header' ); ?>
+			<?php echo CFS()->get( esc_html('features_header') ); ?>
 		</span></div>
 		<div class="features-container">
-			<?php $featurescontainers = CFS()->get('features_container');
+			<?php $featurescontainers = CFS()->get(esc_html('features_container'));
 			foreach ($featurescontainers as $featurecontainer ):?>
 			<div class="indiv-feature">
 				<?php echo '<img class="features-image" alt="Features Image" src="' . esc_html($featurecontainer['features_image']) . '"/>';?>
@@ -115,11 +115,11 @@ get_header();?>
 				<div class="testimonial">
 					<div class="testimonial-inner">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial Headshot']); ?>
+							<?php the_post_thumbnail(esc_html('large'), [esc_html('class') => esc_html('testimonial-headshot'), esc_html('alt') => esc_html('Testimonial Headshot')]); ?>
 						<?php endif; ?>
 						<div class="endorsement">
-							<p><?php echo CFS()->get('endorsers_testimonial'); ?></p>
-							<h2><?php echo CFS()->get('endorsers_name'); ?></h2>
+							<p><?php echo CFS()->get(esc_html('endorsers_testimonial')); ?></p>
+							<h2><?php echo CFS()->get(esc_html('endorsers_name')); ?></h2>
 						</div>
 					</div>
 				</div>
@@ -127,7 +127,7 @@ get_header();?>
 
 		<div class="join-beta-container">
 			<h2 class="join-beta-title">
-				<?php echo CFS()->get( 'join_beta_title' ); ?>
+				<?php echo CFS()->get(esc_html('join_beta_title' )); ?>
 			</h2>
 			<?php echo '<a class="linc-edge-button"
 			href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>

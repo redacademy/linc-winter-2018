@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 			<?php esc_html( comments_number( '0 Comments', '1 Comment', '% Comments' ) ); ?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( esc_html('page_comments' )) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html( 'Comment navigation' ); ?></h2>
 			<div class="nav-links">
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( esc_html('page_comments') ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html( 'Comment navigation' ); ?></h2>
 			<div class="nav-links">
@@ -60,7 +60,7 @@ if ( post_password_required() ) {
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), esc_html('comments') ) ) :
 	?>
 		<p class="no-comments"><?php esc_html( 'Comments are closed.' ); ?></p>
 	<?php endif; ?>

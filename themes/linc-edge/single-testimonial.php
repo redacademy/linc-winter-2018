@@ -19,11 +19,11 @@ get_header(); ?>
             <div class="testimonial">
                 <div class="testimonial-inner">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail('large', ['class' => 'testimonial-headshot', 'alt' => 'Testimonial headshot']); ?>
+                        <?php the_post_thumbnail(esc_html('large'), [esc_html('class') => esc_html('testimonial-headshot'), esc_html('alt') => esc_html('Testimonial headshot')]); ?>
                     <?php endif; ?>
                     <div class="endorsement">
-                        <p><?php echo CFS() -> get ('endorsers_testimonial'); ?></p>
-                        <h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
+                        <p><?php echo CFS() -> get (esc_html('endorsers_testimonial')); ?></p>
+                        <h2><?php echo CFS() -> get (esc_html('endorsers_name')); ?></h2>
                     </div>
                 </div>
             </div>
