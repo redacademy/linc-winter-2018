@@ -237,15 +237,12 @@
             font-size: 2.5rem;
             }
         }
-        .sign-up-product,.sign-up-product-desktop{
-            @include linc-button-style;
-        }
-        .sign-up-product{
+        p.mobile {
             @include desktop{
                 display:none;
             }
         }
-        .sign-up-product-desktop{
+        p.desktop{
             display:none;
             @include desktop{
                 display:block;

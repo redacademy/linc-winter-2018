@@ -41,7 +41,7 @@
 	display:flex;
 	justify-content: center;
 	align-items:center;
-	margin: 0 auto;
+	margin: 2rem auto;
 	&:hover {
 		background-color: darken($color__lincedgegreen, 5%)
 	}

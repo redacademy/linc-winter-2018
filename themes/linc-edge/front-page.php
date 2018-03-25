@@ -17,18 +17,16 @@ get_header();?>
 					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
 	
 				</div>
-				<?php echo '<a href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
-					<button class="signup-front-desktop">
-						<p>Sign Up</p>
-					</button>
+				<?php echo '<a class="linc-edge-button signup-front-desktop"
+				href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+					<p>Sign Up</p>
 				</a>
 		</div>
 		
 		<!-- Mobile: Sign Up button below banner -->
-		<?php echo '<a href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
-			<button class="signup-front-mobile">
-				<p>Sign Up</p>
-			</button>
+		<?php echo '<a class="linc-edge-button signup-front-mobile"
+		href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+			<p>Sign Up</p>
 		</a>
 
 		<div class="afterbanner-container">
@@ -96,10 +94,9 @@ get_header();?>
 		</div>
 		
 		<!-- Learn More button -->
-		<?php echo '<a href="' . esc_url(get_site_url()) . "/products-features-benefits/" . '">';?>
-			<button class="learnmore-front">
-				<p>Learn More</p>
-			</button>
+		<?php echo '<a class="linc-edge-button"
+		href="' . esc_url(get_site_url()) . "/products-features-benefits/" . '">';?>
+			<p>Learn More</p>
 		</a>
 
 		<!-- testimonial -->
@@ -132,10 +129,9 @@ get_header();?>
 			<h2 class="join-beta-title">
 				<?php echo CFS()->get( 'join_beta_title' ); ?>
 			</h2>
-			<?php echo '<a href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
-				<button class="join-beta-button">
-					<p>Sign Up</p>
-				</button>
+			<?php echo '<a class="linc-edge-button"
+			href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+				<p>Sign Up</p>
 			</a>
 		</div>
 
