@@ -51,15 +51,12 @@
 // Testimonials 
 .testimonial {
 	color: #fff;
-	background: linear-gradient(gold 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 90%, gold 90%,gold 100%);
+	background: linear-gradient(gold 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
 	width: 100%;
-	display: flex;
-	align-items: center;
-	// height: 350px;
-	margin-top: 6rem;
+	// display: flex;
+	height: 350px;
 	@include desktop {
 		height: 250px;
-		margin-top: 3rem;
 	}
 	.testimonial-inner {
 		display: flex;
