@@ -10,7 +10,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
                 <header class="entry-header">
-                    <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+                    <?php esc_html(the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' )); ?>
                 </header>
             <?php endwhile; // End of the loop. ?>
             
@@ -23,8 +23,8 @@ get_header(); ?>
                             <?php echo '<img class="timeline-image" src="' . esc_html($post['timeline_image']) . '"/>';?>
                         <?php endif ?>
                         <div class="timeline-content">
-                            <h2 class="timeline-date"><?php echo $post['timeline_date'];?></h2>
-                            <p class="timeline-event"><?php echo $post['timeline_event'];?></p>
+                            <h2 class="timeline-date"><?php echo esc_html($post['timeline_date']); ?></h2>
+                            <p class="timeline-event"><?php echo esc_html($post['timeline_event']); ?></p>
                         </div>
                     </div>
                 </li>
