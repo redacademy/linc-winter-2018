@@ -196,7 +196,13 @@
             }
         }
         .testimonial{
-           margin-top:10rem;
+            margin-top: 10rem;
+            @media screen and (min-width: 350px) {
+                margin-top:8rem;
+            }
+           @include desktop {
+               margin-top: 5rem;
+           }
         }
 
         .features-title{
@@ -294,7 +300,7 @@
             }
         }
     }
-    .testi2-desktop{
+    .testimonial-desktop{
         display:none;
         @include desktop{
             display:block
