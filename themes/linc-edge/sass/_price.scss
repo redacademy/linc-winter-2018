@@ -1,5 +1,6 @@
 .page-template-price {
 
+  // Desktop only
   .pricing-plans-container {
     display: none;
     @include desktop {
@@ -9,85 +10,79 @@
       width: 80%;
       margin: 0 auto;
     }
-  } /* .pricing-plan-container */
-
-  .pricing-plan-content-container {
-    @include desktop {
-      img {
-        align-self: center;
-      }
+    .pricing-plan-content-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       background-color: #ffffff; 
       border: 1px solid #ffffff;
       border-radius: 10px;
       width: 32%;
-    }
-  } /* .pricing-plan-content-container */
-
-  p {
-    @include desktop {
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-    }
-  } /* p */
-  
-  .pricing-plan-title {
-    @include desktop {
-      color: $color__lincedgeblue;
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-    }
-    @media screen and (min-width: 950px) {
-      font-size: 2rem;
-    }
-  } /* .pricing-plan-title */
-
-  .pricing-plan-description {
-    @include desktop {
-      color: $color__text-main;
-      font-size: 1.15rem;
-      line-height: 1.5;
-      margin: 0 15%;
-    }
-  } /* .pricing-plan-description */
-
-  .pricing-plan-rate {
-    @include desktop {
-      color: $color__text-main;
-      font-size: 1.25rem;
-      line-height: 1;
-    }
-  } /* .pricing-plan-rate */
-
-  .pricing-plan-button {
-    @include desktop {
-      align-self: center;
-      margin-bottom: 15%;
-      background-color: $color__lincedgegreen;
-      border-radius: 30px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      color: #ffffff;
-      font-size: 1.25rem;
-      padding: 0.75rem 2rem;
-      text-transform: uppercase;
+      img {
+        align-self: center;
       }
-    } /* .pricing-plan-button */
+      .pricing-plan-title {
+        color: $color__lincedgeblue;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        @media screen and (min-width: 950px) {
+          font-size: 2rem;
+        }
+      }
+      .pricing-plan-description {
+        color: $color__text-main;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0 10%;
+        @media screen and (min-width: 850px) {
+          font-size: 1.15rem;
+        }
+      }
+      .pricing-plan-rate {
+        color: $color__text-main;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+      .pricing-plan-button {
+        border-radius: 30px;
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $color__lincedgegreen;
+        border: none;
+        box-shadow: 0px 1px 2px $color__text-main;
+        padding: 0.5rem .5rem;
+        margin: 0 auto 15% auto;
+        @media screen and (min-width: 850px) {
+          font-size: 1.25rem;
+          padding: 0.75rem 1.75rem;
+        }
+        &:hover {
+          background-color: darken($color__lincedgegreen, 5%)
+        }
+        &:focus {
+          box-shadow: inset 0px 1px 2px $color__text-main;
+          transform: translateY(1px);
+          outline: none;
+        }
+      } /* .pricing-plan-button */
+    } /* .pricing-plan-content-container */
+  } /* .pricing-plans-container */
 
-
+  
   .subscription-description-container {
     @include desktop {
       margin-top: 3rem;
     }
     .subscription-description {
+      text-align: center;
       color: $color__lincedgeblue;
       font-size: 1.25rem;
       font-weight: bold;
       margin: 0 1.5rem;
-      text-align: center;
       @include desktop {
         font-size: 1.5rem;
       }
@@ -97,10 +92,11 @@
 
 
   .subscription-form-container {
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
     @include desktop {
       display: flex;
       justify-content: center;
+      margin: 2rem auto 0 auto;
     }
   }
 
@@ -125,32 +121,39 @@
   } /* input.email-field */
 
   input.submit-button {
-    background-color: $color__lincedgegreen;
-    border-radius: 30px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: #ffffff;
     font-size: 1rem;
     padding: 0.75rem 2rem;
     text-transform: uppercase;
+    border-radius: 30px;
+    color: #fff;
+    background-color: $color__lincedgegreen;
+    border: none;
+    box-shadow: 0px 1px 2px $color__text-main;
     @include desktop {
       font-size: 1.25rem;
-      width: auto;
+    }
+    &:hover {
+      background-color: darken($color__lincedgegreen, 5%)
+    }
+    &:focus {
+      box-shadow: inset 0px 1px 2px $color__text-main;
+      transform: translateY(1px);
+      outline: none;
     }
   } /* input.submit-button */
 
   .subscription-condition-container {
     .subscription-condition {
-      align-self: center;
-      color: $color__lincedgeblue;
-      font-size: 1rem;
-      margin: 0 1.5rem;
+      width: 60%;
+      text-align: center;
+      color: lighten($color__text-main, 20%);
+      font-size: 0.75rem;
+      margin: 0 auto;
       @include desktop {
-        font-size: 1.15rem;
+        font-size: 1rem;
       }
     } /* subscription-condition */
   } /* .subscription-condition-group */
-
-
 
 
 } /* .page-template-price */
