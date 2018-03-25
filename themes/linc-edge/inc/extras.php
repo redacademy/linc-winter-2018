@@ -22,9 +22,6 @@ function linc_edge_body_classes( $classes ) {
 add_filter( 'body_class', 'linc_edge_body_classes' );
 
 function lincedge_hero_image(){
-	if ( !is_page_template( 'front-page.php' ) ) {
-		return;
-	}else{
 		$CFS_url = CFS()->get( 'bannerimage' );
 		if (!$CFS_url){
 			return;
@@ -37,7 +34,6 @@ function lincedge_hero_image(){
 
 		}";
 		wp_add_inline_style ('lincedge-starter-style',$CSS);
-	} 
 }
  
 add_action('wp_enqueue_scripts' , 'lincedge_hero_image');
