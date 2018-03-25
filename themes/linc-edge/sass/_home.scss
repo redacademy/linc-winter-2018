@@ -31,6 +31,12 @@ article{
             left:40px;
         }
     }
+    &:nth-child(2){
+        &:before{
+            display:none;
+        }
+    }
+
     &:nth-child(1){
         &:before{
             display:none;
