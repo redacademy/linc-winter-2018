@@ -2,18 +2,17 @@
     .site-content{
         height:100%;
     }
-    .site-footer{
-        margin-top:0;
-    }
     
     #benefit-desktop{
         display:none;
         @include desktop{
+            margin-left:11%;
+            display:flex;
+            flex-wrap:wrap;
             .benefit-title-desktop{
                 font-size:40px;
                 color:$color__lincedgeblue;
                 margin-left:4%;
-                
             }
             .benefit-back{
                 width:34%;
@@ -24,13 +23,7 @@
                 margin-top:13%;
                 position:absolute;
                 border-radius:10px;
-
             }
-            margin-left:11%;
-    
-            display:block;
-            display:flex;
-            flex-wrap:wrap;
             img{
                 width:70%;
             }
@@ -46,7 +39,7 @@
                 margin-bottom:25%;
             }
         }
-    }
+    }// end #benefit-desktop
     .button-container{
         display: flex;
         justify-content: center;
@@ -81,8 +74,11 @@
             display:none;
         }
     }
-    .entry-title{
-        display:none;
+    .entry-title-benefits {
+        display: none;
+        @include desktop {
+            display: block;
+        }
     }
     .benefit-title,.feature-title{
         
@@ -252,44 +248,27 @@
         }
 
     }
+    .experience-container {
+        text-align: center;
+    }
     .experience-title{
-        font-size:24px;
-        text-align:center;
-        margin-top:12%;
         color:$color__lincedgeblue;
+        margin-top:10%;
+        font-size: 1.5rem;
         @include desktop{
-            font-size:40px;
-            font-weight:bold;
-            margin-top:7%;
+        margin-top:5%;
+        font-size: 2.5rem;
         }
-  
     }
-    .signup-product,.signup-product-desktop{
-        border-radius: 30px;
-        height: 52px;
-        width: 240px;
-        text-transform: uppercase;
-        font-size: 18px;
-        background-color: #97c13b;
-        font-weight: 700;
-        display:flex;
-        justify-content: center;
-        align-items:center;
-        margin:8% auto;
-            a{
-                text-decoration: none;
-                color: #fff;
-            }
-            
+    .sign-up-product,.sign-up-product-desktop{
+        @include linc-button-style;
     }
-    .signup-product{
-
+    .sign-up-product{
         @include desktop{
             display:none;
         }
-        
     }
-    .signup-product-desktop{
+    .sign-up-product-desktop{
         display:none;
         @include desktop{
             display:block;
