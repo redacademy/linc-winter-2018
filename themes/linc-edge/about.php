@@ -38,7 +38,7 @@ get_header(); ?>
             </div><!-- .about-text-group -->
 
             <div class="about-image-group">
-              <?php echo '<img src="' . $field['picture'] .'"/>';  ?>
+              <?php echo '<img src="' . esc_url($field['picture']) .'"/>';  ?>
             </div><!-- .about-image-group -->
               
           </div><!-- .about-content-container -->
@@ -56,7 +56,7 @@ get_header(); ?>
           
 				    <div class="customer-content-container">
 					    <div class="customer-image-group"> 
-                <?php echo '<img src="' . $customer['image'] . '"/>'; ?>
+                <?php echo '<img src="' . esc_url($customer['image']) . '"/>'; ?>
 					    </div><!-- .customer-image-group -->
             </div><!-- .customer-content-container -->
             
