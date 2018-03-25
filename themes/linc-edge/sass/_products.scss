@@ -156,61 +156,58 @@
         }
     }// end #benefit-desktop
 
-
+    .testimonial-desktop{
+        display:none;
+        @include desktop{
+            display:block
+        }
+    }
+    
     .benefits-content-container{
         display: none;
-    } // JS display on click
-
-    .benefit-title {
-        padding: 1.5rem 0;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        color: $color__lincedgeblue;
-        @include desktop{
-            font-size: 3rem;
-            padding-top: 3rem;
-        }
-    }
-
-    .carousel-2{
-        
-        min-height:500px;
-        width:100%;
-        margin-bottom:60%;
-        .benefits-title{
-        margin-top:20px;
-        font-weight:bold;
-        color:$color__lincedgeblue;
-        font-size:18px;
-        
-        }
-        .benefit-image{
+        // JS display on click
+        .benefit-title {
+            padding: 1.5rem 0;
             text-align: center;
-            margin-left:5%;
-            margin-right:5%;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            color: $color__lincedgeblue;
         }
-        .benefits-text{
-           width:90%;
-           font-size:18px;
-           line-height:30px;
-
-        }
-        .carousel-cell{
+        .carousel-2{
+            min-height:500px;
             width:100%;
-       .title-text-con{
-           margin-left:7%;
-       }
-        }
-        .flickity-page-dots{
-            bottom: -20px;
-        }
-        .flickity-button{
-            display:none;
-        }
-    }
+            margin-bottom:60%;
+            .carousel-cell{
+                width:100%;
+                .benefits-image{
+                    text-align: center;
+                    margin-left:5%;
+                    margin-right:5%;
+                }
+                .title-text-con{
+                    margin-left:7%;
+                }
+            }
+            .benefits-title{
+            margin-top:20px;
+            font-weight:bold;
+            color:$color__lincedgeblue;
+            font-size:18px;
+            }
+            .benefits-text{
+               width:90%;
+               font-size:18px;
+               line-height:30px;
+            }
+            .flickity-page-dots{
+                bottom: -20px;
+            }
+            .flickity-button{
+                display:none;
+            }
+        } // end .carousel-2
+    } // end .benefits-content-container
 
-  
     .white-back{
         @include desktop{
             background-color:white;
@@ -220,45 +217,34 @@
             width:75%;
             height:65%;
             z-index:-1;
-
         }
     }
 
     .experience-container {
         text-align: center;
-    }
-    .experience-title{
-        color:$color__lincedgeblue;
-        margin-top:10%;
-        font-size: 1.5rem;
-        @include desktop{
-        margin-top:5%;
-        font-size: 2.5rem;
-        }
-    }
-    .sign-up-product,.sign-up-product-desktop{
-        @include linc-button-style;
-    }
-    .sign-up-product{
-        @include desktop{
-            display:none;
-        }
-    }
-    .sign-up-product-desktop{
-        display:none;
-        @include desktop{
-            display:block;
-            a{
-                display: flex;
-                justify-content: center;
-                padding:12px;
+        .experience-title{
+            color:$color__lincedgeblue;
+            margin-top:10%;
+            font-size: 1.5rem;
+            @include desktop{
+            margin-top:5%;
+            font-size: 2.5rem;
             }
         }
-    }
-    .testimonial-desktop{
-        display:none;
-        @include desktop{
-            display:block
+        .sign-up-product,.sign-up-product-desktop{
+            @include linc-button-style;
         }
-    }
+        .sign-up-product{
+            @include desktop{
+                display:none;
+            }
+        }
+        .sign-up-product-desktop{
+            display:none;
+            @include desktop{
+                display:block;
+            }
+        }
+    } // end .experience-container
+
 }

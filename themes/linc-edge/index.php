@@ -118,7 +118,7 @@ get_header(); ?>
 
 			<!-- Mobile only Benefits section -->
 			<div class="benefits-content-container" id="benefit-mobile">
-				<div class="benefit-carousel">
+				<div class="benefit-carousel"> <!-- pretty sure unused -->
 					<h1 class="benefit-title">
 						<?php echo CFS()->get( 'benefits_title' ); ?>
 					</h1>
@@ -126,18 +126,18 @@ get_header(); ?>
 					<?php 
 					foreach($fields as $field ): ?>
 						<div class="carousel-cell">
-							<div class="benefit-image">
+							<div class="benefits-image">
 								<?php echo '<img src="' . $field['image'] . '"/>';?>
 							</div>
 							<div class="title-text-con">
 								<div class="benefits-title"><?php echo $field['title']; ?></div>
 								<p class="benefits-text"><?php echo $field['description'];?></p>
 							</div>
-						</div><!-- carousel cell -->
+						</div><!-- .carousel cell -->
 					<?php endforeach; ?>
-					</div><!-- carousel2 -->
+					</div><!-- .carousel2 -->
 
-					<!-- Testimonial for Benefits, mobile, Daniel -->
+					<!-- Mobile only Benefits Testimonial, Daniel -->
 					<?php
 					$args = array(
 						'post_type' => 'testimonial',
@@ -159,10 +159,10 @@ get_header(); ?>
 									<h2><?php echo CFS() -> get ('endorsers_name'); ?></h2>
 								</div>
 							</div>
-						</div><!-- testimonial -->
+						</div><!-- .testimonial -->
     					<?php endforeach; wp_reset_postdata();?>
-				</div><!-- benefit-carousel -->
-			</div><!-- benefit content container -->
+				</div><!-- .benefit-carousel -->
+			</div><!-- .benefit content container -->
 
 
 		<div class="experience-container">
@@ -179,9 +179,7 @@ get_header(); ?>
 					<p>Sign Up for Beta</p>
 				</button>
 			</a>
-			<!-- <div class="signup-product"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a></div>
-			<div class="signup-product-desktop"><?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> sign up for beta</a></div> -->
-		</div>
+		</div> <!-- .experience-container -->
         <!-- Ending "benefits" forEach-loop -->
 
 		</main><!-- #main -->
