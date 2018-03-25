@@ -28,14 +28,18 @@
 					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
 	
 				</div>
-				 <button class="signup-front-desktop">
-					 <?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-				</button>
+				<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+					<button class="signup-front-desktop">
+						<p>Sign Up</p>
+					</button>
+				</a>
 		</div>
 		
-		<button class="signup-front-mobile">
-			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-		</button>
+		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+			<button class="signup-front-mobile">
+				<p>Sign Up</p>
+			</button>
+		</a>
 
 		<div class="afterbanner-container">
 				<?php $afterbannertexts = CFS()->get( 'after_banner_text' );
@@ -105,8 +109,11 @@
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<button class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> Learn More </a></button>
-
+		<?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?>
+			<button class="learnmore-front">
+				<p>Learn More</p>
+			</button>
+		</a>
 <!-- testimonials -->
 <?php
     $args = array(
@@ -138,9 +145,11 @@
 		<h2 class="join-beta-title">
 			<?php echo CFS()->get( 'join_beta_title' ); ?>
 		</h2>
-		<button class="join-beta-button">
-		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-		</button>
+		<?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?>
+			<button class="join-beta-button">
+				<p>Sign Up</p>
+			</button>
+		</a>
 	</div>
 
 
