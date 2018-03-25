@@ -10,7 +10,7 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
             <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' ); ?>
+                <?php esc_html(the_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' )); ?>
             </header>
         <?php endwhile; // End of the loop. Remaining content are custom fields ?>
         
@@ -35,7 +35,7 @@ if ( $team_posts ):
         ?>
             <div class="member-profile">
                 <?php if ( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail( 'medium', ['class' => 'headshot'] ); ?>
+                    <?php esc_url(the_post_thumbnail( 'medium', ['class' => 'headshot'] )); ?>
                 <?php endif; ?>
                 <div class="member-profile-inner">
                     <h2><?php the_title(); ?></h2>
@@ -47,12 +47,12 @@ if ( $team_posts ):
                         <?php echo CFS() -> get ('biography'); ?>
                     </div>
                     <div class="arrow-container-mobile">
-                        <img class="arrow-show-more-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                        <img class="arrow-show-less-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                        <img class="arrow-show-more-mobile" src="<?php echo esc_html(get_stylesheet_directory_uri()); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-mobile" src="<?php echo esc_html(get_stylesheet_directory_uri()); ?>/images/arrow-show-more-up.png">
                     </div>
                     <div class="arrow-container-desktop">
-                        <img class="arrow-show-more-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-down.png">
-                        <img class="arrow-show-less-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-show-more-up.png">
+                        <img class="arrow-show-more-desktop" src="<?php echo esc_html(get_stylesheet_directory_uri()); ?>/images/arrow-show-more-down.png">
+                        <img class="arrow-show-less-desktop" src="<?php echo esc_html(get_stylesheet_directory_uri()); ?>/images/arrow-show-more-up.png">
                     </div>
                 </div>
             </div><!-- .member-profile -->

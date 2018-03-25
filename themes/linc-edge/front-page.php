@@ -43,7 +43,7 @@ get_header();?>
 		</div>
 
 		<div class="benefits-header"><span class="title-underline">
-			<?php echo esc_html(CFS()->get( 'benefits_header' )); ?>
+			<?php echo CFS()->get( 'benefits_header' ); ?>
 		</span></div>
 		<div class="benefits-container">
 			<?php $benefitscontainers = CFS()->get('benefits_container');
