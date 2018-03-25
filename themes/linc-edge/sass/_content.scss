@@ -164,7 +164,7 @@ h1 {
 	}    
 }
 
-a.button-block {
-	display: block;
-	margin: 2rem auto;
+// Global button style
+a.linc-edge-button {
+	@include linc-button-style;
 }

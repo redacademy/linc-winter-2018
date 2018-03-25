@@ -169,15 +169,10 @@ get_header(); ?>
 			<h2 class="experience-title">
 				<?php echo CFS()->get('experience_title');?>
 			</h2>
-			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
-				<button class="sign-up-product">
-					<p>Sign Up</p>
-				</button>
-			</a>
-			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
-				<button class="sign-up-product-desktop">
-					<p>Sign Up for Beta</p>
-				</button>
+			<?php echo ' <a class="linc-edge-button"
+			href="' . get_site_url() . "/sign-up/" . '"> ';?>
+				<p class="mobile">Sign Up</p>
+				<p class="desktop">Sign Up for Beta</p>
 			</a>
 		</div> <!-- .experience-container -->
         <!-- Ending "benefits" forEach-loop -->
