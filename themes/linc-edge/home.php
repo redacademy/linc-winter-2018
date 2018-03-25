@@ -9,7 +9,7 @@ get_header(); ?>
 
        <header class="entry-header">
 
-                <?php single_post_title( esc_html('<h1 class="entry-title"><span class="title-underline">', '</span></h1>') ); ?>
+                <?php  esc_html(single_post_title('<h1 class="entry-title"><span class="title-underline">', '</span></h1>' )); ?>
 
         </header><!-- .entry-header -->
         
