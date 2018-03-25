@@ -28,14 +28,14 @@
 					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
 	
 				</div>
-				 <div class="signup-front-desktop">
+				 <button class="signup-front-desktop">
 					 <?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-				</div>
+				</button>
 		</div>
 		
-		<div class="signup-front-mobile">
+		<button class="signup-front-mobile">
 			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
-		</div>
+		</button>
 
 		<div class="afterbanner-container">
 				<?php $afterbannertexts = CFS()->get( 'after_banner_text' );
@@ -105,7 +105,7 @@
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<div class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> learn more </a></div>
+		<button class="learnmore-front"><?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?> Learn More </a></button>
 
 <!-- testimonials -->
 <?php
@@ -135,9 +135,9 @@
 	
 
  	<div class="join-beta-container">
-		<div class="join-beta-title">
+		<h2 class="join-beta-title">
 			<?php echo CFS()->get( 'join_beta_title' ); ?>
-		</div>
+		</h2>
 		<button class="join-beta-button">
 		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?> Sign Up </a>
 		</button>

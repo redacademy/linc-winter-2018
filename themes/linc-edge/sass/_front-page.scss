@@ -84,7 +84,6 @@
         margin: 3% 0;
         @include desktop {
             font-size: 3rem;
-            font-weight: 700;
             display: block;
             color: #012f46;
         }
@@ -226,12 +225,10 @@
         .join-beta-title{
             color:$color__lincedgeblue;
             margin-top:10%;
-            font-weight:700;
-            font-size:24px;
+            font-size: 1.5rem;
             @include desktop{
             margin-top:5%;
-            font-size: 40px;
-            font-weight: 700;
+            font-size: 2.5rem;
             }
         }
         .join-beta-button{
