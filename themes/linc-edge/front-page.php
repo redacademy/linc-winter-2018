@@ -17,7 +17,7 @@ get_header();?>
 					<a href="<?php echo CFS()->get( 'apple_store_link' );?>"><?php echo '<img class="app-store-link" alt="Apple Store" src="' . CFS()->get( 'appleimage' ). '"/>' ?></a>
 	
 				</div>
-				<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+				<?php echo '<a class="button-block" href="' . get_site_url() . "/sign-up/" . '">';?>
 					<button class="signup-front-desktop">
 						<p>Sign Up</p>
 					</button>
@@ -25,7 +25,7 @@ get_header();?>
 		</div>
 		
 		<!-- Mobile: Sign Up button below banner -->
-		<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+		<?php echo '<a class="button-block" href="' . get_site_url() . "/sign-up/" . '">';?>
 			<button class="signup-front-mobile">
 				<p>Sign Up</p>
 			</button>
@@ -96,7 +96,7 @@ get_header();?>
 		</div>
 		
 		<!-- Learn More button -->
-		<?php echo '<a href="' . get_site_url() . "/products-features-benefits/" . '">';?>
+		<?php echo '<a class="button-block" href="' . get_site_url() . "/products-features-benefits/" . '">';?>
 			<button class="learnmore-front">
 				<p>Learn More</p>
 			</button>
@@ -133,7 +133,7 @@ get_header();?>
 			<h2 class="join-beta-title">
 				<?php echo CFS()->get( 'join_beta_title' ); ?>
 			</h2>
-			<?php echo '<a href="' . get_site_url() . "/sign-up/" . '">';?>
+			<?php echo '<a class="button-block" href="' . get_site_url() . "/sign-up/" . '">';?>
 				<button class="join-beta-button">
 					<p>Sign Up</p>
 				</button>
