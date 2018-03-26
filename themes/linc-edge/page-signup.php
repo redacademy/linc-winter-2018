@@ -1,6 +1,7 @@
 <?php
 /**
- * Template Name: Sign Up
+ * The template for displaying signup page
+ * @package Linc-edge-theme
  */
 
 get_header(); ?>

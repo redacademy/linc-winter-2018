@@ -1,7 +1,8 @@
 <?php
-/*
-Template Name: Our Team
-*/
+/**
+ * The template for displaying our team page
+ * @package Linc-edge-theme
+ */
 
 get_header(); ?>
 

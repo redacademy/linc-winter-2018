@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Template Name: Pricing
+ * The template for displaying prcing page
+ * @package Linc-edge-theme
  */
 
 get_header(); ?>
