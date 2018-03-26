@@ -2,25 +2,25 @@
 > A WordPress theme designed for LincEdge, an online platform dedicated and designed to source increasing labour and trade demands, connecting trusted partners and qualified professionals via the LincEdge Network. This release features responsive custom page templates and fields for ease-of-use on the client-side for updating corresponding page content.
 
 ## Home Page
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/preview-images/home-page-preview.png"/>
 
 ## Product Page
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## Pricing Page
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## Blog Page
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## About Page 
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## Contact Page 
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## Sign Up Page
-<img src="./images/quotes-on-dev-screenshot.png"/>
+<img src="./images/"/>
 
 ## Technologies Used 
 > * CLI [Command Line Interface]
