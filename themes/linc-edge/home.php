@@ -35,14 +35,16 @@ get_header(); ?>
     
 </div>
 
-<div class="backhome-container">
-
+	<div class="backhome-container">
         <a href ="http://linc.van.cp.academy.red/">
 			<button class="backhome-button">
 				<p>go back home</p>
             </button>
         </a>
-
 	</div>
+	<?php echo '<a class="linc-edge-button signup-front-mobile"
+	href="' . esc_url(get_site_url()) . '">';?>
+		<p>Go Back Home2</p>
+	</a>
 
 <?php get_footer(); ?>
