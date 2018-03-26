@@ -39,15 +39,22 @@ jQuery(document).ready(function($){
                 $(".button-feature").addClass("button-active");
                 $(".button-benefit").removeClass("button-active");
               });
+
             $(window).on('resize', function () {
-                if (document.body.clientWidth > 650) {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                    // do nothing ?
+                }
+                else if (document.body.clientWidth > 650) {
                     $('.features-content-container').css('display','block');
                     $('#benefit-desktop').css('display','flex');
                     $('#benefit-mobile').css('display','none');
                 }
             });
             $(window).on('resize', function () {
-                if (document.body.clientWidth < 650) {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                    // do nothing ?
+                }
+                else if (document.body.clientWidth < 650) {
                     $('.features-content-container').css('display','block');
                     $('#benefit-desktop').css('display','none');
                 }
