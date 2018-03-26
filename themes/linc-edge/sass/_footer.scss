@@ -1,99 +1,65 @@
-.site-footer{
-    background-color:#012f46;
-
-    justify-content:center;
-    align-items:center;
-    display:flex;
-    margin-top:50px;
-    height:240px;
-    width:100%;
-    
-    @include desktop{
-        height:260px;
+.site-footer {
+  background-color: #012f46;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 50px;
+  height: 240px;
+  width: 100%;
+  @include desktop {
+    height: 260px;
+  }
+  .widget-area {
+    margin-top: 50px;
+  }
+  .site-info {
+    line-height: 0;
+    width: 70%;
+    span,
+    p,
+    a {
+      color: white;
     }
-
-    .widget-area{
-        margin-top: 50px;
-
-     
+    span {
+      font-size: 2rem;
     }
-
-
-
-    .site-info{
-        line-height:0;
-        width:70%;
-        
-
-        
-    
-        span,p,a{
-        color:white;
-
-        }
-        span{
-         font-size:2rem;
-        }
-        p{
-            font-size:1rem;
-        }
-        @include desktop{
-   
-        margin-top:0;
-        line-height:0;
-        span{
-            font-size:3rem;
-            
-        }
-        p{
-            font-size:1.3rem;
-            
-        }
-        }
+    p {
+      font-size: 1rem;
     }
-    .icon-container{
-        display:flex;
-        margin:0 auto;
-        justify-content:space-between;
-        width:200px;
-        
-
-
-        @include desktop{
-        width:250px;
-        }
+    @include desktop {
+      margin-top: 0;
+      line-height: 0;
+      span {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
     }
-    .footer-text-container{
-        flex-wrap:wrap;
-        margin-top: 50px;
-        display:flex;
-        justify-content: space-around;
-
-        @media screen and (max-width: 667px) {
-            margin-left:0 !important;
-        }
-  
-
-    
-        @include desktop{
-        width: 100%;
-        margin-left: 19%;
-        
-
-
-        }
-       
-
+  }
+  .icon-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 200px;
+    @include desktop {
+      width: 250px;
     }
-    .footer-policy{
-    
-
-        
-        text-decoration: underline;
- 
-        }
-
-    } // .site-footer
-
-
-
+  }
+  .footer-text-container {
+    flex-wrap: wrap;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 667px) {
+      margin-left:0 !important;
+    }
+    @include desktop {
+      width: 100%;
+      margin-left: 19%;
+    }
+  }
+  .footer-policy {
+    text-decoration: underline;
+  }
+} // .site-footer

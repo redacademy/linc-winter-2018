@@ -5,170 +5,175 @@
 /* Posts and pages */
 
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+  margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+  margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+  clear: both;
+  margin: 0 0 $base__space-unit;
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
+
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 // Testimonials 
 .testimonial {
-	color: #fff;
-	background: linear-gradient(#fff 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
-	width: 100%;
-	margin: 2rem 0;
-	@media screen and (min-width: 850px) {
-		background: $color__lincedgeblue;
-	}
-	@media screen and (min-width: 1172px) {
-		background: linear-gradient($color__background-body 12%, $color__lincedgeblue 12%, $color__lincedgeblue 88%, $color__background-body 88%, $color__background-body 100%);
-	}
-	.testimonial-inner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 75%;
-		margin: 0 auto;
-		padding-bottom: 2rem;
-		@media screen and (min-width: 850px) {
-			flex-direction: row;
-			padding-bottom: 0;
-			max-height: 285px;
-		}
-	}
-	img {
-		display: block;
-		width: 175px;
-		@media screen and (min-width: 850px) {
-			position: relative;
-			width: 24vw;
-			height: 24vw;
-			max-width: 285px;
-			max-height: 285px;
-		}
-	}
-	.endorsement {
-		@media screen and (min-width: 850px) {
-			margin-left: 2rem;
-		}
-	}
-	p {
-		font-style: italic;
-		font-size: 1.1rem;
-		padding: 1.5rem 0 1rem;
-		margin: 0;
-		@media screen and (min-width: 850px) {
-			padding-top: 0;
-			font-size: 1.25rem;
-		}
-	}
-	h2 {
-		margin: 0;
-		font-weight: normal;
-		font-size: 1.1rem;
-		@media screen and (min-width: 850px) {
-			font-size: 1.25rem;
-		}
-	}
+  color: #fff;
+  background: linear-gradient(#fff 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
+  width: 100%;
+  margin: 2rem 0;
+  @media screen and (min-width: 850px) {
+    background: $color__lincedgeblue;
+  }
+  @media screen and (min-width: 1172px) {
+    background: linear-gradient($color__background-body 12%, $color__lincedgeblue 12%, $color__lincedgeblue 88%, $color__background-body 88%, $color__background-body 100%);
+  }
+  .testimonial-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    @media screen and (min-width: 850px) {
+      flex-direction: row;
+      padding-bottom: 0;
+      max-height: 285px;
+    }
+  }
+  img {
+    display: block;
+    width: 175px;
+    @media screen and (min-width: 850px) {
+      position: relative;
+      width: 24vw;
+      height: 24vw;
+      max-width: 285px;
+      max-height: 285px;
+    }
+  }
+  .endorsement {
+    @media screen and (min-width: 850px) {
+      margin-left: 2rem;
+    }
+  }
+  p {
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 1.5rem 0 1rem;
+    margin: 0;
+    @media screen and (min-width: 850px) {
+      padding-top: 0;
+      font-size: 1.25rem;
+    }
+  }
+  h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.1rem;
+    @media screen and (min-width: 850px) {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 // GLOBAL margin beneath fixed header
 .site-content {
-	margin-top: 48px;
-	background: #fff;
-	@include desktop {
-		margin-top: 108px;
-		background: $color__background-body;
-	}
+  margin-top: 48px;
+  background: #fff;
+  @include desktop {
+    margin-top: 108px;
+    background: $color__background-body;
+  }
 }
+
 // GLOBAL title style
 h1 {
-	margin: 0;
+  margin: 0;
 }
+
 .entry-title {
-	padding: 1.5rem 0;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	color: $color__lincedgeblue; 
-	@include desktop {
-		font-size: 3.5rem;
-		padding-top: 3rem;
-		padding-bottom:3rem;
-		}
+  padding: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: $color__lincedgeblue;
+  @include desktop {
+    font-size: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
+
 .title-underline {
-	@include desktop {
-		position: relative;
-		&:after {
-			position: absolute;
-			content: '';
-			height: 4px;
-			bottom: -10px; 
-			margin: 0 auto;
-			left: 0;
-			right: 0;
-			width: 100%;
-			background: $color__lincedgegreen;
-		}
-	}    
+  @include desktop {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      bottom: -10px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: $color__lincedgegreen;
+    }
+  }
 }
+
 .title-underline-short {
-	@include desktop {
-		position: relative;
-		&:after {
-			position: absolute;
-			content: '';
-			height: 3px;
-			bottom: -10px; 
-			margin: 0 auto;
-			left: 0;
-			width: 60px;
-			background: $color__lincedgegreen;
-		}
-	}    
+  @include desktop {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 3px;
+      bottom: -10px;
+      margin: 0 auto;
+      left: 0;
+      width: 60px;
+      background: $color__lincedgegreen;
+    }
+  }
 }
 
 // Global button style
 a.linc-edge-button {
-	@include linc-button-style;
+  @include linc-button-style;
 }
 
 /* Sticky Footer */
@@ -177,11 +182,9 @@ a.linc-edge-button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  .site-header {
-  }
+  .site-header {}
   .site-content {
     flex-grow: 1;
   }
-  .site-footer {
-  }
+  .site-footer {}
 }
