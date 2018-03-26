@@ -110,6 +110,10 @@ function linc_edge_scripts() {
 	
 	wp_enqueue_script( 'product-js', get_template_directory_uri() . '/build/js/product.min.js', array('jquery'), true );
 
+	wp_enqueue_script( 'product-js', get_template_directory_uri() . '/build/js/product.min.js', array('jquery'), true );
+
+	wp_enqueue_script( 'scroll-functions-js', get_template_directory_uri() . '/build/js/scroll.min.js', array('jquery'), true );
+
 	wp_enqueue_style( 'style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lato', false ); 
