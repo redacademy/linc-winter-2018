@@ -1,4 +1,11 @@
 .blog {
+    .site{
+        background-color:white;
+        @include desktop{
+        background-color:#f3f4f5;
+        }
+    }
+
 background-color:white;
 
 
