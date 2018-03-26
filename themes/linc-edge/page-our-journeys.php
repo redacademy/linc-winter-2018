@@ -1,8 +1,7 @@
 <?php
-/**
- * The template for displaying our journey page
- * @package Linc-edge-theme
- */
+/*
+Template Name: Our Journey
+*/
 
 get_header(); ?>
 
