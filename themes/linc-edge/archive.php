@@ -14,12 +14,10 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				  the_archive_title( '<h1 class="entry-title"><span class="title-underline">', '</span></h1>' );
+				  the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
-			     
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -40,13 +38,13 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<a href="#page" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+	<a id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
 	<div class="backhome-container">
 
 <a href ="http://linc.van.cp.academy.red/">
 	<button class="backhome-button">
-		<p>go back home</p>
+		<p>Back to Home</p>
 	</button>
 </a>
 

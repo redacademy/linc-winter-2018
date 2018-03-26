@@ -1,135 +1,129 @@
-// Thank You page
-.page-id-229, .page-id-284{
-    .entry-content {
-        margin-top: 0;
-    }
-    .thankyou-text{
-        text-align:center;
-        font-size:30px;
-    }
-} // .page-id-220
+/* Thank You Page */
 
+.page-id-229,
+.page-id-284 {
+  .entry-content {
+    margin-top: 0;
+  } /* .entry-content */
+  .thankyou-text {
+    text-align: center;
+    font-size: 30px;
+  } /* .thankyou-text */
+} /* .page-id-229 .page-id-284 */
 
-// Sign Up page
+/* Sign Up page */
+
 .page-id-11 {
-    .entry-content {
-        margin: 0 auto;
-        @include desktop {
-        width: 75%;
-        }
+  .entry-content {
+    margin: 0 auto;
+    @include desktop {
+      width: 75%;
     }
-
-    // Desktop only
-    .signup-desktop{
-        display:none;
-        @include desktop{
-            display:block;
-            .signup-desktop-text{
-                text-align:center;
-                font-size:20px;
-            }
-            .gform_wrapper{
-                form{
-                    margin:0;
-                }
-
-                .gfield_label{
-                    font-weight:normal;
-                    margin-left: 13%;
-                    display:flex;
-                    justify-content:flex-start;
-                    
-                }
-                width:100%;
-                margin-top:3%;
-                display:flex;
-                flex-direction:column;
-                input.medium{
-                    width:75%;
-                    box-shadow: 0 0 3px #ddd;
-                    margin-left: 13%;
-        
-                }
-                .gform_button{
-                    @include linc-button-style;
-                     color:white;
-                }
-            } // .gform_wrapper
-        }
-    } // .signup-desktop
-
-    // Mobile only
-    .signup-mobile{
-        display:block;
-        @include desktop{
-            display:none;
-        }
-        .signup-policy{
-            font-size:0.85rem;
-            text-align:center;
-            margin-top:10%;
-            margin-bottom:10%;
-        }
-        .signup-text{
-            width:75%;
-            text-align:center;
-            margin:0 auto;
-            font-size:1rem;
-            line-height:30px;
-        }
-        .gform_page_fields{
-            .mobile-signup-title{
-                font-weight:bold;
-                color:$color__lincedgeblue;
-                text-align:center;
-            }
-            .gfield{
-                color:$color__lincedgeblue;
-                line-height:10px;
-                margin-top:5%;
-                input {
-                    width:90%;
-                    border-radius:10px;
-                }
-            }
-        }
-        .name-signup{
-            text-align: center;
-        }
-        .gform_wrapper .gform_page_footer {
-            border-top: none;
-        }
-        .gform_footer{
-            text-align: center;
-        }
-        #gform_page_10_1 {
-            .gform_next_button {
-                @include linc-button-style;
-                border: none;
-                margin: 0 auto !important;
-            }
-        }
-        #gform_page_10_2 {
-            .gform_previous_button, .gform_next_button {
-                @include linc-button-style;
-                border: none;
-            }
-        }
-        #gform_page_10_3 {
-            .gform_previous_button, .gform_button {
-                @include linc-button-style;
-                border: none;
-            }
-        }
-    } // .signup-mobile
-
-
-    .site-footer{
-        margin-top:0;
+  } /* .entry-content */
+  .signup-desktop {
+    display: none;
+    @include desktop {
+      display: block;
+      .signup-desktop-text {
+        text-align: center;
+        font-size: 20px;
+      } /* .signup-desktop-text */
+      .gform_wrapper {
+        form {
+          margin: 0;
+        } /* form */
+        .gfield_label {
+          font-weight: normal;
+          margin-left: 13%;
+          display: flex;
+          justify-content: flex-start;
+        } /* .gfield_label */
+        width:100%;
+        margin-top:3%;
+        display:flex;
+        flex-direction:column;
+        input.medium {
+          width: 75%;
+          box-shadow: 0 0 3px #ddd;
+          margin-left: 13%;
+        } /* .medium */
+        .gform_button {
+          @include linc-button-style;
+          color: white;
+        } /* .gform_button */
+      } /* .gform_wrapper */
     }
+  } /* .signup-desktop */
 
-    .site-content {
-    height:100%;
+  .signup-mobile {
+    display: block;
+    @include desktop {
+      display: none;
     }
-    
-} // Sign Up Page
+    .signup-policy {
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    } /* .signup-policy */
+    .signup-text {
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 30px;
+    } /* .signup-text */
+    .gform_page_fields {
+      .mobile-signup-title {
+        font-weight: bold;
+        color: $color__lincedgeblue;
+        text-align: center;
+      } /* .mobile-signup-title */
+      .gfield {
+        color: $color__lincedgeblue;
+        line-height: 10px;
+        margin-top: 5%;
+        input {
+          width: 90%;
+          border-radius: 10px;
+        } /* input */
+      } /* .gfield */
+    } /* .gform_page_fields */
+    .name-signup {
+      text-align: center;
+    } /* .name-signup */
+    .gform_wrapper .gform_page_footer {
+      border-top: none;
+    } /* .gform_wrapper .gform_page_footer */
+    .gform_footer {
+      text-align: center;
+    } /* .gform_footer */
+    #gform_page_10_1 {
+      .gform_next_button {
+        @include linc-button-style;
+        border: none;
+        margin: 0 auto !important;
+      }
+    } /* #gform_page_10_1 */
+    #gform_page_10_2 {
+      .gform_previous_button,
+      .gform_next_button {
+        @include linc-button-style;
+        border: none;
+      } /* .gform_previous_button .gform_next_button */
+    } /* #gform_page_10_2 */
+    #gform_page_10_3 {
+      .gform_previous_button,
+      .gform_button {
+        @include linc-button-style;
+        border: none;
+      } /* .gform_previous_button .gform_button */
+    } /* #gform_page_10_3 */
+  } /* .signup-mobile */
+  .site-footer {
+    margin-top: 0;
+  } /* .site-footer */
+  .site-content {
+    height: 100%;
+  } /* .site-content */
+} /* .page-id-11 */

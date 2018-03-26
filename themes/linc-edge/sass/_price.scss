@@ -1,5 +1,4 @@
 .page-id-26 {
-  // Desktop only
   .pricing-plans-container {
     display: none;
     @include desktop {
@@ -20,7 +19,7 @@
       width: 32%;
       img {
         align-self: center;
-      }
+      } /* img */
       .pricing-plan-title {
         color: $color__lincedgeblue;
         font-weight: bold;
@@ -29,7 +28,7 @@
         @media screen and (min-width: 950px) {
           font-size: 2rem;
         }
-      }
+      } /* .pricing-plan-title */
       .pricing-plan-description {
         color: $color__text-main;
         font-size: 1rem;
@@ -38,12 +37,12 @@
         @media screen and (min-width: 850px) {
           font-size: 1.15rem;
         }
-      }
+      } /* .pricing-plan-description */
       .pricing-plan-rate {
         color: $color__text-main;
         font-size: 1.25rem;
         line-height: 1;
-      }
+      } /* .pricing-plan-rate */
       .pricing-plan-button {
         border-radius: 30px;
         font-size: 1.15rem;
@@ -67,12 +66,9 @@
           transform: translateY(1px);
           outline: none;
         }
-      }
-      /* .pricing-plan-button */
-    }
-    /* .pricing-plan-content-container */
-  }
-  /* .pricing-plans-container */
+      } /* .pricing-plan-button */
+    } /* .pricing-plan-content-container */
+  } /* .pricing-plans-container */
   .subscription-description-container {
     @include desktop {
       margin-top: 3rem;
@@ -86,10 +82,8 @@
       @include desktop {
         font-size: 1.5rem;
       }
-    }
-    /* .subscription-description */
-  }
-  /* .subscription-description-container */
+    } /* .subscription-description */
+  } /* .subscription-description-container */
   .subscription-form-container {
     margin: 2rem auto 1rem auto;
     @include desktop {
@@ -97,7 +91,7 @@
       justify-content: center;
       margin: 2rem auto 0 auto;
     }
-  }
+  } /* .subscription-form-container */
   .subscription-form-content-container {
     display: flex;
     justify-content: space-evenly;
@@ -105,8 +99,8 @@
     @include desktop {
       margin: 1rem;
     }
-  }
-  /* .subscribe-container */
+  } /* .subscription-form-content-container */
+
   input.email-field {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -116,8 +110,7 @@
       padding-left: 1rem;
       padding-right: 10rem;
     }
-  }
-  /* input.email-field */
+  } /* input.email-field */
   input.submit-button {
     font-size: 1rem;
     padding: 0.75rem 2rem;
@@ -138,8 +131,7 @@
       transform: translateY(1px);
       outline: none;
     }
-  }
-  /* input.submit-button */
+  } /* input.submit-button */
   .subscription-condition-container {
     .subscription-condition {
       width: 60%;
@@ -150,10 +142,6 @@
       @include desktop {
         font-size: 1rem;
       }
-    }
-    /* subscription-condition */
-  }
-  /* .subscription-condition-group */
-}
-
-/* .page-template-price */
+    } /* subscription-condition */
+  } /* .subscription-condition-group */
+} /* .page-template-price */
