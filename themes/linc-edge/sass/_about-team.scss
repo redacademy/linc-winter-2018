@@ -1,6 +1,6 @@
 .page-template-about-team,
 .single-team {
-    // 1rem = 16px | 1.25rem = 20px | 1.5rem = 24px | 2rem = 32px
+
     h2.team-comment {
         width: 75%;
         margin: 1rem auto 3.5rem auto;
@@ -8,19 +8,19 @@
         font-size: 1.25rem;
         font-weight: normal;
         line-height: 1.25;
-    }
+    } /* .team-comment */
+
     .team-general-container,
     .team-co-op-container {
         // width: 75%;
         margin-left: auto;
         margin-right: auto;
-    }
+    } /* .team-general-container .team-co-op-container */
   
     .member-profile {
         margin-left: auto;
         margin-right: auto;
-        width: 75%;
-        // width: 73vw;        
+        width: 75%;      
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,11 +36,9 @@
             margin-bottom: 0.75rem;
             @include desktop {
                 margin: 0;
-                // position: absolute;
-                // left: 0;
-                // top: 11px;
             }
-        }
+        } /* .headshot */
+
         h2 {
             font-size: 1.5rem;
             font-weight: normal;
@@ -51,7 +49,7 @@
                 font-size: 2rem;
                 text-align: left;
             }
-        }
+        } /* h2 */
         h3 {
             font-size: 1.15rem;
             font-weight: normal;
@@ -61,7 +59,8 @@
             @include desktop {
                 text-align: left;
             }
-        }
+        } /* h3 */
+
         .member-profile-inner {
             height: auto;
             width: auto;
@@ -69,8 +68,8 @@
                 margin-left: 2rem;
                 width: 100%;
             }
-        }
-    }
+        } /* .member-profile-inner */
+    } /* .member-profile */
 
     .bio-excerpt-mobile,
     .arrow-container-mobile {
@@ -78,14 +77,16 @@
         @include desktop {
             display: none;
         }
-    }
+    } /* .bio-excerpt-mobile .arrow-container-mobile */
+
     .bio-excerpt-desktop,
     .arrow-container-desktop {
         display: none;
         @include desktop {
             display: block;
         }
-    }
+    } /* .bio-excerpt-desktop .arrow-container-desktop */
+
     .arrow-show-more-mobile,
     .arrow-show-less-mobile {
         cursor: pointer;
@@ -96,7 +97,8 @@
         @include desktop {
             display: none;
         }
-    }
+    } /* .arrow-show-more-mobile .arrow-show-less-mobile */
+
     .arrow-show-more-desktop,
     .arrow-show-less-desktop {
         display: none;
@@ -107,7 +109,8 @@
             height: 15px;
             margin: 0 60% 0 40%;
         }
-    }
+    } /* .arrow-show-more-desktop .arrow-show-less-desktop */
+
     .additional-title {
         padding: 0;
         text-align: center;
@@ -119,5 +122,5 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
-    }
-}
+    } /* .additional-title */
+} /* .single-team */
