@@ -1,5 +1,4 @@
-.page-id-26{
-
+.page-id-26 {
   // Desktop only
   .pricing-plans-container {
     display: none;
@@ -15,7 +14,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffffff; 
+      background-color: #ffffff;
       border: 1px solid #ffffff;
       border-radius: 10px;
       width: 32%;
@@ -68,11 +67,12 @@
           transform: translateY(1px);
           outline: none;
         }
-      } /* .pricing-plan-button */
-    } /* .pricing-plan-content-container */
-  } /* .pricing-plans-container */
-
-  
+      }
+      /* .pricing-plan-button */
+    }
+    /* .pricing-plan-content-container */
+  }
+  /* .pricing-plans-container */
   .subscription-description-container {
     @include desktop {
       margin-top: 3rem;
@@ -86,11 +86,10 @@
       @include desktop {
         font-size: 1.5rem;
       }
-    } /* .subscription-description */
-  } /* .subscription-description-container */
-
-
-
+    }
+    /* .subscription-description */
+  }
+  /* .subscription-description-container */
   .subscription-form-container {
     margin: 2rem auto 1rem auto;
     @include desktop {
@@ -99,7 +98,6 @@
       margin: 2rem auto 0 auto;
     }
   }
-
   .subscription-form-content-container {
     display: flex;
     justify-content: space-evenly;
@@ -107,8 +105,8 @@
     @include desktop {
       margin: 1rem;
     }
-  } /* .subscribe-container */
-
+  }
+  /* .subscribe-container */
   input.email-field {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -118,8 +116,8 @@
       padding-left: 1rem;
       padding-right: 10rem;
     }
-  } /* input.email-field */
-
+  }
+  /* input.email-field */
   input.submit-button {
     font-size: 1rem;
     padding: 0.75rem 2rem;
@@ -140,8 +138,8 @@
       transform: translateY(1px);
       outline: none;
     }
-  } /* input.submit-button */
-
+  }
+  /* input.submit-button */
   .subscription-condition-container {
     .subscription-condition {
       width: 60%;
@@ -152,8 +150,10 @@
       @include desktop {
         font-size: 1rem;
       }
-    } /* subscription-condition */
-  } /* .subscription-condition-group */
+    }
+    /* subscription-condition */
+  }
+  /* .subscription-condition-group */
+}
 
-
-} /* .page-template-price */
+/* .page-template-price */

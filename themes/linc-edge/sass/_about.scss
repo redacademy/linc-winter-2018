@@ -16,7 +16,7 @@
       }
       p {
         margin: 0;
-      } 
+      } /* p */
     } /* .entry-content */
 
   .about-container {
@@ -38,18 +38,17 @@
         border-radius: 10px;
         display: flex;
         flex-direction: row;
-        // justify-content: flex-start;
         width: 80%;
         margin-bottom: 4rem;
         padding: 0;
         &:nth-of-type(odd) {
           .about-image-group {
             order: 2;
-          }
+          } /* .about-image-group */
           .about-text-group {
             order: 1;
-          }
-        }
+          } /* .about-text-group */
+        } /* &:nth-of-type */
       }
     } /* .about-content-container */ 
 
@@ -72,7 +71,6 @@
       text-transform: uppercase;
       margin-bottom: 0;
       @include desktop {
-        // border-bottom: 5px solid $color__lincedgegreen;
         font-size: 2rem;
         justify-content: flex-start;
         margin-bottom: 1.5rem; 
@@ -93,7 +91,7 @@
       @media screen and (min-width: 850px) {
         font-size: 1.25rem;
       } 
-    }
+    } /* .about-description */
 
     .about-image-group {
       @include desktop {
@@ -102,9 +100,6 @@
         height: auto;
         width: 45%;
       }
-      img {
-
-      } /* img */
     } /* .about-image-group */
 
   } /* .about-container */
@@ -119,7 +114,8 @@
   
       background: white;
     }
-  }
+  } /* .customer-container */
+
   .customer-header {
     color: $color__lincedgeblue;
     font-size: 2rem;
@@ -139,31 +135,31 @@
     img {
       height: 125px;
       width: 250px;
-    }
+    } /* img */
     .carousel-cell {
       height: 200px;
       width: 100%;
-    }
+    } /* .carousel-cell */
     .flickity-page-dots {
       margin: 5% auto;
       @include desktop {
         margin: 5% auto;
       }
-    }
+    } /* .flickity-page-dots */
     .flickity-button {
       visibility: hidden;
       @include desktop {
         visibility: visible;
       }
-    }
+    } /* .flickity-button */
     .flickity-prev-next-button.previous {
       left: 20.5%;
       top: 32.5%;
-    }
+    } /* .flickity-prev-next-button.previous */
     .flickity-prev-next-button.next {
       right: 20.5%;
       top: 32.5%;
-    }
+    } /* .flickity-prev-next-button.next */
   } /* .carousel */
 
   .customer-content-container {
@@ -172,7 +168,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    // background: #fff;
   } /* .customer-content-container */
 
 } /* .page-template-about */

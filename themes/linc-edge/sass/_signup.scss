@@ -6,6 +6,37 @@
     }
 } // .page-id-220
 
+.page-id-284{
+    .thankyou-text{
+        text-align:center;
+        font-size:30px;
+    }
+    .back-home-button{
+        margin:0 auto;
+        margin-top:8%;
+        margin-bottom:20%;
+        border-radius: 30px;
+        height:52px;
+        width:240px;
+        text-transform:uppercase;
+        font-size:18px;
+        background-color:$color__lincedgegreen;
+        color:white;
+        font-weight:bold;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        a{
+            text-decoration:none;
+            color:white;
+            display:flex;
+            justify-content: center;
+            padding:12px;
+        }
+    }
+
+}
+
+
+
 // Sign Up page
 .page-id-11 {
     .entry-content {
