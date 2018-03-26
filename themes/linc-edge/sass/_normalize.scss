@@ -2,11 +2,11 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-}
+} /* html */
 
 body {
   margin: 0;
-}
+} /* body */
 
 article,
 aside,
@@ -21,7 +21,7 @@ nav,
 section,
 summary {
   display: block;
-}
+} /* article aside details figcaption figure footer header main menu nav section summary */
 
 audio,
 canvas,
@@ -29,53 +29,53 @@ progress,
 video {
   display: inline-block;
   vertical-align: baseline;
-}
+} /* audio canvas progress video */
 
 audio:not([controls]) {
   display: none;
   height: 0;
-}
+} /* audio:not */
 
 [hidden],
 template {
   display: none;
-}
+} /* template */
 
 a {
   background-color: transparent;
-}
+} /* a */
 
 a:active,
 a:hover {
   outline: 0;
-}
+} /* a:active a:hover */
 
 abbr[title] {
   border-bottom: 1px dotted;
-}
+} /* abbr */
 
 b,
 strong {
   font-weight: bold;
-}
+} /* b strong */
 
 dfn {
   font-style: italic;
-}
+} /* dfn */
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
+} /* h1 */
 
 mark {
   background: #ff0;
   color: #000;
-}
+} /* mark */
 
 small {
   font-size: 80%;
-}
+} /* small */
 
 sub,
 sup {
@@ -83,36 +83,36 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-}
+} /* sub sup */
 
 sup {
   top: -0.5em;
-}
+} /* sup */
 
 sub {
   bottom: -0.25em;
-}
+} /* sub */
 
 img {
   border: 0;
-}
+} /* img */
 
 svg:not(:root) {
   overflow: hidden;
-}
+} /* svg:not */
 
 figure {
   margin: 1em 40px;
-}
+} /* figure */
 
 hr {
   box-sizing: content-box;
   height: 0;
-}
+} /* hr */
 
 pre {
   overflow: auto;
-}
+} /* pre */
 
 code,
 kbd,
@@ -120,7 +120,7 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
+} /* code kbd pre samp */
 
 button,
 input,
@@ -130,16 +130,16 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-}
+} /* button input optgroup select textarea */
 
 button {
   overflow: visible;
-}
+} /* button */
 
 button,
 select {
   text-transform: none;
-}
+} /* button select */
 
 button,
 html input[type="button"],
@@ -162,7 +162,7 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
-}
+} /* input */
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -189,27 +189,27 @@ fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
-}
+} /* fieldset */
 
 legend {
   border: 0;
   padding: 0;
-}
+} /* legend */
 
 textarea {
   overflow: auto;
-}
+} /* textarea */
 
 optgroup {
   font-weight: bold;
-}
+} /* optgroup */
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} /* table */
 
 td,
 th {
   padding: 0;
-}
+} /* td th */
