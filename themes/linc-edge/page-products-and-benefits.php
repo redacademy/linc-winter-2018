@@ -1,10 +1,10 @@
 <?php
 /**
- * The main template file.
- * Template Name: Products
- *
- * @package linc_edge_Theme
+ * The template for displaying products page
+ * @package Linc-edge-theme
  */
+
+ 
 
 get_header(); ?>
 

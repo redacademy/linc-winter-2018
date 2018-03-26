@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The template for displaying prcing page
+ * The template for displaying pricing page
  * @package Linc-edge-theme
  */
 
