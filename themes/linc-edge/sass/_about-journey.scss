@@ -1,23 +1,25 @@
 .page-template-about-journey {
+
     .site-content {
         background: #fff;
-    }
-}
+    } /* .site-content */
+
+} /* .page-template-about-journey */
 
 ul.timeline-list {
     margin: 0 1rem 0 2rem;
     padding: 0;
+
     li {
         position: relative;
         list-style-type: none;
         padding-bottom: 3rem;
-        // turn container into line connecting bullet points
         width: 6px;
         background: $color__lincedgegreen;
         @include desktop {
             margin: 0 auto;
-        }
-        // bullet points
+        } /* li */
+
         &:before{
             content: '';
             position: absolute;
@@ -33,8 +35,8 @@ ul.timeline-list {
                 width: 40px;
                 height: 40px;
             }
-        }
-        // bullet point at the end
+        } /* &:before */
+
         &:last-child:after {
             content: '';
             position: absolute;
@@ -50,11 +52,12 @@ ul.timeline-list {
                 width: 40px;
                 height: 40px;
             }
-        }
-    }
-}
+        } /* &:last-child:after */
+    } /* li */
+} /* .timeline-list */
 
 ul.timeline-list li {
+
     .timeline-item {
         color: $color__lincedgeblue;
         position: relative;
@@ -63,13 +66,15 @@ ul.timeline-list li {
         @include desktop {
             width: 25vw;
             min-height: 250px;
-        }
+        } /* .timeline-item */
+
         h2 {
             margin: 0;
             @include desktop {
                 font-size: 2.5rem;
-            }
-        }
+            } 
+        } /* h2 */
+
         img {
             display: none;
             @include desktop {
@@ -77,35 +82,37 @@ ul.timeline-list li {
                 position: absolute;
                 bottom: 110%;
             }
-        }
+        } /* img */
+
         p {
             margin: 0;
             padding-top: 0.75rem;
             font-size: 1.1rem;
-        }
-    }
+        } /* p */
+    } /* .timeline-item */
+
     @include desktop {
         &:nth-child(odd) .timeline-item {
             left: 3.5rem;
             .timeline-content {
                 text-align: left;
-            }
+            } /* .timeline-content */
             img {
                 left: 0;
-            }
-        }
+            } /* img */
+        } /* .timeline-item */
         &:nth-child(even) .timeline-item {
             left: calc(-25vw - 3rem);
             .timeline-content {
                 text-align: right;
-            }
+            } /* .timeline-content */
             img {
                 right: 0;
-            }
-        }
+            } /* img */
+        } /* .timeline-item */
     }
-}
+} /* .timeline-list li */
 
 .timeline-item-hidden {
     opacity: 0;
-}
+} /* .timeline-item-hidden */
