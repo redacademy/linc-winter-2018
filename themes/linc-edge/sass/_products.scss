@@ -233,14 +233,15 @@
 
     .experience-container {
         text-align: center;
+        @include desktop {
+            margin-top:5%;
+        }
         .experience-title{
             color:$color__lincedgeblue;
             margin: 0;
             font-size: 1.5rem;
-            @include desktop{
-            margin-top:5%;
+            @include desktop{}
             font-size: 2.5rem;
-            }
         }
         p.mobile {
             @include desktop{
