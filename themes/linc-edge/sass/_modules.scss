@@ -27,9 +27,8 @@
     top: 5px;
     width: auto;
     z-index: 100000;
-    /* Above WP toolbar. */
   }
-}
+} /* .screen-reader-text */
 
 /*--------------------------------------------------------------
 # Alignments
@@ -39,18 +38,18 @@
   display: inline;
   float: left;
   margin-right: $base__space-unit;
-}
+} /* .alignleft */
 
 .alignright {
   display: inline;
   float: right;
   margin-left: $base__space-unit;
-}
+} /* .alignright */
 
 .aligncenter {
   clear: both;
   @include center-block;
-}
+} /* .aligncenter */
 
 /*--------------------------------------------------------------
 # Clearings
@@ -60,4 +59,4 @@
   clear: both;
   content: "";
   display: table;
-}
+} /* .clearfix */
