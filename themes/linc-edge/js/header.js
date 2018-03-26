@@ -11,7 +11,7 @@
         });
       
         // Hide active mobile menu if window expands to desktop //
-        // Show 'About' sub-menu 'Company' if window shrinks to mobile //
+        // and call submenuCenter //
         var resizeTimer;
         $(window).on('resize', function () { 
 
@@ -21,18 +21,13 @@
                 if (document.body.clientWidth > 650) {
                     $hamburger.removeClass('is-active');
                     $('.menu-navigation .menu').removeClass('is-active');  
-                } else {
-                    $('.menu-item-159').show();
                 }
-
                 submenuCenter();
-              
+                
             }, 250);
           
         });
 
-        // Hide "About" sub-menu "Company" //
-        $('.menu-item-159').hide();
         // Center sub-menus below parent. Overwritten by !important CSS on mobile //
         function submenuCenter(){
             console.log('submenuCenter');
