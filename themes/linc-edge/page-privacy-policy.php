@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Template Name: Privacy Policy
+ * The template for displaying private policy
+ * @package Linc-edge-theme
  */
 
 get_header(); ?>
