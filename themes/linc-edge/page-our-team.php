@@ -136,7 +136,7 @@ if ( $team_posts2 ):
     
     </main><!-- #main -->
 </div><!-- #primary -->
-<a id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+<a id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i>TOP</a>
 
 <?php get_footer(); ?>
 
