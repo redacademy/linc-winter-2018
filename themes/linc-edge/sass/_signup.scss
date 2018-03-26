@@ -1,37 +1,37 @@
+// Thank You page
 .page-id-229{
-.thankyou-text{
-    text-align:center;
-    font-size:30px;
-}
-.back-home-button{
-    margin:0 auto;
-    margin-top:8%;
-    margin-bottom:20%;
-    border-radius: 30px;
-    height:52px;
-    width:240px;
-    text-transform:uppercase;
-    font-size:18px;
-     background-color:$color__lincedgegreen;
-     color:white;
-     font-weight:bold;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-     a{
-         text-decoration:none;
-         color:white;
-         display:flex;
-         justify-content: center;
-         padding:12px;
-     }
-}
- 
+    .thankyou-text{
+        text-align:center;
+        font-size:30px;
+    }
+    .back-home-button{
+        margin:0 auto;
+        margin-top:8%;
+        margin-bottom:20%;
+        border-radius: 30px;
+        height:52px;
+        width:240px;
+        text-transform:uppercase;
+        font-size:18px;
+        background-color:$color__lincedgegreen;
+        color:white;
+        font-weight:bold;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        a{
+            text-decoration:none;
+            color:white;
+            display:flex;
+            justify-content: center;
+            padding:12px;
+        }
+    }
+} // .page-id-220
 
-}
-
+// Sign Up page
 .page-id-11 {
     .entry-content {
         @include desktop {
-        margin: 1.5rem auto 0 auto;
+        margin: 0 auto;
         width: 75%;
         }
     }
@@ -39,7 +39,6 @@
     .signup-desktop{
         display:none;
         @include desktop{
-            margin-bottom:20%;
             display:block;
             .signup-desktop-text{
                 text-align:center;
@@ -71,7 +70,7 @@
                     @include linc-button-style;
                      color:white;
                 }
-            }
+            } // .gform_wrapper
 
         }
     }
