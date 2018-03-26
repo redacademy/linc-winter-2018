@@ -4,7 +4,7 @@
     @include desktop {
       background-color: #f3f4f5;
     }
-  }
+  } /* .site */
   background-color:white;
   article {
     margin-bottom: 8%;
@@ -46,15 +46,15 @@
           height: 90vh;
           margin-left: 0% !important;
         }
-      }
+      } /* img */
       .article-container {
         background-color: $color__background-body;
         border-radius: 0px;
         position: relative;
-      }
+      } /* .article-container */
       .comments {
         color: white;
-      }
+      } /* .comments */
       .entry-content {
         position: absolute;
         background-color: $color__lincedgeblue;
@@ -67,32 +67,32 @@
         color: white;
         .content-container {
           margin-left: 5%;
-        }
+        } /* .content-container */
         .category-title {
           margin-top: 2%;
           @include desktop {
             margin-top: 5%;
           }
-        }
+        } /* .category-title */
         @include desktop {
           height: 70%;
         }
         .posted-on {
           color: white;
-        }
+        } /* .posted-on */
         .author {
           color: white;
-        }
+        } /* .author */
         .entry-title {
           a {
             color: white;
-          }
-        }
-      }
+          } /* a */
+        } /* .entry-title */
+      } /* .entry-content */
       .image-container {
         width: 100%;
         margin-top: 0;
-      }
+      } /* .image-container */
     }
     &:nth-of-type(even) {
       .image-container {
@@ -118,13 +118,13 @@
       @include desktop {
         display: none
       }
-    }
+    } /* .excerpt-mobile */
     .excerpt-desktop {
       display: none;
       @include desktop {
         display: block;
       }
-    }
+    } /* .excerpt-desktop */
     img {
       object-fit: cover;
       max-width: none;
@@ -137,7 +137,7 @@
         margin-bottom: 2%;
         border-radius: 0px;
       }
-    }
+    } /* img */
     .image-container {
       margin-top: 11%;
       width: 70%;
@@ -145,7 +145,7 @@
       @include desktop {
         margin-top: 5.5rem;
       }
-    }
+    } /* .image-container */
     .entry-content {
       margin-top: 10%;
       width: 100%;
@@ -158,12 +158,12 @@
           text-decoration: none;
           text-transform: uppercase;
           color: $color__lincedgegreen;
-        }
-      }
+        } /* a */
+      } /* .category-title */
       p {
         margin: 0;
         color: $color__lincedgeblue;
-      }
+      } /* p */
       .entry-title {
         text-align: left;
         margin: 0;
@@ -173,8 +173,8 @@
           text-transform: none;
           color: $color__text-main;
           text-decoration: none;
-        }
-      }
+        } /* a */
+      } /* .entry-title */
       .entry-meta {
         color: $color__lincedgeblue;
         margin-top: 4%;
@@ -184,12 +184,12 @@
           text-transform: uppercase;
           .author-color {
             color: $color__lincedgegreen;
-          }
-        }
-      }
-    }
-  }
+          } /* .author-color */
+        } /* .author */
+      } /* .entry-meta */
+    } /* .entry-content */
+  } /* article */
   .site-footer {
     margin-top: 0;
-  }
-}
+  } /* .site-footer */
+} /* .blog */
