@@ -168,11 +168,11 @@
         display: flex;
         flex-direction: column;
         // Company
-        // .menu-item-159 {
-        //   @include desktop {
-        //     display: none;
-        //   }
-        // }
+        .menu-item-159 {
+          @media screen and (max-width: 650px) {
+            display: inline !important;
+          }
+        }
       }
     }
   }
