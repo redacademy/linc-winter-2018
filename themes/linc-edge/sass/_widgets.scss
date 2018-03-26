@@ -6,11 +6,11 @@
   margin: 0 0 $base__space-unit;
   select {
     max-width: 100%;
-  }
-}
+  } /* select */
+} /* .widget */
 
 /* Search widget. */
 
 .widget_search .search-submit {
   display: none;
-}
+} /* .widget_search .search-submit */
