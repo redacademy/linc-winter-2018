@@ -1,5 +1,5 @@
 # LincEdge 
-A WordPress theme designed for LincEdge, an online platform dedicated and designed to source increasing labour and trade demands, connecting trusted partners and qualified professionals via the LincEdge Network. This release features custom page templates and fields for ease-of-use on the client-side for updating corresponding page content.
+* > A WordPress theme designed for LincEdge, an online platform dedicated and designed to source increasing labour and trade demands, connecting trusted partners and qualified professionals via the LincEdge Network. This release features custom page templates and fields for ease-of-use on the client-side for updating corresponding page content.
 
 ## Technologies Used 
 > * CLI [Command Line Interface]
