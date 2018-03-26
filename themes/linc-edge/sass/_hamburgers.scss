@@ -120,9 +120,9 @@ $hamburger-types: ( // 3dx,
         transform: rotate(-90deg);
         transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
-    }
+    } /* .hamburger-inner */
   }
-}
+} /* .hamburger--squeeze */
 
 // ==================================================
 // Cooking up additional types:
