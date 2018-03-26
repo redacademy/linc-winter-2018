@@ -17,6 +17,26 @@
       margin: 0;
     } /* p */
   } /* .entry-content */
+
+    .entry-content {
+      width: 65%;
+      margin: 0 auto;
+      color: $color__lincedgeblue;
+      font-size: 1.5rem;
+      font-weight: normal;
+      line-height: 30px;
+      text-align: center;
+      @include desktop {
+        font-size: 36px;
+        font-style: italic;
+        line-height: 45px;
+        text-align: left;
+      }
+      p {
+        margin: 0;
+      } /* p */
+    } /* .entry-content */
+
   .about-container {
     margin-top: 2rem;
     @include desktop {
