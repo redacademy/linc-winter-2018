@@ -170,6 +170,27 @@
       margin-left: 0;
     }
   } /* .gfield_label */
+  /* underline for title contact form*/
+  .title-underline-contact {
+
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 3px;
+      bottom: -10px;
+      margin: 0 auto;
+      left: 0;
+      width: 60px;
+      background: $color__lincedgegreen;
+    
+  }
+} /* .title-underline-contact */
+
+
+
+
+
 } /* .page-id-9 */
 
 .gform_page_footer {
