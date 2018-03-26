@@ -22,6 +22,7 @@
     align-items: center;
     margin-bottom: 2.5rem;
     @include desktop {
+      padding: 0 1rem;
       position: relative;
       background: #fff;
       min-height: 200px;

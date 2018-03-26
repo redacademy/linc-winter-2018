@@ -56,6 +56,9 @@
   background: linear-gradient(#fff 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
   width: 100%;
   margin: 2rem 0;
+  @include desktop {
+    background: linear-gradient($color__background-body 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%); 
+  }
   @media screen and (min-width: 850px) {
     background: $color__lincedgeblue;
   }
