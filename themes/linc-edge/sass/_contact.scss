@@ -1,23 +1,23 @@
 .page-id-9 {
   #gform_next_button_7_15 {
     display: none;
-  }
+  } /* #gform_next_button_7_15 */
   .site-content {
     height: 100%;
-  }
+  } /* .site-content */
   .site-footer {
     margin-top: 0;
-  }
+  } /* .site-footer */
   h2,
   h3 {
     color: $color__lincedgeblue;
-  }
+  } /* h2 h3 */
   .entry-title {
     display: none;
     @include desktop {
       display: block;
     }
-  }
+  } /* .entry-title */
   .entry-content {
     margin: 0;
     h2 {
@@ -31,11 +31,11 @@
         text-align: left;
         margin-left: 0;
       }
-    }
-  }
+    } /* h2 */
+  } /* .entry-content */
   .gform_page {
     text-align: center;
-  }
+  } /* .gform_page */
   .main-contact-container {
     display: flex;
     @include desktop {
@@ -47,14 +47,14 @@
       @include desktop {
         width: 43%;
         display: block;
-        margin-left: 25%; // margin-top: 10px;
+        margin-left: 25%;
         background-color: $color__lincedgeblue;
         padding: 15px;
         border-radius: 10px;
         input[type="text"],
         textarea {
           width: 100%;
-        }
+        } /* textarea */
         .gform_button {
           width: 38%;
           height: 50px;
@@ -68,25 +68,25 @@
           &:focus {
             outline: 0;
           }
-        }
+        } /* .gform_button */
       }
-    }
+    } /* .message-container */
     .contact-info-container {
       hr {
         margin-left: 0px;
         background-color: $color__lincedgegreen;
         height: 3px;
-      }
+      } /* hr */
       .info-title {
         margin-bottom: 0;
         width: 300px;
-      }
+      } /* .info-title */
       h3 {
         font-size: 25px;
-      }
+      } /* h3 */
       p {
         font-size: 21px;
-      }
+      } /* p */
       margin-left:7%;
       width:200px;
       @include desktop {
@@ -94,15 +94,15 @@
       }
       .appointment {
         font-size: 1rem;
-      }
-    }
+      } /* .appointment */
+    } /* .contact-info-container */
     .message-container {
       .contact-desktop-title {
         font-size: 40px;
         color: white;
-      }
-    }
-  }
+      } /* .contact-desktop-title */
+    } /* .message-container */
+  } /* .main-contact-container */
   .map-container {
     margin-right: 5.5%;
     @include desktop {
@@ -120,8 +120,8 @@
         border-radius: 10px;
         margin-right: 5%;
       }
-    }
-  }
+    } /* iframe */
+  } /* .map-container */
   .question-container {
     display: block;
     text-align: center;
@@ -140,27 +140,27 @@
       &:focus {
         outline: 0;
       }
-    }
+    } /* button */
     .comments-questions,
     .contact-form-title {
       color: $color__lincedgeblue;
       font-size: 25px;
       font-weight: bold;
       text-align: center;
-    }
+    } /* .comments-questions .contact-form-title */
     input[type="text"],
     textarea {
       max-width: 90%;
       margin-left: 7%;
       border-radius: 10px;
-    }
+    } /* textarea */
     @include desktop {
       display: none;
     }
-  }
+  } /* .question-container */
   .gform_title {
     display: none
-  }
+  } /* .gform_title */
   .gfield_label {
     margin-left: 7%;
     font-size: 17px;
@@ -169,22 +169,22 @@
       color: white;
       margin-left: 0;
     }
-  }
-}
+  } /* .gfield_label */
+} /* .page-id-9 */
 
 .gform_page_footer {
   display: flex;
   justify-content: space-around;
   img.gform_ajax_spinner {
     display: none;
-  }
+  } /* .gform_ajax_spinner */
   #gform_next_button_1_14 {
     width: 30%;
     margin-left: 60%;
     &:focus {
       outline: 0;
     }
-  }
+  } /* #gform_next_button_1_14 */
   .gform_next_button,
   .gform_button {
     width: 38%;
@@ -198,7 +198,7 @@
     &:focus {
       outline: 0;
     }
-  }
+  } /* .gform_next_button .gform_button */
   .gform_previous_button {
     width: 38%;
     height: 50px;
@@ -211,5 +211,5 @@
     &:focus {
       outline: 0;
     }
-  }
-}
+  } /* .gform_previous_button */
+} /* .gform_page_footer */

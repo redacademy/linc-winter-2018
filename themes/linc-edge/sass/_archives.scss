@@ -9,7 +9,7 @@
       margin-left: 3%;
       margin-right: 3%;
       @include desktop {}
-    }
+    } /* .article-container */
     &:before {
       content: ' ';
       position: absolute;
@@ -34,7 +34,7 @@
       }
       .entry-content {
         order: 1;
-      }
+      } /* .entry-content */
       @include desktop {}
     }
     &:nth-of-type(odd) {
@@ -52,13 +52,13 @@
       @include desktop {
         display: none
       }
-    }
+    } /* .excerpt-mobile */
     .excerpt-desktop {
       display: none;
       @include desktop {
         display: block;
       }
-    }
+    } /* .excerpt-desktop */
     img {
       object-fit: cover;
       max-width: none;
@@ -71,7 +71,7 @@
         margin-bottom: 2%;
         border-radius: 0px;
       }
-    }
+    } /* img */
     .image-container {
       margin-top: 11%;
       width: 70%;
@@ -79,7 +79,7 @@
       @include desktop {
         margin-top: 5.5rem;
       }
-    }
+    } /* .image-container */
     .entry-content {
       margin-top: 10%;
       width: 100%;
@@ -92,12 +92,12 @@
           text-decoration: none;
           text-transform: uppercase;
           color: $color__lincedgegreen;
-        }
-      }
+        }  /* a */
+      } /* .category-title */
       p {
         margin: 0;
         color: $color__lincedgeblue;
-      }
+      } /* p */
       .entry-title {
         text-align: left;
         margin: 0;
@@ -107,8 +107,8 @@
           text-transform: none;
           color: $color__text-main;
           text-decoration: none;
-        }
-      }
+        } /* a */
+      } /* .entry-title */
       .entry-meta {
         color: $color__lincedgeblue;
         margin-top: 4%;
@@ -118,14 +118,14 @@
           text-transform: uppercase;
           .author-color {
             color: $color__lincedgegreen;
-          }
-        }
-      }
-    }
-  }
+          } /* .author-color */
+        } /* .author */
+      } /* .entry-meta */
+    } /* .entry-content */
+  } /* article */
   .site-footer {
     margin-top: 0;
-  }
+  } /* .site-footer */
   .backhome-container {
     text-align: center;
     background-color: white;
@@ -151,7 +151,7 @@
       p {
         margin-bottom: 0;
         margin-top: 0;
-      }
-    }
-  }
-}
+      } /* p */
+    } /* .backhome-button */
+  } /* .backhome-container */
+} /* .article */
