@@ -54,7 +54,7 @@
 	background: linear-gradient(gold 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
 	width: 100%;
 	margin: 2rem 0;
-	@include desktop {
+	@media screen and (min-width: 850px) {
 		background: $color__lincedgeblue;
 	}
 	@media screen and (min-width: 1172px) {
@@ -68,7 +68,7 @@
 		width: 75%;
 		margin: 0 auto;
 		padding-bottom: 2rem;
-		@include desktop {
+		@media screen and (min-width: 850px) {
 			flex-direction: row;
 			padding-bottom: 0;
 			max-height: 285px;
@@ -77,20 +77,16 @@
 	img {
 		display: block;
 		width: 175px;
-		// position: absolute;
-		// top: -45px;
-		@include desktop {
+		@media screen and (min-width: 850px) {
 			position: relative;
 			width: 24vw;
 			height: 24vw;
-		}
-		@media screen and (min-width: 850px) {
 			max-width: 285px;
 			max-height: 285px;
 		}
 	}
 	.endorsement {
-		@include desktop {
+		@media screen and (min-width: 850px) {
 			margin-left: 2rem;
 		}
 	}
@@ -99,10 +95,8 @@
 		font-size: 1.1rem;
 		padding: 1.5rem 0 1rem;
 		margin: 0;
-		@include desktop {
-			padding-top: 0;
-		}
 		@media screen and (min-width: 850px) {
+			padding-top: 0;
 			font-size: 1.25rem;
 		}
 	}
@@ -110,9 +104,6 @@
 		margin: 0;
 		font-weight: normal;
 		font-size: 1.1rem;
-		@include desktop {
-			// font-size: 1.15rem;
-		}
 		@media screen and (min-width: 850px) {
 			font-size: 1.25rem;
 		}
