@@ -6,7 +6,7 @@
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: $hamburger-hover-transition-duration;
-  transition-timing-function: $hamburger-hover-transition-timing-function; // Normalize (<button>)
+  transition-timing-function: $hamburger-hover-transition-timing-function;
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -23,19 +23,19 @@
       opacity: $hamburger-hover-opacity;
     }
     box-shadow: none;
-  } // additional
+  }
   height: 100%;
   @include desktop {
     display: none;
   }
-}
+} /* .hamburger */
 
 .hamburger-box {
   width: $hamburger-layer-width;
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   display: inline-block;
   position: relative;
-}
+} /* .hamburger-box */
 
 .hamburger-inner {
   display: block;
@@ -64,4 +64,4 @@
   &::after {
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
-}
+} /* .hamburger-inner */
