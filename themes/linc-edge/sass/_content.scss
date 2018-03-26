@@ -51,14 +51,14 @@
 // Testimonials 
 .testimonial {
 	color: #fff;
-	background: linear-gradient(gold 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
+	background: linear-gradient(#fff 87.5px, $color__lincedgeblue 87.5px, $color__lincedgeblue 100%);
 	width: 100%;
 	margin: 2rem 0;
 	@media screen and (min-width: 850px) {
 		background: $color__lincedgeblue;
 	}
 	@media screen and (min-width: 1172px) {
-		background: linear-gradient(gold 12%, $color__lincedgeblue 12%, $color__lincedgeblue 88%, gold 88%, gold 100%);
+		background: linear-gradient($color__background-body 12%, $color__lincedgeblue 12%, $color__lincedgeblue 88%, $color__background-body 88%, $color__background-body 100%);
 	}
 	.testimonial-inner {
 		display: flex;
