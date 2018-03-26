@@ -3,7 +3,7 @@
     height: 100%;
     .entry-content {
       position: relative;
-    }
+    } /* .entry-content */
     .entry-content {
       text-align: left;
       margin-left: 5%;
@@ -15,16 +15,16 @@
         a {
           text-decoration: none;
           color: $color__lincedgeblue;
-        }
-      }
+        } /* a */
+      } /* .entry-title */
       .category-title {
         font-size: 1.7rem;
         a {
           text-decoration: none;
           color: $color__lincedgegreen;
           text-transform: uppercase;
-        }
-      }
+        } /* a */
+      } /* .category-title */
       .entry-meta {
         position: absolute;
         background-color: $color__lincedgeblue;
@@ -43,8 +43,8 @@
           justify-content: center;
           width: 55%;
         }
-      }
-    }
+      } /* .entry-meta */
+    } /* .entry-content */
     .image-container {
       margin-left: 5%;
       margin-right: 5%;
@@ -56,15 +56,15 @@
           width: 100%;
           height: 80vh;
         }
-      }
-    }
+      } /* img */
+    } /* .image-container */
     .entry-content1 {
       margin-left: 5%;
       margin-right: 5%;
-    }
+    } /* .entry-content1 */
     .navigation {
       display: none;
-    }
+    } /* .navigation */
     .comments-area {
       color: $color__lincedgeblue;
       margin-left: 5%;
@@ -73,11 +73,11 @@
         a {
           text-decoration: none;
           color: $color__lincedgeblue;
-        }
-      }
+        } /* a */
+      } /* .logged-in-as */
       .comment-form-comment {
         color: $color__lincedgeblue;
-      }
+      } /* .comment-form-comment */
       .submit {
         align-self: center;
         margin-bottom: 5%;
@@ -88,17 +88,17 @@
         font-size: 0.8rem;
         padding: 0.75rem 2rem;
         text-transform: uppercase;
-      }
-    }
+      } /* .submit */
+    } /* .comments-area */
     @media screen and (max-width: 355px) {
       .entry-meta {
         span {
           font-size: 0.8rem;
-        }
-      }
+        } /* span */
+      } /* .entry-meta */
     }
-  }
+  } /* .site-content */
   .site-footer {
     margin-top: 0px;
-  }
-}
+  } /* .site-footer */
+} /* .single-post */
