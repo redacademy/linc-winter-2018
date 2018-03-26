@@ -7,7 +7,7 @@
   height: 240px;
   width: 100%;
   @include desktop {
-    height: 260px;
+    height: 265px;
   }
   .widget-area {
     margin-top: 50px;
@@ -50,13 +50,15 @@
     flex-wrap: wrap;
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
-    @media screen and (max-width: 667px) {
-      margin-left:0 !important;
-    }
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+    
     @include desktop {
       width: 100%;
-      margin-left: 19%;
+      flex-direction: column;
+      text-align: center;
+      margin-left: 0;
     }
   } /* .footer-text-container */
   .footer-policy {
