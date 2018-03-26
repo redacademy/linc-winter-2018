@@ -30,16 +30,16 @@ get_header(); ?>
 		<?php else : ?>
 			<?php get_template_part( esc_html('template-parts/content-blog'), esc_html('none') ); ?>
 		<?php endif; ?>
-
+</div><!-- .article-master-container -->
 		<?php echo '<a class="linc-edge-button"
 		href="' . esc_url(get_site_url()) . '">';?>
 			<p>Go Back Home</p>
 		</a>
+		
+
 		</main><!-- #main -->
     </div><!-- #primary -->
-    
-</div>
-
+	<button onclick="topFunction()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 
 <?php get_footer(); ?>
