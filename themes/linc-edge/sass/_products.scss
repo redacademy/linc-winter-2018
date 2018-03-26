@@ -1,259 +1,240 @@
-.page-id-17{
-
-    
-    .site-content{
-        height:100%;
+.page-id-17 {
+  .site-content {
+    height: 100%;
+  } // mobile
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    @include desktop {
+      display: none;
     }
-
-    // mobile
-    .button-container{
-        
+    button {
+      width: 40%;
+      height: 40px;
+    }
+    .button-feature {
+      background-color: white;
+      color: $color__lincedgeblue;
+    }
+    .button-benefit {
+      background-color: white;
+      color: $color__lincedgeblue;
+    }
+    .button-active {
+      background-color: $color__lincedgeblue;
+      color: white;
+    }
+  } // end .button-container
+  // mobile and desktop
+  .features-content-container {
+    display: block;
+    .features-inner-container {
+      margin-left: 15%;
+      margin-right: 13%;
+      @include desktop {
         display: flex;
-        justify-content: center;
-        padding-top: 1rem;    
-        @include desktop{
-            display:none;
+        flex-direction: row;
+        .feature-text-container {
+          display: flex;
+          max-height: 700px;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-left: 5%;
+          margin-top: 13%;
         }
-        button {
-            width:40%;
-            height:40px;
+      }
+      .features-title,
+      .benefits-title {
+        font-weight: bold;
+        color: $color__lincedgeblue;
+        font-size: 18px;
+        margin-top: 20px;
+        @include desktop {
+          letter-spacing: 1px;
+          font-size: 40px;
+          font-weight: normal;
         }
-        .button-feature{
-            background-color:white;
-            color:$color__lincedgeblue;
+      }
+      .features-text,
+      .benefits-text {}
+    } // end .features-inner-container
+    .testimonial {
+      // margin-top: 10rem;
+      @media screen and (min-width: 350px) {
+        // margin-top:8rem;
+      }
+      @include desktop {
+        //    margin-top: 5rem;
+      }
+    }
+    .carousel {
+      min-height: 500px;
+      width: 100%;
+      margin-bottom: 50px;
+      .benefits-title {
+        margin-top: 12%;
+        font-weight: bold;
+        color: $color__lincedgeblue;
+        font-size: 18px;
+      }
+      .features-text {
+        width: 90%;
+        font-size: 18px;
+        line-height: 30px;
+        @include desktop {
+          line-height: 40px;
         }
-        .button-benefit{
-            background-color:white;
-            color:$color__lincedgeblue;
+      }
+      .carousel-cell {
+        width: 100%;
+        .title-text-con {
+          margin-left: 7%;
         }
-        .button-active{
-            background-color:$color__lincedgeblue;
-            color:white;
-        }
-    } // end .button-container
-
-    // mobile and desktop
-    .features-content-container{
-
-
-        display:block;
-        .features-inner-container{
-            margin-left:15%;
-            margin-right:13%;
-            @include desktop{
-                display:flex;
-                flex-direction:row;
-                .feature-text-container{
-                    display:flex;
-                    max-height:700px;
-                    flex-direction:column;
-                    justify-content:flex-start;
-                    margin-left:5%;
-                    margin-top:13%;
-                }
-            }
-            .features-title,.benefits-title{
-                font-weight:bold;
-                color:$color__lincedgeblue;
-                font-size:18px;
-                margin-top:20px;
-                @include desktop{
-                    letter-spacing: 1px;
-                    font-size:40px;
-                    font-weight:normal;
-                }
-            }
-            .features-text,.benefits-text{
-
-            }
-        } // end .features-inner-container
-        .testimonial{
-            // margin-top: 10rem;
-            @media screen and (min-width: 350px) {
-                // margin-top:8rem;
-            }
-            @include desktop {
-            //    margin-top: 5rem;
-           }
-        }
-        .carousel{
-            min-height:500px;
-            width:100%;
-
-            margin-bottom: 50px;
-            .benefits-title{
-            margin-top:12%;
-            font-weight:bold;
-            color:$color__lincedgeblue;
-            font-size:18px;
-            
-            }
-            .features-text{
-               width:90%;
-               font-size:18px;
-               line-height:30px;
-               @include desktop{
-                line-height:40px;
-                }
-            }
-            .carousel-cell{
-                width:100%;
-                .title-text-con{
-                    margin-left:7%;
-                    }
-            }
-            .flickity-page-dots{
-                bottom: -20px;
-            }
-            .flickity-button{
-                display:none;
-                @include desktop{
-                    display:block;
-                    background-color:$color__lincedgeblue;
-                    .flickity-button-icon{
-                        fill:white;
-                    }
-                }
-            }
-        } // end .carousel
-    } // end features-content-container
-
-    // desktop
-    .entry-title-benefits {
+      }
+      .flickity-page-dots {
+        bottom: -20px;
+      }
+      .flickity-button {
         display: none;
         @include desktop {
-            display: block;
+          display: block;
+          background-color: $color__lincedgeblue;
+          .flickity-button-icon {
+            fill: white;
+          }
         }
+      }
+    } // end .carousel
+  } // end features-content-container
+  // desktop
+  .entry-title-benefits {
+    display: none;
+    @include desktop {
+      display: block;
     }
-    #benefit-desktop{
-        display:none;
-        @include desktop{
-            margin-left:11%;
-            display:flex;
-            flex-wrap:wrap;
-            .benefit-text-container{
-                z-index:3;
-                width:50%;
-            }
-            .benefit-back{
-                width:34%;
-                background-color:white;
-                z-index:-1;
-                height:80%;
-                margin-left:-1.5%;
-                margin-top:13%;
-                position:absolute;
-                border-radius:10px;
-            }
-            .benefit-title-desktop{
-                font-size:40px;
-                color:$color__lincedgeblue;
-                margin-left:4%;
-            }
-            img{
-                width:70%;
-            }
-            .benefits-text{
-                width:60%;
-                font-size:15px;
-                line-height:36px;
-                margin-left:5%;
-                margin-bottom:25%;
-            }
-        }
-    }// end #benefit-desktop
-
-    .testimonial-desktop{
-        display:none;
-        @include desktop{
-            display:block
-        }
+  }
+  #benefit-desktop {
+    display: none;
+    @include desktop {
+      margin-left: 11%;
+      display: flex;
+      flex-wrap: wrap;
+      .benefit-text-container {
+        z-index: 3;
+        width: 50%;
+      }
+      .benefit-back {
+        width: 34%;
+        background-color: white;
+        z-index: -1;
+        height: 80%;
+        margin-left: -1.5%;
+        margin-top: 13%;
+        position: absolute;
+        border-radius: 10px;
+      }
+      .benefit-title-desktop {
+        font-size: 40px;
+        color: $color__lincedgeblue;
+        margin-left: 4%;
+      }
+      img {
+        width: 70%;
+      }
+      .benefits-text {
+        width: 60%;
+        font-size: 15px;
+        line-height: 36px;
+        margin-left: 5%;
+        margin-bottom: 25%;
+      }
     }
-
-    // mobile
-    .benefits-content-container{
+  } // end #benefit-desktop
+  .testimonial-desktop {
+    display: none;
+    @include desktop {
+      display: block
+    }
+  } // mobile
+  .benefits-content-container {
+    display: none; // JS display on click
+    .benefit-title {
+      padding: 1.5rem 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: $color__lincedgeblue;
+    }
+    .carousel-2 {
+      min-height: 500px;
+      width: 100%;
+      margin-bottom: 50px; // @media screen and (min-width: 550px) {
+      //     margin-bottom: 25%;
+      // }    
+      .carousel-cell {
+        width: 100%;
+        .benefits-image {
+          text-align: center;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .title-text-con {
+          margin-left: 7%;
+        }
+      }
+      .benefits-title {
+        margin-top: 20px;
+        font-weight: bold;
+        color: $color__lincedgeblue;
+        font-size: 18px;
+      }
+      .benefits-text {
+        width: 90%;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      .flickity-page-dots {
+        bottom: -20px;
+      }
+      .flickity-button {
         display: none;
-        // JS display on click
-        .benefit-title {
-            padding: 1.5rem 0;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            color: $color__lincedgeblue;
-        }
-        .carousel-2{
-            min-height:500px;
-            width:100%;
-            margin-bottom: 50px;
-            // @media screen and (min-width: 550px) {
-            //     margin-bottom: 25%;
-            // }    
-            .carousel-cell{
-                width:100%;
-                .benefits-image{
-                    text-align: center;
-                    margin-left:5%;
-                    margin-right:5%;
-                }
-                .title-text-con{
-                    margin-left:7%;
-                }
-            }
-            .benefits-title{
-            margin-top:20px;
-            font-weight:bold;
-            color:$color__lincedgeblue;
-            font-size:18px;
-            }
-            .benefits-text{
-               width:90%;
-               font-size:18px;
-               line-height:30px;
-            }
-            .flickity-page-dots{
-                bottom: -20px;
-            }
-            .flickity-button{
-                display:none;
-            }
-        } // end .carousel-2
-    } // end .benefits-content-container
-
-    .white-back{
-        @include desktop{
-            background-color:white;
-            position:absolute;
-            margin-top:7%;
-            margin-left:2%;
-            width:75%;
-            height:65%;
-            z-index:-1;
-        }
+      }
+    } // end .carousel-2
+  } // end .benefits-content-container
+  .white-back {
+    @include desktop {
+      background-color: white;
+      position: absolute;
+      margin-top: 7%;
+      margin-left: 2%;
+      width: 75%;
+      height: 65%;
+      z-index: -1;
     }
-
-    .experience-container {
-        text-align: center;
-        @include desktop {
-            margin-top:5%;
-        }
-        .experience-title{
-            color:$color__lincedgeblue;
-            margin: 0;
-            font-size: 1.5rem;
-            @include desktop{}
-            font-size: 2.5rem;
-        }
-        p.mobile {
-            @include desktop{
-                display:none;
-            }
-        }
-        p.desktop{
-            display:none;
-            @include desktop{
-                display:block;
-            }
-        }
-    } // end .experience-container
-
+  }
+  .experience-container {
+    text-align: center;
+    @include desktop {
+      margin-top: 5%;
+    }
+    .experience-title {
+      color: $color__lincedgeblue;
+      margin: 0;
+      font-size: 1.5rem;
+      @include desktop {}
+      font-size: 2.5rem;
+    }
+    p.mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+    p.desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  } // end .experience-container
 }

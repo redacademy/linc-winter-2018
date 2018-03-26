@@ -1,58 +1,55 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin desktop {
-	@media (min-width: $desktop__width) {
-		@content;
-	}
+  @media (min-width: $desktop__width) {
+    @content;
+  }
 }
 
 @mixin product {
-	@media (max-width: $product__width) {
-		@content;
-	}
+  @media (max-width: $product__width) {
+    @content;
+  }
 }
 
-@mixin page-title-style {
-
-}
+@mixin page-title-style {}
 
 @mixin linc-button-style {
-	height: 52px;
-	width: 240px;
-	border-radius: 30px;
-	font-size: 1.15rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: #fff;
-	background-color: $color__lincedgegreen;
-	border: none;
-	box-shadow: 0px 1px 2px $color__text-main;
-
-	display:flex;
-	justify-content: center;
-	align-items:center;
-	margin: 2rem auto;
-	&:hover {
-		background-color: darken($color__lincedgegreen, 5%)
-	}
-	&:focus {
-		box-shadow: inset 0px 1px 2px $color__text-main;
-		transform: translateY(1px);
-		outline: none;
-	}
-	p {
-		margin: 0;
-		color:#fff;
-	}
+  height: 52px;
+  width: 240px;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $color__lincedgegreen;
+  border: none;
+  box-shadow: 0px 1px 2px $color__text-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  &:hover {
+    background-color: darken($color__lincedgegreen, 5%)
+  }
+  &:focus {
+    box-shadow: inset 0px 1px 2px $color__text-main;
+    transform: translateY(1px);
+    outline: none;
+  }
+  p {
+    margin: 0;
+    color: #fff;
+  }
 }

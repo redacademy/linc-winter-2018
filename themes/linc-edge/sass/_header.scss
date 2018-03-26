@@ -5,28 +5,30 @@
   @include desktop {
     height: 108px;
   }
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 10;
-	box-shadow: 5px 5px 6px 0px rgba(99, 99, 99, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 5px 5px 6px 0px rgba(99, 99, 99, 0.25);
 }
+
 .admin-bar #masthead {
   top: 46px;
   @media screen and (min-width: 782px) {
     top: 32px;
   }
 }
+
 // WP menu default <600px is not position: fixed, leaving a gap above our menu
 @media screen and (max-width: 600px) {
   #wpadminbar {
-      position: fixed !important;
+    position: fixed !important;
   }
 }
 
 .menu-navigation {
-  z-index:10;
+  z-index: 10;
   height: 100%;
   position: relative;
   ul.menu {
@@ -35,8 +37,7 @@
     padding: 0;
     line-height: 50px;
     border-top: 1px solid #ffffff;
-    display: none;
-    // JS on click, add class .is-active
+    display: none; // JS on click, add class .is-active
     &.is-active {
       display: block;
     }
@@ -47,7 +48,7 @@
       border-top: none;
       margin-top: 2.5rem;
     }
-		li {
+    li {
       display: inline;
       position: relative;
     }
@@ -95,14 +96,13 @@
     top: 15%;
     left: 0;
     width: 128px;
-    @media screen and (min-width: 750px ) {
+    @media screen and (min-width: 750px) {
       top: 10%;
       width: 148px;
       left: 6.5%;
     }
   }
 }
-
 
 @include desktop {
   .menu-menu-container {
@@ -123,14 +123,12 @@
       text-align: center;
       border-top: 1px solid $color__border-abbr;
     }
-  }
-  // Home link
+  } // Home link
   ul.menu .menu-item-156 a {
     display: none;
-  }
-  // Sign Up link
+  } // Sign Up link
   ul.menu .menu-item-25 {
-    @media screen and (min-width: 750px ) {
+    @media screen and (min-width: 750px) {
       margin-right: 2rem;
     }
     a {
@@ -138,7 +136,7 @@
       padding: 0.5rem 1rem;
       border-radius: 30px;
       border: 1px solid;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     a:hover {
       color: #ffffff;
@@ -149,10 +147,8 @@
       color: #ffffff;
       outline: none;
       background-color: darken($color__lincedgegreen, 5%);
-
     }
-  }
-  // Products link
+  } // Products link
   .menu-item-24 {
     &:hover {
       .sub-menu {
@@ -160,8 +156,7 @@
         flex-direction: column;
       }
     }
-  }
-  // About link
+  } // About link
   .menu-item-21 {
     &:hover {
       .sub-menu {
@@ -171,7 +166,6 @@
     }
   }
 } // end @include desktop
-
 ul.sub-menu {
   background: $color__lincedgeblue;
   margin: 0;
@@ -179,4 +173,3 @@ ul.sub-menu {
     margin-left: 0 !important;
   }
 }
-
