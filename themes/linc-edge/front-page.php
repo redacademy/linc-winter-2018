@@ -107,7 +107,7 @@ get_header();?>
 			$args = array(
 				'post_type' => 'testimonial',
 				'posts_per_page' => 1,
-				'title' => 'Chad Myers'
+				'orderby'=> 'rand'
 						);
 			$get_testimonial = get_posts( $args );
 			?>
