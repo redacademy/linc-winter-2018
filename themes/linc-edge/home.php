@@ -39,7 +39,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
     </div><!-- #primary -->
-	<button onclick="topFunction()" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+	<a href="#page" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
 
 <?php get_footer(); ?>

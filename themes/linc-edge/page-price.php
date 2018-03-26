@@ -50,5 +50,6 @@ get_header(); ?>
           
   </main><!-- .site-main -->
 </div><!-- .content-area -->
-
+<a href="#page" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+  
 <?php get_footer(); ?>

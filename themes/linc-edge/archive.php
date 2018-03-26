@@ -40,6 +40,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<a href="#page" id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
 	<div class="backhome-container">
 
 <a href ="http://linc.van.cp.academy.red/">
