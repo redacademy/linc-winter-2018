@@ -175,7 +175,7 @@ get_header(); ?>
 				<p class="desktop">Sign Up for Beta</p>
 			</a>
 		</div> <!-- .experience-container -->
-        <!-- Ending "benefits" forEach-loop -->
+    <!-- Ending "benefits" forEach-loop -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
