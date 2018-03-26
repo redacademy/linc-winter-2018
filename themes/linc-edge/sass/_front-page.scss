@@ -1,10 +1,8 @@
 .home {
   .testimonial {
-    // margin-top:9rem;
     @include desktop {
-      // margin-top:3rem;
     }
-  }
+  } /* .testimonial */
   .banner-container {
     margin-top: -32px;
     @include desktop {
@@ -24,7 +22,7 @@
         font-size: 2.5rem;
         height: 50%;
       }
-    }
+    } /* .banner-text */
     .download-container {
       display: flex;
       justify-content: space-around;
@@ -42,7 +40,7 @@
           height: 100%;
           width: 180px;
         }
-      }
+      } /* .google-play-link */
       .app-store-link {
         width: 100px;
         height: 100%;
@@ -50,22 +48,22 @@
           height: 100%;
           width: 180px;
         }
-      }
-    } // end download container
-  } // end banner container
-  // call-to-action buttons
+      } /* .app-store-link */
+    } /* .download-container */
+  } /* .banner-container */
+
   .signup-front-mobile {
     @include desktop {
       display: none;
     }
-  }
+  } /* .signup-front-mobile */
   .signup-front-desktop {
     display: none;
     @include desktop {
       margin-top: 8%;
       display: flex;
     }
-  }
+  } /* .signup-front-desktop */
   .theproblem-heading,
   .benefits-header,
   .features-header,
@@ -81,7 +79,7 @@
       display: block;
       color: #012f46;
     }
-  }
+  } /* .theproblem-heading .benefits-header .features-header .howworks-header */
   .theproblem-description {
     font-size: 1.25rem;
     width: 85%;
@@ -90,7 +88,7 @@
     @include desktop {
       width: 75%;
     }
-  }
+  } /* .theproblem-description */
   .benefits-container,
   .features-container {
     display: flex;
@@ -107,7 +105,7 @@
     .indiv-feature {
       text-align: center;
       margin-bottom: 1rem;
-    }
+    } /* .indiv-benefit .indiv-feature */
     .benefits-image,
     .features-image {
       width: 180px;
@@ -116,7 +114,7 @@
         width: 20vw;
         height: 20vw;
       }
-    }
+    } /* .benefits-image .features-image */
     .benefits-title,
     .features-title {
       text-align: center;
@@ -124,11 +122,11 @@
       color: $color__lincedgeblue;
       font-size: 18px;
       margin: 0;
-    }
+    } /* .benefits-title .features-title */
     p {
       margin-bottom: 0;
-    }
-  } // end benefites/features-container
+    } /* p */
+  } /* .benefits-container .features-container */
   .howworks-container {
     width: 100%;
     .non-carousel {
@@ -164,7 +162,7 @@
             }
           }
         }
-      } // end hw-inner-container
+      } /* .hw-inner-container */
       .howworks-title {
         @include desktop {
           color: white;
@@ -174,54 +172,53 @@
           text-align: center;
           margin-top: 20%;
         }
-      }
+      } /* .howworks-title */
       img {
         @include desktop {
           margin-top: 40%;
           width: 97px;
           height: 80px;
         }
-      }
-    } // end non-carousel
+      } /* img */
+    } /* .non-carousel */
     .carousel {
       @include desktop {
         display: none;
       }
       height: 225px;
-      width:100%; // margin-top:10%;
+      width:100%;
       .carousel-cell {
-        width: 100%; // min-height: 350px;   
+        width: 100%; 
         text-align: center;
-      }
+      } /* .carousel-cell */
       img {
         height: 100px;
-      }
+      } /* img */
       .flickity-page-dots {
         bottom: 5%;
-      }
+      } /* .flickity-page-dots */
       .flickity-button {
         display: none;
-      }
+      } /* .flickity-button */
       .howworks-title {
         font-weight: bold;
         color: $color__lincedgeblue;
         width: 50%;
         margin: 0 auto;
         margin-top: 5%;
-      }
-    } // end carousel
-  } // end how-works container
+      } /* .howworks-title */
+    } /* .carousel */
+  } /* .howworks-container */
   .join-beta-container {
     margin: 3rem;
     text-align: center;
     .join-beta-title {
       margin: 0;
-      color: $color__lincedgeblue; // margin-top:10%;
+      color: $color__lincedgeblue;
       font-size: 1.5rem;
       @include desktop {
-        // margin-top:5%;
         font-size: 2.5rem;
       }
-    }
-  }
-}
+    } /* .join-beta-title */
+  } /* .join-beta-container */
+} /* .home */
