@@ -5,12 +5,11 @@
 html {
   box-sizing: border-box;
   @include font-size(1);
-}
+} /* html */
 
 *,
 *:before,
 *:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
 
@@ -18,9 +17,8 @@ body {
   background: #fff;
   @include desktop {
     background: $color__background-body;
-    /* Fallback for when there is no custom background color defined. */
   }
-}
+} /* body */
 
 blockquote,
 q {
@@ -29,50 +27,50 @@ q {
   &:after {
     content: "";
   }
-}
+} /* blockquote q */
 
 hr {
   background-color: $color__background-hr;
   border: 0;
   height: 1px;
   margin-bottom: $base__space-unit;
-}
+} /* hr */
 
 ul,
 ol {
   margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
+} /* ul ol */
 
 ul {
   list-style: disc;
-}
+} /* ul */
 
 ol {
   list-style: decimal;
-}
+} /* ol */
 
 li>ul,
 li>ol {
   margin-bottom: 0;
   margin-left: $base__space-unit;
-}
+} /* li>ul li>ol */
 
 dt {
   font-weight: bold;
-}
+} /* dt */
 
 dd {
   margin: 0 $base__space-unit $base__space-unit;
-}
+} /* dd */
 
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
-}
+} /* img */
 
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
-}
+} /* table */
