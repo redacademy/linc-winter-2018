@@ -121,7 +121,7 @@ a {
   bottom: 20px;
   right: 20px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 0.75rem;
   border: none;
   outline: none;
   background-color: $color__lincedgegreen;
@@ -132,6 +132,10 @@ a {
   .svg-inline--fa {
     display: block;
     margin: 0 auto;
+  }
+  @include desktop {
+    font-size: 1.1rem;
+    padding: 10px;
   }
 } /* #back-to-top-btn */
 
