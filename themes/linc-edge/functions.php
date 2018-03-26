@@ -79,11 +79,6 @@ function linc_edge_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'linc_edge_minified_css', 10, 2 );
 
-
-
-
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -124,16 +119,6 @@ function linc_edge_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'linc_edge_scripts' );
 
-
-
-
-
-
-
-
-
-
-
 function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 
@@ -166,11 +151,6 @@ function content($limit) {
   return $content;
 }
 
-
-
-
-
-
 /**
  * Custom template tags for this theme.
  */
@@ -180,6 +160,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-
-
