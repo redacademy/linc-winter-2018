@@ -9,15 +9,13 @@
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
+} /* .page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley */
 
 embed,
 iframe,
 object {
   max-width: 100%;
-}
+} /* embed iframe object */
 
 /* Captions */
 
@@ -29,18 +27,18 @@ object {
   }
   .wp-caption-text {
     margin: 0.8075rem 0;
-  }
-}
+  } /* .wp-caption-text */
+} /* .wp-caption */
 
 .wp-caption-text {
   text-align: center;
-}
+} /* .wp-caption-text */
 
-/* Galleries*/
+/* Galleries */
 
 .gallery {
   margin-bottom: $base__space-unit;
-}
+} /* .gallery */
 
 .gallery-item {
   display: inline-block;
@@ -71,8 +69,8 @@ object {
   .gallery-columns-9 & {
     max-width: 11.11%;
   }
-}
+} /* .gallery-item */
 
 .gallery-caption {
   display: block;
-}
+} /* .gallery-caption */
