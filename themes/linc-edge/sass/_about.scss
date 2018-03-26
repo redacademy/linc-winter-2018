@@ -110,9 +110,14 @@
   } /* .about-container */
 
   .customer-container {
-    background: $color__background-body;
+  
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #fff;
     @include desktop {
-      background: #fff;
+  
+      background: white;
     }
   }
   .customer-header {
@@ -142,7 +147,7 @@
     .flickity-page-dots {
       margin: 5% auto;
       @include desktop {
-        margin: 2.5% auto;
+        margin: 5% auto;
       }
     }
     .flickity-button {
