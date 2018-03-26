@@ -138,7 +138,10 @@ get_header();?>
 			</a>
 		</div>
 
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
 
 <?php get_footer(); ?>
