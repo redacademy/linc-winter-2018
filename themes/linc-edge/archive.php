@@ -38,16 +38,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<a id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
-
-	<div class="backhome-container">
-
-<a href ="http://linc.van.cp.academy.red/">
-	<button class="backhome-button">
-		<p>Back to Home</p>
-	</button>
-</a>
-
-</div>
+	<a id="back-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i>TOP</a>
 
 <?php get_footer(); ?>
