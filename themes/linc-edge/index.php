@@ -75,7 +75,7 @@ get_header(); ?>
 			</div> <!-- .features-content-container -->
 
 			<!-- Desktop only Benefits section -->
-			<h1 class="entry-title entry-title-benefits"><span class="title-underline">
+			<h1 class="entry-title entry-title-benefits" id="benefits"><span class="title-underline">
 				<?php echo CFS()->get( esc_html('benefits_title') ); ?>
 			</span></h1>
 			<div class="benefits-content-container" id="benefit-desktop">
