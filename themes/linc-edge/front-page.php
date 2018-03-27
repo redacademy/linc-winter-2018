@@ -21,14 +21,14 @@ get_header();?>
 	
 				</div>
 				<?php echo '<a class="linc-edge-button signup-front-desktop"
-				href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+				href="' . esc_url(get_site_url()) . "/signup/" . '">';?>
 					<p>Sign Up</p>
 				</a>
 		</div>
 		
 		<!-- Mobile: Sign Up button below banner -->
 		<?php echo '<a class="linc-edge-button signup-front-mobile"
-		href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+		href="' . esc_url(get_site_url()) . "/signup/" . '">';?>
 			<p>Sign Up</p>
 		</a>
 
@@ -133,7 +133,7 @@ get_header();?>
 				<?php echo CFS()->get(esc_html('join_beta_title' )); ?>
 			</h2>
 			<?php echo '<a class="linc-edge-button"
-			href="' . esc_url(get_site_url()) . "/sign-up/" . '">';?>
+			href="' . esc_url(get_site_url()) . "/signup/" . '">';?>
 				<p>Sign Up</p>
 			</a>
 		</div>
