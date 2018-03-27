@@ -104,6 +104,12 @@
       display: block;
     }
   } /* .entry-title-benefits */
+  a.anchor#benefit {
+    display: block;
+    position: relative;
+    top: -108px;
+    visibility: hidden;
+  }
   #benefit-desktop {
     display: none;
     @include desktop {
