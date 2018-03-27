@@ -119,6 +119,7 @@ get_header(); ?>
 
 			<!-- Mobile only Benefits section -->
 			<div class="benefits-content-container" id="benefit-mobile">
+            <a class="anchor" id="benefit"></a>
 				<div class="benefit-carousel"> <!-- pretty sure unused -->
 					<h1 class="benefit-title">
 						<?php echo CFS()->get( esc_html('benefits_title') ); ?>
