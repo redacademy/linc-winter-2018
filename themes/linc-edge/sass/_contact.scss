@@ -72,6 +72,12 @@
       }
     } /* .message-container */
     .contact-info-container {
+      a{
+        color:$color__lincedgegreen;
+        &:hover{
+          color:darken($color__lincedgegreen,10%);
+        }
+      }
       hr {
         margin-left: 0px;
         background-color: $color__lincedgegreen;
