@@ -131,7 +131,7 @@
         margin-left: -1.5%;
         margin-top: 13%;
         position: absolute;
-        border-radius: 10px;
+        border-radius: 6px;
       } /* .benefit-back */
       .benefit-title-desktop {
         font-size: 40px;
@@ -202,6 +202,7 @@
   .white-back {
     @include desktop {
       background-color: white;
+      border-radius: 6px;
       position: absolute;
       margin-top: 7%;
       margin-left: 2%;

@@ -53,7 +53,7 @@
         align-items: center;
         background-color: #ffffff;
         border: 1px solid #ffffff;
-        border-radius: 10px;
+        border-radius: 6px;
         display: flex;
         flex-direction: row;
         width: 80%;
@@ -112,13 +112,15 @@
         order: 1;
         height: auto;
         width: 45%;
+        padding-top: 1.75rem;
+        padding-bottom: 1.25rem;
       }
     } /* .about-image-group */
   } /* .about-container */
   .customer-container {
     width: 80%;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 6px;
     background: #fff;
     @include desktop {
       background: white;
