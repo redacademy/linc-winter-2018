@@ -1,10 +1,18 @@
-(function($) {
+jQuery(document).ready(function($){
 
-    $(document).ready(function(){
-        $('#gf_button_get_form_7').click(function(){
+
+        
+        if ($('.mc4wp-success').css('display') == 'block'){
+            $('.subscription-condition').css('display','none');
+            $('.mc4wp-form-fields').css('display','none');
+
+        }
+    
+            
+
 
         });
-    
-    });
 
-})( jQuery );
+    
+
+

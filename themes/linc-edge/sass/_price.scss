@@ -99,7 +99,23 @@
     @include desktop {
       margin: 1rem;
     }
-  } /* .subscription-form-content-container */
+  } 
+  
+  .mc4wp-response{
+    font-size:1rem;
+    font-weight:bold;
+    text-align:center;
+    margin-left:5%;
+    margin-right:5%;
+    @include desktop{
+    font-size:1.5rem;
+    margin-left:0%;
+    margin-right:0%;
+    }
+
+  }  
+  
+  /* .subscription-form-content-container */
 
   input.email-field {
     padding-left: 1rem;
