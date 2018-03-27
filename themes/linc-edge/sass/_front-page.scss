@@ -1,8 +1,4 @@
 .home {
-  .testimonial {
-    @include desktop {
-    }
-  } /* .testimonial */
   .banner-container {
     margin-top: -32px;
     @include desktop {
