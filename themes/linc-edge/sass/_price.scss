@@ -92,7 +92,7 @@
       margin: 2rem auto 0 auto;
     }
   } /* .subscription-form-container */
-  .subscription-form-content-container {
+  .subscription-form-content-container,.mc4wp-form-error{
     
     display: flex;
     justify-content: space-evenly;
@@ -169,4 +169,12 @@
       }
     } /* subscription-condition */
   } /* .subscription-condition-group */
+  .mc4wp-form-error{
+    .email-field{
+      width: 100%;
+    }
+    .submit-button{
+      width:100%;
+    }
+  }
 } /* .page-template-price */
