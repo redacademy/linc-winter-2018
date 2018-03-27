@@ -101,8 +101,9 @@
     align-items:center;
     @include desktop {
       margin: 1rem;
-      flex-direction:row;
-      align-items:flex-end;
+      flex-direction:column;
+      
+      align-items: center;
     }
   } 
   
