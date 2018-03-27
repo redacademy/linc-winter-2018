@@ -29,12 +29,15 @@
       text-align: center;
       margin-left: 15%;
       margin-right: 15%;
+      flex-direction: column;
+      margin-top:-25px;
       @include desktop {
+        flex-direction: row;
         margin-left: 25%;
         margin-right: 25%;
       }
       .google-play-link {
-        width: 100px;
+        width: 125px;
         height: 100%;
         @include desktop {
           height: 100%;
@@ -42,7 +45,7 @@
         }
       } /* .google-play-link */
       .app-store-link {
-        width: 100px;
+        width: 125px;
         height: 100%;
         @include desktop {
           height: 100%;
