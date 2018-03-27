@@ -3,24 +3,32 @@
 
 ## Home Page
 <img src="./themes/linc-edge/images/preview-images/home-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/home-mobile.png"/>
 
 ## Product Page
 <img src="./themes/linc-edge/images/preview-images/features-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/products-mobile.png.png"/>
+<img src="./themes/linc-edge/images/preview-images/features-mobile.png"/>
 
 ## Pricing Page
 <img src="./themes/linc-edge/images/preview-images/pricing-page.png"/>
 
 ## Blog Page
 <img src="./themes/linc-edge/images/preview-images/blog-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/blog-mobile.png"/>
 
 ## About Page 
 <img src="./themes/linc-edge/images/preview-images/team-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/journey-mobile.png"/>
+<img src="./themes/linc-edge/images/preview-images/about-mobile.png"/>
 
 ## Contact Page 
 <img src="./themes/linc-edge/images/preview-images/contact-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/map-mobile.png"/>
 
 ## Sign Up Page
 <img src="./themes/linc-edge/images/preview-images/signup-page.png"/>
+<img src="./themes/linc-edge/images/preview-images/signup-mobile.png"/>
 
 ## Technologies Used 
 > * CLI [Command Line Interface]
