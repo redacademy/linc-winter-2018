@@ -19,6 +19,9 @@
     p,
     a {
       color: white;
+      &:hover{
+        color:#97c13b;
+      }
     } /* span p a */
     span {
       font-size: 2rem;
