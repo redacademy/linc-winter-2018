@@ -104,8 +104,11 @@
       display: block;
     }
   } /* .entry-title-benefits */
-  a.anchor#benefit {
-    display: block;
+  a.anchor-desktop#benefit {
+    display: none;
+    @include desktop {
+      display: block;
+    }
     position: relative;
     top: -108px;
     visibility: hidden;
