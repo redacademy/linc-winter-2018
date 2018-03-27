@@ -2,25 +2,25 @@
 > A WordPress theme designed for LincEdge, an online platform dedicated and designed to source increasing labour and trade demands, connecting trusted partners and qualified professionals via the LincEdge Network. This release features responsive custom page templates and fields for ease-of-use on the client-side for updating corresponding page content.
 
 ## Home Page
-<img src="./themes/linc-edge/images/preview-images/home-page.png"/>
+<img src="./images/preview-images/home-page.png"/>
 
 ## Product Page
-<img src="./themes/linc-edge/images/preview-images/features-page.png"/>
+<img src="./images/preview-images/features-page.png"/>
 
 ## Pricing Page
-<img src="./themes/linc-edge/images/preview-images/pricing-page.png"/>
+<img src="./images/preview-images/pricing-page.png"/>
 
 ## Blog Page
-<img src="./themes/linc-edge/images/preview-images/blog-page.png"/>
+<img src="./images/preview-images/blog-page.png"/>
 
 ## About Page 
-<img src="./themes/linc-edge/images/preview-images/team-page.png"/>
+<img src="./images/preview-images/team-page.png"/>
 
 ## Contact Page 
-<img src="./themes/linc-edge/images/preview-images/contact-page.png"/>
+<img src="./images/preview-images/contact-page.png"/>
 
 ## Sign Up Page
-<img src="./themes/linc-edge/images/preview-images/signup-page.png"/>
+<img src="./images/preview-images/signup-page.png"/>
 
 ## Technologies Used 
 > * CLI [Command Line Interface]
