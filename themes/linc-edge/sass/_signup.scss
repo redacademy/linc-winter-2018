@@ -4,6 +4,11 @@
 .page-id-284 {
   .entry-content {
     margin-top: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    @include desktop {
+      margin: 0;
+    }
   } /* .entry-content */
   .thankyou-text {
     text-align: center;
