@@ -30,7 +30,6 @@
 
         // Center sub-menus below parent. Overwritten by !important CSS on mobile //
         function submenuCenter(){
-            console.log('submenuCenter');
             $('.menu .sub-menu').each(function() {
                 $(this).css({
                     'left' : '50%',
