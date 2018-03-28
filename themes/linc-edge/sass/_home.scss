@@ -61,7 +61,7 @@
         opacity: 0.95;
         left: 0px;
         width: 90%;
-        height: 25rem;
+        height: 70%;
         margin: 0;
         bottom: 45px;
         color: white;
@@ -75,7 +75,7 @@
           }
         } /* .category-title */
         @include desktop {
-          height: 70%;
+          height:25rem;
           width:60%;
         }
         .posted-on {
