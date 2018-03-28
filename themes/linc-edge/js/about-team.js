@@ -1,7 +1,7 @@
 (function($) {
 
     $(document).ready(function () {
-        if($('body').is('.page-template-about-team')){
+        if($('body').is('.page-id-99')){
 
         // ----------------------- MOBILE -----------------------
         // Hide all bio paragraphs
