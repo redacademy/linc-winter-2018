@@ -98,7 +98,7 @@ get_header();?>
 		
 		<!-- Learn More button -->
 		<?php echo '<a class="linc-edge-button"
-		href="' . esc_url(get_site_url()) . "/products-features-benefits/" . '">';?>
+		href="' . esc_url(get_site_url()) . "/products-and-benefits/" . '">';?>
 			<p>Learn More</p>
 		</a>
 

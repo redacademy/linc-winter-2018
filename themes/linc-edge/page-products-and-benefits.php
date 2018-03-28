@@ -171,7 +171,7 @@ get_header(); ?>
 				<?php echo CFS()->get(esc_html('experience_title'));?>
 			</h2>
 			<?php echo ' <a class="linc-edge-button"
-			href="' . esc_url(get_site_url()) . "/sign-up/" . '"> ';?>
+			href="' . esc_url(get_site_url()) . "/signup/" . '"> ';?>
 				<p class="mobile">Sign Up</p>
 				<p class="desktop">Sign Up for Beta</p>
 			</a>
