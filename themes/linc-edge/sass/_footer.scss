@@ -19,10 +19,12 @@
     p,
     a {
       color: white;
+    } /* span p a */
+    a {
       &:hover{
         color:#97c13b;
       }
-    } /* span p a */
+    }
     span {
       font-size: 2rem;
     } /* span */
