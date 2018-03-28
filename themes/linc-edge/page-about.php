@@ -32,11 +32,13 @@ get_header(); ?>
         <?php $fields = CFS()->get( esc_html('action_description' )); foreach ( $fields as $field ): ?> 
 
           <div class="about-content-container">
+            
 
             <div class="about-text-group">
               <p class="about-title"><span class="title-underline-short"><?php echo esc_html($field['title']);?></span></p>
               <p class="about-description"><?php echo esc_html($field['description']); ?></p>
-            </div><!-- .about-text-group -->
+          
+          </div><!-- .about-text-group -->
 
             <div class="about-image-group">
               <?php echo '<img src="' . esc_url($field['picture']) .'"/>';  ?>
