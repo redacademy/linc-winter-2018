@@ -128,7 +128,7 @@
   } /* .benefits-container .features-container */
   .howworks-container {
     width: 100%;
-    .non-carousel {
+    .non-carousel, .non-carousel-2 {
       display: none;
       position: relative;
       @include desktop {
@@ -180,7 +180,7 @@
         }
       } /* img */
     } /* .non-carousel */
-    .carousel {
+    .carousel, .carousel-2 {
       @include desktop {
         display: none;
       }

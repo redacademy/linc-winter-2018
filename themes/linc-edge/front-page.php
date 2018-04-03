@@ -71,6 +71,17 @@ get_header();?>
 				</div>
 				<?php endforeach; ?>
 			</div><!-- .carousel -->
+			<div class="carousel-2" >
+			<?php $howworkscontainers = CFS()->get(esc_html('howworks_container2'));
+				foreach ($howworkscontainers as $howworkcontainer ): ?>
+				<div class="carousel-cell">
+					<div class="howworks-image">
+						<?php echo '<img class="howworks-image" alt="How Works Image" src="' . esc_html($howworkcontainer['howworks_image']) . '"/>';?>
+					</div>
+					<p class="howworks-title"><?php echo esc_html($howworkcontainer['howworks_text']); ?></p>
+				</div>
+				<?php endforeach; ?>
+			</div><!-- .carousel-2 -->
 			
 			<div class="non-carousel">
 			<?php $howworkscontainers = CFS()->get(esc_html('howworks_container_desktop'));
@@ -81,6 +92,15 @@ get_header();?>
 				</div>
 				<?php endforeach; ?>
 			</div><!-- .non-carousel -->
+			<div class="non-carousel-2">
+			<?php $howworkscontainers = CFS()->get(esc_html('howworks_container_desktop2'));
+				foreach ($howworkscontainers as $howworkcontainer ): ?>
+				<div class="hw-inner-container">
+					<?php echo '<img class="howworks-image" alt="How Works Image" src="' . esc_html($howworkcontainer['howworks_image_desktop']) . '"/>';?>
+					<p class="howworks-title"><?php echo esc_html($howworkcontainer['howworks_text_desktop']); ?></p>
+				</div>
+				<?php endforeach; ?>
+			</div><!-- .non-carousel-2 -->
 		</div><!-- .howworks-container -->
 	
 		<div class="features-header"><span class="title-underline">
