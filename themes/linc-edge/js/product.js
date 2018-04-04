@@ -59,26 +59,6 @@ jQuery(document).ready(function($){
                     $('#benefit-desktop').css('display','none');
                 }
             });
-            // $("#menu-item-158").click(function(){
-            //     if ($(window).width()<=650 ){
-            //         $("#benefit-mobile").css("display","block");
-            //         $("#benefit-desktop").css("display", "none");
-            //         $(".features-content-container").css("display", "none");
-            //         $('.carousel-2').flickity({
-            //             cellAlign: 'left',
-            //             contain: true
-            //           });
-            //           $(".button-benefit").addClass("button-active");
-            //           $(".button-feature").removeClass("button-active");
-            //         } else{
-            //         $("#benefit-mobile").css("display","none");
-            //         $("#benefit-desktop").css("display", "block");
-            //         $(".features-content-container").css("display", "none");
-            //         }
-            //     });
-
-        
-
-                
+      
       
         });
