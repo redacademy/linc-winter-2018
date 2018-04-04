@@ -128,18 +128,21 @@
   } /* .benefits-container .features-container */
   .howworks-container {
     width: 100%;
+    .non-carousel {
+      margin-bottom: 1.5rem;
+    }
     .non-carousel, .non-carousel-2 {
       display: none;
       position: relative;
       @include desktop {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         text-align: center;
       }
       .hw-inner-container {
         @include desktop {
           background-color: $color__lincedgeblue;
-          height: 500px;
+          height: 425px;
           width: 24vw;
           position: relative;
           &:not(:first-child) {
@@ -179,7 +182,19 @@
           height: 80px;
         }
       } /* img */
-    } /* .non-carousel */
+    } /* .non-carousel, .non-carousel-2 */
+    .non-carousel-2 {
+      margin: 0 auto;
+      .hw-inner-container:not(:last-child) {
+        &:after {
+          content: '';
+          left: 118%;
+        }
+      }
+    }
+    .carousel {
+      margin-bottom: 1rem;
+    }
     .carousel, .carousel-2 {
       @include desktop {
         display: none;
@@ -206,7 +221,7 @@
         margin: 0 auto;
         margin-top: 5%;
       } /* .howworks-title */
-    } /* .carousel */
+    } /* .carousel, .carousel-2 */
   } /* .howworks-container */
   .join-beta-container {
     text-align: center;
