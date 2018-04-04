@@ -123,7 +123,7 @@ get_header(); ?>
 					<h1 class="benefit-title">
 						<?php echo CFS()->get( esc_html('benefits_title') ); ?>
 					</h1>
-					<div class="carousel-2">
+					<div class="carousel-mobile">
 					<?php 
 					foreach($fields as $field ): ?>
 						<div class="carousel-cell">
