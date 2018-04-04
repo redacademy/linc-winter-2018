@@ -165,7 +165,7 @@
       font-size: 1.5rem;
       color: $color__lincedgeblue;
     } /* .benefits-title */
-    .carousel-2 {
+    .carousel-mobile {
       min-height: 500px;
       width: 100%;
       margin-bottom: 50px;
@@ -197,7 +197,7 @@
       .flickity-button {
         display: none;
       } /* .flickity-button */
-    } /* .carousel-2 */
+    } /* .carousel-mobile */
   } /* .benefits-content-container */
   .white-back {
     @include desktop {
