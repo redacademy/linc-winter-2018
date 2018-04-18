@@ -7,7 +7,6 @@ jQuery(document).ready(function($){
             contain: true
         });
     }
-
     if($('.carousel-2').length){
         $('.carousel-2').flickity({
             // options
@@ -15,13 +14,10 @@ jQuery(document).ready(function($){
             contain: true
         });
     }
-
     $("#button-feature").click(function(){
         $(".features-content-container").css("display", "block");
         $(".benefits-content-container").css("display", "none");
-
     });
-
     $("#button-benefit").click(function(){
         if ($(window).width()<=650 ){
             $("#benefit-mobile").css("display","block");
@@ -38,7 +34,6 @@ jQuery(document).ready(function($){
         }
     });
     $(".button-feature").addClass("button-active");
-
     $("#button-benefit").click(function(){
         $(".button-benefit").addClass("button-active");
         $(".button-feature").removeClass("button-active");
@@ -47,7 +42,6 @@ jQuery(document).ready(function($){
         $(".button-feature").addClass("button-active");
         $(".button-benefit").removeClass("button-active");
     });
-
     $(window).on('resize', function () {
         if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
             // do nothing ?
@@ -84,5 +78,4 @@ jQuery(document).ready(function($){
     //         $(".features-content-container").css("display", "none");
     //         }
     //     });
-
 });
